@@ -4,3 +4,4 @@ This reposiratory is mainly collection of rapid Dashboards created using Dash Pl
 
 1. app_1.py : Is Dash Dashboard application showcasing Python rich modules/libraries with excellent documentation websites.
 2. app_2.py : Plotly based all country live Tokyo 2020 olympic dashboard
+3. dynamic_playlist_dashboard.py : config driven (currently supports 6 tabs, 8 titles and 8 videos per page) using Python dash framework. Such dashboards can be used for training, learning, presentation and demo purposes.
