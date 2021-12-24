@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>n1311w16</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="center">
+<p><span><strong>Notes I on Introductory Mechanics<br />
+Statics and Describing Motion</strong></span></p>
+</div>
+<p>These notes are meant to help students understand the basic "physics" behind introductory "Newtonian" mechanics. The ideas are presented in the order in which they are taught in my first year class, and are designed to supplement the text.</p>
+<p>The approach we take is somewhat historical. In this section we first study the conditions for static equilibrium for a rigid object: how forces combine such that a rigid object does not move or rotate. The branch of mathematics that is relevant for these topics is Vectors. When we have finished statics, we will learn the language for describing motion.</p>
+<p><strong>Mechanics before 1500</strong></p>
+<p>In early times the balancing of forces was important for building, and was the first "physics" to be investigated. Later on in the quarter we will analyze mechanical systems precisely. We will discuss the concepts of inertial mass, force and motion, ideas that were discovered in the 1600’s. For now, we will consider a simple set of experiments with forces.</p>
+<p>Simply speaking, a force is a push (or pull). Let’s consider forces due to an objects weight, i.e. the gravitational force due to the attraction of the earth. For this discussion, we limit ourselves to objects that are made of pure elements, i.e. copper, iron, etc. We will make the assumption that for a pure homogenious substance the weight is proportional to the volume of the object. That is, if object A is twice as large object B, and both are made of the same substance, then object A has twice the weight as object B. If one object has a weight of 10 units, then an object of twice (or x times) the volume will have a weight of 20 units (or 10x units). The weights in our weight set are so labeled.</p>
+<p>In our first experiments we will combine forces on a ring by using pulleys and strings. A string attached to the ring will pass over a pulley. The other end of the string will be attached to a weight. Suppose two weights, each of magnitude 10 units, pulls on the ring to the right (the + direction). How much weight and where should it be placed to balance the two weights of 10 units. Your guess is probably one weight of magnitude 20 units pulling to the left. We will check this result in class. (Your guess was correct). This means that two forces pulling in the same direction add like real numbers. Similarly, we will show that two forces pulling in the opposite direction subtract. Thus for the case of one dimension, we can assign a (+ or -) to a force to signify the direction (right or left).</p>
+<p>A forces can act in any direction. What role does the direction of a force play when combining forces? Consider the following experiment:<br />
+</p>
+<p><br />
+</p>
+<p>After doing the experiment in class, we will find that the balancing force is a force that pulls on the ring with an amount of 50 units at a direction of <span class="math inline">\(36.9^\circ\)</span> S of W. Thus the force of 40 units to the east plus the force of 30 units to the north is equivalent to a single force of magnitude 50 units at an angle of <span class="math inline">\(36.869^\circ\)</span> N of E. In this case 30 plus 40 equals 50. You probably remember from trig that lengths of 30, 40, and 50 form a right triangle (3-4-5 triangle). Thus, if we represent each force by an arrow, whose length is proportional to its magnitude and whose direction is in the direction of the force, the two forces combine by placing the tail of one at the tip of the other. The resultant force is represented by the arrow along the hypotenuse.</p>
+<p>In lab, you will carry out a number of experiments that demonstrate that any two forces combine using the "arrow" tail-to-tip method described above. The mathematics that best describes how forces combine is the mathematics of <span><em>vector addition</em></span>. Since a number of physical quantities have the properties of mathematical vectors, we will spend some time in lecture discussing vectors.</p>
+<p>Vectors are discussed in many texts and usually are defined (initially) as something with direction and magnitude. Quantities with direction and magnitude are not necessarily vectors. They must also have certain mathematical properties. An addition operation must be defined, and the sum of two vectors must also be a vector. If <span class="math inline">\(\vec{A}\)</span> and <span class="math inline">\(\vec{B}\)</span> represent any two vectors, then it must be true that <span class="math inline">\(\vec{A} + \vec{B} = \vec{B}
++ \vec{A}\)</span>. Vectors are also defined over a field, which in our class will be the real numbers. To be an "inner-product" vector space, a scalar product between two vectors must be defined with certain properties. We will talk about this later when we discuss energy.</p>
+<p>The experimental result pertaining to adding "static" forces is summarized by the following experiment:<br />
+</p>
+<p>If two forces, <span class="math inline">\(\vec{F}_1\)</span> and <span class="math inline">\(\vec{F}_2\)</span>, act on an object that doesn’t move, the resulting force is the same as if the object were subject to the force <span class="math inline">\(\vec{F}\)</span> where <span class="math inline">\(\vec{F}\)</span> is the <span><strong>vector sum</strong></span> of the two forces: <span class="math inline">\(\vec{F} = \vec{F}_1 + \vec{F}_2\)</span>. The same vector addition applies if more than two forces are acting on the object.<br />
+</p>
+<p>This is a wonderful experimental result! Forces didn’t have to "add" in such a simple way, but they do. It demonstrates that certain aspects of nature can be understood using geometry (trig). These ideas were developed over 3000 years ago, and helped in the building of magnificant structures. We will do many examples in class demonstrating this remarkable property of forces, but first we review the mathematical properties of vector addition.</p>
+<p>Multiplication of a vector by a scalar <span class="math inline">\(c\)</span> changes the magnitude of the vector by the factor <span class="math inline">\(|c|\)</span>. If <span class="math inline">\(c&gt;0\)</span>, then the direction remains the same, but if <span class="math inline">\(c&lt;0\)</span> the direction is reversed.</p>
+<p>Unit vectors are vectors that have a magnitude of one. In three dimensional cartesian space, one usually defines the unit vector <span class="math inline">\(\hat{i}\)</span> to point in the +x direction, the unit vector <span class="math inline">\(\hat{j}\)</span> to point in the +y direction, and the unit vector <span class="math inline">\(\hat{k}\)</span> to point in the +z direction. Any vector in cartesian 3D space can be expressed as linear combinations of these unit vectors:</p>
+<p><span class="math display">\[\vec{A} = A_x \hat{i} + A_y \hat{j} + A_z \hat{k}\]</span></p>
+<p>where <span class="math inline">\(A_x\)</span>, <span class="math inline">\(A_y\)</span>, and <span class="math inline">\(A_z\)</span> are the coordinates of the tip of the vector. These unit vectors form an orthonormal basis, whose linear combinations span the vector space. The unit vectors are like "building blocks": any vector can be "built" from these three elements.</p>
+<p>We explain vector addition with an example. Let vector <span class="math inline">\(\vec{A}\)</span> have a magnitude of 150 units at an angle of 30 degrees N of E, vector <span class="math inline">\(\vec{B}\)</span> have a magnitude of 100 units at an angle of 45 degrees N of W, and vector <span class="math inline">\(\vec{C}\)</span> have a magnitude of 200 units at an angle of 80 degrees S of E. Find the vector <span class="math inline">\(\vec{D} = \vec{A} + \vec{B} + \vec{C}\)</span>, which is the sum of the three vectors. One could use the tail-to-tip method to add the three vectors. We will show in class that the tail-to-tip method is equivalent to adding the cartesian components after expressing the vectors in terms of the unit vectors. So, let’s add the three vectors using the unit vector basis. First, express <span class="math inline">\(\vec{A}\)</span> as a linear combination of the unit vectors <span class="math inline">\(\hat{i}\)</span> and <span class="math inline">\(\hat{j}\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{A} &amp; = &amp; 150 cos(30) \hat{i} + 150 sin(30) \hat{j}\\
+           &amp; = &amp; 130 \hat{i} + 75 \hat{j}\end{aligned}\]</span></p>
+<p>from the definition of the unit vectors and scalar multiplication. Then, express <span class="math inline">\(\vec{B}\)</span> in terms of the unit vectors:</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{B} &amp; = &amp; - 100 cos(45) \hat{i} + 100 sin(45) \hat{j}\\
+           &amp; = &amp; - 70.7 \hat{i} + 70.7 \hat{j}\end{aligned}\]</span></p>
+<p>Finally, express <span class="math inline">\(\vec{C}\)</span> in terms of the unit vectors:</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{C} &amp; = &amp; 200 cos(80) \hat{i} - 200 sin(80) \hat{j}\\
+           &amp; = &amp; 34.7 \hat{i} - 197 \hat{j}\end{aligned}\]</span></p>
+<p>To add the three vectors, one simple adds the components of the unit vectors:</p>
+<p><span class="math display">\[\begin{aligned}
+  \vec{A} + \vec{B} + \vec{C} &amp; = &amp; (130-70.7+34.7) \hat{i} + 
+                                     (75+70.7-197) \hat{j}\\
+      \vec{D} &amp; = &amp; 94 \hat{i} - 51.3 \hat{j}\end{aligned}\]</span></p>
+<p>The sum vector <span class="math inline">\(\vec{D}\)</span> can be expressed in terms of the unit vectors, or as a magnitude and direction: <span class="math inline">\(|\vec{D}| = \sqrt{94^2 + 51.3^2} = 
+107\)</span> units. The vector <span class="math inline">\(\vec{D}\)</span> points in the fourth quadrant, with the angle <span class="math inline">\(tan^{-1} \theta = 51.3/94\)</span>, or <span class="math inline">\(\theta = 28.6^\circ\)</span>. Since <span class="math inline">\(\vec{D}\)</span> is in the fourth quadrant, <span class="math inline">\(\theta = 28.6^\circ\)</span> S of E. The calculation is summarized in the figure.</p>
+<p><img src="fig1311a.png" style="width:14cm" alt="image" /></p>
+<p><span><strong>The connection that the mathematics of this example has to physics is the following. If an object is subject to three forces: a force of magnitude 150 units at an angle of 30 degrees N of E, a force of magnitude 100 units at an angle of 45 degrees N of W, and a force of magnitude 200 units at an angle of 80 degrees S of E, then the net force on the object is <span class="math inline">\(107\)</span> units at an angle of <span class="math inline">\(28.6^\circ\)</span> S of E.</strong></span> If one wants to balance these three forces, then one needs a force of <span class="math inline">\(107\)</span> units in the opposite direction at <span class="math inline">\(28.6^\circ\)</span> N of W.</p>
+<p>Expressing the vectors using unit (or basis) vectors is probably the most convenient way to perform operations with them. In general, if <span class="math inline">\(\vec{A} = A_x \hat{i} + A_y \hat{j}\)</span>, and <span class="math inline">\(\vec{B} = B_x \hat{i} + B_y \hat{j}\)</span>, then the sum <span class="math inline">\(\vec{A} + \vec{B}\)</span> equals</p>
+<p><span class="math display">\[\vec{A} + \vec{B} = (A_x + B_x) \hat{i} +
+                       (A_y + B_y) \hat{j}\]</span></p>
+<p>for subtraction, replace the "+" with a "-". Using unit (or basis) vectors is particulary useful when adding (or subtraction) more than two vectors.</p>
+<p>Some final points on vectors and vector addition:</p>
+<ol>
+<li><p>It is important to remember that <span><strong>for a complete description of a vector in two dimensions, two numbers are needed</strong></span>: a magnitude plus direction, two components, etc. For example, the vector <span class="math inline">\(\vec{D}\)</span> above can be expressed as: <span class="math inline">\(94 \hat{i} - 51.3 \hat{j}\)</span>, or 107 units at a direction <span class="math inline">\(28.6^\circ\)</span> S of E, or 107 units at an angle of <span class="math inline">\(331.4^\circ\)</span> clockwise from the x-axis.</p></li>
+<li><p>Here we have limited our applications to two and three dimensional vectors. These ideas can be generalized to any number of dimensions (including infinity). For vector spaces with dimension greater than 3, it is not always useful to think of the direction of a vector. The generalization of the ideas presented here is the branch of mathematics called Abstract Linear Algebra.</p></li>
+<li><p>In order for a quantity to be a vector, the quantity must add (or combine) according to the rules of vector addition. Not all quantities with magnitude and direction add accoring to the rules of vector addition. An example of such a quantity is rotations. Any rotation in three dimensions can be represented by an arrow with magnitude and direction: the direction is the axis of rotation, and the magnitude is the amount of rotation (e.g. in radians). Let <span class="math inline">\(A\)</span> be a rotation about the x-axis of <span class="math inline">\(\pi/2\)</span> radians, and <span class="math inline">\(B\)</span> be a rotation about the y-axis of <span class="math inline">\(\pi/2\)</span> radians. You can show by rotating your physics book that <span class="math inline">\(\vec{A} + \vec{B} \neq \vec{B} +
+\vec{A}\)</span>. That forces add according to the laws of simple vector addition is remarkable.</p></li>
+</ol>
+<p>There are a number of quantities in classical physics that behave as vectors: displacement, velocity, acceleration, force, the electric field and the magnetic field to name a few. You will encounter these during your first year of physics. Although they represent different physical quantites, they all add like the method described here. Vector addition pertains to many different physical quantites, it is a "universal mathematics", and its importance cannot be understated.</p>
+<p><strong>Torque: twisting force</strong></p>
+<p>We all have experience tightening a bolt. If we want it tight, we use a wrench. To apply a large amount of "twisting force", we hold the wrench as far as we can from the bolt and push with a force perpendicular to the wrench arm. The name we call "twisting force" is <span><strong>torque</strong></span>. In order to determine the amount of torque, we need to specify three things:</p>
+<p>) The axis of rotation. In the case of the bolt, this is where the bolt is.<br />
+) The force that is doing the twisting. (The force, direction and magnitude, that you apply to the wrench).<br />
+) The location of the force. (How far from the bolt that you apply the force.)<br />
+When we speak of torque, we usually say "the torque <span><em>about</em></span> the axis (or point) <span class="math inline">\(O\)</span> <span><em>due</em></span> to the force <span class="math inline">\(F\)</span> <span><em>applied</em></span> at the location <span class="math inline">\(P\)</span>."</p>
+<p>All three things matter in determining the torque. We know from experience that a larger force produces a larger torque, and the further away from the axis that the force is applied, the larger the torque, but what is the correct mathematical formula for torque? We will show in class that:</p>
+<div class="center">
+<p>torque = <span class="math inline">\(|\vec{r}|\)</span> times the component of the force perpendicular to <span class="math inline">\(\vec{r}\)</span></p>
+</div>
+<p>where <span class="math inline">\(\vec{r}\)</span> is the vector from the axis to the location where the force is applied. The component of the force perpendicular to <span class="math inline">\(\vec{r}\)</span> is the component of the force that does the twisting. The component of the force, <span class="math inline">\(\vec{F}\)</span>, that is parallel to <span class="math inline">\(\vec{r}\)</span> just pushes on the bolt. This component doesn’t cause any twisting about the axis. The symbol for torque used in most physics texts is <span class="math inline">\(\tau\)</span>:</p>
+<p><span class="math display">\[|\vec{\tau}| = |\vec{r}| F_\bot\]</span></p>
+<p>If we let <span class="math inline">\(\theta\)</span> be the angle between the vector <span class="math inline">\(\vec{r}\)</span> and the vector <span class="math inline">\(\vec{F}\)</span>, the torque equation can be written as:</p>
+<p><span class="math display">\[|\vec{\tau}| = |\vec{r}| |\vec{F}| sin(\theta)\]</span></p>
+<p>Remember, the vector <span class="math inline">\(\vec{r}\)</span> goes from the axis of rotation to the location at which the force is applied.</p>
+<p>Is torque a vector, a scalar, or something else? Torque certainly has a magnitude, which is the amount of twisting force. We can also associate a direction with torque: The axis of rotation of the twist. The axis of rotation is in the direction perpendicular to both the force <span class="math inline">\(\vec{F}\)</span> and the position vector <span class="math inline">\(\vec{r}\)</span>. Thus, we can assign a vector to a particular torque: The magnitude of the vector is the amount of twisting force, <span class="math inline">\(|\vec{r}| |\vec{F}| sin(\theta)\)</span>; and the direction is the direction perpendicular to the plane containing <span class="math inline">\(\vec{r}\)</span> and <span class="math inline">\(\vec{F}\)</span>. There is one more decision to make: which direction along the axis of the torque corresponds to a clockwise twist, and which direction to a counter-clockwise twist? Since <span class="math inline">\(sin(-\theta) =
+-sin(\theta)\)</span>, the vector for clockwise twist will be in the opposite direction to the one for counter-clockwise twist. The convention that is agreed upon around the world is the following: the direction of the torque vector is the direction that the bolt would move (for normal "right-handed" bolts). Using your right hand, if your fingers curl in the direction of the twist, your thumb points in the direction of the torque.</p>
+<p>We will show that torques add according to the rules of vector addition, so it is a true vector. In mathematics, there is an operation between vectors that yields another vector. It is the cross product and we can write the torque vector as <span class="math inline">\(\vec{r}\)</span> cross <span class="math inline">\(\vec{F}\)</span>:</p>
+<p><span class="math display">\[\vec{\tau} = \vec{r} \times \vec{F}\]</span></p>
+<p>In this course, we will only solve problems in which all the location <span class="math inline">\(\vec{r}\)</span> vectors and all the force <span class="math inline">\(\vec{F}\)</span> vectors lie in the same plane. Thus, we will not need to carry out the cross product explicitly using vectors. We will only do problems in which the torques produce a clockwise or counter-clockwise twist, and consquently the torque vectors are either in or out of the page. Nonetheless, to prepare you for more advanced courses, we review some of the mathematical properties of the vector cross product.</p>
+<p>The cross product of vector <span class="math inline">\(\vec{A}\)</span> and <span class="math inline">\(\vec{B}\)</span> is a vector. The magnitude of <span class="math inline">\(\vec{A} \times \vec{B}\)</span> equals the magnitude of <span class="math inline">\(\vec{A}\)</span>, <span class="math inline">\(|\vec{A}|\)</span> times the magnitude of <span class="math inline">\(\vec{B}\)</span>, <span class="math inline">\(|\vec{B}|\)</span>, times the sin of the angle between them:</p>
+<p><span class="math display">\[|\vec{A} \times \vec{B}| = |\vec{A}| |\vec{B}| sin(\theta)\]</span></p>
+<p>where the angle <span class="math inline">\(\theta\)</span> is the angle between vector <span class="math inline">\(\vec{A}\)</span> and vector <span class="math inline">\(\vec{B}\)</span>. The angle goes from <span class="math inline">\(\vec{A}\)</span> to the vector <span class="math inline">\(\vec{B}\)</span>. The direction of <span class="math inline">\(\vec{A} \times \vec{B}\)</span> is determined by the "right hand" rule described above. Note that since <span class="math inline">\(sin(-\theta) = - sin(\theta)\)</span>,</p>
+<p><span class="math display">\[\vec{B} \times \vec{A} = - \vec{A} \times \vec{B}\]</span></p>
+<p>Note that the cross product is maximized when <span class="math inline">\(\vec{A}\)</span> is perpendicular to <span class="math inline">\(\vec{B}\)</span>, and zero when <span class="math inline">\(\theta\)</span> is zero or <span class="math inline">\(180^\circ\)</span>. The unit vectors have simple cross product properties:</p>
+<p><span class="math display">\[\begin{aligned}
+  \hat{i} \times \hat{j} &amp; = &amp; \hat{k}\\
+  \hat{j} \times \hat{k} &amp; = &amp; \hat{i}\\
+  \hat{k} \times \hat{i} &amp; = &amp; \hat{j}\\
+  \hat{i} \times \hat{i} &amp; = &amp; 0\\
+  \hat{j} \times \hat{j} &amp; = &amp; 0\\
+  \hat{k} \times \hat{k} &amp; = &amp; 0\end{aligned}\]</span></p>
+<p>.</p>
+<p>We can express <span class="math inline">\(\vec{A}\)</span> and <span class="math inline">\(\vec{B}\)</span> in terms of the unit vectors: <span class="math inline">\(\vec{A} = A_x \hat{i} + A_y \hat{j} +
+A_z \hat{k}\)</span> and <span class="math inline">\(\vec{B} = B_x \hat{i} + B_y \hat{j} + B_z \hat{k}\)</span>. If we use the above forumlas for the cross products of the unit vectors, after "foil"ing we have:</p>
+<p><span class="math display">\[\begin{aligned}
+  \vec{A} \times \vec{B} &amp; = &amp; (A_y B_z - A_z B_y) \hat{i} +
+                              (A_z B_x - A_x B_z) \hat{j}\\
+                        &amp;   &amp; + (A_x B_y - A_y B_x) \hat{k} \end{aligned}\]</span></p>
+<p>This formula can be succinctly written in terms of the determinant of a matrix:</p>
+<p><span class="math display">\[\vec{A} \times \vec{B} =
+  \left| \begin{array}{ccc}
+       \hat{i} &amp; \hat{j} &amp; \hat{k}\\
+       A_x  &amp;  A_y  &amp;  A_z  \\
+       B_x  &amp;  B_y  &amp;  B_z
+         \end{array} \right|\]</span></p>
+<p><strong>Condition for Static equilibrium for a rigid object</strong></p>
+<p>In summary, there are two conditions for static equilibrium. In order for an object to stay at rest, the vector sum of the forces on the object must be zero. This is all one needs if the object is a point particle. However, if the object has size, the location of the forces on the object is important. Eventhough the sum of the forces is zero, the object might rotate. In order for the object to stay stationary and not rotate, the sum of the torques must be zero about any axis. These are the two conditions for an object to remain "static", i.e. not translate and not rotate:</p>
+<p><span class="math display">\[\begin{aligned}
+   \sum_i \vec{F}_i &amp; =  &amp;0\\
+   \sum_i \vec{\tau}_i &amp; = &amp; 0\end{aligned}\]</span></p>
+<p>where the torque sum can be taken about any axis. Note that for the first requirement, <span class="math inline">\(\sum_i \vec{F}_i =0\)</span>, the location of the forces do not enter in the calculation. However, for the second requirement, the location of the forces are very important. Just like in Real Estate, the three most important things are Location, Location, and Location. With torque, it is just Location, Location: the Location of the axis and the Location of the forces.</p>
+<p>In class we will do many examples of objects in static equilibrium. In evaluating the torque sum, a proper choice of axis can reduce the mathematical complexity.</p>
+<p><strong>One Dimensional (straight-line) Frictionless Environment</strong></p>
+<p>Objects are not always stationary. They move. In order to formulate the laws of motion, we need to come up with a useful language. It turns out that the laws of motion are most easily described in terms of instantaneous rates of change. The mathematics of calculus was key to understanding the laws motion, and we start with the language for describing motion.</p>
+<p>To describe motion of a point particle in one "straight-line" dimension one needs to come up with a measure of two quantities: position (or distance) and time.</p>
+<p>To measure <span><strong>position</strong></span>, we set up a coordinate system, which in one dimension is just a straight line with a reference point chosen as the origin. Once a direction for positive distance and a unit length have been decided upon, equal lengths can be marked on the line. A particles position is specified by a real number (+ or -) indicating its location on the line. Two systems of units are used in the class, MKS and British. Length is measured in meters in the MKS, and in units of feet in the British system.</p>
+<p>To measure <span><strong>time</strong></span>, we need an instrument (a clock) that can produce equal time intervals. Whereas we have a physical feeling for equal distances from our hands, arms and eyes, equal time intervals are difficult to get a feeling for. Physiologically a good movie lasting as long as a physics lecture might seem much shorter in time. Therefore we can’t rely on our senses to judge equal time intervals. One could use a pendulum or other oscillating device. However, using the motion of a physical system to determine equal time intervals and then using this clock to understand motion itself might bias our description and laws of physics. We might wonder if our method of measuring time is making our equations of physics to complicated. It would be nice to have a clock that does not rely on a physical system. We will discuss such a possibility with Newton’s first law of motion. In order not to get caught up in circular arguments and deep philosophy, in this class we will accept that clocks can be made that give equal time intervals. As discussed in the text, the accepted definition of a second is 9192631770 oscillations of a particular transition in the Cesium atom. Although the atom is a physical system, we obtain a workable definition of time for developing physics theories. The interested student should take our modern physics course, where Einstein’s theory of special relativity addresses these problems.</p>
+<p>Once we have established distance and time units, we can define a <span><strong>position function</strong></span>, <span class="math inline">\(x(t)\)</span>. The position function is just the position <span class="math inline">\(x\)</span> for the particle as a function of time, <span class="math inline">\(t\)</span>.</p>
+<p>A particles <span><strong>displacement</strong></span> between the times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is just equal to <span class="math inline">\(x(t_2) - x(t_1)\)</span>, where <span class="math inline">\(t_2 &gt; t_1\)</span>. If the displacement is positive, the particle has moved to the right (+ direction) from the time <span class="math inline">\(t_1\)</span> to the time <span class="math inline">\(t_2\)</span>. If the displacement is negative, the particle has moved to the left (- direction). To talk about displacement, you need to refer to <span><em>two times</em></span>.</p>
+<p>Velocity is a measure of how fast an object is moving. <span><strong>Average velocity</strong></span>, <span class="math inline">\(\bar{v}_{t_1 \rightarrow t_2}\)</span>, is defined to be the displacement/(time interval):</p>
+<p><span class="math display">\[\bar{v}_{t_1 \rightarrow t_2} \equiv {{x(t_2) - x(t_1)} \over {t_2 - t_1}}\]</span> As with displacement, to calculate the average velocity of an object one needs to specify the <span><em>two</em></span> times, <span class="math inline">\(t_1\)</span> AND <span class="math inline">\(t_2\)</span>. Average time is not a particularly good quantity to express the laws of mechanics in a simple way. For understanding the laws of physics in a simple way, the velocity at an instant, instantaneous velocity, is a much better quantity. <span><strong>Instantaneous velocity</strong></span> at the time <span class="math inline">\(t_1\)</span>, <span class="math inline">\(v(t_1)\)</span>, is defined to be:</p>
+<p><span class="math display">\[v(t_1) \equiv \lim_{t_2 \rightarrow t_1} {{x(t_2) - x(t_1)} \over {t_2 - t_1}}\]</span></p>
+<p>This can also be written as:</p>
+<p><span class="math display">\[v(t_1) \equiv \lim_{\Delta t \rightarrow 0} {{x(t_1 + \Delta t) - x(t_1)} \over {\Delta t}}\]</span></p>
+<p>which you will recognize as the first derivative of <span class="math inline">\(x(t)\)</span> evaluated at the time <span class="math inline">\(t_1\)</span>: <span class="math inline">\(v(t_1) \equiv (dx/dt)|_{t = t_1}\)</span>. A nice thing about instaneous velocity is that it is defined at a single time, <span class="math inline">\(t_1\)</span>. For this reason it is a better quantity to use than average velocity to try and describe how nature behaves. If the instantaneous velocity is positive (negative) then the particle is moving to the right (left) at that instant.</p>
+<p>A particle’s <span><strong>speed</strong></span> is defined to be the magnitude (or absolute value) of the instantaneous velocity.</p>
+<p>In some special cases, a particles velocity may be constant for a long period of time. If this is so, then the position function takes on a simple form. Let <span class="math inline">\(v_0\)</span> be the velocity of the particle at the time when we start our clocks, <span class="math inline">\(t=0\)</span>. We will often use the subscript 0 to label the value of a variable at time <span class="math inline">\(t=0\)</span>. For a particle moving with a constant velocity, <span class="math inline">\(v_0\)</span> will be the velocity for all times <span class="math inline">\(t\)</span>. From the definition of velocity: <span class="math inline">\((x(t) - x(0))/(t-0) = v_0\)</span>. If we define <span class="math inline">\(x(0) \equiv x_0\)</span>, we have the simple relationship for <span class="math inline">\(x(t)\)</span>:</p>
+<p><span class="math display">\[x(t) = x_0 + v_0 t\]</span></p>
+<p>Often one writes <span class="math inline">\(x(t)\)</span> as just <span class="math inline">\(x\)</span>, so the equation becomes <span class="math inline">\(x=x_0 + v_0 t\)</span>.</p>
+<p>Under what situations will an object move with a constant velocity in a straight line? A person walking in a straight line down the street with a constant speed, or a car driving down a straight length of road with a constant speed are some examples that come to mind. However, there is a very important case related to a fundamental Law of Motion.</p>
+<p>Consider a "reference frame" which is a box floating in space far from any other objects. If you were to go inside this box, floating in space, you would feel "at rest". You could not sense that you were moving. You set up a coordinate system to measure position (one dimensional) and time. Suppose a particle had an initial velocity <span class="math inline">\(v_0\)</span> with respect to your coordinate system. There are no forces on the particle. What would happen to the particle in time? Would it come to rest, or continue to move with the velocity <span class="math inline">\(v_0\)</span> in a straight line? Newton and Galileo realized that the particle would continue to move with the velocity <span class="math inline">\(v_0\)</span>. If the particle was at rest (<span class="math inline">\(v_0 = 0\)</span>) it would remain at rest. This property of motion is refered to as Newton’s first Law of Motion:</p>
+<div class="center">
+<p><span><strong>If there are <u>no forces</u> acting on an object, an object at rest<br />
+remains at rest and an object in motion continues in a state of<br />
+uniform motion</strong></span></p>
+</div>
+<p>This idea might seem simple to us, but at the time it was proposed it was profound. It was believed that the natural state of an object was at rest, and that objects that were moving came to rest on their own. Newton’s first law of motion applies to reference frames that are floating in space. Only in these frames will an object that is released at rest in "mid air" stay at rest. The name we give to reference frames for which this law (Newton’s first law) of motion holds is an <span><strong>inertial reference frame</strong></span>.</p>
+<p>Imagine two reference frames floating in space. Suppose someone named Bill was in one, and George in the other. Suppose that George observed that Bill was moving in the + direction with a <span><em>constant velocity</em></span> <span class="math inline">\(+v\)</span>. George would feel at rest and say that Bill was moving to the right with a constant velocity. Bill, however, would also feel at rest and say that George is moving to the left with a constant velocity <span class="math inline">\(-v\)</span>. Who is correct? Both are. Each of these frames is an inertial reference frame. Bill feels at rest, and so does George. There is something very special about reference frames floating in space with a constant velocity with respect to each other. They are all inertial reference frames and have the following properties:<br />
+. A reference frame moving with a constant velocity with respect to an inertial frame is also an inertial reference frame.<br />
+. In an inertial reference frame, one "feels" at rest.<br />
+. There is no experiment that one can do in an inertial reference frame to determine the velocity of the reference frame.<br />
+. The laws of physics take on the same form in all inertial reference frames.<br />
+. There is no absolute reference frame.<br />
+The equivalance of inertial reference frames is a fundamental property of physics, and is the basis of Einstein’s theory of special relativity. It is a wonderful property of nature, and one can marvel at its simplicity.</p>
+<p>A final note on Newton’s first law is that it allows one to define equal time intervals independent of a physical system. Here is how to do it: Set up your "x" axis, pick an origin, and a unit length. Use your unit length to mark on your "x" axis equal distances. Then set an object (with no forces) in motion. It will float along your "x" axis. A time interval occurs each time that it passes a mark. According to Newton’s first law the time intervals will be equal.</p>
+<p>Objects don’t always move with constant velocity, velocities change. The change in velocity per unit time is called acceleration. The average acceleration, <span class="math inline">\(\bar{a}_{t_1 \rightarrow t_2}\)</span>, between time <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is defined to be</p>
+<p><span class="math display">\[\bar{a}_{t_1 \rightarrow t_2} \equiv {{v(t_2) - v(t_1)} \over {t_2 - t_1}}\]</span></p>
+<p>As with average displacement and average velocity, one needs <span><em>two times</em></span> to calculate the average acceleration. Since two times are needed, the average acceleration is not a good quantity to describe the laws of physics. A more useful quantity is the instantaneous acceleration, which is defined in the same way as instananeous velocity. One takes the limit of the average acceleration as <span class="math inline">\(t_2\)</span> approaches <span class="math inline">\(t_1\)</span>:</p>
+<p><span class="math display">\[a(t_1) \equiv \lim_{t_2 \rightarrow t_1} {{v(t_2) - v(t_1)} \over {t_2 - t_1}}\]</span></p>
+<p>Instantaneous acceleration is also written as:</p>
+<p><span class="math display">\[a(t_1) \equiv \lim_{\delta t \rightarrow 0} {{v(t_1 + \delta t) - v(t_1)} \over {\delta t}}\]</span></p>
+<p>The limit on the right side is just the first derivative of the velocity evaluated at the time <span class="math inline">\(t_1\)</span>. So <span class="math inline">\(a(t_1) \equiv dv/dt|_{t = t_1}\)</span>. Often the <span class="math inline">\(t_1\)</span> is replaced by <span class="math inline">\(t\)</span>, and one writes <span class="math inline">\(a \equiv dv/dt\)</span>. A nice property about instananeous acceleration is that it is determined at <span><em>one time</em></span>. The acceleration is just the second derivative of position with respect to time: <span class="math inline">\(a = d^2x/dt^2\)</span>.</p>
+<p>One could also consider more derivatives such as <span class="math inline">\(da/dt\)</span>, <span class="math inline">\(d^2 a/ dt^2\)</span>, etc... to describe motion. We need to rely on experiments to determine the simplest way to relate interactions (forces) and motion.</p>
+<p>If the position function, <span class="math inline">\(x(t)\)</span>, is known, it is easy to find <span class="math inline">\(v(t)\)</span> and <span class="math inline">\(a(t)\)</span> by differentiation. If one knows <span class="math inline">\(a(t)\)</span>, one needs to integrate with respect to <span class="math inline">\(t\)</span> to find <span class="math inline">\(v(t)\)</span>. To find <span class="math inline">\(x(t)\)</span>, one needs to integrate <span class="math inline">\(v(t)\)</span> with respect to <span class="math inline">\(t\)</span>. A simple case that is discussed in many texts is the special case of motion with constant acceleration. Suppose the acceleration of a particle is constant, label it <span class="math inline">\(a_0\)</span>. Then, <span class="math inline">\(dv/dt = a_0\)</span>. Multiplying both sides by <span class="math inline">\(dt\)</span> and integrating we have <span class="math inline">\(\int_0^t dv = \int_0^t a_0 dt\)</span>, which gives <span class="math inline">\(v(t) - v_0 = a_0 t\)</span> where <span class="math inline">\(v_0\)</span> is the velocity at <span class="math inline">\(t=0\)</span>, <span class="math inline">\(v(0)\)</span>. This is often written as <span class="math inline">\(v = v_0 + a_0 t\)</span>, where <span class="math inline">\(v\)</span> means <span class="math inline">\(v(t)\)</span>.</p>
+<p>To solve for <span class="math inline">\(x(t)\)</span> for the case of constant acceleration requires one more integration. From <span class="math inline">\(dx/dt = v(t) = v_0 + a_0 t\)</span>, one can multiply both sides by <span class="math inline">\(dt\)</span> and integrate: <span class="math inline">\(\int_0^t dx = \int_0^t v_0 dt + \int_0^t a_0 t dt\)</span>. After integrating, one obtains: <span class="math inline">\(x(t) - x(0) = v_0 t + a_0 t^2/2\)</span>. This equation is often written as <span class="math inline">\(x = x_0 + v_0 t + a_0 t^2/2\)</span>, where <span class="math inline">\(x\)</span> means <span class="math inline">\(x(t)\)</span>.</p>
+<p>Summarizing for the <span><em>special case of constant acceleration</em></span>:</p>
+<p><span class="math display">\[v = v_0 + a_0 t\]</span> <span class="math display">\[x = x_0 + v_0 t + {a_0 \over 2} t^2\]</span></p>
+<p>Eliminating <span class="math inline">\(t\)</span> from these two equations gives:</p>
+<p><span class="math display">\[v^2 = v_0^2 + 2 a_0 (x-x_0)\]</span></p>
+<p>In general, motion that has constant (non-zero) acceleration for extended periods of time is fairly rare. Under certain circumstances however, the motion of an object can be <span><em>approximately</em></span> one of constant acceleration for a period of time. These special cases include situations where the net force is <span><em>approximately</em></span> constant (e.g. free fall near the earth’s surface in the absence of air friction, rolling or sliding down a ramp with no friction, ...). Since the equations for position and velocity are simple for motion of constant acceleration, many texts use examples and problems of this special case to test the student’s understanding of these concepts.</p>
+<p>One final note: the sign’s of <span class="math inline">\(x(t)\)</span>, <span class="math inline">\(v(t)\)</span>, and <span class="math inline">\(a(t)\)</span> are not related to each other. The acceleration can be in the negative (positive) direction eventhough the velocity is positive (negative), etc. The sign of <span class="math inline">\(a\)</span> is in the direction of the change of <span class="math inline">\(v\)</span>.</p>
+<p>The extension of velocity and acceleration to 2 and 3 dimensions is straighforward, since displacements add like vectors. We can define a position vector, <span class="math inline">\(\vec{r}(t)\)</span>, a velocity vector, <span class="math inline">\(\vec{v}(t)\)</span>, and an acceleration vector, <span class="math inline">\(\vec{a}(t)\)</span> as follows</p>
+<p><span class="math display">\[\begin{aligned}
+ \vec{r}(t) &amp; = &amp; x(t) \hat{i} + y(t) \hat{j} + z(t) \hat{k} \\
+ \vec{v}(t) &amp; = &amp; {{d\vec{r}(t)} \over {dt}} \\
+            &amp; = &amp; v_x(t) \hat{i} + v_y(t) \hat{j} + v_z(t) \hat{k} \\
+ \vec{a}(t) &amp; = &amp; {{d\vec{v}(t)} \over {dt}} \\
+            &amp; = &amp; a_x(t) \hat{i} + a_y(t) \hat{j} + a_z(t) \hat{k} \end{aligned}\]</span></p>
+<p>If we pick our coordinate system properly, sometimes we can change a three dimensional problem into three one dimensional problems. An important point to mention is that in general <span><strong>the three vectors <span class="math inline">\(\vec{r}(t)\)</span>, <span class="math inline">\(\vec{v}(t)\)</span>, and <span class="math inline">\(\vec{a}(t)\)</span> do not necessarily point in the same direction</strong></span>.</p>
+</body>
+</html>

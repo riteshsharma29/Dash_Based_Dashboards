@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Fluids_Oscillations_Thermodynamics_1</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="center">
+<p><span><strong>Notes on Fluid Dynamics</strong></span></p>
+</div>
+<p>These notes are meant for my PHY132 lecture class, but all are free to use them and I hope they help. The ideas are presented roughly in the order in which they are taught in my class, and are designed to supplement the text. I will be writing these notes as I teach the class, so they will be constantly updated and modified.</p>
+<p>Our initial topic this quarter will be fluids. We will first consider fluids at rest and then generalize to fluids in motion. We will not introduce any new fundamental "Laws of Physics", but rather apply Newton’s laws of mechanics to fluids.</p>
+<p><strong>Fluids at Rest</strong></p>
+<p>By fluids we mean liquids and gasses. If a fluid is "at rest", and neutral, there are only two macroscopic quantities needed to describe it: density (<span class="math inline">\(\rho\)</span>) and pressure (<span class="math inline">\(P\)</span>).<br />
+</p>
+<p>Density is a concept you probably learned in high school. It is simply the amount of mass per volume. Given the symbol <span class="math inline">\(\rho\)</span>, it is defined as</p>
+<p><span class="math display">\[\rho \equiv {{mass} \over {volume}} = {m \over V}\]</span></p>
+<p>With this definition, one needs a finite amount of volume and mass. One can also define the <span><strong>density at a point</strong></span> in the fluid by taking the limit as the volume (and mass) approach zero:</p>
+<p><span class="math display">\[\rho \equiv \lim_{V \rightarrow 0} {m \over V}\]</span></p>
+<p>Since it will be useful to consider the properties of fluids at different points in the fluid, the second definition is more useful than the first.<br />
+:<br />
+. Density is a scalar. It has no direction.<br />
+. The density can change from point to point. However, for most of our applications the density will be treated as constant over the volume under consideration. One obvious example where density changes with position is the density of air with altitude.<br />
+. The units of density are mass/volume. The most common units are the metric units of kg/M<span class="math inline">\(^3\)</span> or g/cm<span class="math inline">\(^3\)</span>.<br />
+</p>
+<p>You were also probably introduced to the concept of pressure in high school, and remember that it has something to do with the force that a fluid exerts on a surface. Suppose a small surface of area <span class="math inline">\(A\)</span> is placed in a fluid. The molecules of the liquid or gas will bounce off the surface and exert a force on it (the surface). The direction of the force on the "small" area will be perpendicular to the surface. Here is the nice property of fluids: if we double the size of the "small" surface then the force on the bigger surface is twice as large. That is, the force on the surface is proportional to its area (assuming the area is small enough). The ratio of the force to area is thus independent of the area, and this ratio we call the pressure <span class="math inline">\(P\)</span>:</p>
+<p><span class="math display">\[P \equiv {{force} \over {area}} = {F \over A}\]</span></p>
+<p>where <span class="math inline">\(F\)</span> is <span><em>the force on</em></span> and <span class="math inline">\(A\)</span> is <span><em>the area of</em></span> a small surface <span><strong>if it is placed in the fluid</strong></span>. Note that there does not need to be a surface in the fluid to define the pressure. <span><strong>If</strong></span> a surface were placed in the fluid, <span><strong>then</strong></span> the force on the surface would be <span class="math inline">\(P\)</span> times <span class="math inline">\(A\)</span>.</p>
+<p>You might be wondering if pressure is a scalar or a vector. Since it has something to do with force, you might think it is a vector. However, the direction of the force on the surface is always perpendicular to the surface. So the direction of the force depends on the orientation of the surface, and not on the ratio of <span class="math inline">\(F\)</span> to <span class="math inline">\(A\)</span>. We can define an area vector as follows: it’s magnitude is equal to the area of the surface, and it’s direction is perpendicular to the surface. Then, the direction of the force, <span class="math inline">\(\vec{F}\)</span>, is the same as the direction of the area vector <span class="math inline">\(\vec{A}\)</span>. Thus, we can write</p>
+<p><span class="math display">\[\vec{F} = P \vec{A}\]</span></p>
+<p>and we see that <span><strong>pressure is a scalar</strong></span>. <span class="math inline">\(\vec{F}\)</span> and <span class="math inline">\(\vec{A}\)</span> have directions, but not <span class="math inline">\(P\)</span>.</p>
+<p>The above definition requires a finite sized area. Since it will be useful to consider the properties of fluids at different points in the fluid, it is best to define pressure using the above definition as the area approaches zero:</p>
+<p><span class="math display">\[P \equiv \lim_{A \rightarrow 0} {F \over A}\]</span></p>
+<p>where <span class="math inline">\(F\)</span> is the <span><em>magnitude</em></span> of the force on and <span class="math inline">\(A\)</span> is the <span><em>magnitude</em></span> of the area of a small surface <span><strong>if</strong></span> it is placed in the fluid.</p>
+<p>You will encounter this same sort of abstraction when you study electricity and magnetism. For example, the electric field at a point can be defined as the force per charge <span><strong>if</strong></span> a charge is placed at the point. One can define quantities in empty space this way. The price per weight of a quantity is a similar concept. Let the price of bananas be 50 cents per pound. This value, 50 cents per pound, can exist even if no one ever buys bananas. However, <span><strong>if</strong></span> someone wants to buy bananas, the bananas are weighed and the price is determined. If a surface is in a fluid, the force on the surface equals the area times the pressure if the pressure is known.</p>
+<p>The <span><strong>units</strong></span> of pressure are force/area. The most common units are <span class="math inline">\(N/m^2\)</span> in the metric system. One <span class="math inline">\(N/m^2\)</span> is called a Pascal (Pa). In the British system, pounds/in<span class="math inline">\(^2\)</span> (PSI) is used. Pressure is also measured in mm of mercury, which will be discussed later. Atmospheric pressure near sea level is around <span class="math inline">\(1.013 \times 10^5\)</span> Pa, which in British units is <span class="math inline">\(14.6\)</span> PSI.</p>
+<p><br />
+You probably have experienced how pressure changes with depth while swimming. As you dive deeper in water, you feel the water pressure increase. Here we want to figure out exactly how the pressure changes within a fluid.</p>
+<p>If the fluid is at rest in a container that is "floating" in space, for example in the space shuttle, then the pressure is the same everywhere. In an inertial frame, objects at rest are just floating, and the pressure will not change with position. For the pressure to change with position, one needs to be in an accelerating reference frame, or on a planet with a gravitational field. Here, we will consider how the pressure changes in a fluid on earth.</p>
+<p>Consider a vessel on the earth that contains a fluid at rest. For example a swimming pool filled with water. To determine how the pressure changes with depth in the fluid one can analyze a cylindrical volume of fluid (within the pool). Let the cylinder have an area <span class="math inline">\(A\)</span> on its top and bottom, and have a height <span class="math inline">\(h\)</span>, as shown in figure 1. Let the axis of the cylinder be aligned with the direction of gravity. Since the fluid is at rest, the net force on this volume of fluid must be zero. The forces around the side of the cylinder balance out, so we must have:</p>
+<div class="center">
+<p>(Force on bottom) - (Force on top) = weight of fluid in the cylinder</p>
+</div>
+<p>Since the force on the top and bottom is just the pressure times the area, one obtains:</p>
+<p><span class="math display">\[P_{bottom}A - P_{top}A = mg\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is the mass of the fluid in the cylinder. Since <span class="math inline">\(m=\rho V = \rho A h\)</span>, we have</p>
+<p><span class="math display">\[P_{bottom} A - P_{top} A = \rho A h g\]</span></p>
+<p>Canceling the area, we have</p>
+<p><span class="math display">\[P_{bottom} - P_{top} = \rho g h\]</span></p>
+<p>Thus, the pressure on the bottom is larger than the top by an amount <span class="math inline">\(\rho g h\)</span>. As one dives deeper in a fluid (in the direction of gravity) the pressure increases by an amount <span class="math inline">\(\rho g\)</span> times the change in depth. Since we can let the area <span class="math inline">\(A\)</span> go to zero, the equation applies to a <span><em>point</em></span> at the top and bottom of the cylinder. We can write the above equation in a nicer way as follows:<br />
+. Take the y-axis to point opposite to the direction of gravity. That is, let <span class="math inline">\(\vec{g} = -g \hat{j}\)</span>, where <span class="math inline">\(\hat{j}\)</span> is the unit vector in the +y direction.<br />
+. Label the bottom point "1" and the top point "2".<br />
+With these conventions, <span class="math inline">\(P_{bottom}\)</span> can be called <span class="math inline">\(P_1\)</span> or <span class="math inline">\(P(y_1)\)</span>. The pressure at the top <span class="math inline">\(P_{top}\)</span> is then <span class="math inline">\(P_2\)</span> or <span class="math inline">\(P(y_2)\)</span>. The height difference <span class="math inline">\(h\)</span> is just <span class="math inline">\(h=y_2 - y_1\)</span>. Plugging into the above equation gives:</p>
+<p><span class="math display">\[P_1 - P_2 = \rho g (y_2 - y_1)\]</span></p>
+<p>rearrainging the terms, we have:</p>
+<p><span class="math display">\[P_1 + \rho g y_1 = P_2 + \rho g y_2\]</span></p>
+<p>which can also be written as</p>
+<p><span class="math display">\[P(y_1) + \rho g y_1 = P(y_2) + \rho g y_2\]</span></p>
+<p>This is an interesting result. It states that if one moves around in a fluid (which is at rest) the sum of the pressure plus <span class="math inline">\(\rho g y\)</span> remains constant. That is</p>
+<p><span class="math display">\[P(y) + \rho g y = constant\]</span></p>
+<p>for a fluid at rest. If there is no gravity, then the pressure is the same everywhere. The pressure only changes in the direction of gravity! A useful distance to remember for water is the change in height to cause a change in pressure of one atmosphere. This can be found by solving the equation <span class="math inline">\(\rho g h = 1.013 \times 10^5\)</span>Pa, or <span class="math inline">\(h = 1.013 \times 10^5 / (\rho g) = 1.013 \times 10^5 / 1000/9.8 \approx
+10.3\)</span>m. For every <span class="math inline">\(10.3\)</span> meters (or around 33 ft) of depth in water the pressure increases by one atmosphere.</p>
+<p>We will do a number of examples in class, where in some cases we will calculate the net force on a surface or object. If you hold a piece of paper, that has an area of 1 in<span class="math inline">\(^2\)</span>, in the air, the force on one side is <span class="math inline">\(14 \times 2 = 28\)</span> pounds!. Why doesn’t the paper move? It is because there is also a force of <span class="math inline">\(28\)</span> pounds on the other side. Only if there is a difference in pressure will there be a net force on an object. This should be clear from the examples we do in lecture.</p>
+<p>If the density does change with position, one can generalize the above formula to:</p>
+<p><span class="math display">\[P_1 - P_2 =  \int_{y_1}^{y_2} \rho g dy\]</span></p>
+<p><br />
+The <span><strong>bouyant force</strong></span> on an object in a fluid is the net upward force the object feels due to the fluid. If history is correct, Archemedes was the first one to figure out what the bouyant force on an object is. Archemedes principle is a statement (without an equation) of the bouyant force on an object <span><em>in a fluid that is at rest</em></span>:<br />
+<span><strong>The bouyant force on an object is equal to the weight of the fluid that the object displaces.</strong></span><br />
+Although Archemedes Principle can be derived from Eqs. 8-12 above, I am not sure if Archemedes did it that way. His reasoning might have been as follows:</p>
+<p>The bouyant force is the sum of the forces the fluid exerts on all the surfaces of the object. Thus, the bouyant force can only depend on the size (and perhaps shape) of the object. Suppose that the object in the fluid is replaced by the fluid itself. Then the bouyant force on the "replaced" fluid must equal the weight of the fluid, since it is at rest. If you put the object back, the bouyant force is the same as on the "replaced" fluid, since it only depends on the size of the object. Thus, the bouyant force must equal the weight of the fluid that is displaced by the object.<br />
+If this is confusing, then one can derive Archemedes Principle using Eq. 8 above. Consider a cylinder placed in a fluid with its axis in the direction of the gravitational field. Let the top and bottom area be <span class="math inline">\(A\)</span>, and the height <span class="math inline">\(h\)</span>. Since the forces on the sides cancel out, the net force, or net bouyant force, is equal to the upward force on the bottom minus the downward force on the top:</p>
+<p><span class="math display">\[F_{bouyant} = F_{bottom} - F_{top}\]</span></p>
+<p>Using <span class="math inline">\(F = PA\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  F_{bouyant} &amp; = &amp; P_{bottom} A - P_{top} A\\
+              &amp; = &amp; A(P_{bottom} - P_{top})\\
+              &amp; = &amp; A (\rho_{fluid} g h)\\
+              &amp; = &amp; \rho_{fluid} g (Ah)\\
+              &amp; = &amp; \rho_{fluid} g V\\
+              &amp; = &amp;  m_{fluid \: displaced} g\end{aligned}\]</span></p>
+<p>The last line is recognized as the weight of the fluid displaced. Note that the <span class="math inline">\(\rho\)</span> on the right side is the density of the <span><strong>fluid</strong></span> and has nothing to do with the object in the fluid. Thus, <span><strong>the bouyant force only depends on the volume of the object</strong></span> and <span><strong>the density of the fluid</strong></span>. It does not depend on the density or weight of the object itself. Although the formula was derived using a cylinder, using vector calculus one can show that this result is true for an object of any shape. We will do a number of examples using Archemedes principle in lecture.</p>
+<p><strong>Fluids in Motion</strong></p>
+<p>In this introductory class, we will limit our treatment to moving fluids whose density doesn’t change and ones that are at steady state. There are two main relationships that we will derive and apply. The first one is called the "continuity equation", and the second one Bernouli’s equation. By steady state, we mean that the pressure and velocity do not change in time in the fluid, although they may change with position.</p>
+<p>For fluids at rest, we only needed to consider two quantites, density and pressure. If the fluid is flowing (or moving) we need one more quantity, the velocity of the fluid. Last quarter we introduced the concept of velocity as the velocity of a particle. What do we mean by the velocity in a fluid. The velocity in a fluid is the velocity of a "small" volume of the fluid. More specifically, it is the velocity of a volume of the fluid as the volume approaches zero. In general the velocity in a fluid can change from one point to another, so we can speak of the velocity <span><em>at a point</em></span> in the fluid. At every point in the fluid, we can ascribe a velocity vector, which is the velocity of a small volume of the fluid at that point.</p>
+<p>The velocity in a fluid is an example of a "vector field". If there is a vector assigned to every point in space, this collection of vectors is called a vector field. You will see vector fields in PHY133. The electric field and magnetic field are both vector fields. They are vectors that can be defined at every point in space. In this class, we will not deal with the properties of vector fields, but next quarter we will.</p>
+<p>In summary, there are <span><strong>three quantites</strong></span> we will consider in a fluid: density, pressure, and velocity. Each of these are defined at a point in the fluid, and can vary from point to point.<br />
+<br />
+Consider a fluid that is flowing through a pipe. The pipe has a cross sectional area that is not constant. Let the area on the left end of the pipe be <span class="math inline">\(A_1\)</span> and the area on the right end be <span class="math inline">\(A_2\)</span>. Let the velocity of the fluid entering the pipe from the left be labeled <span class="math inline">\(v_1\)</span> and the velocity of the fluid leaving the pipe from the right be <span class="math inline">\(v_2\)</span>. See figure 2.</p>
+<p>The question we want to consider is how are <span class="math inline">\(v_1\)</span>, <span class="math inline">\(A_1\)</span>, <span class="math inline">\(v_2\)</span> and <span class="math inline">\(A_2\)</span> related to each other. If we assume that the density of the fluid is the same throughout the pipe, i.e. that the fluid is incompressible, then there is a relationship amoung the variables:</p>
+<p>In a time <span class="math inline">\(\Delta t\)</span> the <span><em>volume</em></span> of fluid entering from the left end is <span class="math inline">\(A_1 v_1 \Delta t\)</span>, and the <span><em>volume</em></span> of fluid leaving from the right end is <span class="math inline">\(A_2 v_2 \Delta t\)</span>. If the fluid is incompressible, then the volume of fluid leaving in a time <span class="math inline">\(\Delta t\)</span> equals the volume entering in a time <span class="math inline">\(\Delta t\)</span>:<br />
+</p>
+<p>Volume entering = Volume leaving</p>
+<p><span class="math display">\[A_1 v_1 \Delta t = A_2 v_2 \Delta t\]</span></p>
+<p>Canceling the <span class="math inline">\(\Delta t\)</span>,</p>
+<p><span class="math display">\[A_1 v_1 = A_2 v_2\]</span></p>
+<p>If <span class="math inline">\(A_2\)</span> is smaller than <span class="math inline">\(A_1\)</span>, then <span class="math inline">\(v_2\)</span> must be larger than <span class="math inline">\(v_1\)</span> so the amount of water coming out equals the amount going in.</p>
+<p><br />
+Let’s first state Bernouli’s equation, then derive it from the laws of mechanics. The equation deals with how the pressure and velocity change with position in a fluid that is flowing (or at rest):</p>
+<p><span class="math display">\[P + {\rho \over 2} v^2 + \rho g y = constant\]</span></p>
+<p>where <span class="math inline">\(P\)</span> is the pressure at, <span class="math inline">\(\rho\)</span> is the density at, <span class="math inline">\(v\)</span> is the speed at, and <span class="math inline">\(y\)</span> is the height of a point in a fluid. If one multiplies the equation by <span class="math inline">\(V\)</span>, the <span class="math inline">\(V \rho v^2/2\)</span> term is similar to the "kinetic energy" of a volume <span class="math inline">\(V\)</span> of the fluid. The term <span class="math inline">\(V \rho g y\)</span> is similar to gravitational potential energy, and <span class="math inline">\(PV\)</span> has units of force <span class="math inline">\(\times\)</span> distance or work. Thus, the physics of the work-energy theorum is somehow contained in the equation, and we will use it to derive Bernouli’s equation.</p>
+<p>Consider a small volume of fluid within the bigger fluid. Let the small volume be a cylindrical shape with the axis of symmetry in the direction of its velocity. Let the area of the cylinder be <span class="math inline">\(A\)</span>, the height <span class="math inline">\(d\)</span>, the mass <span class="math inline">\(\Delta m\)</span>, and the volume <span class="math inline">\(\Delta V\)</span>. Suppose the volume is flowing to the right as shown in figure 3. We label the point to the left of the small volume as <span class="math inline">\(1\)</span>, and the point to the right labeled as <span class="math inline">\(2\)</span>. At point number 1, the fluid will have a density, pressure and velocity vector. At point 2, the fluid will also have a density, pressure and velocity, which might be different than at point 1. Note that if the volume is moving to the right, <span class="math inline">\(P_1\)</span> will be greater than <span class="math inline">\(P_2\)</span>.</p>
+<p>We can apply the work-energy theorum as the left side of the volume of fluid moves from point 1 to 2. From the work-energy theorum:</p>
+<div class="center">
+<p>Net Work = Change in K.E.<br />
+(Work done by gravity) + (Work done by the Pressure) = Change in K.E.</p>
+</div>
+<p>The work done by gravity is <span class="math inline">\(\Delta m g (y_1 - y_2)\)</span>, where <span class="math inline">\(y_1\)</span> (<span class="math inline">\(y_2\)</span>) is the "y" coordinate at point 1 (2). To find the work done by the pressure, we use work equals force times distance. Since force is pressure times area, the <span><em>net average force</em></span> on the small volume as the left side moves from <span class="math inline">\(1 \rightarrow 2\)</span> is <span class="math inline">\((P_1 A - P_2 A)\)</span>. This force acts through a distance <span class="math inline">\(d\)</span>, so</p>
+<p><span class="math display">\[(P_1 A - P_2 A)d + \Delta m g(y_1 - y_2) = {{\Delta m} \over 2} v_2^2 - {{\Delta m} \over 2} v_1^2\]</span></p>
+<p>Factoring out the <span class="math inline">\(A\)</span> and dividing by <span class="math inline">\(\Delta V = A d\)</span> we have:</p>
+<p><span class="math display">\[P_1 - P_2 + \rho g (y_1 - y_2) = {\rho \over 2} v_2^2 - {\rho \over 2} v_1^2\]</span></p>
+<p>where <span class="math inline">\(\rho = \Delta m / \Delta V\)</span>. Rearrainging the terms gives us a more useful relationship:</p>
+<p><span class="math display">\[P_1 + \rho g y_1 + {\rho \over 2} v_1^2 = P_2 + \rho g y_2 + {\rho \over 2} v_2^2\]</span></p>
+<p>As the volume moves a small distance <span class="math inline">\(d\)</span> through the fluid, the combination of Pressure plus <span class="math inline">\(\rho g y\)</span> plus <span class="math inline">\(\rho v^2 /2\)</span> doesn’t change:</p>
+<p><span class="math display">\[P + \rho g y + {\rho \over 2} v^2 = constant\]</span></p>
+<p>We can follow the small volume as it moves through the fluid, with the result being that <span class="math inline">\(P + \rho g y + \rho v^2 /2 =\)</span> constant throughout the whole fluid!</p>
+<p>This is a remarkable result that there is such a simple relationship between these variables for all points in a fluid, whether it is flowing or not. As one moves around within a fluid <span class="math inline">\(P + \rho g y + \rho v^2 /2\)</span> remains the same. WOW!<br />
+The work done by the pressure difference derived above is somewhat non-rigorous. Why did we use the average force equal to <span class="math inline">\((P_1 - P_2)A\)</span>? A more detailed approach is the following. Let the initial position be labeled as "<span class="math inline">\(1\)</span>" and the final position as "<span class="math inline">\(2\)</span>". The net work done by the pressure difference is:</p>
+<p><span class="math display">\[W_{net} = \int_1^2 F_{net} \; dx = \int_1^2 A(P(x) - P(x+d)) \; dx\]</span></p>
+<p>where <span class="math inline">\(P(x)\)</span> is the pressure at the location <span class="math inline">\(x\)</span>. <span class="math inline">\(P(x)-P(x+d)\)</span> is the pressure difference between the left and right sides of the cylinder for any value of <span class="math inline">\(x\)</span>. If <span class="math inline">\(d\)</span> is small enough, then <span class="math inline">\(P(x) - P(x+d) \approx - d (dP)/(dx)\)</span> from the definition of the derivitive. With this approximation, we have</p>
+<p><span class="math display">\[\begin{aligned}
+   W_{net} &amp; = &amp; \int_1^2 A(P(x) - P(x+d)) \; dx \\
+           &amp; \approx &amp; A \int_1^2 (-d) {{dP} \over {dx}} dx \\
+           &amp; \approx &amp; -Ad (P(2) - P(1)) \\
+           &amp; \approx &amp; V (P_1 - P_2) \\\end{aligned}\]</span></p>
+<p>Using the average force gives the same result. Note that in the discussion above position "<span class="math inline">\(2\)</span>" is not necessarily at the other side of the cylinder.</p>
+<p><br />
+Bernouli’s equation states that if one moves around in the fluid, points of fast velocity are points of low pressure, and points of lower speed have higher pressure. This does make "sense", since to obtain a large velocity places of larger pressure somewhere else are needed to "push" the fluid to these higher speeds where the pressure is lower. Note, that if the fluid is at rest, <span class="math inline">\(v\)</span> is zero everywhere, and Bernouli’s equation reduces to the equation for a fluid at rest: <span class="math inline">\(P + \rho g y =\)</span> constant. If one is in a "weightless" environment where <span class="math inline">\(g=0\)</span>, the equation is also valid: <span class="math inline">\(P + \rho v^2 /2 =\)</span> constant. One cannot understate the importance of Bernouli’s equation to applications in society. It is the "physics" behind the invention and development of the airplane. We will do interesting examples and demo’s in lecture which demonstrate Bernouli’s equation.</p>
+<p>In deriving Bernouli’s equation we did not introduce any new fundamental principle of physics, but rather applied Newton’s laws of mechanics to fluid motion. Bernouli presented his equation in 1738. Newton lived from 1642-1727. You might wonder why it took so long to apply Newton’s laws to fluids, or why didn’t Newton himself come up with Bernouli’s equation? I can only guess that since Newton’s laws of mechanics dealt with particles, it was not clear if they could be applied to fluids. It took the genius of Bernouli to extend Newton’s ideas to continuous media. In the next section we will discuss a truely fundamental principle of physics. We will ponder over the nature of gravity, and learn one of the most interesting ideas of physics ever discovered: Newton’s Law of Universal Gravity.</p>
+<p><img src="fig1321a.png" style="width:14cm" alt="image" /></p>
+<div class="center">
+<p><span><strong>Universal Gravitation</strong></span></p>
+</div>
+<p>The discovery of universal gravitation was a result of our curiousity about the stars and planets. The history of the scientific development of our understanding about the universe warrants a course in itself. The interested student might consider taking our upper division G.E. elective Phy303: The Universe in 10 weeks. Here I will briefly mention two important scientists that gave Newton the necessary background to formulate his famous theory of universal gravitation: the experimentalist Tycho Brahe (1546-1601) and the theoretician Johannes Kepler (1571-1630).<br />
+:<br />
+Brahe was born in Denmark. A predicted solar eclipse that he observed fueled his interest in astronomy. He devoted his life to making extremely accurate measurements of the positions of the planets, because he knew such data was necessary for a correct understanding of their movement. He was funded by King Frederick II of Denmark, and was given an island to do his measurements. Since the telescope had not yet been invented, he built large sextants for accurate measurements. He took data for over <span class="math inline">\(20\)</span> years, and was able to obtain an accuracy of <span class="math inline">\(1/60\)</span> of a degree in his angular measurements. When Brahe died in Prague, he entrusted his data to his collegue Johannes Kepler.<br />
+<br />
+Kepler was very talented in mathematics, and was interested in discovering mathematical relationships among the planets. He believed in the Copernicus model of the solar system and devoted his efforts to understanding the motion of the planets. In analyzing Brahe’s data for the orbit of Mars, Kepler came across a problem: Mars’ orbit did not appear to be circular. He had <span class="math inline">\(40\)</span> good data points for Mars, and no matter what circular shape he tried Brahe’s data was off by <span class="math inline">\(8/60\)</span> of a degree. Brahe was no longer alive, but Kepler knew that the experimental data was accurate to <span class="math inline">\(1/60\)</span> of a degree. Trying different shapes, Kepler discovered that an eliptical shape fit the Mars data well. After nearly <span class="math inline">\(30\)</span> years of analyzing Brahe’s data, Kepler discovered three quantitative relationships for the planets. These are known as "Kepler’s Laws":<br />
+<br />
+I. <span><strong>Each planet moves in an elliptical orbit with the sun at one focus.</strong></span> Who ordered an ellipse? It was believed that the circle was the perfect shape, and the planets should travel in circles about the sun. The discovery that the planets travel in elliptical orbits was revolutionary, but the data supported it. Kepler was correct.<br />
+II. <span><strong>The vector drawn from the sun to a planet sweeps out equal areas in equal times.</strong></span> This means that when a planet is furthest from the sun it moves slower than when it is closer. We shall see that this is because the force of gravity is a central force and angular momentum is conserved.<br />
+III. <span><strong>The square of the period of a planet is proportional to the semi-major axis cubed.</strong></span> This is probably better expressed mathematically. Let <span class="math inline">\(T\)</span> be the period of the planet. The period is the time it takes the planet to orbit the sun. It is the planet’s year. Let <span class="math inline">\(a\)</span> be the semi-major axis. If the orbit were to be circular, this is the radius of the orbit. Then,</p>
+<p><span class="math display">\[T^2 \propto a^3\]</span></p>
+<p>Kepler’s laws allowed astronomers to predict the positions of the planets much more accurately then before. Before Kepler, it was assumed that the planets moved in circular orbits (the perfect shape), and corrections had to be made from these predictions. Kepler’s work also emphasized the importance of believing the data, even though it is contrary to your pre-conceived ideas. It took <span class="math inline">\(20\)</span> years of accurate data taking and <span class="math inline">\(20\)</span> more years of data analysis to discover these three properties of planetary motion. It was a tremendous accomplishment. The reason why these "laws" were true were not understood by Kepler and other scientists at the time. It took the genius of Issac Newton (1642-1727) to discover that Kepler’s 3 laws are the result of only one law of nature: Universal Gravitation.<br />
+</p>
+<p>As the story goes, Newton was sitting under an apple tree and could see the moon in the sky. All of a sudden an apple fell from the tree. He then realized that the same type of force (gravity) that was attracting the apple to the earth was attracting the moon to the earth as well. Never before has anyone thought that the earth’s gravitational force could extend to the moon and beyond. Newton attacked the problem of gravity quantitatively. He considered first the force between two small objects.</p>
+<p>Suppose there are two "small" objects or particles. Label one of them "1" and the other "2" having masses <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> respectively. Let them be separated by a distance <span class="math inline">\(r\)</span>. Newton supposed that there exists a force of gravity attracting them to each other. From his third law, the force on "1" due to "2" is equal in magnitude (but opposite in direction) to the force on "2" due to "1": <span class="math inline">\(\vec{F}_{12} = - \vec{F}_{21}\)</span>. What could the magnitude of this force, <span class="math inline">\(|\vec{F}_{12}| \equiv F_{gravity}\)</span> depend on? Since <span class="math inline">\(w=mg\)</span> on earth, the gravitational force is proportional to the objects mass. Since the forces are equal in magnitude, the source of the force must be proportional to the sources mass. Thus, it is a good guess that the force of gravity is proportional to the product of the two particle’s masses:</p>
+<p><span class="math display">\[F_{gravity} \propto m_1 m_2\]</span></p>
+<p>How should the magnitude of the force depend on the distance between the particles <span class="math inline">\(r\)</span>? One would think that the larger <span class="math inline">\(r\)</span> is, the smaller the force. But is the dependence <span class="math inline">\(1/r\)</span>, <span class="math inline">\(1/r^2\)</span>, <span class="math inline">\(1/r^3\)</span> or <span class="math inline">\(1/r^x\)</span> where <span class="math inline">\(x\)</span> is some non- integer? From the available data at the time, Newton was able to determine that <span class="math inline">\(F \propto 1/r^2\)</span>. We will discuss how he was able to do this later. Putting the two dependences together gives:</p>
+<p><span class="math display">\[F_{gravity} \propto {{m_1 m_2} \over r^2}\]</span></p>
+<p>The proportionality can be changed to an equality by adding a proportionality constant:</p>
+<p><span class="math display">\[F_{gravity} = G {{m_1 m_2} \over r^2}\]</span></p>
+<p>with the direction of the force being along the line joining the particles and is attactive.</p>
+<p>The constant <span class="math inline">\(G\)</span> is called the universal gravitational constant. This is different than "little" <span class="math inline">\(g\)</span> which is the acceleration near the surface of a planet. <span class="math inline">\(g\)</span> can change from place to place, but <span class="math inline">\(G\)</span> is universal: it is the same everywhere in the universe. It was first accurately measured by Cavandish in 1798 to be <span class="math inline">\(6.67 \times 10^{-11} \; Nm^2/Kg^2\)</span>.<br />
+Comments on Newton’s universal law of gravity:<br />
+. The above equation pertains only to "point" particles. That is objects whose size is much smaller than the separation of the objects.<br />
+. The gravitational force <span class="math inline">\(F_{gravity}\)</span> is always attractive. Both objects attract each other.<br />
+. No matter how large <span class="math inline">\(r\)</span> is, there is still some gravitational attractive force between the particles. This means that you are attracted to every piece of matter in the entire universe. You are attracted to every star in the universe, a moth in Tibet, the student sitting next to you, etc. Of course, the farther away the objects are, the weaker is the magnitude of the force.<br />
+. Since <span class="math inline">\(G\)</span> is small (in metric units), one of the particles needs to have a large mass for the force to be a significant number of Newtons. For example, the force between two <span class="math inline">\(1\)</span> kg objects that are separated by a distance of <span class="math inline">\(1\)</span> meter is only <span class="math inline">\(6.67 \times 10^{-11}\)</span> Newtons. Don’t worry about the force from the student sitting next to you, it is pretty small.<br />
+. In the above equation (Newton’s law of gravitation), mass plays a different role than in the force-motion equation <span class="math inline">\(\vec{F}_{net} = m \vec{a}\)</span>. In the law of gravitation, <span><strong>mass is the source</strong></span> of the gravitational force. In the force-motion law, <span><strong>mass is a measure of inertia</strong></span> or the difficulty to change the objects velocity. It turns out that the "gravitational mass" is equal to the "inertial mass". This equivalence motivated Einstein to formulate his law of gravity.<br />
+. The force of gravity is <span><strong>always attractive</strong></span>. In the case of the electrostatic force, charges can attract or repel. This is not the case with gravity. As far as we know, all matter (regular or anti-matter) attract each other.<br />
+Since force is a vector, it would be nice to express Newton’s law in vector form. We can do this by defining a unit vector that points along the line joining the two particles. Let <span class="math inline">\(\hat{r}_{12}\)</span> be defined as a vector of length <span><em>one unit</em></span> that points from particle "1" to particle "2". Similarly, <span class="math inline">\(\hat{r}_{21}\)</span> points from particle "2" to particle "1" and is of length one. Then the force <span><strong>on particle "2"</strong></span> from particle "1" is:</p>
+<p><span class="math display">\[\vec{F}_{21} = G {{m_1 m_2} \over r^2} (- \hat{r}_{12})\]</span></p>
+<p>or</p>
+<p><span class="math display">\[\vec{F}_{21} = -G {{m_1 m_2} \over r^2} \hat{r}_{12}\]</span></p>
+<p>The minus sign in the above equation signifies that the force on particle "2" is towards particle "1", i.e. attractive. Note that the notation in the book of <span class="math inline">\(\vec{F}_{ij}\)</span> is opposite to the definition used here.</p>
+<p>The equation can also be written in terms of <span><strong>the force on particle "1"</strong></span> due to particle "2":</p>
+<p><span class="math display">\[\vec{F}_{12} = G {{m_1 m_2} \over r^2} \hat{r}_{12}\]</span></p>
+<p><br />
+Suppose we have three "point" objects, labeled "1", "2", and "3", with respective masses <span class="math inline">\(m_1\)</span>, <span class="math inline">\(m_2\)</span>, and <span class="math inline">\(m_3\)</span>. What is the force on object "1" <span><strong>due</strong></span> to the other two objects? Your first thought might be to simply add <span class="math inline">\(\vec{F}_{12}\)</span> to <span class="math inline">\(\vec{F}_{13}\)</span> using the laws of vector addition. This turns out to be correct, but must be verified by experiment, and is. This principle, which is a law of nature, is called the <span><strong>principle of superposition</strong></span>: the net gravitational force on an object is the vector sum of the gravitational forces on the object from all the other objects in the system.</p>
+<p><span class="math display">\[\vec{F}_1(Net) = G {{m_1 m_2} \over {r_{12}^2}} \hat{r}_{12} + G {{m_1 m_3} \over {r_{13}^2}}
+                                             \hat{r}_{13}\]</span></p>
+<p>If there are <span class="math inline">\(N\)</span> "point" particles in the system, the net force on particle "1" is the vector sum of the forces due to (from) the other <span class="math inline">\(N-1\)</span> particles:</p>
+<p><span class="math display">\[\vec{F}_1(Net) = \sum_{j=2}^N G {{m_1 m_j} \over {r_{1j}}} \hat{r}_{1j}\]</span></p>
+<p>where <span class="math inline">\(r_{ij}\)</span> is the distance between particle <span class="math inline">\(i\)</span> and particle <span class="math inline">\(j\)</span>. The force on the other particles are determined in a similar way. We will do a number of examples in class involving Newton’s law of the gravitational force between point particles and the principle of superposition.<br />
+<br />
+How did Newton know the gravitational force decreased as <span class="math inline">\(1/r^2\)</span>? One way was to calculate the acceleration of the moon as it orbits the earth and compare it with the acceleration of an object near the surface of the earth. Since the moon is moving in approximately circular motion, its acceleration is <span class="math inline">\(a_{moon} = v^2 /r = (2 \pi r/T)^2 /r = (4 \pi^2 r/T^2\)</span>. Using <span class="math inline">\(r = 3.84 \times
+10^8\)</span>m, and <span class="math inline">\(T = 28\)</span> days, one gets <span class="math inline">\(a_{moon} = 2.72 \times 10^{-3}\)</span> m/s<span class="math inline">\(^2\)</span>. The acceleration near the surface of the earth is <span class="math inline">\(9.8\)</span> m/s<span class="math inline">\(^2\)</span>. The moon is around <span class="math inline">\(60\)</span> earth radii away, and since <span class="math inline">\(9.8/60^2 = 2.72 \times 10^{-3}\)</span> we see that the gravitational force on the moon is <span class="math inline">\(1/60^2\)</span> that of an object on the surface of the earth, verifying the inverse square decrease of the gravitational force.</p>
+<p>Another observation that supports the inverse square nature of the force is Kepler’s third law which states that <span class="math inline">\(T^2 \propto a^3\)</span>. Using <span class="math inline">\(F=ma\)</span>:</p>
+<p><span class="math display">\[F_{grav} = G {{m_1 m_2} \over r^2} = m_1 {v^2 \over r}\]</span></p>
+<p>Since <span class="math inline">\(v = 2 \pi r / T\)</span> we obtain</p>
+<p><span class="math display">\[G {{m_1 m_2} \over r^2} = m_1 {{(2 \pi r / T)^2} \over r}\]</span></p>
+<p>reducing to</p>
+<p><span class="math display">\[T^2 = {{4 \pi} \over {G m_2}} r^3\]</span></p>
+<p>Thus, the data of the planet’s motion <span class="math inline">\(T^2 \propto r^3\)</span> is supported by the inverse square law decrease of the gravitational force.</p>
+<p>The inverse square law shows up in different situations in physics: light intensity, sound intensity, and the electostatic force also decrease as <span class="math inline">\(1/r^2\)</span>. Is there a deep reason for the inverse square law? For light and sound intensity there is. It has to do with geometry. The surface area of a sphere equals <span class="math inline">\(4 \pi r^2\)</span>, so if a quantity is spread out evenly on the surface of an expanding sphere, its intensity decreases as <span class="math inline">\(1/r^2\)</span>. Sound intensity and light intensity follow this principle. Force is not an intensity, so one cannot really use this argument. However, advanced theories of gravity and electrodynamics give the same geometric result when speeds are slow enough. Time factors out of these equations and the remaining three dimensional space geometry produces a <span class="math inline">\(1/r^2\)</span> decrease of the gravitational and electrostatic force.</p>
+<p><br />
+What is the gravitational force between a "point" particle and a larger or extended object. By an extended object we mean an object that has a finite size: a solid object. Do we need any new physics to find the graviational force in this case. No, we just need divide up the solid object into small pieces, and use the superposition principle and Newton’s gravitational force equation for point particles. Let’s explain the method using two examples.<br />
+<br />
+Suppose we have a ring of mass <span class="math inline">\(M\)</span> and radius <span class="math inline">\(a\)</span>. A point particle of mass <span class="math inline">\(m\)</span> is placed on the axis of the ring a distance <span class="math inline">\(x\)</span> from the center (See the figure at the end of this section). What gravitational force does the point particle feel due to the ring?</p>
+<p><img src="fig1321b.png" style="width:14cm" alt="image" /></p>
+<p>First we divide up the ring into small "point" pieces of mass <span class="math inline">\(\Delta M\)</span>. Next, we find the magnitude of the force, <span class="math inline">\(|\Delta \vec{F}|\)</span>, between the point particle and the small piece of the ring:</p>
+<p><span class="math display">\[|\Delta \vec{F}| = G {{m \Delta M} \over {x^2 + a^2}}\]</span></p>
+<p>The direction of the force <span class="math inline">\(\Delta \vec{F}\)</span> points from the point particle to the edge of the ring where <span class="math inline">\(\Delta M\)</span> is. Now we need to sum up the forces due to all the little pieces of the ring. This involves an integration: <span class="math inline">\(\int \Delta \vec{F}\)</span>. However, for the ring this is simple. Upon integrating around the ring, the only component that survives is the one along the axis: <span class="math inline">\(|\Delta \vec{F}| cos \theta\)</span> or</p>
+<p><span class="math display">\[\Delta F_x = G {{m \Delta M} \over {x^2 + a^2}} cos(\theta)\]</span></p>
+<p>towards the ring. Since <span class="math inline">\(x\)</span>, <span class="math inline">\(a\)</span> and <span class="math inline">\(\theta\)</span> are the same for all the pieces of the ring, the integral is simple:</p>
+<p><span class="math display">\[F_x = G {{m} \over {x^2 + a^2}} cos(\theta) \int \Delta M\]</span></p>
+<p>The integral over <span class="math inline">\(\Delta M\)</span> is just <span class="math inline">\(M\)</span>, so</p>
+<p><span class="math display">\[F_x = G {{mM} \over {x^2 + a^2}} cos(\theta)\]</span></p>
+<p>towards the ring. Since <span class="math inline">\(cos\theta = x/\sqrt{x^2 + a^2}\)</span>, we have</p>
+<p><span class="math display">\[F_x = G {{mMx} \over {(x^2 + a^2)^{3/2}}}\]</span></p>
+<p>with the direction towards the ring.<br />
+<br />
+Suppose we have a long thin rod of mass <span class="math inline">\(M\)</span> and length <span class="math inline">\(l\)</span>. A point particle of mass <span class="math inline">\(m\)</span> is placed on the axis of the rod a distance <span class="math inline">\(d\)</span> from one end. See the figure at the end of the section. What gravitational force does the point particle feel due to the rod?</p>
+<p>First we divide up the rod into small pieces. Lets divide it up into <span class="math inline">\(N\)</span> equal pieces. Each piece will have a mass <span class="math inline">\(\Delta M\)</span> and a length <span class="math inline">\(\Delta x\)</span>. Consider the force on the point particle due to a small piece of rod a distance <span class="math inline">\(x\)</span> from the end. The magnitude of this force, <span class="math inline">\(\Delta F_x\)</span>, from Newton’s law of gravitation is:</p>
+<p><span class="math display">\[\Delta F_x = G {{m \Delta M} \over {(d+x)^2}}\]</span></p>
+<p>Since we will integrate over <span class="math inline">\(x\)</span>, we need to express the mass of the small piece <span class="math inline">\(\Delta M\)</span> in terms of <span class="math inline">\(\Delta x\)</span>. Since the whole rod has mass <span class="math inline">\(M\)</span> and length <span class="math inline">\(l\)</span>, the mass of the small piece is <span class="math inline">\(\Delta M = M (\Delta x / l)\)</span>. Thus, we have</p>
+<p><span class="math display">\[\Delta F_x = G {{m M \Delta x} \over {l (d+x)^2}}\]</span></p>
+<p>The final step is to add up the contribution from all the little pieces of the rod as <span class="math inline">\(\Delta x \rightarrow 0\)</span>. This leads to the integral expression:</p>
+<p><span class="math display">\[F_x = \int_0^l G {{m M \; dx} \over {l (d+x)^2}}\]</span></p>
+<p>with the result being:</p>
+<p><span class="math display">\[F_x = G {{Mm} \over {d(d+l)}}\]</span></p>
+<p>with the force directed towards the rod. The above equation deserves some comments:<br />
+. It was a real theoretical breakthrough of Newton to come up with a method of finding the force between two "complicated" extended objects. The superposition principle is the key to the simplification: the forces from many sources add like vectors. One needs only to understand the force between two "point" particles, then integrate over the solid objects to find the total force. It turns out that the force between two point particles is simple: <span class="math inline">\(\sim m_1 m_2/r^2\)</span>. This same method will be used for the electrostatic and magnetic forces next quarter. It was a triumph to break down a complicated problem into two (or more) simple problems.<br />
+. One can check the result of the particle and rod in the limiting case of <span class="math inline">\(d&gt;&gt;l\)</span>. As <span class="math inline">\(d\)</span> becomes much greater than <span class="math inline">\(l\)</span>, the term <span class="math inline">\((d+l)\)</span> is very close to <span class="math inline">\(d\)</span>. Thus the limit of <span class="math inline">\(F_x\)</span> as <span class="math inline">\(d \rightarrow \infty\)</span> is <span class="math inline">\(GMm/d^2\)</span> which is the force between two point objects as expected.<br />
+. Note that the force between the particle and the rod is not equal to <span class="math inline">\(G M m/(d+l/2)^2\)</span>:</p>
+<p><span class="math display">\[F_x \neq G {{Mm} \over {(d + l/2)^2}}\]</span></p>
+<p>That is, <span><strong>in general the gravitational force is not the same as if all of the objects mass were located at its center of mass</strong></span>. There is one exception to this: the force between an object with spherical symmetry and a point particle outside the object. We consider this case next.<br />
+<br />
+Suppose we have a thin spherical shell of mass <span class="math inline">\(M\)</span> and radius <span class="math inline">\(R\)</span>. A point particle of mass <span class="math inline">\(m\)</span> is placed outside the shell and distance <span class="math inline">\(d\)</span> from the center of the shell. What gravitational force does the point particle experience due to the shell?</p>
+<p>This problem is solved the same way as the last two. One divides up the shell into rings, and adds up the force due to each ring. I show the solution to this problem at the end of the lecture notes, since it is easiest to solve for the graviational potential energy between a point particle and a thin spherical shell. You might think that the result would be complicated, but as we will show it is amazingly simple:</p>
+<p><span class="math display">\[F = G {{Mm} \over d^2}\]</span></p>
+<p>where <span class="math inline">\(F\)</span> is the magnitude of the gravitational force, and the direction of the force on the particle is towards the center of the shell. Thus, for the thin shell, it is as if all the mass were located at the center of the shell. This is only true if the particle is <span><strong>outside the shell</strong></span>. If the particle is <span><strong>inside the shell</strong></span>, the net force on the particle is zero! We note that this simple result is only true in the special case of the inverse square law force, which is the case for the gravitational and electrostatic forces.</p>
+<p>The above result for the thin shell enables us to find the gravitational force between a point particle and any spherically symmetric object, since a spherically symmetric object can be divided up into thin shells. We will only consider one example in this class: the gravitational force between a point particle and a solid sphere of uniform density.<br />
+<br />
+A solid sphere can be divided up into thin shells. If particle of mass <span class="math inline">\(m\)</span> is located outside the sphere, the magnitude of the gravitational force it feels due to the sphere is just</p>
+<p><span class="math display">\[F = G {{Mm} \over r^2}\]</span></p>
+<p>where M is the mass of the sphere, and <span class="math inline">\(r\)</span> is the distance the particle is from the center of the sphere. Note that the radius of the sphere does not enter into the formula (as long as the point particle is outside the sphere).</p>
+<p>We can use this nice result to determine the acceleration due to gravity at the surface of a planet. Let <span class="math inline">\(M\)</span> be the mass of a planet, and <span class="math inline">\(R\)</span> its radius. Let a particle, of mass <span class="math inline">\(m\)</span>, be located a distance <span class="math inline">\(h\)</span> above the surface of the planet. The magnitude of the gravitational force between the point object and the planet is</p>
+<p><span class="math display">\[F = G {{Mm} \over {(R+h)^2}}\]</span></p>
+<p>If <span class="math inline">\(h &lt;&lt;&lt; R\)</span> the force is approximately</p>
+<p><span class="math display">\[F \approx G {{Mm} \over {R^2}}\]</span></p>
+<p>Since the weight of the object is the force due to gravity, <span class="math inline">\(mg\)</span>, we have:</p>
+<p><span class="math display">\[mg \approx G {{Mm} \over {R^2}}\]</span></p>
+<p>Actually, the <span class="math inline">\(m\)</span> on the left is the inertial mass, and the <span class="math inline">\(m\)</span> on the right is the gravitational mass. Since they are equivalent they cancel and all objects have the same acceleration <span class="math inline">\(g\)</span>:</p>
+<p><span class="math display">\[g \approx G {{M} \over {R^2}}\]</span></p>
+<p>where <span class="math inline">\(M\)</span> is the mass and <span class="math inline">\(R\)</span> is the radius of the planet. It is easy to measure <span class="math inline">\(g\)</span>, with the result on earth being around <span class="math inline">\(9.8\)</span> m/s<span class="math inline">\(^2\)</span>. The radius of the earth was known from ancient times, and is <span class="math inline">\(R \approx 6.37 \times 10^6\)</span>m. When Cavandish accurately measured <span class="math inline">\(G\)</span>, he was also measuring the mass of the earth! By observing the motion of moons and planets, astonomers can determine their masses using Newton’s law of gravitation.<br />
+</p>
+<p><strong>Gravitational Potential Energy</strong></p>
+<p>For our final topic on universal gravitation, we want to derive an expression for the potential energy for the gravitational force. Last quarter (Phy131) we derived the expression: <span class="math inline">\(P.E. = mgy\)</span>. This was the case if the force of gravity is constant, which is only valid if one is close to the surface of a planet. Here we will handle the situation in general, and let the particles be far apart.</p>
+<p>Let’s start, as physicists often do, with the simplest case: two small "point" particles. For example, two small marbles. Let one have a mass <span class="math inline">\(m_1\)</span> and the other a mass of <span class="math inline">\(m_2\)</span>. Let particle <span class="math inline">\(m_2\)</span> be fixed in space, and not be able to move. We want to calculate the work done by the force of gravity if the particle <span class="math inline">\(m_1\)</span> is moved from one position to another. Remember that work is the component of force in the direction of path.</p>
+<p>Suppose <span class="math inline">\(m_1\)</span> is moved in a circular path with constant radius, say <span class="math inline">\(r_i\)</span>. Since the force of gravity is outward from mass <span class="math inline">\(m_2\)</span>, this path is perpendicular to the direction of the force. Thus, the force of gravity does no work in this case. The force of gravity only does work on <span class="math inline">\(m_1\)</span> if <span class="math inline">\(m_1\)</span> is moved away from <span class="math inline">\(m_2\)</span>. Let’s calculate the work that the force of gravity does on <span class="math inline">\(m_1\)</span> when it is moved <span><strong>radially</strong></span> away from <span class="math inline">\(m_2\)</span>. Suppose it (<span class="math inline">\(m_1\)</span>) starts at a distance <span class="math inline">\(r_i\)</span> and is moved to a distance <span class="math inline">\(r_f\)</span>, where <span class="math inline">\(r_i &lt; r_f\)</span>. At any position, the force of gravity on <span class="math inline">\(m_1\)</span> is:</p>
+<p><span class="math display">\[|\vec{F}_{12}| = G {{m_1 m_2} \over r^2}\]</span></p>
+<p>and is directed towards <span class="math inline">\(m_2\)</span>. Work, <span class="math inline">\(W\)</span>, is force times distance. In this case, the force changes with position, so we must integrate <span class="math inline">\(W = \int \vec{F} \cdot d\vec{r}\)</span>. In our case, <span class="math inline">\(\vec{F}\)</span> is exactly opposite to <span class="math inline">\(\Delta \vec{r}\)</span>, so we have:</p>
+<p><span class="math display">\[W_{r_i \rightarrow r_f} = \int_{r_i}^{r_f} -G {{m_1 m_2} \over r^2} dr\]</span></p>
+<p>where the minus sign is because <span class="math inline">\(\vec{F}\)</span> points opposite to the direction that <span class="math inline">\(m_1\)</span> is moved. Evaluation of the integral gives:</p>
+<p><span class="math display">\[W_{r_i \rightarrow r_f} = G {{m_1 m_2} \over {r_f}} - G {{m_1 m_2} \over {r_i}}\]</span></p>
+<p>Note that since <span class="math inline">\(r_i &lt; r_f\)</span>, gravity does negative work in this case. If <span class="math inline">\(m_1\)</span> were to go from <span class="math inline">\(r_f \rightarrow r_i\)</span> (further away to closer) then gravity would do positive work on <span class="math inline">\(m_1\)</span>. Let’s determine a possible form for the potential energy by using the work-energy theorum.</p>
+<p>The work-energy theorum states that the net work done equals the change in K.E. Let the particle of mass <span class="math inline">\(m_1\)</span> have an initial speed of <span class="math inline">\(v_i\)</span> directed away from <span class="math inline">\(m_2\)</span>, and let the speed when it reaches <span class="math inline">\(r_f\)</span> be <span class="math inline">\(v_f\)</span>. Then from the work-energy theorum:</p>
+<p><span class="math display">\[G {{m_1 m_2} \over {r_f}} - G {{m_1 m_2} \over {r_i}} = 
+              {{m_1 v_f^2} \over 2} - {{m_1 v_i^2} \over 2}\]</span></p>
+<p>rearrainging terms, we have</p>
+<p><span class="math display">\[{{m_1 v_i^2} \over 2} - G {{m_1 m_2} \over {r_i}} = 
+              {{m_1 v_f^2} \over 2} - G {{m_1 m_2} \over r_f}\]</span></p>
+<p>Note that the left side of the above equation only contains <span class="math inline">\(r_i\)</span> and <span class="math inline">\(v_i\)</span>, and that the right side only contains <span class="math inline">\(r_f\)</span> and <span class="math inline">\(v_f\)</span>. Since <span class="math inline">\(r_f\)</span> is arbitrary, we see that as particle <span class="math inline">\(m_1\)</span> moves under the influence of the force of gravity from <span class="math inline">\(m_2\)</span> that</p>
+<p><span class="math display">\[{{m_1 v^2} \over 2} - G {{m_1 m_2} \over {r}} = constant\]</span></p>
+<p>where <span class="math inline">\(r\)</span> is the distance that particle "1" is away from particle "2". The first term on the left is recognized as the kinetic energy of particle "1". The second term only depends on position and has units of energy, and is thus interpreted as the potential energy function, <span class="math inline">\(U(r)\)</span>. The above statement is one of mechanical energy conservation, and the potential energy function for the gravitational force can be taken as</p>
+<p><span class="math display">\[U(r) = -G {{m_1 m_2} \over r}\]</span></p>
+<p>Some comments on <span class="math inline">\(U(r)\)</span>:<br />
+. <span class="math inline">\(U(r)\)</span> is the potential energy function for two point particles. If we have more than 2 particles, then we have use the above formula and sum over all the pairs of particles. If the objects are solid and have finite size, then one needs to integrate over the volume (or volumes) of the objects. We will only do simple cases in this class.<br />
+. The potential energy function is not absolute. One can always add a constant value to <span class="math inline">\(U(r)\)</span>, since only the difference <span class="math inline">\(U(r_f) - U(r_i)\)</span> is important. For the form <span class="math inline">\(U(r) = -G m_1 m_2 / r\)</span> we have chosen as a reference zero potential the point(s) at <span class="math inline">\(r = \infty\)</span>: <span class="math inline">\(U(\infty) \equiv 0\)</span>.<br />
+. If <span class="math inline">\(m_1\)</span> is "let go" at a distance <span class="math inline">\(r_i\)</span> away from <span class="math inline">\(m_2\)</span>, it will move towards it, since the force of gravity is attractive. Thus, points closer to <span class="math inline">\(m_2\)</span> will be at "lower" potential energy. Since <span class="math inline">\(U(\infty) = 0\)</span>, values of <span class="math inline">\(r&lt;\infty\)</span> will have negative potential energy. This is the reason for the minus sign in the expression. It is basically because the gravitational force is attractive.<br />
+. <span class="math inline">\(U(r)\)</span> is a <span><strong>scalar</strong></span>. There is no direction to potential energy. There is a direction to force.<br />
+. Notice that <span class="math inline">\(U(r) \propto 1/r\)</span>, whereas the force <span class="math inline">\(F \propto 1/r^2\)</span>. In phy131 we discussed how force and potential are related, one is the derivative of the other. In our case, <span class="math inline">\(F_r = - dU/dr\)</span>. Check it out, it works.<br />
+</p>
+<p><br />
+As an example of the graviational potential energy of a small "point" object and an extended object the gravitational potential energy between a thin ring of mass <span class="math inline">\(M\)</span> and radius <span class="math inline">\(R\)</span> and a small object of mass <span class="math inline">\(m\)</span> located on the axis of the ring a distance <span class="math inline">\(x\)</span> from it’s center.</p>
+<p>To solve the problem, we divide the ring up into small little pieces as we did in finding the force between a "point" object and a ring. Let the small piece of ring contain an amount of mass equal to <span class="math inline">\(\Delta M\)</span>. The gravitational potential energy, <span class="math inline">\(\Delta U\)</span>, between the "point" object of mass <span class="math inline">\(m\)</span> and the small piece of the ring is</p>
+<p><img src="fig1321c.png" style="width:14cm" alt="image" /></p>
+<p><span class="math display">\[\Delta U = - {{Gm (\Delta M)} \over {\sqrt{x^2+R^2}}}\]</span></p>
+<p>The factor <span class="math inline">\(\sqrt{x^2+R^2}\)</span> is the distance from <span class="math inline">\(m\)</span> to the ring segment (see the figure). You might wonder if the sin or cos of an angle should enter in the formula as it did with the force between a "point" object on the axis of a thin ring. Potential energy is a scalar. There is no direction to <span class="math inline">\(\Delta U\)</span>. Only the distance between <span class="math inline">\(m\)</span> and <span class="math inline">\(\Delta M\)</span> matters, a nice feature of potential energy.</p>
+<p>Now we can sum up the <span class="math inline">\(\Delta U\)</span> contributions from every piece of the ring.</p>
+<p><span class="math display">\[\begin{aligned}
+  U &amp; = &amp; \sum \Delta U \\
+    &amp; = &amp; -\sum {{Gm (\Delta M)} \over {\sqrt{x^2+R^2}}}\\
+    &amp; = &amp; - {{Gm} \over {\sqrt{x^2+R^2}}} \sum (\Delta M) \\
+  U &amp; = &amp; - {{GmM} \over {\sqrt{x^2+R^2}}}\end{aligned}\]</span></p>
+<p>Since the distance from the "point" object to every piece of the ring is the same, <span class="math inline">\(\sqrt{x^2+R^2}\)</span>, this term can be brought out of the sum. The sum consists of adding up the mass of each piece of the thin ring, which adds up to <span class="math inline">\(M\)</span>. The result is nice and simple.</p>
+<p>Note that this expression uses as a reference for zero potential energy the configuration for the ring and object to be infinitely far apart. That is, <span class="math inline">\(U=0\)</span> when <span class="math inline">\(x=\infty\)</span>.</p>
+<p>From this expression for <span class="math inline">\(U(x,0,0)\)</span>, one can obtain the force between the "point" mass and the thin ring using <span class="math inline">\(F_x=-\partial U/\partial x\)</span>.</p>
+<p><span class="math display">\[F_x = -{{\partial U} \over {\partial x}} = -G {{mMx} \over {(x^2 + a^2)^{3/2}}}\]</span></p>
+<p>in agreement with the result we obtained before for the force between a "point" object and a thin ring.<br />
+</p>
+<p><br />
+We are ready to solve a classic problem: the gravitational potential energy between a small "point" object of mass <span class="math inline">\(m\)</span> and a thin spherical shell of mass <span class="math inline">\(M\)</span>. Let the radius of the thin shell be <span class="math inline">\(R\)</span>, and let the small object be located a distance <span class="math inline">\(r&gt;R\)</span> from the center of the shell.</p>
+<p>We divide the spherical shell up into many thin rings. Consider a ring that is at an angle <span class="math inline">\(\theta\)</span> from the axis, and subtends an angle <span class="math inline">\(\Delta \theta\)</span> as shown in the figure. The amount of mass <span class="math inline">\(\Delta M\)</span> in the ring is equal to the total mass <span class="math inline">\(M\)</span> of the shell times the ratio of the rings area to that of the shell:</p>
+<p><span class="math display">\[\Delta M = M {{2 \pi R sin(\theta) R (\Delta \theta)} \over {4 \pi R^2}}=
+             M {{sin(\theta) (\Delta \theta)} \over {2}}\]</span></p>
+<p>The distance from a point on the ring and the object <span class="math inline">\(m\)</span> is just <span class="math inline">\(d=\sqrt{r^2+R^2-2rRcos(\theta)}\)</span> using the law of cosines. Thus, the gravitational potential energy <span class="math inline">\(\Delta U\)</span> between the "point" object and the ring is</p>
+<p><span class="math display">\[\Delta U =  -Gm {{M \; sin(\theta) (\Delta \theta)/2} \over {\sqrt{r^2+R^2-2rRcos(\theta)}}}\]</span></p>
+<p>All the thin ring segments are added up by integrating over <span class="math inline">\(\theta\)</span> from <span class="math inline">\(\theta = 0\)</span> to <span class="math inline">\(\theta = \pi\)</span>:</p>
+<p><span class="math display">\[U =  -GmM \int_0^\pi {{sin(\theta) \; d\theta} \over {2\sqrt{r^2+R^2-2rRcos(\theta)}}}\]</span></p>
+<p>The integral is solvable with the substitution <span class="math inline">\(y=r^2+R^2-2rRcos(\theta)\)</span>. With this substitution we have <span class="math inline">\(dy=2rRsin(\theta) d\theta\)</span>, and the integral becomes</p>
+<p><span class="math display">\[U = -{{GMm} \over {4rR}} \int_{(r-R)^2}^{(r+R)^2} {{dy} \over \sqrt{y}}\]</span></p>
+<p>Solving the integral yields:</p>
+<p><span class="math display">\[\begin{aligned}
+  U &amp; = &amp; -{{GMm} \over {2rR}}   \sqrt{y} |_{(r-R)^2}^{(r+R)^2} \\
+    &amp; = &amp; -{{GMm} \over {2rR}}  [(r+R) - (r-R)] \\
+  U &amp; = &amp; -{{GMm} \over {r}} \\\end{aligned}\]</span></p>
+<p>for <span class="math inline">\(r&gt;R\)</span>. WOW!! The gravitational potential (and also force) between a spherically symmetric object of mass <span class="math inline">\(M\)</span> and a small "point" object (outside the spherically symmetric mass) is the same as if all the mass <span class="math inline">\(M\)</span> were located at the center of the spherical object.</p>
+<p>If <span class="math inline">\(r&lt;R\)</span> for the thin shell, then the lower limit of the integral becomes <span class="math inline">\((R-r)^2\)</span>. In this case, the gravitational potential equals</p>
+<p><span class="math display">\[U = -{{GMm} \over {R}}\]</span></p>
+<p>for all <span class="math inline">\(r\)</span>. That is, the potential inside the spherical shell is a constant and equal to the value at the surface of the shell. Since the potential is constant, the small "point" mass <span class="math inline">\(m\)</span> will feel no force inside the thin spherical shell.<br />
+In lecture we will do a number examples in which we solve for and use the potential energy function <span class="math inline">\(U\)</span>.</p>
+</body>
+</html>

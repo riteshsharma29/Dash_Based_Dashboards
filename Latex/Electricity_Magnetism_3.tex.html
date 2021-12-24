@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Electricity_Magnetism_3</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="center">
+<p><span><strong>Notes on the Magnetic Interaction</strong></span></p>
+</div>
+<p>In the last sections, the main interaction we considered was the electrostatic: Coulomb’s Law for point charges and the principle of superposition. Why did we call Coulomb’s Law the electro<span><strong>static</strong></span> force? This is because the force does not <span><strong>depend</strong></span> on the particle’s velocity. Whether the charged particles are moving or not the force is the same: <span class="math inline">\(k q_1 q_2/r^2\)</span>.</p>
+<p>In this section, we shall see that if the charged particles are both moving, then there is an additional force between them. We could call this force the "velocity dependent part of the electric force", but this is too wordy. The name we give it is the <span><strong>magnetic force</strong></span>, and together with the electrostatic force, the complete force is called the <span><strong>electromagnetic interaction</strong></span>.</p>
+<p>We first present some properties of permanent magnetics, then develop the properties of the electromagnetic interaction.</p>
+<p><strong>Permanent Magnets</strong></p>
+<p>The magnetic force was discovered long before it was realized that its source was moving charges. This is because permanent magnets exert forces on each other even though the magnet is not moving nor has any charge on it. We list some properties of permanent magnets below:<br />
+. Magnets always come with two "poles". No one has yet to find a magnet with only one pole, a magnetic monopole. Whenever there is a north pole, there always is a south pole.<br />
+. Like poles repel, and opposite poles attract.<br />
+. If a magnet is cut in half, then two new magnets are formed. That is if one starts with one North and South pole, and cut it in half, then one gets two smaller magnets each with their own North and South pole pair.<br />
+You might wonder what would happen if you kept dividing a magnet in half over and over again. Eventually you get to a single atom. Atoms themselves are little magnets with a north and south pole. What about the constituents of the atom: the protons, neutrons and electrons? The proton, neutron and electron are each little magnets as well. This is somewhat perplexing, since as far as we know the electron has very little, if any, size. The subject of quantum mechanics is needed to understand the magnetic properties of these particles. In this class we won’t get that far, but will cover the developments of electromagnetism up to around 1860. We begin with one of the most important discoveries in science.</p>
+<p><strong>Sources of Magnetism</strong></p>
+<p>Many discoveries in science are by accident, and in 1820 a very important accidental discovery changed the way the world was to be. The place was Hans Oerstead’s classroom. Oerstead produced a large current in a wire that was in the vicinity of a magnetic compass. When the current flowed in the wire, he noticed that the magnetic compass needle moved! This was the first evidence that electric currents produced magnetic fields. In summary, he discovered that <span><strong>electric currents produce magnetic fields</strong></span>, or stated in microscopic terms: <span><strong>moving charge produces magnetic fields</strong></span>.</p>
+<p>One cannot understate the importance of this discovery. Oerstead’s discovery showed that two "supposedly different" forces were somehow related to each other. Over the next 40 years scientists sorted out the connections and unification of these two forces: electric and magnetic. It was the beginning of a quest to see if all the fundamental forces of nature were somehow related to each other. From 1960-1980, the "weak" interaction was unified with the electric and magnetic. Current experiments are examining if the strong and/or graviational interactions are also part of the electromagnetic-weak interaction. In addition to these philosophical implications, Oerstead’s discovery eventually lead to many practical applications. Before we can understand the applications, we need to understand the "physics" of the magnetic field produced by an electric current.</p>
+<p><br />
+We will initially define the magnetic field <span class="math inline">\(\vec{B}\)</span> at a point "P" in space in terms of how it affects a little magnetic probe when the probe is located at "P". If we place our little magnetic probe at "P", it will allign itself along the direction of the magnetic field. The strength of the magnetic field is related to how strong the probe alligns itself with the field. In lecture we will use the "magnaprobe" to determine the magnetic field from different sources.</p>
+<p>Later we will define the magnetic field in terms of the force it produces on a small "point" particle, but for now we will define it in terms of its effect on a small magnetic probe.<br />
+<br />
+In lecture we will connect a power supply to a wire and produce an electrical current in the wire. Then, using our little "magnaprobe" we will see that the magnetic field produced by this "current carrying wire" <span><em>goes around the wire</em></span>. This might seem a bit strange, but lets try to understand why it is so. As physicists, we first start with the simplest situation and try and determine what quantites the magnetic field could depend upon.</p>
+<p>Let’s first consider a small piece of the wire and pose the following question: What is the magnetic field <span class="math inline">\(\vec{\Delta B}\)</span> at a point "P" located a position <span class="math inline">\(\vec{r}\)</span> from the small segment of the wire <span class="math inline">\(\vec{\Delta l}\)</span> that carries a current <span class="math inline">\(I\)</span>? The vector <span class="math inline">\(\vec{r}\)</span> is a vector from the small wire segment to the point "P" (where we want to know the magnetic field <span class="math inline">\(\vec{\Delta B}\)</span>).</p>
+<p>Let the current in the wire be <span class="math inline">\(I\)</span>, and the length of the wire be <span class="math inline">\(\Delta l\)</span>. The direction of the current will be important, so we will designate the direction of the current by the direction of <span class="math inline">\(\Delta l\)</span>. This can be done by making <span class="math inline">\(\Delta l\)</span> a vector: <span class="math inline">\(\vec{\Delta l}\)</span>.</p>
+<p>What can the magnitude of the magnetic field <span class="math inline">\(|\vec{\Delta B}|\)</span> depend on? The only quantities available are: <span class="math inline">\(I\)</span>, <span class="math inline">\(\vec{r}\)</span> and <span class="math inline">\(\vec{\Delta l}\)</span>. How could the magnitude depend on them: A good guess is the following: if the current <span class="math inline">\(I\)</span> is doubled, then the magnitude of the magnetic field should double. If the length of the small line segment is doubled, then so should the magnitude of <span class="math inline">\(\vec{\Delta B}\)</span>:</p>
+<p><span class="math display">\[|\vec{\Delta B}| \propto I |\vec{\Delta l}|\]</span></p>
+<p>How might the magnitude of <span class="math inline">\(\vec{\Delta B}\)</span> depend on the distance from the small wire segment? It probably decreases with distance, but does it fall off as <span class="math inline">\(1/r\)</span> or <span class="math inline">\(1/r^2\)</span> or some other power? We are tempted to be guided by Newtonian gravity and Coulomb’s law and suppose that the inverse square law applys here also. So a good guess would be</p>
+<p><span class="math display">\[|\vec{\Delta B}| \propto {{I |\vec{\Delta l}|} \over r^2}\]</span></p>
+<p>where <span class="math inline">\(r \equiv |\vec{r}|\)</span>. I should mention that this equation has been tested by experiment, so our guessing was good.</p>
+<p>Now we need to consider the direction of the "little" magnetic field <span class="math inline">\(\vec{\Delta B}\)</span>. You might guess that it points radially away from (or towards) the wire segment, like the electrostatic force. The direction of <span class="math inline">\(\vec{r}\)</span> should have some effect on the direction of the magnetic field. However, the source for the magnetic field is different than the source for the electrostatic or gravitational forces. In addition to <span class="math inline">\(\vec{r}\)</span>, another vector enters the picture. The <span><strong>source</strong></span> of magnetism itself <span><strong>has a direction</strong></span>: the direction of the current in the wire. If there is no current (i.e. no direction) there is no magnetic field. Remember that the magnetic field is created by moving charges (current). So the direction of <span class="math inline">\(\vec{\Delta l}\)</span> must play a role in determining the direction of <span class="math inline">\(\vec{\Delta B}\)</span>.</p>
+<p>There are three vectors involved in determining the magnetic field produced by a small piece of current carrying wire: <span class="math inline">\(\vec{\Delta l}\)</span> which points in the direction of the current, <span class="math inline">\(\vec{r}\)</span> the vector from the wire segment to the location, and <span class="math inline">\(\vec{\Delta B}\)</span> the magnetic field at the location in question. The only mathematical operation (with the correct mathematical properties) that combines two vectors to produce a third vector is the <span><em>vector cross product</em></span>. Consequently, the only acceptable relationship is:</p>
+<p><span class="math display">\[\vec{\Delta B} \propto {I \over r^2} \; (\vec{\Delta l} \times \hat{r})\]</span></p>
+<p>where <span class="math inline">\(\hat{r} \equiv \vec{r}/r\)</span>. This is a fairly complicated equation. We restate what the terms mean: <span class="math inline">\(\vec{\Delta B}\)</span> is the magnetic field at the point "P" produced by a small piece of wire which has a current <span class="math inline">\(I\)</span>. <span class="math inline">\(\vec{\Delta l}\)</span> is a vector whose magnitude is the length of the "small piece of wire" and whose direction points in the direction of the current. <span class="math inline">\(\vec{r}\)</span> is a vector from the piece of wire to the point "P".</p>
+<p>Note that because of the cross product, the direction of <span class="math inline">\(\vec{\Delta B}\)</span> will be perpendicular to both <span class="math inline">\(\vec{\Delta l}\)</span> and <span class="math inline">\(\vec{r}\)</span>. Thus, the magnetic field will circulate a straight wire, a phenomena that was demonstrated in lecture.</p>
+<p>We can replace the proportionality sign with an equal sign and a constant:</p>
+<p><span class="math display">\[\vec{\Delta B} = {\mu_0 \over {4 \pi}} {I \over r^2} \; (\vec{\Delta l} \times \hat{r})\]</span></p>
+<p>where <span class="math inline">\(\mu_0\)</span> is a constant equal to <span class="math inline">\(4 \pi \times 10^{-7}\)</span> Tm/A. We will discuss units later on in the quarter. For now accept the fact that <span class="math inline">\(\mu_0 = 4 \pi \times 10^{-7}\)</span> Tm/A. The "T" stands for Tesla, which is a unit for magnetic field. We need to determine what the units for the magnetic field are, which we will do shortly when we examine the force on a particle possessing charge.</p>
+<p>If you don’t like using the unit vector <span class="math inline">\(\hat{r}\)</span>, you can write the above equation in terms of <span class="math inline">\(\vec{r}\)</span>, since <span class="math inline">\(\hat{r} = \vec{r}/r\)</span>. In terms of <span class="math inline">\(\vec{r}\)</span> we have</p>
+<p><span class="math display">\[\vec{\Delta B} = {\mu_0 \over {4 \pi}} {I \over r^3} \; (\vec{\Delta l} \times \vec{r})\]</span></p>
+<p>Taking the magnitude of the right side of the equation above, we obtain an expression for the magnitude of <span class="math inline">\(\vec{\Delta B}\)</span>:</p>
+<p><span class="math display">\[|\vec{\Delta B}| = {\mu_0 \over {4 \pi}} {{I |\vec{\Delta l}| sin(\theta)} \over r^2}\]</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the angle between <span class="math inline">\(\vec{\Delta l}\)</span> and <span class="math inline">\(\vec{r}\)</span>. Since the sin function is maximized when <span class="math inline">\(\theta = 90^\circ\)</span>, the magnetic field is maximized at positions perpendicular to the wire segment. Since <span class="math inline">\(sin(0) = sin(180^\circ) = 0\)</span> the wire segment does not produce any magnetic field at points located on its axis. The above formula is called the "Biot-Savart" Law in honor of the scientists who discovered it.</p>
+<p>The Biot-Savart Law relates the magnetic field at a point in space produced by a small segment of a wire which carries a current. What if there are more than one small segments of wire which carry current (there always is). Then, to find the net magnetic field <span class="math inline">\(\vec{B}\)</span> at a point in space we might suspect that one would just add all the vectors <span class="math inline">\(\vec{\Delta B}_i\)</span> from each <span class="math inline">\(i\)</span>’th wire segment. This is the <span><strong>principle of superposition</strong></span> applied to the magnetic field where the sources are segments of wire. Although we hope the superposition principle is valid for the "current sources" of the magnetic field, the principle needs to be verified by experiment. Experiments show that it is. Thus, now we have a method of calculating the magnetic field produced by any finite wire which has an electrical current flowing through it:<br />
+. Divide the wire up into small segments, <span class="math inline">\(\vec{\Delta l}_i\)</span>. The segments are labeled by the index <span class="math inline">\(i\)</span>.<br />
+. Use the Biot-Savart law to determine the magnetic field <span class="math inline">\(\vec{\Delta B}_i\)</span> at the point "P" from each of the segments.<br />
+. Add up all the <span class="math inline">\(\vec{\Delta B}_i\)</span> to find the net magnetic field <span class="math inline">\(\vec{B}\)</span> at the point "P" due to the whole wire (i.e. apply the principle of superposition). In adding up the contributions from all the segments, we take the limit as the segment length <span class="math inline">\(|\vec{\Delta l}|\)</span> goes to zero. This will result in an integral which we need to evaluate.<br />
+</p>
+<p>Note that the above method is the same procedure we used for the electric field: Divide the object into small point sources, determine <span class="math inline">\(\vec{E}\)</span> from each point source in the object, and add up the contributions (i.e. integrate) over the whole object. We apply the above procedure to two common current distributions: a straight length of wire of finite size, and a circular loop of wire.<br />
+</p>
+<p><br />
+Consider a wire segment that lies on the y-axis. The lower end starts at <span class="math inline">\(y = -b\)</span>, and the upper end is at <span class="math inline">\(y=a\)</span>. Suppose there is a current <span class="math inline">\(I\)</span> that flows in the wire. Lets find the magnetic field at a point "P" on the x-axis located a distance <span class="math inline">\(d\)</span> from the origin (d,0).</p>
+<p>We start by dividing up the wire in to small segments of length <span class="math inline">\(\Delta y\)</span>. The <span class="math inline">\(i\)</span>’th segment will be located at <span class="math inline">\(y_i=i*\Delta y\)</span> where <span class="math inline">\(i\)</span> goes from <span class="math inline">\(-b/(\Delta y)\)</span> to <span class="math inline">\(a/(\Delta y)\)</span>. The distance from the <span class="math inline">\(i\)</span>’th segment to the point "P" is <span class="math inline">\(r = \sqrt{y_i^2 + d^2}\)</span>. The Biot-Savart Law gives for the magnitude of the magnetic field <span class="math inline">\(\vec{\Delta B}_i\)</span>:</p>
+<p><span class="math display">\[|\vec{\Delta B}_i| = {{\mu_0 I} \over {4 \pi}} {{\Delta y \; sin(\theta)} \over r^2}\]</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the angle between the direction of the wire segment and the point "P". In terms of the geometry, <span class="math inline">\(sin(\theta) = d/r\)</span>.:</p>
+<p><span class="math display">\[|\vec{\Delta B}_i| = {{\mu_0 I} \over {4 \pi}} {{\Delta y \; d} \over r^3}\]</span></p>
+<p>In terms of the <span class="math inline">\(y_i\)</span>, we have</p>
+<p><span class="math display">\[|\vec{\Delta B}_i| = {{\mu_0 I} \over {4 \pi}} {{\Delta y \; d} \over {(y_i^2 + d^2)^{3/2}}}\]</span></p>
+<p>Note: the direction of all the <span class="math inline">\(\vec{\Delta B}_i\)</span> are in the negative z direction, i.e. along (<span class="math inline">\(- \hat{k}\)</span>). Adding up all the <span class="math inline">\(\vec{\Delta B}_i\)</span> and taking the limit as <span class="math inline">\(\Delta y \rightarrow 0\)</span> we have</p>
+<p><span class="math display">\[|\vec{B}| = {{\mu_0 I d} \over {4 \pi}} \int_{-b}^a{{dy} \over {(y^2 + d^2)^{3/2}}}\]</span></p>
+<p>This integral can be solved using the trig substitution <span class="math inline">\(y = d \; tan(\phi)\)</span>. With this substitution, <span class="math inline">\(dy = d \; sec^2 \phi \; d \phi\)</span>. This substitution also gives <span class="math inline">\(y^2 + d^2 = d^2 sec^2 \phi\)</span>. Upon substitution, the integral is just an integral over <span class="math inline">\(cos(\theta)\)</span>:</p>
+<p><span class="math display">\[|\vec{B}| = {{\mu_0 I} \over {4 \pi d}} \int_{-\phi_b}^{\phi_a} cos\phi \; d \phi\]</span></p>
+<p>Solving the integral and taking the limits yields:</p>
+<p><span class="math display">\[|\vec{B}| = {{\mu_0 I} \over {4 \pi d}} (sin(\phi_a) + sin(\phi_b))\]</span></p>
+<p>In terms of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> the expression becomes</p>
+<p><span class="math display">\[|\vec{B}| = {{\mu_0 I} \over {4 \pi d}} ( {a \over {\sqrt{a^2 + d^2}}} +   
+                                    {b \over {\sqrt{b^2 + d^2}}} )\]</span></p>
+<p>If the wire is of infinite length, the result takes on a simple form. In this case, <span class="math inline">\(\phi_a\)</span> and <span class="math inline">\(\phi_b\)</span> are both <span class="math inline">\(90^\circ\)</span>. Since <span class="math inline">\(sin(90^\circ) = 1\)</span>, we have</p>
+<p><span class="math display">\[|\vec{B}| = {{\mu_0 I} \over {2 \pi d}}\]</span></p>
+<p>Here we see that the strength of the magnetic field decreases as the inverse of the perpendicular distance <span class="math inline">\(d\)</span> to the wire. This <span class="math inline">\(1/d\)</span> decrease was also the case for the magnitude of the electric field produced by an infinitely long uniformly charged line (or rod) of charge. In infinitly long source essentially removes one dimension from the source distribution geometry. Since the circumference of a circle increases with radius to the first power, the force fields decrease with <span class="math inline">\(1/d\)</span>. We will use this property of the magnetic field to reformulate the Biot-Savart Law via closed path line integrals: Ampere’s Law.<br />
+<br />
+A common wire shape is a circular loop. Let’s use the Biot-Savart Law to find the magnetic field on the axis of a circular loop of wire that has a current <span class="math inline">\(I\)</span> flowing through it. Let the radius of the loop be <span class="math inline">\(R\)</span>, the center of the loop be at the origin, and the loop lie in the y-x plane. The x-axis is thus the axis through the center of the loop Suppose the point "P" is located on the axis of the loop (i.e. the x-axis) a distance <span class="math inline">\(x\)</span> from its center.</p>
+<p>We use the same method as before, we first "chop" up the wire into small wire segments of equal length <span class="math inline">\(|\vec{\Delta l}|\)</span>. The magnitude of the magnetic field <span class="math inline">\(|\vec{\Delta B}|\)</span> from any of the small segments of wire is</p>
+<p><span class="math display">\[|\vec{\Delta B}| = {{\mu_0 I} \over {4 \pi}} \; {{|\vec{\Delta l}|} \over
+                               {x^2 + R^2}}\]</span></p>
+<p>The direction of <span class="math inline">\(\vec{\Delta B}\)</span> is not along the x-axis, but rather at an angle <span class="math inline">\(\phi\)</span> with respect to the axis. After integrating around the circular loop, all components of <span class="math inline">\(\vec{\Delta B}\)</span> perpendicular to the x-axis cancel out. Thus, the only component that "survives" is the one along the x-axis <span class="math inline">\(\Delta B_x\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  \Delta B_x &amp; = &amp; {{\mu_0 I} \over {4 \pi}} \; {{|\vec{\Delta l}|} \over
+                               {x^2 + R^2}} \; cos(\phi)\\
+          &amp; = &amp; {{\mu_0 I} \over {4 \pi}} \; {{|\vec{\Delta l}|} \over
+                               {x^2 + R^2}} \; {R \over {\sqrt{x^2 + R^2}}}\\\end{aligned}\]</span></p>
+<p>When the <span class="math inline">\(\Delta B_x\)</span> are summed (or integrated) <span class="math inline">\(x\)</span> and <span class="math inline">\(R\)</span> do not change. Thus, one only needs to sum up the <span class="math inline">\(|\vec{\Delta l}|\)</span> which is the circumference of the loop: <span class="math inline">\(2 \pi R\)</span>:</p>
+<p><span class="math display">\[\Delta B_x  = {{\mu_0 I} \over {4 \pi}} \; {{2 \pi R} \over
+                               {x^2 + R^2}} \; {R \over {\sqrt{x^2 + R^2}}}\]</span></p>
+<p>Collecting terms we have:</p>
+<p><span class="math display">\[B_x = {{\mu_0 I R^2} \over {2 (x^2 + R^2)^{3/2}}}\]</span></p>
+<p>You will test the <span class="math inline">\(x\)</span> dependence of this equation in your laboratory class. If you find it to follow the above formula, you will be demonstrating the validity of the Biot-Savart Law for the current loop.</p>
+<p>To find the magnetic field at the center of the loop, we set <span class="math inline">\(x = 0\)</span>. Thus at the center of a circular loop we have</p>
+<p><span class="math display">\[B_{center} = {{\mu_0 I} \over {2 R}}\]</span></p>
+<p>with the direction perpendicular to the plane of the loop.<br />
+<br />
+Another interesting current distribution is that of a solenoid. A solenoid is essentially wire coiled around a cylinder. We can use the results of the last section to find the magnetic field on the axis of a solenoid. Suppose the solenoid has a radius <span class="math inline">\(R\)</span> and <span class="math inline">\(n\)</span> turns of wire per length. Lets use our previous result to calculate the magnetic field on the axis inside the solenoid. Let the axis of the solenoid lie on the x-axis, and suppose the solenoid starts at <span class="math inline">\(x=-b\)</span> and extends to <span class="math inline">\(x=a\)</span>, and we will calculate the magnetic field at the origin. If the current flows counter-clockwise looking in the "-x" direction, then the magnetic field at the origin will point in the +x direction.</p>
+<p>Consider first the contribution to the magnetic field, <span class="math inline">\(\Delta B_x\)</span>, at the origin due to a small slice of the solenoid located at position <span class="math inline">\(x\)</span> and of thickness <span class="math inline">\(\Delta x\)</span>. The amount of current in the slice of thickness <span class="math inline">\(\Delta x\)</span> is <span class="math inline">\(\Delta I = n \Delta x\)</span>. From the previous section we have:</p>
+<p><span class="math display">\[\Delta B_x = {{\mu_0 R^2 n \; \Delta x} \over {2 (x^2 + R^2)^{3/2}}}\]</span></p>
+<p>To find the net magnetic field at the origin, we need to add up the <span class="math inline">\(\Delta B_x\)</span> from each thin slice of the solenoid. This leads to the integral</p>
+<p><span class="math display">\[B_x = \mu_0 R^2 I n  \int_{-b}^a {{dx} \over {2 (x^2 + R^2)^{3/2}}}\]</span></p>
+<p>We have done this integral before when we calculated the magnetic field produced by a finite straight current carrying wire. The trick was to substitute <span class="math inline">\(x = R tan \phi\)</span>. Then <span class="math inline">\(dx = R sec^2 \phi\)</span>, and <span class="math inline">\((x^2 + R^2) =
+R^2 sec^2 \phi\)</span>. After substitution the integral becomes</p>
+<p><span class="math display">\[B_x = {{\mu_0 I n} \over 2}  \int_{-\phi_b}^{\phi_a} cos \phi \; d \phi\]</span></p>
+<p>Evaluating the integral gives</p>
+<p><span class="math display">\[B_x = {{\mu_0 I n} \over 2} (sin(\phi_a) + sin(\phi_b))\]</span></p>
+<p><span class="math inline">\(B_x\)</span> can be written In terms of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</p>
+<p><span class="math display">\[B_x = {{\mu_0 I n} \over 2} ({a \over {\sqrt{a^2 + R^2}}} + 
+                   {b \over {\sqrt{b^2 + R^2}}})\]</span></p>
+<p>An interesting case is an infinite solenoid, that is when <span class="math inline">\(a \rightarrow \infty\)</span> and <span class="math inline">\(b \rightarrow \infty\)</span>. Then, one obtains</p>
+<p><span class="math display">\[B_x = \mu_0 I n\]</span></p>
+<p>for points on the axis of the infinite solenoid. Note here that the length of the solenoid and hence the total number of turns is infinite, but the number of turns per length, <span class="math inline">\(n\)</span>, is finite.</p>
+<p><strong>Ampere’s Law</strong></p>
+<p>In the last section we discussed the Biot-Savart Law, and applied it to some examples. As discussed, one can use the Biot-Savart law to find the magnetic field at any point in space that is produced by any current configuration. To do this, one would follow the same method we have used: slice up the wires into small segments, determine <span class="math inline">\(\vec{\Delta B_i}\)</span> from each of the segments, take the limit as the segments approach zero and integrate over all the wires. Although this can be a tedious process, computers can help and in principle one could solve any problem involving currents in wires.</p>
+<p>We could continue solving other current set-ups, but it is more interesting to examine if there are any global properties of magnetic fields. We will see that a line (or path) integral of the magnetic field for a closed path yields simple solutions. This result will help us determine magnetic fields for some symmetric wire configurations.</p>
+<p>The magnitude of the magnetic field produced by an infinitely long wire is <span class="math inline">\(B = \mu_0 I/(2 \pi d)\)</span>, where <span class="math inline">\(d\)</span> is the perpendicular distance to the wire. The direction of the magnetic field is circular, around the wire. The denominator, <span class="math inline">\(2 \pi d\)</span>, reminds us of the circumference of a circle. Consider a circle such that the wire passes through its center and whose plane is perpendicular to the wire. If one were to calculate the line integral (or path integral) of <span class="math inline">\(\vec{B} \cdot d \vec{r}\)</span> for a closed path around this circle, one obtains</p>
+<p><span class="math display">\[\oint \vec{B} \cdot d \vec{r} = {{\mu_0 I} \over {2 \pi d}} (2 \pi d)\]</span></p>
+<p>The result is simple since the magnitude of the magnetic field is constant, <span class="math inline">\(B = \mu_0 I/(2 \pi d)\)</span>, and the direction of the magnetic field is parallel to the path. In this special case, the circular path with the wire at the center, the path integral is simply the magnitude of the magnetic field times the path length. Note that the factor <span class="math inline">\(2 \pi d\)</span> cancels, and we are left with</p>
+<p><span class="math display">\[\oint \vec{B} \cdot d \vec{r} = \mu_0 I\]</span></p>
+<p>for a circular path of any size. Since the magnetic field decreases as <span class="math inline">\(1/d\)</span> and the path length increases as <span class="math inline">\(2 \pi d\)</span>, the radius of the circle cancels out. We will show in lecture that this results hold for any path that goes around the infinitely long wire.</p>
+<p>You might be wondering if the direction of the current and/or the direction that the path is traversed in the closed path integral. Yes it does. The convention is that if your right thumb points in the direction of the current (for the infinite wire) the magnetic field circles in the direction of your fingers. Therefore, if the <span><em>fingers of your right hand curl in the direction of the path of the line integral</em></span>, your <span><em>thumb will point in the positive direction for current</em></span>. If the current flows in the opposite direction as your thumb, then the line integral will be negative. That is, the path is going in the opposite direction to <span class="math inline">\(\vec{B}\)</span>.</p>
+<p>What happens if more than infinite wire (carrying current) passes through the closed path? Since the principle of superposition applies to the magnetic field, the closed path line integral will just equal <span class="math inline">\(\mu_0\)</span> times the sum of the currents that pass through the path. Whether the current is + or - is determined by the "right hand rule" described above: If the fingers of your right hand curl in the direction of the path, then your right thumb will point in the direction of positive current.</p>
+<p><span class="math display">\[\oint \vec{B} \cdot d \vec{r} = \mu_0 I_{Net \; through \; path}\]</span></p>
+<p>:<br />
+. The little circle in the middle of the integral sign means that the path integral is closed. For the equation to apply, <span><strong>the line integral must be over a closed path</strong></span>.<br />
+. In lecture we have only justified this equation for straight wires of infinite length. Using vector calculus, it can be shown that this result is valid for any wire configuration as long as the wires (or currents) do not have an open end. That is, if all the wires are closed loops or extent to infinity then the above equation is valid. A counter-example is a discharging parallel plate capacitor. In this case the current starts at one plate and ends at the other. There is a gap in the middle where there is no electrical current (i.e. no charge flow).<br />
+. If the path does not enclose any current, then the closed line integral on the left is zero.<br />
+The equation above is refered to as Ampere’s Law. In lecture we will do some classic examples using Ampere’s law: The infinite solenoid, coaxial cable, and the toroid. In these examples our goal will be to determine the magnetic fields produced by these wire configurations. However, before we can uniquely calculate these magnetic fields, we need one more global property of magnetic fields: what is the surface integral over a closed surface for magnetic fields?</p>
+<p>For the electrostatic field <span class="math inline">\(\vec{E}\)</span> we showed that Coulombs Law resulted in <span class="math inline">\(\oint \oint \vec{E} \cdot \vec{dA} = Q_{enclosed}/\epsilon_0\)</span>. This was because electric fields are produced by a stationary source of charge that eminate from the source and whose magnitude decreases as <span class="math inline">\(1/r^2\)</span>. If there are no stationary sources within the closed surface, then the surface integral equals zero. For the magnetic field, <span><strong>there are no stationary sources</strong></span>. That is, there are no magnetic monopoles. At least until now, none have been discovered. So until one is discovered, we must have</p>
+<p><span class="math display">\[\oint \oint \vec{B} \cdot \vec{dA} = 0\]</span></p>
+<p>for <span><strong>any closed surface</strong></span>! Whereas <span class="math inline">\(\oint \vec{B} \cdot \vec{dr}\)</span> is only true when the current sources have no open ends, the surface integral is valid for any source of magnetic fields.</p>
+<p>We can use the two integral properties of the magnetic field:</p>
+<p><span class="math display">\[\begin{aligned}
+ \oint \vec{B} \cdot d \vec{r} &amp; = &amp; \mu_0 I_{Net \; through \; path}\\
+ \oint \oint \vec{B} \cdot \vec{dA} &amp; = &amp; 0\end{aligned}\]</span></p>
+<p>The first one is valid for current sources with no open ends, and the second is always true. Next I’ll briefly present the results for the magnetic field inside an infinite solenoid and a toroid, with more details given in lecture.<br />
+<br />
+We previously showed, using the Biot-Savart Law, that the magnetic field on the axis of an infinitely long solenoid was <span class="math inline">\(B_x = \mu_0 I n\)</span>, where <span class="math inline">\(n\)</span> equals the number of turns per length. What about the magnetic field at points inside the solenoid but not on the axis? We will use the fact that the solenoid has axial symmetry about its central axis.</p>
+<p>Consider a point located a distance <span class="math inline">\(r\)</span> from the axis of an infinite solenoid. At this point, the magnetic field could have three different components: 1) parallel to the axis of the solenoid (<span class="math inline">\(B_x\)</span>), 2) radially away from the axis (<span class="math inline">\(B_r\)</span>), or 3) circular around the axis (<span class="math inline">\(B_\theta\)</span>). Because of axial symmetry, these components can only depend on <span class="math inline">\(r\)</span> and not on the position along the axis (<span class="math inline">\(x\)</span>) or the angle around the axis (<span class="math inline">\(\theta\)</span>). That is the components can only have an <span class="math inline">\(r\)</span> dependence: <span class="math inline">\(B_x(r)\)</span>, <span class="math inline">\(B_r(r)\)</span> and <span class="math inline">\(B_\theta (r)\)</span>.</p>
+<p>If we choose a closed cylindrical surface of radius <span class="math inline">\(r\)</span>, length <span class="math inline">\(l\)</span> whose axis coincides with the axis of the solenoid, then <span class="math inline">\(\oint \oint \vec{B} \cdot \vec{dA}
+= 2 \pi\)</span>r<span class="math inline">\(l B_r\)</span>. However, this surface integral must be zero. Therefore, <span class="math inline">\(B_r = 0\)</span>. If we choose as a path, a circle of radius <span class="math inline">\(r\)</span> whose axis is on the axis of the solenoid, then <span class="math inline">\(\oint \vec{B} \cdot \vec{dr} = 2 \pi r B_\theta\)</span>. Since there is no current flowing through the path, this line integral must be zero. Thus, <span class="math inline">\(B_\theta\)</span> must be zero. Finally, we choose as a path a rectangle of dimensions <span class="math inline">\(l \times r\)</span> whose side <span class="math inline">\(l\)</span> lies on the axis of the solenoid. Then <span class="math inline">\(\oint \vec{B} \cdot \vec{dr} = \mu_0 I n l - B_r l + 0 + 0\)</span>. Since there is no current flowing through the path this line integral must be zero. Thus, we have <span class="math inline">\(l(\mu_0 I n - B_r) =0\)</span> or <span class="math inline">\(B_r = \mu_0 I n\)</span> in the x-direction. The magnetic field inside an infinite solenoid is constant and equal to <span class="math inline">\(\mu I n\)</span> everywhere inside the solenoid. In lecture we will discuss the magnetic field outside the solenoid.<br />
+<br />
+To make a toroid, one could coil wire around a donut, then take the donut out. Lets consider the magnetic field inside a toroid that has a rectangular cross section. Let the inner radius be <span class="math inline">\(a\)</span> and the outer radius <span class="math inline">\(b\)</span>, and the height of the cross section be <span class="math inline">\(h\)</span>. Suppose the toroid has <span class="math inline">\(N\)</span> total turns of wire. The toroid has axial symmetry about an axis through its center and perpendicular to the plane of the toroid.</p>
+<p>Consider a point inside the toriod a distance <span class="math inline">\(r\)</span> from the central axis. That is <span class="math inline">\(a &lt; r  &lt; b\)</span>. The magnetic field at this point could have three components: 1) radially away from the axis of symmetry (<span class="math inline">\(B_r\)</span>), 2) circular around the axis of symmetry (<span class="math inline">\(B_\theta\)</span>), or 3) "up or down" in the <span class="math inline">\(\pm h\)</span> direction (<span class="math inline">\(B_h\)</span>). We will show in lecture that because of the symmetry (axial and h-direction), the integral <span class="math inline">\(\oint \oint \vec{B} \cdot \vec{dA} = 0\)</span> leads to <span class="math inline">\(B_r = 0\)</span> and <span class="math inline">\(B_h = 0\)</span>.</p>
+<p>If we choose a circular path of radius <span class="math inline">\(r\)</span> that goes around the axis of symmetry and is inside the toroid. Then, <span class="math inline">\(\oint \vec{B} \cdot \vec{dr} = 2 \pi r B_\theta\)</span>. From Ampere’s law this closed path integral equals the current that passes through the path, which is <span class="math inline">\(NI\)</span>. Thus, <span class="math inline">\(B_\theta = \mu_0 NI/(2 \pi r)\)</span> for points inside the toroid. In lecture we will consider points outside the toroid.</p>
+<p><strong>Magnetic Force</strong></p>
+<p>Up to now we have discussed some sources for the magnetic field. The main type of source we have dealt with has been a wire that has a current flowing through it. As far as the magnetic force goes, we have only considered how a magnetic field affects small bar magnets. In lecture we used our magnaprobe to observe magnetic fields. Consider the following question: <span><em>will an object that has charge feel a magnetic force</em></span>?. That is, is there any other object besides a small bar magnet that experience a magnetic force. We will do two experiments in lecture:<br />
+Experiment 1. We will place a wire in the presence of a strong magnetic field. When there is <span><strong>no current</strong></span> in the wire, the wire experiences <span><strong>no force</strong></span>. When current flows in the wire, the wire jumps. We will see that the direction of the force on the wire is <span><em>perpendicular to both the direction of the magnetic field and the direction of the current</em></span>.<br />
+Experiment 2. We will bring into lecture an "electron gun". Electrons will be sent forward in a tube and will hit the screen in front of the tube. Electrons have a charge <span class="math inline">\(e\)</span>. When a magnetic field is introduced in the path of the electrons, the electrons are deflected. We will see that the force on the electrons is <span><em>perpendicular to both the direction of the magnetic field and the direction of the electrons velocity</em></span>.<br />
+Since current flow is essentially a flow of charge, the same effect is happening in both experiments. If an object that has a net charge moves in the presence of a magnetic field, it feels a force. The force is perpendicular to both the magnetic field and the velocity of the object.</p>
+<p>This might seem strange at first, since we are used to forces being in towards or away from a source, or along the direction of a field vector. The gravitational force is always towards the other object. The electrostatic force is always away or towards its source, or along the direction of <span class="math inline">\(\vec{E}\)</span>: <span class="math inline">\(F_{electrostatic} = q \vec{E}\)</span>. However, these two forces do not depend on the velocity of the object. The force is the same if the object is moving or not. The magnetic force, on the other hand, <span><strong>depends on the velocity of the object</strong></span>. If the object is not moving, there is no force (the wire felt no force if the charges in it had an average velocity equal to zero). Thus, the magnetic force vector must depend on two other vectors: the magnetic field <span class="math inline">\(\vec{B}\)</span> and the velocity vector <span class="math inline">\(\vec{v}\)</span> of the object. The only mathematical operation (in three dimensions) that takes two vectors and produces a third vector in a mathematically invarient way is the cross product. That is,</p>
+<p><span class="math display">\[\vec{F}_{magnetic} \sim \vec{v} \times \vec{B}\]</span></p>
+<p>The net charge also plays a role in the magnetic force on a particle. If a particle does not possess charge, it will not feel a magnetic force (or electric force). Electrons feel an opposite force that protons feel if they move with the same velocity in the same magnetic field. If an object has <span class="math inline">\(N_p\)</span> protons and <span class="math inline">\(N_e\)</span> electrons, then the superposition principle for forces yields:</p>
+<p><span class="math display">\[\vec{F}_{magnetic} \sim (N_p - N_e)e \vec{v} \times \vec{B}\]</span></p>
+<p>In terms of the net charge on the object, this equation becomes:</p>
+<p><span class="math display">\[\vec{F}_{magnetic} \sim q \vec{v} \times \vec{B}\]</span></p>
+<p>where <span class="math inline">\(q\)</span> is the net (or total) charge on the object or particle. From this force equation, we can see that the units of magnetic field are Force per charge per velocity, or in more basic quantities: mass/(charge-sec). As with the electric field, the force equation can be used to define <span class="math inline">\(\vec{B}\)</span>, and hence the <span class="math inline">\(\sim\)</span> can be replaced with an equal sign:</p>
+<p><span class="math display">\[\vec{F}_{magnetic} = q \vec{v} \times \vec{B}\]</span></p>
+<p>Before we discuss the force a wire feels in the presence of a magnetic field, the above equation deserves some comments:<br />
+. The magnitude of the magnetic force is <span class="math inline">\(|\vec{v}|
+|\vec{B}| sin(\theta )\)</span> where <span class="math inline">\(\theta\)</span> is the angle between the magnetic field and the particle’s velocity. Thus, if the particle moves in the direction of the magnetic field, it does not feel a magnetic force. Only the component of the velocity perpendicular to the magnetic field contributes to the force.<br />
+. Since the magnetic force is always perpendicular to the particles velocity, <span><strong>the magnetic force cannot do any work</strong></span> on the particle. The magnetic force cannot change the speed of a particle, it can only change the direction of its motion.<br />
+. The magnetic field is similiar to the electric field in that is it a "force per charge". However, in the case of the magnetic field it is a (force per charge)/speed.<br />
+. It is remarkable that both the electrostatic force and the magnetic force are proportional to the same quantity: charge. There is something to be learned from this property.<br />
+</p>
+<p><br />
+From the equation for the magnetic force on a particle, we can calculate the magnetic force on a piece of <span><em>straight wire</em></span> that has a current flowing through it. Suppose we have a wire that has <span class="math inline">\(n\)</span> "charge carriers" per unit volume and each charge carrier has a charge <span class="math inline">\(q\)</span>. The charge carriers are usually electrons. Suppose each of the charge carriers is moving down the wire with a drift velocity of <span class="math inline">\(\vec{v}_d\)</span>. Let the wire have a length <span class="math inline">\(L\)</span>, a cross sectional area of <span class="math inline">\(A\)</span>, and a current <span class="math inline">\(I\)</span>. If there is a magnetic field <span class="math inline">\(\vec{B}\)</span> at the location of the wire, then the net force on the straight wire is</p>
+<p><span class="math display">\[\vec{F} = n A L q ( \vec{v}_d \times \vec{B} )\]</span></p>
+<p>since <span class="math inline">\(n\)</span> is the number of charge carries per volume. Note that <span class="math inline">\(n A L q\)</span> equals the total charge that is moving. Remembering that the current density <span class="math inline">\(\vec{J} = n q \vec{v}_d\)</span> we have</p>
+<p><span class="math display">\[\vec{F} = A L ( \vec{J} \times \vec{B} )\]</span></p>
+<p>This equation is in a nice form. Remember that the current <span class="math inline">\(I\)</span> equals <span class="math inline">\(A |\vec{J} |\)</span>, so we can replace <span class="math inline">\(A \vec{J}\)</span> with <span class="math inline">\(I\)</span>. However, if we do this we need to specify the direction of the current. This is best done by expressing <span class="math inline">\(L\)</span> as a vector: <span class="math inline">\(\vec{L}\)</span>, where the vector <span class="math inline">\(\vec{L}\)</span> points in the direction of the current. With this convention, we have</p>
+<p><span class="math display">\[\vec{F} = I ( \vec{L} \times \vec{B} )\]</span></p>
+<p><br />
+. This equation is only valid for a <span><em>straight wire</em></span>, which has a current <span class="math inline">\(I\)</span>. However, if we have a curved wire, we can break it up into small pieces which can be considered as straight wires in the limit that the "piece size" goes to zero. We need then to integrate over the wire.<br />
+. The force on the wire is always perpendicular to the wire.<br />
+. The force is the same whether the current is caused by positive charges moving one way or negative charges moving the other way.<br />
+In lecture we will do examples of the magnetic force on wires and individual particles.<br />
+</p>
+<p><strong>Units of the Electromagnetic Interaction</strong></p>
+<p>Now that we understand the electric (velocity independent) force and the magnetic (velocity dependent) force we can discuss units. Consider two point particles, one with a charge <span class="math inline">\(q_1\)</span> and the other a charge of <span class="math inline">\(q_2\)</span> that are separated by a displacement <span class="math inline">\(\vec{r}\)</span>. Suppose particle "1" has a velocity <span class="math inline">\(\vec{v}_1\)</span> and particle "2" a velocity of <span class="math inline">\(\vec{v}_2\)</span>.</p>
+<p>The electric force <span class="math inline">\(\vec{F}_e\)</span> between the two particles is</p>
+<p><span class="math display">\[\vec{F}_e = {1 \over {4 \pi \epsilon_0}} {{q_1 q_2} \over r^2} \hat{r}\]</span></p>
+<p>from Coulomb’s law.</p>
+<p>To find the magnetic force between the two particles, it is best to start with the force between charges moving in a wire and a charge outside the wire. If charges are moving in a wire of length <span class="math inline">\(\vec{\Delta l}\)</span>, then by the Biot-Savart Law, the magnetic field produced is</p>
+<p><span class="math display">\[\vec{\Delta B} = {\mu_0 \over {4 \pi}} I {{\vec{\Delta l} \times \hat{r}} \over r^2}\]</span></p>
+<p>The current <span class="math inline">\(I\)</span> can be written as <span class="math inline">\(I=|\vec{J}| A\)</span>. <span class="math inline">\(\vec{J}\)</span> is equal to <span class="math inline">\(n q \vec{v}\)</span>. Since <span class="math inline">\(n A \Delta l\)</span> is equal to the total number of charge carriers <span class="math inline">\(N\)</span> in the wire segment <span class="math inline">\(\Delta l\)</span>. So the magnetic field produced by the line segment can be written as</p>
+<p><span class="math display">\[\vec{\Delta B} = {\mu_0 \over {4 \pi}} Nq {{\vec{v} \times \hat{r}} \over r^2}\]</span></p>
+<p>From this equation, we can interpret the magnetic field produced by a single charge <span class="math inline">\(q_1\)</span> moving with a velocity <span class="math inline">\(\vec{v_1}\)</span> as</p>
+<p><span class="math display">\[\vec{\Delta B} \approx {\mu_0 \over {4 \pi}} q_1 {{\vec{v}_1 \times \hat{r}} \over r^2}\]</span></p>
+<p>I have put in the approximation sign, since there are small corrections to this equation due to relativity (Einstein’s Special Relativity). If particle "2" is moving with a velocity of <span class="math inline">\(\vec{v}_2\)</span> at the location <span class="math inline">\(\vec{r}\)</span>, then the magnetic force it feels is</p>
+<p><span class="math display">\[\vec{F}_m = q_2 (\vec{v}_2 \times \vec{\Delta B})\]</span></p>
+<p>using the expression above for <span class="math inline">\(\vec{\Delta B}\)</span> we have</p>
+<p><span class="math display">\[\vec{F}_m \approx {\mu_0 \over {4 \pi}} q_1 q_2 {{\vec{v}_2 \times \vec{v}_1 \times \hat{r}}
+                             \over r^2}\]</span></p>
+<p>Note: to have a magnetic force <span><em>both</em></span> charges have to be moving. Summarizing:</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{F}_e &amp; = &amp; {1 \over {4 \pi \epsilon_0}} {{q_1 q_2} \over r^2} \hat{r}\\
+  \vec{F}_m &amp; \approx &amp; {\mu_0 \over {4 \pi}} q_1 q_2 {{\vec{v}_2 \times \vec{v}_1 \times \hat{r}}
+                             \over r^2}\end{aligned}\]</span></p>
+<p>These equations give us guidance in choosing the units for the electromagnetic interaction. From mechanics we have the basic units for length, time and mass. The unit of force is derived from these three fundamental units. We now need to consider units for charge, and corresponding values for <span class="math inline">\(\epsilon_0\)</span> and <span class="math inline">\(\mu_0\)</span>. We have some options, and we list just two:<br />
+Option 1: We choose a standard amount of charge as our unit charge. Then by measuring the electrostatic force between two point charges, the first equation allows us to determine <span class="math inline">\(\epsilon_0\)</span>. By measuring the magnetic force between point charges that are moving, the second equation allows us to determine <span class="math inline">\(\mu_0\)</span>. One could choose <span class="math inline">\(e\)</span> as the standard unit of charge. Then the proton would have a charge of <span class="math inline">\(+1\)</span> and the electron a charge of <span class="math inline">\(-1\)</span> in these units.<br />
+Option 2: We could choose our unit of charge so that one of the constants, <span class="math inline">\(\mu_0\)</span> or <span class="math inline">\(\epsilon_0\)</span>, equals one or another appropriate number in these units. Then the other equation would give us a way to measure the other constant.<br />
+Most texts, and the metric system, use the second option. That is, the unit of charge is the Coulomb, and one Coulomb is that amount of charge that makes <span class="math inline">\(\mu_0\)</span> exactly equal to <span class="math inline">\(4 \pi \times 10^{-7}\)</span> in metric units. That is why you see in the textbooks that <span class="math inline">\(\mu_0 = 4 \pi \times 10^{-7}\)</span> Tm/A. The electrostatic equation can be used to determine <span class="math inline">\(\epsilon_0\)</span> which comes out to be <span class="math inline">\(\epsilon_0 \approx 8.85 \times 10^{-12}\)</span> C<span class="math inline">\(^2\)</span>/(Nm<span class="math inline">\(^2\)</span>).</p>
+<p>There are some very interesting properties of the two equations above:<br />
+. <span><strong>No matter what one chooses as the basic unit for charge, the product <span class="math inline">\(\epsilon_0 \mu_0\)</span> is always the same</strong></span>. This can be seen as follows. Let <span class="math inline">\(q_0\)</span> be the unit of charge that results in a value of <span class="math inline">\(\epsilon_0\)</span> and <span class="math inline">\(\mu_0\)</span>. Suppose we change the unit of charge to <span class="math inline">\(q = x q_0\)</span>, where <span class="math inline">\(x\)</span> is a scale factor. The new <span class="math inline">\(\epsilon_0\)</span> would increase by the factor <span class="math inline">\(x\)</span>: <span class="math inline">\(\epsilon_0&#39; = 
+x \epsilon_0\)</span>, and the new <span class="math inline">\(\mu_0\)</span> would decrease by the factor <span class="math inline">\(x\)</span>: <span class="math inline">\(\mu_0&#39; = \mu_0 /x\)</span>. The new product of <span class="math inline">\(\epsilon_0&#39;\)</span> times <span class="math inline">\(\mu_0&#39;\)</span> would equal the old one <span class="math inline">\(\epsilon_0 \mu_0\)</span> since the factor <span class="math inline">\(x\)</span> would cancel. Note that the product <span class="math inline">\(\epsilon_0 \mu_0\)</span> has units of <span class="math inline">\(s^2/m^2\)</span> or one over speed squared! There are no units of charge in the product.<br />
+. <span><strong>The combination <span class="math inline">\(1/ \sqrt{\epsilon_0 \mu_0}\)</span> has units of speed, which is independent of our choice of charge unit</strong></span>. Thus, there is a fundamental speed associated with the electromagnetic interaction. In metric units, <span class="math inline">\(1/ \sqrt{\epsilon_0 \mu_0} \approx 3 \times 10^8\)</span> m/s, the speed of light. More on this later.<br />
+. We can see the relative importance of the two forces for interacting particles by taking the ratio of the magnetic force to the electrostatic force. From the above equations we have:</p>
+<p><span class="math display">\[{F_m \over F_e} \sim \epsilon_0 \mu_0 v_1 v_2\]</span></p>
+<p>where the <span class="math inline">\(\sim\)</span> sign is used since we have left out the affect of the relative angles between the velocities. Note that <span class="math inline">\(\epsilon_0 \mu_0 = 1/c^2\)</span>, where <span class="math inline">\(c \equiv 3 \times 10^8\)</span> m/s (the speed of light). Thus, for speeds much less than the speed of light the magnetic force between individual particles will be less than the electrostatic force between them.<br />
+. The magnetic force <span class="math inline">\(\vec{F}_m\)</span> depends on the particle’s velocities. However, velocity is relative to one’s reference frame. This means that <span><strong>a magnetic force for one observer might be an electric force for another</strong></span>. The electric force is also reference frame dependent. These are important considerations in formulating the laws of electromagnetism in a way that have the same form for all inertial observers, and led Einstein to the theory of special relativity.</p>
+<p><strong>The effect of Changing Magnetic Fields</strong></p>
+<p>We have talked about the sources for electric and magnetic fields, and the forces that they cause on a charged particle. We have expressed the fields in terms of the charge sources using Coulomb’s Law and the Biot-Savart Law:</p>
+<p><span class="math display">\[\begin{aligned}
+  \vec{E} &amp; = &amp; k {Q \over r^2} \hat{r}\\
+  \vec{\Delta B} &amp; = &amp; {\mu_0 \over {4 \pi}} I {{\vec{\Delta l} \times \hat{r}} \over r^2}\end{aligned}\]</span></p>
+<p>We also used the line and surface integrals, Gauss’ Law and Ampere’s Law, to express the properties of the fields:</p>
+<p><span class="math display">\[\begin{aligned}
+  \oint \oint \vec{E} \cdot \vec{dA} &amp; = &amp; {{Q_{net \; enclosed}} \over \epsilon_0}\\
+  \oint \oint \vec{B} \cdot \vec{dA} &amp; = &amp; 0\\
+  \oint \vec{E} \cdot \vec{dr} &amp;  = &amp; 0\\
+  \oint \vec{B} \cdot \vec{dr} &amp; = &amp; \mu_0 I_{net \; through \; path}\\\end{aligned}\]</span></p>
+<p>You might think that there is nothing more to understand about the sources of electric and magnetic fields. However, there is something missing in the equations above. It is due to the velocity dependence of the magetic force. If one goes into the reference frame of a moving particle, there is no magnetic force. However, there must be some force to take its place. In this "moving" reference frame, the magnetic fields are moving. Therefore, a changing magnetic field must produce some sort of force that we haven’t accounted for yet. We will demonstrate this phenomena with an example.</p>
+<p>Suppose we have a bar magnet and a closed rectangular loop of conducting wire. Let the bar magnet be stationary at the origin and point in the +z direction. Now suppose the rectangular loop of wire lies in the x-y plane and moves with constant velocity <span class="math inline">\(v_0\)</span> in the +x direction, <span class="math inline">\(\vec{v} = v_0 \hat{i}\)</span>. Let the sides of the rectangular wire loop be <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Suppose at <span class="math inline">\(t=0\)</span> one side of the wire (<span class="math inline">\(a\)</span>) passes directly over the bar magnet. That is, the front end of the rectangle is at position <span class="math inline">\(x = vt\)</span>. Suppose the magnet field is strong only near the origin. We will view the situations from two different reference frames: one in which the magnet is at rest and the wire is moving, and the other in which the wire is at rest and the magnet is moving.<br />
+<br />
+In this reference frame, the the free charges in the front side of the wire are moving in the presence of a magnetic field and will feel a force. However, since only the front side of length <span class="math inline">\(a\)</span> is over the magnet, only these charges will feel a force. The net result is that overall the charges are forced around the wire and a current is produced. We will demonstrate this in class. We will produce a current in the closed wire loop without batteries! As far as the current is concerned, the key quantity is the "voltage" around the wire loop. The "voltage" is essentially the force/charge times <span class="math inline">\(\Delta l\)</span> integrated around the wire loop. In our case, this integral becomes:</p>
+<p><span class="math display">\[\oint_{wire} {\vec{F} \over q} \cdot \vec{dr} =  B v a\]</span></p>
+<p>The force acts <span><strong>only on the charges on the front side</strong></span> of length <span class="math inline">\(a\)</span> over the magnet. The force/charge is <span class="math inline">\(B v\)</span> and the distance it acts is <span class="math inline">\(a\)</span>. So the force per charge times distance around the loop is <span class="math inline">\(Bva\)</span>, which is essentially the voltage around the wire loop. If the wire has a resistance <span class="math inline">\(R\)</span>, then the current is <span class="math inline">\(I = Bva/R\)</span>.<br />
+<br />
+This reference frame is moving with velocity <span class="math inline">\(\vec{v} = v_0 \hat{i}\)</span> with respect to the other frame. Here, the loop is at rest and the magnet is moving with velocity <span class="math inline">\(- v_0 \hat{i}\)</span>. In this frame the free charges in the wire loop are not moving, i.e. have zero average velocity. Thus, as far as this observer is concerned the charges do not feel a magnetic force. Also, there is no electrical force since there are no charge sources. So, if this observer uses the equations of electrodynamics that we have developed so far, the observer will not predict that a current is formed in the loop. When we do the experiment in class, you will see that keeping the loop fixed and moving the magnet also produces a current in the loop. Thus, there is something missing in the equations above. In this frame, the wire is at rest but the magnetic field is changing. Thus, somehow <span><em>a changing magnetic field produces some sort of electric field</em></span>.<br />
+To fix the problem, we need to go into the first reference frame, since we are correctly predicting the experimental outcome, and try and express <span class="math inline">\(\oint_{wire} \vec{F} \cdot \vec{dl}\)</span> without the velocity <span class="math inline">\(v\)</span> but with only a changing magnetic field.<br />
+<br />
+Since the position of the front side of the wire is <span class="math inline">\(x=vt\)</span>, we can express the velocity <span class="math inline">\(v\)</span> as <span class="math inline">\(v = \Delta x / \Delta t\)</span>. Substituting for the force/charge times distance around the loop:</p>
+<p><span class="math display">\[\oint_{wire} {\vec{F} \over q} \cdot \vec{dr} =  B {{\Delta x} \over {\Delta t}} a\]</span></p>
+<p>However, in this reference frame, <span class="math inline">\(B\)</span> and <span class="math inline">\(a\)</span> are constant, so we can write the above equation as:</p>
+<p><span class="math display">\[\oint_{wire} {\vec{F} \over q} \cdot \vec{dr} =  {{\Delta (x B a)} \over {\Delta t}}\]</span></p>
+<p>This is a better form, since there is no velocity in the expression. The changing is a combination of the magnetic field times <span class="math inline">\(x\)</span>. In one frame <span class="math inline">\(B\)</span> is changing and <span class="math inline">\(x\)</span> is not, and in the other frame <span class="math inline">\(x\)</span> is changing and <span class="math inline">\(B\)</span> is not. The quantity <span class="math inline">\(xaB\)</span> is the magnetic flux through the wire loop. We can restate the equation more succinctly as</p>
+<p><span class="math display">\[\oint_{wire} {\vec{F} \over q} \cdot \vec{dr} = - {{\Delta \Phi_B} \over {\Delta t}}\]</span></p>
+<p>Where <span class="math inline">\(\Phi_B\)</span> is the total magnetic flux through the wire loop. The minus sign refers to the direction of the current. When the limit <span class="math inline">\(\Delta t \rightarrow 0\)</span> is taken, the right side becomes the time derivative of <span class="math inline">\(\Phi_B\)</span>.</p>
+<p><span class="math display">\[\oint_{wire} {\vec{F} \over q} \cdot \vec{dr} = - {{d \Phi_B} \over {d t}}\]</span></p>
+<p>This is a form that both observers can agree on: the right side has the same value in both reference frames. In one frame the wire is moving (magnetic field not changing) and in the other the magnetic field is changing and the wire is not moving. It can be shown that the above equation is true any time there is a changing magnetic flux through a closed wire loop. The magnetic flux can change if<br />
+a) the wire moves in a stationary magnetic field<br />
+b) the wire is stationary and the magnetic field inside the wire loop changes.<br />
+c) the wire’s area changes in a stationary magnetic field<br />
+d) the wire is moving in an area in which the magnetic field is changing.<br />
+The closed integral around the wire loop, <span class="math inline">\(\oint_{wire} \vec{F} /q \cdot \vec{dl}\)</span> is often called the <span class="math inline">\(E.M.F.\)</span> or electromotive force. It represents the voltage around the wire loop that is caused by an electric field produced by a (changing) magnetic field. It is often given the symbol <span class="math inline">\(\xi\)</span>:</p>
+<p><span class="math display">\[\xi \equiv  \oint_{wire} {\vec{F} \over q} \cdot \vec{dr} = - {{d \Phi_B} \over {d t}}\]</span></p>
+<p>The above equation (or some form of it) is called Faraday’s Law after the discoverer of this rather complicated phenomena. It was an important insight to realize that the easiest way to express the effects of a changing magnetic field is through line and surface integrals, i.e. magnetic flux. One reason we covered electric flux and Gauss’s Law was was to introduce you to the concept of flux and prepare you for Faraday’s law. Faraday’s discovery was one of the most important contributions to science. It revolutionized the world, and we will demonstrate its significance with numberous examples in lecture.<br />
+<br />
+We are how in a position to change the field equations. As mentioned, the easiest way to include the effects of a changing magnetic field is through a line integral: <span class="math inline">\(\oint \vec{F} /q \cdot \vec{dl}\)</span>. Thus, it is most convenient to use the integral formulation for the fields, and not the Coulomb or Biot-Savart laws. In the integral forms, <span><strong>the line and surface integrals are done over stationary mathematical topologies</strong></span>. Although we have no wires, we must use the result for stationary wires. If the wire for the closed loop is stationary, then <span class="math inline">\(\vec{F}/q\)</span> is only caused by an electric field: <span class="math inline">\(\vec{F}/q = \vec{E}\)</span>. This gives</p>
+<p><span class="math display">\[\oint \vec{E} \cdot \vec{dr} = - {{d \Phi_B} \over {d t}}\]</span></p>
+<p>where the subscript "wire" on the integral is removed. This equation is true for any closed mathematical path. The corrected equations can now be written as:</p>
+<p><span class="math display">\[\begin{aligned}
+  \oint \oint \vec{E} \cdot \vec{dA} &amp; = &amp; {{Q_{net \; enclosed}} \over \epsilon_0}\\
+  \oint \oint \vec{B} \cdot \vec{dA} &amp; = &amp; 0\\
+  \oint \vec{E} \cdot \vec{dr} &amp; = &amp; - {{d \Phi_B} \over {dt}}\\
+  \oint \vec{B} \cdot \vec{dr} &amp; = &amp; \mu_0 I_{net \; through \; path}\\\end{aligned}\]</span></p>
+<p>It is important to note that the path and surface integrals on the left sides of the equal signs can only be evaluated over paths and surfaces that are not moving. The new addition takes into account the effect of changing magnetic fields. Indirectly it states that a changing magnetic field <span><strong>induces</strong></span> an electric field. This phenomena is often called induction. It is an extremely important addition to the laws of electrodynamics and deserves some comments.<br />
+. The time derivative of the magnetic flux, <span class="math inline">\(d \Phi_B /dt\)</span> in the above equation is often written explicitly as an integral: <span class="math inline">\(\Phi_B = \oint \oint \vec{B} \cdot \vec{dA}\)</span>:</p>
+<p><span class="math display">\[\oint \vec{E} \cdot \vec{dr} = - {d  \over {dt}} \oint \oint \vec{B} \cdot \vec{dA} \\\]</span></p>
+<p>The direction of the path for the path integral on the left side defines the direction for the area vector on the right. If the fingers of your right hand curl in the direction of the path, then your right thumb points in the direction of positive area.<br />
+. The minus sign in the induction equation signifies the direction of the induced electric field or current. However, it is often easier to use another method stated by Lenz. Lenz’s Law states that <span><em>the magnetic field produced by the induced current opposes the change in the magnetic field causing the induced current.</em></span><br />
+</p>
+<p>We conclude the topic of magnetic induction with some examples.<br />
+<br />
+Suppose there is a constant magnetic field of magnitude <span class="math inline">\(B\)</span>. Suppose we rotate a closed loop of wire, of area <span class="math inline">\(A\)</span>, with the axis of rotation perpendicular to the magnetic field. Let the angle between the area vector and the magnetic field be <span class="math inline">\(\theta\)</span>. When <span class="math inline">\(\theta = 0\)</span> then the magnetic flux through the wire loop is maximized since <span class="math inline">\(\vec{B}\)</span> is perpendicular to the area: <span class="math inline">\(\Phi_m = B A\)</span>. When <span class="math inline">\(\theta = 90^\circ\)</span> then the magnetic flux through the loop is zero. For arbitary angle, <span class="math inline">\(\Phi_m = B A cos\theta\)</span>. Note, in this case the magnetic flux is just (magnetic field) times (area) <span><strong>since the magnetic field is constant inside the wire loop</strong></span>. If the loop is rotating with a constant angular velocity <span class="math inline">\(\omega\)</span>, then <span class="math inline">\(\theta = \omega t\)</span>:</p>
+<p><span class="math display">\[\Phi_m = B A cos(\omega t)\]</span></p>
+<p>The magnitude of the EMF generated in the wire loop is found by taking the time derivative of <span class="math inline">\(\Phi_m\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+ |E.M.F.| &amp; = &amp; | {{d \Phi} \over {dt}} | \\
+          &amp; = &amp; \omega B A sin(\omega t) \end{aligned}\]</span></p>
+<p>A wire rotating at a uniform rate in a constant magnetic field will produce a sinusoidal "voltage" or current in the loop! This is a very convenient way to produce electrical current from mechanical motion. We refer to this type of device as an <span><strong>electric generator</strong></span>. The only peculiarity is that the current produced is sinusoidal in time, that is, it is alternating current (AC). This is one reason why we have alternating current delivered to our homes: it is easy to produce it by mechanical means.<br />
+<br />
+Suppose there is an infinitely long wire with a steady current <span class="math inline">\(I\)</span> flowing through it. Let there be another wire which is a rectangular with sides <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Let side "<span class="math inline">\(b\)</span>" be parallel to the long wire and located a distance <span class="math inline">\(x\)</span> from it. Let side <span class="math inline">\(a\)</span> point directly to the long wire. Lets first calculate the magnetic flux <span><strong>through</strong></span> the rectangular wire <span><strong>due to</strong></span> the magnetic field produced by the infinitely long wire.</p>
+<p>The magnetic field produced from the long wire has a magnitude of <span class="math inline">\(\mu_0 I/(2 \pi r)\)</span>, where <span class="math inline">\(r\)</span> is the perpendicular distance from the wire. The magnetic field is perpendicular to the closed rectangular wire. Since the magnetic field is <span><strong>not constant</strong></span> inside the wire loop, the flux is <span><strong>not equal</strong></span> to just (Magnetic Field) times (area). We need to integrate over the loop area. We divide the area into strips of length <span class="math inline">\(b\)</span> and width <span class="math inline">\(\Delta r\)</span>, where the strip is parallel to the long wire. Then the flux through a strip is:</p>
+<p><span class="math display">\[\Delta \Phi_m = {{\mu_0 I} \over {2 \pi r}} b \Delta r\]</span></p>
+<p>Adding up all strips and taking the limit as <span class="math inline">\(\Delta r 
+\rightarrow 0\)</span> yields an integral:</p>
+<p><span class="math display">\[\Phi_m = \int_x^{x+a} {{\mu_0 I b} \over {2 \pi r}} d r\]</span></p>
+<p>This integral is easily evaluated to be</p>
+<p><span class="math display">\[\Phi_m = {{\mu_0 I b} \over {2 \pi}} (ln(a+x) - ln(x))\]</span></p>
+<p>If <span class="math inline">\(I\)</span> remains constant and the rectangular wire does not move, then no current is induced in it. This is because the magnetic flux <span class="math inline">\(\Phi_m\)</span> is not changing. To change the flux through the wire we need to either move the one of the wires, or change the current in the long wire. Suppose we move the rectanglar wire away with a constant speed <span class="math inline">\(v = dx/dt\)</span>. To find the change in the flux with time, we need to differentiate the above equation with respect to time:</p>
+<p><span class="math display">\[{{d \Phi_m} \over {dt}} = {{d \Phi_m} \over {dx}} {{dx} \over {dt}}\]</span></p>
+<p>Since <span class="math inline">\(v = dx/dt\)</span> we obtain</p>
+<p><span class="math display">\[|{{d \Phi_m} \over {dt}}| = {{\mu_0 I b v} \over {2 \pi}} \; {a \over {(a+x)x}}\]</span></p>
+<p>which is the <span class="math inline">\(E.M.F.\)</span> generated in the rectangular wire loop.</p>
+<p>Another way to generate a current in the rectangular loop is to keep it stationary and change the current in the long wire. In this case, we have</p>
+<p><span class="math display">\[E.M.F. = {{d \Phi_m} \over {dt}} = {{\mu_0 b} \over {2 \pi}} (ln(a+x) - ln(x)) \; {{dI} \over {dt}}\]</span></p>
+<p>This is an interesting way to generate current in the rectangular wire. Neither wire needs to be moving! <span><strong>A changing current in one wire produces a current in the other</strong></span>. Next we will do another example of (changing current in one wire) <span class="math inline">\(\rightarrow\)</span> current in another wire.<br />
+<br />
+Suppose we have a solenoid of length <span class="math inline">\(l\)</span> that has a total of <span class="math inline">\(N_1\)</span> coils of wire. Let the area of the solenoid be <span class="math inline">\(A\)</span>. Around the solenoid we place a circular coil of wire that has <span class="math inline">\(N_2\)</span> loops of wire. Suppose the current in the solenoid is <span class="math inline">\(I_1\)</span>. What is the magnetic flux through the coil of wire that is around the solenoid?</p>
+<p>This is a simple calculation if we approximate the solenoid (wire 1) to be infinite: <span class="math inline">\(B \approx \mu_0 n I_1\)</span> where <span class="math inline">\(n = N_1 /l\)</span>, the number of turns per length. Since the magnetic field only occupies an area <span class="math inline">\(A\)</span> (of the outer coils of wire), we have</p>
+<p><span class="math display">\[\Phi_2 \approx {{\mu_0 N_1 I_1} \over l} N_2 A\]</span></p>
+<p>where <span class="math inline">\(\Phi_2\)</span> is the magnetic flux though the outer coil of wire (wire 2). If <span class="math inline">\(I_1\)</span> changes in time, then the magnetic flux through the outer coil will change and an E.M.F. will be produced in this coil:</p>
+<p><span class="math display">\[E.M.F._2 = {{d \Phi_2} \over {dt}} = {{\mu_0 N_1 N_2 A} \over l} \; {{d I_1} \over {dt}}\]</span></p>
+<p>Suppose there is a sinusoidal current in the solenoid (wire 1): <span class="math inline">\(I_1 = I_0 sin(\omega t)\)</span>. Then, a sinusoidal current will be generated in the other wire!!:</p>
+<p><span class="math display">\[E.M.F._2 = {{\mu_0 N_1 N_2 A} \over l} \; \omega I_0 cos(\omega t)\]</span></p>
+<p>This is great. A sinusoidal current in one wire produces a sinusoidal current in the other. The nice thing is that by choosing appropriate values for <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span> we can control the <span class="math inline">\(E.M.F.\)</span> generated in wire "2" (the outer coil). We can boost the voltage up or down depending on the number of turns we have. This sort of device is called a <span><strong>tranformer</strong></span>. Note that the transformer only works with <span><strong>changing current</strong></span>. It will not work with direct current D.C. This is another reason why the electrical voltage that comes to our homes is alternating (A.C.). It is easy to generate, and it is easy to change (or transform) to a higher or lower voltage!! In the U.S., the frequency of the sinusoidal voltage is <span class="math inline">\(60\)</span> cycles/sec.<br />
+</p>
+<p><strong>Magnetic Induction in Circuits</strong></p>
+<p>The results of the last two examples will apply to any two closed circuits: a changing current in one circuit will produce a current in another circuit. Let the two circuits be labeled "1" and "2". If circuit "1" has a current <span class="math inline">\(I_1\)</span>, then a magnetic field <span class="math inline">\(\vec{B}_1\)</span> will be produced. This magnetic field will exist at the location of circuit "2". There will, therefore, be a magnetic flux through circuit "2" due to the magnetic field produced by circuit "1". We label this magnetic flux as <span class="math inline">\(\Phi_{12}\)</span>.</p>
+<p>Since the magnetic field <span class="math inline">\(\vec{B}_1\)</span> is proportional to the current <span class="math inline">\(I_1\)</span> in circuit "1", the magnetic flux through circuit "2" will also be proportional to <span class="math inline">\(I_1\)</span>:</p>
+<p><span class="math display">\[\Phi_{12} \propto I_1\]</span></p>
+<p>We can replace the proportional sign with an equal sign and a constant:</p>
+<p><span class="math display">\[\Phi_{12} = M_{12} I_1\]</span></p>
+<p>where <span class="math inline">\(M_{12}\)</span> is called the <span><strong>mutual inductance</strong></span> of the two wire configurations.</p>
+<p>You are probably thinking that a current in wire "2" will produce a magnetic flux through wire "1". In a similar manner, the magnetic flux through wire "1" will be proportional to the current in wire "2":</p>
+<p><span class="math display">\[\Phi_{21} = M_{21} I_2\]</span></p>
+<p>where <span class="math inline">\(\Phi_{21}\)</span> is the flux through wire "1" due to the current in wire "2". In our upper division electrodynamics class we show that the mutual inductances are equal: <span class="math inline">\(M_{12} = M_{21}\)</span>.</p>
+<p>In the second example above, the mutual inductance between the infinite straight wire and the rectangular loop is <span class="math inline">\(M_{12} = (\mu_0 b/(2 \pi)) \; ln((a+x)/x)\)</span>. For the solenoid and the outer coil, the nutual inductance is</p>
+<p><span class="math display">\[M_{12} = {{\mu_0 N_1 N_2 A} \over l}\]</span></p>
+<p>Note that:<br />
+. The mutual inductance only depends on the geometry of the two wires. It does not depend on the current flowing in the wires. There is no <span class="math inline">\(I\)</span> in the equation for <span class="math inline">\(M_{12}\)</span>. The mutual inductance is simple the <span><em>ratio</em></span> of the magnetic flux through the surface of one closed wire due to the magnetic field caused by a current in the other wire.<br />
+. To have "mutual inductance" one needs two wires, and both should really be closed circuits. However, one wire could be an infinitely straight wire (which carries the current) and the other one closed.<br />
+. Every two closed wire loops will have a mutual inductance, and electrical engineers will always need to consider this property of circuits.<br />
+:<br />
+If a wire carries a current, a magnetic field is produced. If the wire is closed, then this magnetic field will produce a magnetic flux through the closed wire itself. Thus, if a closed wire carries a current, there is a magnetic flux <span class="math inline">\(\Phi_m\)</span> through the wire circuit that is caused by the current in the wire itself. If the current is doubled, then the magnetic field everywhere is doubled and so is the flux through the circuit:</p>
+<p><span class="math display">\[\Phi_m \propto I\]</span></p>
+<p>where <span class="math inline">\(I\)</span> is the current in the circuit. The proportional sign can be replaced by an equal sign and a constant:</p>
+<p><span class="math display">\[\Phi_m = L I\]</span></p>
+<p>where the constant <span class="math inline">\(L\)</span> is called the <span><strong>self inductance</strong></span> of the wire configuration (or circuit). Perhaps this property will become more clear with an example. Lets find the self-inductance of a solenoid.<br />
+: The self-inductance of a closed circuit depends only on the geometry of the wire. It does not depend on how much current flows in the wire. In fact, it is the ratio of the magnetic flux through the area of the wire loop caused by the current in the wire divided by the current that is in the wire.<br />
+<br />
+Suppose we have a solenoid that has a total of <span class="math inline">\(N\)</span> coils (or turns) of wire. Let the solenoid have a cross sectional area <span class="math inline">\(A\)</span> and a length <span class="math inline">\(l\)</span>. To calculate the self-inductance, we first let the circuit have a current <span class="math inline">\(I\)</span>. Then we calculate the magnetic field produced by this current. Finally we calculate the magnetic flux through the area of the circuit.</p>
+<p>If we make the approximation that the magnetic field inside the soleniod is approximately the same as an infinitely long solenoid, we have</p>
+<p><span class="math display">\[B \approx \mu_0 ({N \over l}) I\]</span></p>
+<p>For an infinite solenoid, the magnetic field is constant throughout the whole inside of the coil. The magnetic flux therefore through one loop of solenoid wire is <span class="math inline">\(\Phi_m \approx A B \approx A \mu_0 N I/l\)</span>. Since there are <span class="math inline">\(N\)</span> coils of wire, the total magnetic flux through the solenoid is:</p>
+<p><span class="math display">\[\Phi_m \approx {{\mu_0 N^2 A} \over l} \; I\]</span></p>
+<p>From this equation, we see that the magnetic flux through the circuit is proportional to the current in the circuit. The constant of proportionality is the self-inductance <span class="math inline">\(L\)</span> of the circuit:</p>
+<p><span class="math display">\[L \approx {{\mu_0 N^2 A} \over l}\]</span></p>
+<p>It is interesting to note that:<br />
+a) As with mutual inductance, self-inductance only depends on the geometry of the closed wire circuit. It does not depend on the current <span class="math inline">\(I\)</span> flowing in the wire.<br />
+b) Self-inductance has units of <span class="math inline">\(\mu_0\)</span> times distance.<br />
+c) There is an <span class="math inline">\(N^2\)</span> dependence for <span class="math inline">\(L\)</span>. The more turns of wire, the stronger the magnetic field is inside the solenoid. The more turns of wire, the more magnetic flux. This results in a <span class="math inline">\(N^2\)</span> factor for <span class="math inline">\(L\)</span>.<br />
+Self-inductance is a very important property of a circuit. In some circuits inductors are placed in circuits for particular applications. Previously, we discussed Kirchoff’s law for the sum of the voltage drops around a closed wire loop, and found the sum to be zero. This is correct if the current is not changing in the circuit. If the current is changing, then path integral of <span class="math inline">\(\oint \vec{E} \cdot \vec{dl}\)</span> is not zero, but rather <span class="math inline">\(- d \Phi_m / dt\)</span>. Thus, the Kirchoff Law involving voltage changes around a closed loop must be modified:</p>
+<p><span class="math display">\[\sum (Voltage \; drops) = - \oint \vec{E} \cdot \vec{dl} = {{d \Phi_m} \over {dt}}\]</span></p>
+<p>where the sum over voltages drops means around a closed path in the circuit. The direction of positive flux is determined by the right hand rule and the direction of the path taken to calculate the voltage drops. That is, if the fingers of your right hand curl in the path direction, then your thumb points in the direction of positive area for the magnetic flux.</p>
+<p>Lets consider a simple example. Suppose we have a circuit that consists of a battery of voltage <span class="math inline">\(V\)</span> and resistor of resistance <span class="math inline">\(R\)</span>. Suppose the circuit has a self-inductance of <span class="math inline">\(L\)</span>. The self-inductance could be caused by an inductor placed in the circuit, or just the self-inductance of the wires themselves. If we apply the modified Kirchoff Law to the circuit we have</p>
+<p><span class="math display">\[V - IR = {{d \Phi_m} \over {dt}} = L {{dI} \over {dt}}\]</span></p>
+<p>If we rearrainge the terms the equation can be viewed as</p>
+<p><span class="math display">\[V - L {{dI} \over {dt}} = IR\]</span></p>
+<p>In this form, we see that the induction term <span class="math inline">\(L (dI/dt)\)</span> tends to decrease the voltage in the current loop. Electrical engineers sometimes call this term a "back E.M.F.". The self-induction (or inductive reactance) in the circuit tends to impede any change in the current.</p>
+<p>In the original form:</p>
+<p><span class="math display">\[V - IR = L {{dI} \over {dt}}\]</span></p>
+<p>the equation can be readily solved. By "cross-multiplying" we have</p>
+<p><span class="math display">\[\int {{dt} \over L} = \int {{dI} \over {V-IR}}\]</span></p>
+<p>If the switch is closed at <span class="math inline">\(t=0\)</span>, that is <span class="math inline">\(I(0) = 0\)</span>, we have</p>
+<p><span class="math display">\[{t \over L} = \int_0^I {{dI&#39;} \over {V-I&#39;R}}\]</span></p>
+<p>whose solution is</p>
+<p><span class="math display">\[I = {V \over R} (1 - e^{-tR/L})\]</span></p>
+<p>Some comments on this result for the "L-R" circuit:<br />
+. As <span class="math inline">\(t \rightarrow \infty\)</span> the current approaches <span class="math inline">\(V/R\)</span>, which is the result without any self-inductance.<br />
+. The "time constant" <span class="math inline">\(L/R\)</span> is called the LR time constant. It is the time it takes for the current to reach <span class="math inline">\((1 - e^{-1})\)</span> (<span class="math inline">\(63 \%\)</span>) of its final value.<br />
+<br />
+An important application is a circuit with an inductor and a capacitor in the same circuit. We will consider here only a simple circuit with a capacitor and inductor in series. Let the capacitor have a capacitance of <span class="math inline">\(C\)</span>, and the inductor a self-inductance of <span class="math inline">\(L\)</span>. Let <span class="math inline">\(\pm Q\)</span> be the charge on the plates of the capacitor. Applying Kirchoff’s modified voltage equation around the circuit gives:</p>
+<p><span class="math display">\[V_c = {{d \Phi_m} \over {dt}}\]</span></p>
+<p>where <span class="math inline">\(V_c\)</span> is the voltage across the capacitor. If <span class="math inline">\(\pm Q\)</span> are the charges on each plate of the capacitor, <span class="math inline">\(V_c = Q/C\)</span>. If the self-inductance of the inductor (i.e. the circuit) is <span class="math inline">\(L\)</span>, we have</p>
+<p><span class="math display">\[{Q \over C} = L {{dI} \over {dt}}\]</span></p>
+<p>The current is the rate of change of the charge on the capacitor. If <span class="math inline">\(I\)</span> flows from the positive plate of the capacitor, then <span class="math inline">\(I = - (dQ)/(dt)\)</span>. Differentiating both sides with respect to <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[{1 \over C} {{dQ} \over {dt}} = L {{d^2I} \over {dt^2}}\]</span></p>
+<p>Substituting in for <span class="math inline">\((dQ)/(dt)\)</span> gives</p>
+<p><span class="math display">\[- {I \over C} = L {{d^2I} \over {dt^2}}\]</span></p>
+<p>Rearrainging terms yields the following differential equation:</p>
+<p><span class="math display">\[{{d^2 I} \over {dt^2}} = - {I \over {LC}}\]</span></p>
+<p>The solution <span class="math inline">\(I(t)\)</span> is a function whose second derivative is minus itself. Functions with this property are sinusoidal functions: <span class="math inline">\(I(t) = A sin(\omega t)\)</span>. Since <span class="math inline">\((d^2 I)/(d t^2) = - \omega^2 A sin(\omega t)\)</span> we see that</p>
+<p><span class="math display">\[\omega = {1 \over {\sqrt{LC}}}\]</span></p>
+<p>This is an interesting result. The current in the L-C circuit oscillates with a frequency of <span class="math inline">\(f = \omega/(2 \pi) = 1/(2 \pi \sqrt{LC} )\)</span>. This frequency is the resonance frequency of the circuit. If an inductor and capacitor are in series in an antenna, signals at the resonant frequency have a large amplitude. By varying <span class="math inline">\(C\)</span> one can tune into ones favorite radio or TV station.<br />
+</p>
+<p>There are many applications of inductors in circuits: producing sparks in car motors, etc, and we will discuss some of these in lecture. Lets close this section on the magnetic interaction by summarizing the main points.</p>
+<p><strong>Summary</strong></p>
+<p>The nature of the magnetic interaction, is quite complicated. This is because both the source and force both depend on the motion of charged particles. The ideas we have discussed the past 4 weeks can be broken down to 3 main features: sources of magnetic fields, the magnetic force on a particle moving in a magnetic field, and the effect of changing magnetic fields.<br />
+<br />
+<span><em>Moving charges produce magnetic fields</em></span>. The magnetic field produced by a small piece of wire segment that carries a current <span class="math inline">\(I\)</span> is described by the Biot-Savart law: <span class="math inline">\(\Delta \vec{B} = ((\mu_0 I) / (4 \pi))(\vec{\Delta l} \times \hat{r})/r^2\)</span>. Ampere’s Law deals with the closed path integral of <span class="math inline">\(\vec{B} \cdot \vec{dl}\)</span>: <span class="math inline">\(\oint \vec{B} \cdot \vec{dl} = \mu_0 I_{through \; path}\)</span>.<br />
+<br />
+<span><em>Particles with charge that are moving in a magnetic field feel a force</em></span>. The force the particle feels is perpendicular to both the velocity vector <span class="math inline">\(\vec{v}\)</span> and the magnetic field <span class="math inline">\(\vec{B}\)</span>: <span class="math inline">\(F_m = q \vec{v} \times \vec{B}\)</span>. Applying this force law to the charges moving in a straight wire gives: <span class="math inline">\(F_m = I (\vec{l} \times \vec{B})\)</span>, where <span class="math inline">\(\vec{l}\)</span> points along the wire segment in the direction of the current and whose magnitude equals the length of the wire.<br />
+<br />
+<span><em>Changing magnetic fields produce electric fields</em></span>. The magnetic interaction depends on the velocity of both the source and the particle experiencing the force. Since velocity is a <span><em>change</em></span> in position, a changing magnetic (or electric) field should cause some sort of effect. Faraday formulated this effect for changing magnetic fields most succinctly:</p>
+<p><span class="math display">\[\oint_{wire} {\vec{F} \over q} \cdot \vec{dl} = - {{d\Phi_m} \over {dt}}\]</span></p>
+<p>Or in words: A changing magnetic flux through a wire loop produces a "voltage" around the wire loop.</p>
+<p><strong>Final Thoughts</strong></p>
+<p>There is still one piece missing in the complete picture of the classical electromagnetic interaction. If you continue with Phy234 you will cover the contribution of Maxwell. He realized that the equations we have so far are inconsistent with charge conservation, and that a changing electric field must produce some sort of magnetic interaction. We state here the complete set of source equations (in integral form) for the electric and magnetic fields:</p>
+<p><span class="math display">\[\begin{aligned}
+ \oint \oint \vec{E} \cdot \vec{dA} &amp; = &amp; {{Q_{net}} \over \epsilon_0} \; \; (Coulomb)\\
+  \oint \oint \vec{B} \cdot \vec{dA} &amp; = &amp; 0  \\
+ \oint \vec{E} \cdot \vec{dr} &amp; = &amp; - {{d \Phi_B} \over {dt}} \; \;  (Faraday)\\
+  \oint \vec{B} \cdot \vec{dr} &amp; = &amp; \mu_0 I_{net} + \epsilon_0 \mu_0 {{d \Phi_E} \over {dt}}
+        \; \; (Ampere + Maxwell) \\\end{aligned}\]</span></p>
+<p>These equations are refered to as "Maxwell’s Equations" for the classical electrodynamic fields. The force equation <span class="math inline">\(F = q \vec{E} + q (\vec{v} \times \vec{B})\)</span> relates the force to the fields. These ideas were developed between 1800 and 1864, and led to a radical change in the lives of humans. The electric generator and transformer were developed using Faraday’s law, which allowed engineers to bring energy into our homes. People could cook food in their kitchens from snow melting high in the mountains. Electric motors turned because of the physics contained in these equations. Maxwell’s contribution connected the electric-magnetic interaction with light (or more generally electromagnetic radiation). Radio and television were made possible from an understanding of these equations. The discovery of the laws of classical electrodynamics was one of the most significant achievements of humankind in the 1800’s.</p>
+<p>The interaction of atoms and molecules with each other are almost entirely electric and magnetic. Thus, all chemical and biological properties derive at their most basic level from the laws of electrodynamics. When you raise your arm, digest your food, or use gasoline to move your car, the electromagnetic force is at work. Basically, thinking is electromagnetic in nature. So when you take your final exam on the laws of electricity and magnetism, you will be using these same laws to solve the questions. As far as I know, the electomagnetic interaction is the only one which can be used to understand itself. Think about that!</p>
+</body>
+</html>
