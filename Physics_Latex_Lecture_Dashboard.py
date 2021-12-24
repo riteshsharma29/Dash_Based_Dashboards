@@ -2,6 +2,13 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
 
+'''
+REFERENCES :
+https://www.cpp.edu/~pbsiegel/supnotes/notes130.html
+https://pretagteam.com/question/how-to-use-iframe-in-dashplotly-pythonhtml
+https://community.plotly.com/t/adding-a-scrollbar-to-a-sidebar-div/53330/2
+'''
+
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
