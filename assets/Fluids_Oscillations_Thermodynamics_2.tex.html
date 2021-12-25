@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Fluids_Oscillations_Thermodynamics_2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="center">
+<p><span><strong>Notes on Oscillations and Mechanical Waves</strong></span></p>
+</div>
+<p>The topics for the second part of our physics class this quarter will be oscillations and waves. We will start with periodic motion for the first two lectures, with our specific examples being the motion of a mass attached to the end of a spring, and the pendulum. The last six lectures will be devoted to mechanical waves and their properties.<br />
+</p>
+<p><strong>Periodic Motion</strong></p>
+<p>Periodic motion is motion that repeats itself. For example, a small object oscillating at the end of a spring, a swinging pendulum, the earth orbiting the sun, etc. are examples where the objects motion "approximately" keeps repeating itself. If an objects motion is periodic, then there is a characteristic time: the time it takes for the motion to repeat itself. This is called the period (of the periodic motion) and is usually given the symbol <span class="math inline">\(T\)</span>:<br />
+(<span class="math inline">\(T\)</span>): The time for one complete cycle of the periodic motion.<br />
+For example, the period of the rotation of the earth about its axis is one day. During the quarter, when classes are in session, the period of our activities is one week. We can also speak of the number of cycles repeated per unit time. This is called the frequency of the periodic motion:<br />
+(<span class="math inline">\(f\)</span>): The number of cycles per unit time.<br />
+A common unit for frequency is one cycle per second. This is defined as one Hertz (Hz). 1 Hz <span class="math inline">\(\equiv\)</span> 1 cycle/sec. If the periodic motion occurs <span class="math inline">\(f\)</span> times per second, then the time for one cycle is <span class="math inline">\(1/f\)</span>, so</p>
+<p><span class="math display">\[T = {1 \over f}\]</span></p>
+<p>or equivalently</p>
+<p><span class="math display">\[f = {1 \over T}\]</span></p>
+<p>In this class we will mainly be describing periodic motion that occurs in one dimension. For example an object will execute periodic motion along the x- or y-axis. Suppose that the motion of an object occurs along the x-axis. Then the position of the object is given by its position function <span class="math inline">\(x(t)\)</span>. If the motion is periodic, it means that:</p>
+<p><span class="math display">\[x(t+T) = x(t)\]</span></p>
+<p>where <span class="math inline">\(T\)</span> is the period of the motion. The function <span class="math inline">\(x(t)\)</span> can in general have any shape as long as <span class="math inline">\(x(t) = x(t+T)\)</span>. In some cases, <span class="math inline">\(x(t)\)</span> has a simple oscillating shape, that of a pure sinusoidal form. If the motion is perfectly sinusoidal, i.e. a sin or cos function, then motion is called "simple harmonic motion".<br />
+</p>
+<p><strong>Simple Harmonic Motion</strong></p>
+<p>If the motion of an object is a perfect single sinusiodal function, we term the motion "simple harmonic". Let’s review the mathematics of simple trig functions. We need just three parameters to describe any single sinusoidal function: the period (<span class="math inline">\(T\)</span>), the amplitude (<span class="math inline">\(A\)</span>), and a parameter related to the position at time <span class="math inline">\(t=0\)</span>. The amplitude of the motion is the maximum value from equilibrium that the object travels.</p>
+<p>Suppose the object starts off initially at <span class="math inline">\(x=0\)</span>, has some initial speed in the +x direction and an amplitude <span class="math inline">\(A\)</span>. In this case, the motion of the object is described by:</p>
+<p><span class="math display">\[x(t) = A sin({{2 \pi t} \over T})\]</span></p>
+<p>where <span class="math inline">\(T\)</span> is the period of the motion. One often defines <span class="math inline">\(2 \pi / T\)</span> to be the variable <span class="math inline">\(\omega\)</span>:</p>
+<p><span class="math display">\[\omega \equiv {{2 \pi} \over T}\]</span></p>
+<p>So one often sees the equation for this case of simple harmonic motion written as <span class="math inline">\(x(t) = A sin(\omega t)\)</span>. At time <span class="math inline">\(t=0\)</span>, the position is at <span class="math inline">\(x=0\)</span> since <span class="math inline">\(sin(0) = 0\)</span>. The velocity of the particle at any time <span class="math inline">\(t\)</span> is found by differentiating <span class="math inline">\(x(t)\)</span>:</p>
+<p><span class="math display">\[v(t) = {{dx} \over {dt}} = A \omega cos(\omega t)\]</span></p>
+<p>The initial velocity is just <span class="math inline">\(v(0) = A \omega\)</span>, and is in the + direction. Actually <span class="math inline">\(A \omega\)</span> is the largest speed that the object ever acquires.</p>
+<p>The above equation only applies to simple harmonic motion for which the object starts at <span class="math inline">\(x=0\)</span>. How do we generalize this to the case where the object starts off at <span class="math inline">\(x=x_0\)</span>, where <span class="math inline">\(x_0 \neq 0\)</span>? This can be done by adding a phase shift, <span class="math inline">\(\phi\)</span> measured in radians, to the argument of the sin function:</p>
+<p><span class="math display">\[x(t) = A sin(\omega t + \phi)\]</span></p>
+<p>If <span class="math inline">\(\phi &lt;0\)</span> then the sin function is shifted to the right. If <span class="math inline">\(\phi &gt; 0\)</span> the sin function is shifted to the left. By adjusting the phase angle one can shift the sin function to match the initial condition. If the initial position is defined as <span class="math inline">\(x(0) \equiv x_0\)</span>, then</p>
+<p><span class="math display">\[x_0 = A sin(\phi)\]</span></p>
+<p>or</p>
+<p><span class="math display">\[\phi = sin^{-1}({x_0 \over A})\]</span></p>
+<p>The function <span class="math inline">\(x(t) = A sin(\omega t + \phi)\)</span> can be expressed in an alternative form by expanding the sin function. Using the angle addition formula for sin:</p>
+<p><span class="math display">\[sin(\omega t + \phi) = sin (\omega t) cos \phi + cos(\omega t) sin \phi\]</span></p>
+<p>Substituting into the equation for <span class="math inline">\(x(t)\)</span> gives:</p>
+<p><span class="math display">\[x(t) = (A cos \phi) sin (\omega t) + (A sin \phi) cos(\omega t)\]</span></p>
+<p>This form for <span class="math inline">\(x(t)\)</span> can be written in a more convenient way. At <span class="math inline">\(t=0\)</span>, <span class="math inline">\(x_0 \equiv x(0) = A sin \phi\)</span>:</p>
+<p><span class="math display">\[x(t) = (A cos \phi) sin (\omega t) + x_0 cos(\omega t)\]</span></p>
+<p>Differentiating the above equation gives:</p>
+<p><span class="math display">\[v(t) = A \omega cos\phi cos(\omega t) - x_0 \omega sin(\omega t)\]</span></p>
+<p>The initial velocity <span class="math inline">\(v_0 \equiv v(0) = A \omega cos\phi\)</span>. This gives <span class="math inline">\(A \cos\phi = v_0/\omega\)</span>. Substituting into the equation for <span class="math inline">\(x(t)\)</span> and rearrainging the terms gives a nice form for <span class="math inline">\(x(t)\)</span> in terms of the initial position and velocity:</p>
+<p><span class="math display">\[x(t) = x_0 cos(\omega t) + {v_0 \over \omega} sin(\omega t)\]</span></p>
+<p>This concludes our review of the two different forms of a sinusoidal function. Now for the Physics!</p>
+<p>Suppose an object, of mass <span class="math inline">\(m\)</span>, is undergoing simple harmonic motion along the x-axis. This means that the object’s position follows a single sinusiodal function, whose general form is <span class="math inline">\(x(t) = A sin(\omega t + \phi)\)</span>. What kind of force produces this kind of motion? Since we know <span class="math inline">\(x(t)\)</span>, we can find <span class="math inline">\(a(t)\)</span>. The force is just <span class="math inline">\(F(t) = m a(t)\)</span>. The velocity is found by differentiating <span class="math inline">\(x(t)\)</span>:</p>
+<p><span class="math display">\[v(t) = A \omega cos(\omega t + \phi)\]</span></p>
+<p>Differentiating again for <span class="math inline">\(a(t)\)</span>:</p>
+<p><span class="math display">\[a(t) = - A \omega^2 sin(\omega t + \phi)\]</span></p>
+<p>However, notice that <span class="math inline">\(x(t) = A sin(\omega t)\)</span>, which simplifies to:</p>
+<p><span class="math display">\[{{d^2 x} \over {dt^2}} = - \omega^2 x(t)\]</span></p>
+<p>or</p>
+<p><span class="math display">\[a(t) = - \omega^2 x(t)\]</span></p>
+<p>or simply <span class="math inline">\(a = - \omega^2 x\)</span> at all times and all positions <span class="math inline">\(x\)</span>. This is a simple result: the acceleration is proportional to <span class="math inline">\(x\)</span>, the objects displacement from the equilibrium position. The negative sign means that if <span class="math inline">\(x&gt;0\)</span> then <span class="math inline">\(a&lt;0\)</span>, and if <span class="math inline">\(x&lt;0\)</span> then <span class="math inline">\(a&gt;0\)</span>. This means that the acceleration is always towards the origin. Since <span class="math inline">\(F = ma\)</span>, we have</p>
+<p><span class="math display">\[F = - m \omega^2 x\]</span></p>
+<p>This result is also quite simple. The force is always towards the origin, and is proportional to <span class="math inline">\(x\)</span> the distance from the origin. If the object is moved twice as far away from the equilibrium position, it feels twice the force pushing it back. This type of force is called a "linear restoring force". It is a restoring force because of the minus sign. For positive <span class="math inline">\(x\)</span> the force is in the negative direction, and for negative <span class="math inline">\(x\)</span> the force is in the positive direction. It tries to "restore" the object back to <span class="math inline">\(x=0\)</span> the equilibrium position. It is a linear force because its magnitude is proportional to <span class="math inline">\(x\)</span> the displacement from equilibrium.</p>
+<p>Thus we see that <span><strong>a linear restoring force produces motion that is a single sinusoidal function (simple harmonic motion)</strong></span>. Let’s consider some forces to see if they produce simple harmonic motion, and if so, how the period depends on the parameter of the force.<br />
+</p>
+<p>We are all familiar with a spring. Suppose an object of mass <span class="math inline">\(m\)</span> is attached to one end, while the other end of the spring is held fixed. The object will have an equilibrium position, call it <span class="math inline">\(x=0\)</span>. If the object is displaced away from <span class="math inline">\(x=0\)</span> the spring pulls (or pushes) it back to the equilibrium position (<span class="math inline">\(x=0\)</span>). Thus, the spring produces a restoring force. But is the restoring force linear? That is, if we pull the object twice as far away from <span class="math inline">\(x=0\)</span> is the force twice as much? This question is answered by doing the experiment. You will do measurements in lab that show that <span><strong>the restoring force of a common spring is approximately linear</strong></span>. That is:</p>
+<p><span class="math display">\[F_{spring} \approx - k x\]</span></p>
+<p>The proportionality constant <span class="math inline">\(k\)</span> is called the spring constant for the particular spring. If <span class="math inline">\(k\)</span> is large, then the spring is stiff and produces a lot of force for a small displacement. If <span class="math inline">\(k\)</span> is small, then the spring is "loose" and doesn’t pull back with much force. The spring constant <span class="math inline">\(k\)</span> can be measured by applying a force (<span class="math inline">\(F_0\)</span>) and measuring how much the spring stretches (<span class="math inline">\(d\)</span>). Then <span class="math inline">\(k = F_0/d\)</span>. <span class="math inline">\(k\)</span> has units of force/distance (N/m). If time permits, we will discuss different spring examples in class.</p>
+<p>Having established that the simple spring produces a linear restoring force (approximately), we can determine period of the resulting periodic (simple harmonic) motion. From the equation above, <span class="math inline">\(F = - m \omega^2 x\)</span>. Since <span class="math inline">\(F_{spring} = - k x\)</span> we have:</p>
+<p><span class="math display">\[k = m \omega^2\]</span></p>
+<p>or</p>
+<p><span class="math display">\[\omega = \sqrt{{k \over m}}\]</span></p>
+<p>Since the period <span class="math inline">\(T = 2 \pi / \omega\)</span>, the period for the objects motion for the spring force is:</p>
+<p><span class="math display">\[T = 2 \pi \sqrt{{m \over k}}\]</span></p>
+<p>Although this formula was derived for the simple spring, a similar formula will result in general for a linear restoring force. If the force on an object (moving in one dimension) is of the form <span class="math inline">\(F_x = -C x\)</span>, then the motion will be simple harmonic, <span class="math inline">\(x(t) = A sin(\omega t + \phi)\)</span> where <span class="math inline">\(\omega = \sqrt{C/m}\)</span>.</p>
+<p>Notice that in the equation for the period <span class="math inline">\(T\)</span> for the linear restoring force that <span class="math inline">\(T\)</span> only depends on the mass and the restoring force constant. It does not depend on the amplitude <span class="math inline">\(A\)</span> of the motion. Thus, oscillations with large amplitudes will have the same period as oscillations with small amplitudes. This phenomena is a nice characteristic of the linear restoring force. The final equation of motion for the object at the end of the spring is:</p>
+<p><span class="math display">\[x(t) = A sin(\sqrt{{k \over m}} t + \phi)\]</span></p>
+<p>A simple pendulum is just a pendulum made out of a small object attached to a light string. Ideally, it is a "point" particle attached to a massless string which is fixed to a pivot point. If the pendulum is displaced from equilibrium, it swings back and forth, and its motion is periodic. The questions we want to consider are: is the motion simple harmonic, and what is the equation for the period <span class="math inline">\(T\)</span> of the motion?</p>
+<p>To answer these questions, one starts with the equation relating forces and motion. I am going to use a different variable than the textbook. I will specify the position of the particle by the distance, along an arc, that the particle is from the equilibrium position. See the figure at the end of this section. If the length of the pendulum is <span class="math inline">\(l\)</span>, the ratio <span class="math inline">\(x/l\)</span> is the angle <span class="math inline">\(\theta\)</span> (in radians) that the string makes with the vertical. Most textbooks use the angle <span class="math inline">\(\theta\)</span> to specify the location of the particle, so <span class="math inline">\(x = l \theta\)</span> is the connection between the text’s <span class="math inline">\(\theta\)</span> and our <span class="math inline">\(x\)</span>. I think this will be easier for us to make reference to the spring equation and avoid using torque.</p>
+<p>When the pendulum is hanging vertical, <span class="math inline">\(x=0\)</span>, right displacement is positive <span class="math inline">\(x\)</span> and left displacement is negative <span class="math inline">\(x\)</span>. If an object is displaced a distance <span class="math inline">\(x\)</span> along the arc, the component of gravity in the direction of the arc is <span class="math inline">\(-mg sin(\theta)\)</span> or <span class="math inline">\(-mg sin(x/l)\)</span>. The negative sign means that the force of gravity is a restoring force. If <span class="math inline">\(x&gt;0\)</span>, <span class="math inline">\(sin(x/l)&gt;0\)</span> and the force is in the negative direction. If <span class="math inline">\(x&lt;0\)</span>, <span class="math inline">\(sin(x/l)&lt;0\)</span> and the force is in the positive direction. Thus,</p>
+<p><span class="math display">\[F_x = - mg sin({x \over l})\]</span></p>
+<p>For a force to produce simple harmonic motion, the force must be proportional to <span class="math inline">\(-x\)</span>. The equation for the simple pendulum is NOT of this form. Here the force is proportional to <span class="math inline">\(-sin(x/l)\)</span>. Thus, <span><strong>the motion of a simple pendulum is NOT not simple harmonic</strong></span>. Don’t get confused with the "sin" function. <span><strong>A sinusoidal restoring force does not produce perfect sinusoidal motion</strong></span>. Only a linear restoring force gives perfect sinusoidal motion. This is easy to demonstrate. For simple harmonic motion, the period does not depend on the amplitude. Pendula with a larger amplitude (larger <span class="math inline">\(x_{max}\)</span>) have a longer period than ones with a smaller amplitude (smaller <span class="math inline">\(x_{max}\)</span>).</p>
+<p>If <span class="math inline">\(x/l\)</span> is small, less than <span class="math inline">\(0.1\)</span> , then <span class="math inline">\(sin(x/l) \approx x/l\)</span>. This can be seen from the series expansion of <span class="math inline">\(sin(x/l)\)</span>. The expansion for <span class="math inline">\(sin(\theta)\)</span> is <span class="math inline">\(sin(\theta) = \theta - \theta^3/3! + 
+\theta^5 /5! - \dots\)</span> (for <span class="math inline">\(\theta\)</span> in radians). Replacing <span class="math inline">\(\theta = x/l\)</span> gives: <span class="math inline">\(sin(x/l) = x/l - (x/l)^3/3! + (x/l)^5 /5! - \dots\)</span> If <span class="math inline">\((x/l) &lt; 0.1\)</span>, then the second term is <span class="math inline">\(0.0016\)</span> times the first, so to a pretty good approximation <span class="math inline">\(sin(x/l) \approx x/l\)</span>. In this case, we have</p>
+<p><span class="math display">\[F_x \approx - {{mgx} \over l}\]</span></p>
+<p>Thus, for small angles the restoring force is proportional to displacement, and the resulting motion is simple harmonic. The proportionality constant <span class="math inline">\(C\)</span> is <span class="math inline">\(mg/l\)</span>. Since the proportionality constant equals <span class="math inline">\(m \omega^2\)</span>, we have <span class="math inline">\(m \omega^2 = mg/l\)</span>, or</p>
+<p><span class="math display">\[\omega = \sqrt{g \over l}\]</span></p>
+<p>For small oscillations, the position <span class="math inline">\(x\)</span> along the arc of the path is just <span class="math inline">\(x(t) = A sin(\sqrt{{g \over l}} t + \phi)\)</span>.</p>
+<p>Since <span class="math inline">\(T = 2 \pi/\omega\)</span> we have</p>
+<p><span class="math display">\[T \approx 2 \pi \sqrt{l \over g}\]</span></p>
+<p>for a simple pendulum swinging at small displacements <span class="math inline">\(x\)</span> such that <span class="math inline">\(x_{max}/l\)</span>. In terms of the angle that the string makes with the vertical the maximum angle <span class="math inline">\(\theta_{max}\)</span> should be less than <span class="math inline">\(0.1\)</span> radians.</p>
+<p>The differential equation for <span class="math inline">\(x(t)\)</span> can be obtained by using <span class="math inline">\(F_x = m d^2x/dt^2\)</span>:</p>
+<p><span class="math display">\[m {{d^2 x} \over {dt^2}} = -mg sin({x \over l})\]</span></p>
+<p>or</p>
+<p><span class="math display">\[{{d^2 x} \over {dt^2}} = -g sin({x \over l})\]</span></p>
+<p>Using the small angle approximation, we have</p>
+<p><span class="math display">\[{{d^2 x} \over {dt^2}} \approx - {g \over l} x\]</span></p>
+<p>To compare with the equations in the book, just substitute <span class="math inline">\(x = l \theta\)</span>.</p>
+<p><strong>Energy considerations for Simple Harmonic Motion</strong></p>
+<p>To obtain an expression for the total mechanical energy that a simple harmonic oscillator has, we need an expression for the potential energy for the force acting. Let’s consider the case of the simple spring. The work done by the spring force when an object moves from the position <span class="math inline">\(x_1\)</span> to the position <span class="math inline">\(x_2\)</span> is:</p>
+<p><span class="math display">\[W_{1 \rightarrow 2} = \int_{x_1}^{x_2} (-kx) dx\]</span></p>
+<p>One needs to integrate since the force is not constant, but rather changes with position. The integral is:</p>
+<p><span class="math display">\[W_{1 \rightarrow 2} = {k \over 2} x_1^2 - {k \over 2} x_2^2\]</span></p>
+<p>From the work-energy theorum: <span class="math inline">\(W_{net} = \Delta(K.E.)\)</span>. If the only force acting on the object is the force of the spring, then the net work is the work done by the spring. In this case we have:</p>
+<p><span class="math display">\[{k \over 2} x_1^2 - {k \over 2} x_2^2 = {m \over 2} v_2^2 - 
+                           {m \over 2} v_1^2\]</span></p>
+<p>Rearrainging the terms gives:</p>
+<p><span class="math display">\[{k \over 2} x_1^2 + {m \over 2} v_1^2 =   
+         {k \over 2} x_2^2 + {m \over 2} v_2^2\]</span></p>
+<p>All the terms on the left are from position <span class="math inline">\(1\)</span>, and all the terms on the right are from position <span class="math inline">\(2\)</span>. Since these positions are arbitrary, we have that the expression <span class="math inline">\({k \over 2} x^2 + {m \over 2} v^2\)</span> is a constant of the motion. In this expression, <span class="math inline">\(x\)</span> is the position of the object and <span class="math inline">\(v\)</span> is the speed of the object (at the position <span class="math inline">\(x\)</span>). As the object moves back and forth, <span class="math inline">\(x\)</span> and <span class="math inline">\(v\)</span> both change but the special combination <span class="math inline">\({k \over 2} x^2 + {m \over 2} v^2\)</span> remains constant. We recognize the first term to be the potential energy and the second term to be the kinetic energy of the object. The sum, which is the total mechanical energy, remains constant.</p>
+<p><span class="math display">\[E_{tot} =  {k \over 2} x^2 + {m \over 2} v^2\]</span></p>
+<p>To determine the total mechanical energy for simple harmonic motion in general, we need to substitute for <span class="math inline">\(x(t)\)</span> and <span class="math inline">\(v(t)\)</span>. In general <span class="math inline">\(x(t) = A sin(\omega t + \phi)\)</span>. The velocity is given by <span class="math inline">\(v(t) = dx/dt = \omega A cos(\omega t + \phi)\)</span>. Substituting into the above equation, we have:</p>
+<p><span class="math display">\[E_{tot} =  {k \over 2} A^2 sin^2(\omega t + \phi) + 
+                {m \over 2} \omega^2 A^2 cos^2 (\omega t + \phi)\]</span></p>
+<p>However, since <span class="math inline">\(m \omega^2 = k\)</span>, we have</p>
+<p><span class="math display">\[E_{tot} =  {k \over 2} A^2 (sin^2(\omega t + \phi) + 
+                                  cos^2 (\omega t + \phi))\]</span></p>
+<p>Since <span class="math inline">\(sin^2 + cos^2 = 1\)</span>, the equation simplifies to</p>
+<p><span class="math display">\[E_{tot} = {k \over 2} A^2\]</span></p>
+<p>The total mechanical energy of a mass-spring system is <span class="math inline">\(k/2\)</span> times the square of the amplitude of the motion. In general, if the proportionality constant is <span class="math inline">\(C\)</span> (<span class="math inline">\(F_x = - C x\)</span>), the total mechanical energy is <span class="math inline">\({C \over 2} A^2\)</span>.</p>
+<p><strong>"Mechanical Waves": Waves in a Medium</strong></p>
+<p>In our previous discussion, we considered oscillations, or periodic motion, in one dimension. That is, an object that moves back and forth in one dimension (e.g. a mass on a spring). Now we want to consider oscillations that take place in a medium. By a <span><strong>medium</strong></span> we mean a material like a gas, liquid or solid. <span><strong>Oscillations that take place in a medium are called mechanical waves</strong></span>. The word mechanical just means that there is a medium that is oscillating.</p>
+<p>What is meant by the expression that a medium is oscillating? It means that the constituents of the medium (the atoms and molecules) are moving back and forth about an average equilibrium position. For the single particle undergoing periodic motion, we described its motion by its position <span class="math inline">\(x(t)\)</span> on the x-axis. Now we have a much different situation to describe. Each point in the medium will have its own displacement as a function of time. I am going to use the symbol <span class="math inline">\(d\)</span> to stand for the displacement of the medium. (The text uses the symbol <span class="math inline">\(y\)</span> which I find confusing.) Each point of the medium will have a displacement that usually varies with time:<br />
+d(<span class="math inline">\(\vec{r},t)\)</span> is defined as the displacement of the medium at the position <span class="math inline">\(\vec{r}\)</span> and at the time <span class="math inline">\(t\)</span>.<br />
+There are two "distances" involved here. One is the position <span class="math inline">\(\vec{r}\)</span> in the medium. The other is <span class="math inline">\(d\)</span>, the displacement of the medium at the position <span class="math inline">\(\vec{r}\)</span>. <span class="math inline">\(d\)</span> depends on position and time. It is actually a "field" quantity, a quantity that depends on position and time. To make the analysis simple, here we will only consider changes in the position <span class="math inline">\(\vec{r}\)</span> in one dimension.</p>
+<p>For example, suppose the medium is a taut string, like a guitar string. Let the x-axis lie along the string. <span class="math inline">\(d(x,t)\)</span> refers to how much the guitar string is displaced above its equilibrium position at the position <span class="math inline">\(x\)</span> at time <span class="math inline">\(t\)</span>. If the string is not vibrating, then <span class="math inline">\(d(x,t) =0\)</span> for all <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>. Suppose the string is vibrating. If <span class="math inline">\(x(5 \; cm, 2 \; sec) = 0.5 \; cm\)</span>, it means that at the position <span class="math inline">\(5\)</span> cm down the string, the string is displaced <span class="math inline">\(0.5\)</span> cm at the time <span class="math inline">\(2\)</span> seconds. <span class="math inline">\(d\)</span> is different at other positions on the string and as the time changes so will <span class="math inline">\(d\)</span>. It is important to understand what <span class="math inline">\(d(x,t)\)</span> means. We will use the function <span class="math inline">\(d(x,t)\)</span> to describe waves, and will derive an equation that <span class="math inline">\(d(x,t)\)</span> satisfies.</p>
+<p>One cannot make a "simple" graph of <span class="math inline">\(d(x,t\)</span> in two dimensions, since <span class="math inline">\(d\)</span> itself depends on <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>. However, two graphs can be used to describe the displacement. One would be a "snapshot" of the wave at a certain time <span class="math inline">\(t\)</span>, say <span class="math inline">\(t=0\)</span>. In this graph, one would plot <span class="math inline">\(d(x,0)\)</span> versus <span class="math inline">\(x\)</span>. It would show a picture of <span><em>the disturbance at a moment in time</em></span>. The other graph would be a graph of the displacement as a function of time at at certain location, say <span class="math inline">\(x=0\)</span>. Here, one would plot <span class="math inline">\(d(0,t)\)</span> as a function of time, and the graph would display the displacement of the medium as a function of time at the position <span class="math inline">\(x=0\)</span>.</p>
+<p>Under certain conditions, the disturbance (or wave) can move with a definate velocity <span class="math inline">\(v\)</span>. One part of the medium "pushes" on the part next to it, and the disturbance propagates down the medium. We will discuss later why this can occur, but lets first consider how such a traveling wave can be described mathematically. Suppose the wave has the functional form <span class="math inline">\(d = f(x)\)</span> at time <span class="math inline">\(t=0\)</span> If the wave <span><strong>travels to the right</strong></span> with speed <span class="math inline">\(v\)</span>, what is <span class="math inline">\(d\)</span> for times <span class="math inline">\(t&gt;0\)</span>? One just replaces <span class="math inline">\(x\)</span> with <span class="math inline">\(x-vt\)</span>:</p>
+<p><span class="math display">\[d(x,t) = f(x-vt)\]</span></p>
+<p>for all <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>. If the disturbance (or wave) is <span><strong>traveling to the left</strong></span>, then <span class="math inline">\(x\)</span> is replaced with <span class="math inline">\(x+vt\)</span>:</p>
+<p><span class="math display">\[d(x,t) = f(x+vt)\]</span></p>
+<p>Let’s consider an example to better understand this concept. Suppose at <span class="math inline">\(t=0\)</span> the displacement is</p>
+<p><span class="math display">\[d(x,0) = {1 \over {x^2 + 1}}\]</span></p>
+<p>A graph of this function is given on the figures page. It looks like a mountain that has its largest value of <span class="math inline">\(1\)</span> at <span class="math inline">\(x=0\)</span>. To make this shape move to the right with speed <span class="math inline">\(2\)</span>, we just replace <span class="math inline">\(x\)</span> with <span class="math inline">\((x-2t)\)</span>:</p>
+<p><span class="math display">\[d(x,t) = {1 \over {(x-2t)^2 + 1}}\]</span></p>
+<p>To see that this shape moves to the right, we can graph <span class="math inline">\(d(x,1)\)</span> the displacement at time <span class="math inline">\(t=1\)</span>:</p>
+<p><span class="math display">\[d(x,1) = {1 \over {(x-2)^2 + 1}}\]</span></p>
+<p>This graph has the same "mountain" shape as the previous one, but is shifted two units to the right. It has a maximum of <span class="math inline">\(1\)</span> at <span class="math inline">\(x=2\)</span>, since at <span class="math inline">\(x=2\)</span> the term <span class="math inline">\((x-2)\)</span> is zero.<br />
+Note that the function <span class="math inline">\(f(x)\)</span> can (in principle) be anything. <span class="math inline">\(f(x)\)</span> does not need to be periodic. Periodic traveling waves are a special case, which we consider next.<br />
+</p>
+<p>If the function <span class="math inline">\(f(x)\)</span> is periodic, then the traveling wave is periodic in position <span class="math inline">\(x\)</span>. If one takes a "snapshot" of the wave at any time <span class="math inline">\(t\)</span>, the disturbance repeats as <span class="math inline">\(x\)</span> is increased (or decreased). The <span><strong>shortest distance that repeats is called the wavelength</strong></span> and is usually given the symbol <span class="math inline">\(\lambda\)</span>.</p>
+<p>An interesting property of traveling waves that are periodic in <span class="math inline">\(x\)</span> (at a fixed time <span class="math inline">\(t\)</span>), is that they are also periodic in time for a fixed position <span class="math inline">\(x\)</span>. <span class="math inline">\(d(x,t)\)</span> for <span class="math inline">\(x\)</span> fixed oscillates periodically in time. As with the spring and pendulum, we define the number of oscillations per unit time as the frequency <span class="math inline">\(f\)</span>. Thus, a periodic traveling wave has a definate wavelength <span class="math inline">\(\lambda\)</span> and a definate frequency <span class="math inline">\(f\)</span>. These two quantities are related to the wave’s velocity. If <span class="math inline">\(f\)</span> cycles occur every second, and for each cycle the wave travels a distance <span class="math inline">\(\lambda\)</span>, then the velocity of the wave is equal to <span class="math inline">\(f \lambda\)</span>:</p>
+<p><span class="math display">\[v = f \lambda\]</span></p>
+<p>This equation is universal for periodic traveling waves. It holds for sound waves, water waves, waves on a string, and waves on a spring to name a few. It even is true for non-mechanical waves like electro-magnetic radiation (light). Periodic traveling waves have three quantities associated with them: a velocity, wavelength and frequency. General traveling waves only have a velocity associated with them, since the shape need not be periodic.</p>
+<p>A periodic traveling wave has some interesting mathematical properties: <span class="math inline">\(d(x \pm \lambda,t) = d(x,t)\)</span> for all times <span class="math inline">\(t\)</span>, and <span class="math inline">\(d(x,t \pm T) = d(x,t)\)</span> for all positions <span class="math inline">\(x\)</span> along the wave. These properties define the periodic traveling wave, the wavelength <span class="math inline">\(\lambda\)</span>, and the period <span class="math inline">\(T\)</span> of the wave. Combining the two equations gives:</p>
+<p><span class="math display">\[d(x \pm \lambda, t) = d(x, t \pm T)\]</span></p>
+<p>Since a traveling wave can be written in the form <span class="math inline">\(d(x \pm vt)\)</span>, the above equation yields:</p>
+<p><span class="math display">\[(x \pm \lambda) - vt = x - v(t \pm T)\]</span></p>
+<p>for a wave traveling to the right. The <span class="math inline">\(x\)</span> and <span class="math inline">\(vt\)</span> cancel on both sides, and we are left with</p>
+<p><span class="math display">\[\lambda = vT\]</span></p>
+<p>using the <span class="math inline">\(+\)</span> sign for <span class="math inline">\(\lambda\)</span> and the <span class="math inline">\(-\)</span> sign for <span class="math inline">\(T\)</span>. Since <span class="math inline">\(f=1/T\)</span> we have</p>
+<p><span class="math display">\[v = f \lambda\]</span></p>
+<p>Before we talk about a specific kind of periodic traveling wave, the sinusoidal traveling wave, let’s discuss some general properties of traveling waves.</p>
+<p>The velocity of a traveling wave will have a certain direction. Let’s suppose it is traveling in the +x direction. The displacement of the medium can be in any direction. It can be in the x-, the y-, or the z-direction, or a combination of the three directions. We have special names if the displacement is in the direction of the velocity (x-direction) or perpendicular to the direction of the velocity (y- or z-direction).<br />
+are traveling waves whose displacements are in the direction of the velocity.<br />
+are traveling waves whose displacements are perpendicular to the direction of the velocity.<br />
+Some waves are a combination of both longitudinal and transverse displacements. Let’s list some of these properties for some common waves:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Property</th>
+<th style="text-align: center;">string</th>
+<th style="text-align: center;">sound</th>
+<th style="text-align: center;">surface water</th>
+<th style="text-align: center;">E-M (light)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">medium:</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">gas, liquid, solid</td>
+<td style="text-align: center;">water</td>
+<td style="text-align: center;">NONE (space and time)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">type:</td>
+<td style="text-align: center;">transverse</td>
+<td style="text-align: center;">longitudinal</td>
+<td style="text-align: center;">combination of both</td>
+<td style="text-align: center;">transverse in free space</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">speed</td>
+<td style="text-align: center;"><span class="math inline">\(\sqrt{F/ \mu}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sqrt{B/\rho}\)</span></td>
+<td style="text-align: center;">depth of water</td>
+<td style="text-align: center;"><span class="math inline">\(3 \times 10^8\)</span>m/s for all observers</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">frequency</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">pitch</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">color for visible light</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We would like to understand the propagation of a traveling wave in terms of some level of fundamental physics. Some questions we would like to answer are: a) how can the disturbance of a medium travel in space? b) what does the speed of the traveling wave depend upon? We will answer these questions for a simple case: transverse displacements on a taut string. There are basically only three parameters that describe the string: its mass, its length, and the tension in the string.</p>
+<p>One could use unit analysis to get an idea how the mass <span class="math inline">\(m\)</span>, length <span class="math inline">\(l\)</span>, and tension affect the speed of the wave. We’ll use the symbol <span class="math inline">\(F\)</span> for the tension in the string (<span class="math inline">\(T\)</span> is used for period). <span class="math inline">\(F\)</span> has units of Newtons = mass(length)/(time)<span class="math inline">\(^2\)</span>. Since we can only use mass and length, we must divide by mass, multiply by length, and take the square root to obtain a velocity: <span class="math inline">\(\sqrt{Fl/m}\)</span>. Thus, the speed can only depend on the tension <span class="math inline">\(F\)</span> and the ratio of mass to length <span class="math inline">\(m/l\)</span>. The mass per length is a <span><strong>linear mass density</strong></span> and is given the symbol <span class="math inline">\(\mu\)</span>. So <span class="math inline">\(v \sim \sqrt{F/\mu}\)</span>. Unit analysis can only take us this far. We do not know if there is a unitless factor in front of <span class="math inline">\(\sqrt{F/ \mu}\)</span>. We need to use more physics.</p>
+<p>Consider a small segment of the string, which starts at <span class="math inline">\(x \equiv x_1\)</span> and has a length of <span class="math inline">\(\Delta x\)</span> and a mass <span class="math inline">\(\Delta m\)</span>. See the figure on the last page. The right side of the segment is at <span class="math inline">\(x + \Delta x \equiv x_2\)</span>. From the figure, the force on the segment at <span class="math inline">\(x_2\)</span> equals <span class="math inline">\(F sin \theta_2\)</span> and is away from equilibrium. The force on the segment at <span class="math inline">\(x_1\)</span> equals <span class="math inline">\(F sin \theta_1\)</span> and is towards equilibrium. The net force on the segment is therefore <span class="math inline">\(F_{net} = F sin \theta_1 -
+F sin \theta_2\)</span>. If the angle is small, <span class="math inline">\(sin \theta \approx tan \theta\)</span>. But, <span class="math inline">\(tan \theta\)</span> is equal to the derivative of <span class="math inline">\(d\)</span> with respect to <span class="math inline">\(x\)</span>. So the net force on the segment is</p>
+<p><span class="math display">\[Net \; Force \approx F {{d&quot;d&quot;} \over {dx}}|_{x+\Delta x} - F {{d&quot;d&quot;} \over {dx}}|_x\]</span></p>
+<p>Equating Net Force to mass times acceleration gives:</p>
+<p><span class="math display">\[\Delta m {{d^2&quot;d&quot;} \over {dt^2}} = F {{d&quot;d&quot;} \over {dx}}|_{x+\Delta x} - F {{d&quot;d&quot;} \over {dx}}|_x\]</span></p>
+<p>Dividing by <span class="math inline">\(\Delta x\)</span> on both sides gives</p>
+<p><span class="math display">\[{{\Delta m} \over {\Delta x}} {{d^2&quot;d&quot;} \over {dt^2}} = F {{{{d&quot;d&quot;} \over {dx}}|_{x+\Delta x} - {{d&quot;d&quot;} \over {dx}}|_x}
+                                                               \over {\Delta x}}\]</span></p>
+<p>Taking the limit as <span class="math inline">\(\Delta x \rightarrow 0\)</span>, the equation becomes</p>
+<p><span class="math display">\[{{d^2&quot;d&quot;} \over {dt^2}} = {F \over \mu} {{d^2 &quot;d&quot;} \over {dx^2}}\]</span></p>
+<p>This equation is called a "wave equation". It contains derivatives in space and time for the function <span class="math inline">\(d(x,t)\)</span> This looks like a difficult differential equation to solve, but surprizingly, the general solution is fairly simple. The solution can be written in the form: <span class="math inline">\(d(x,t) = g(u)\)</span> where <span class="math inline">\(u=x \pm vt\)</span> and <span class="math inline">\(g(u)\)</span> is any function of <span class="math inline">\(u\)</span> that has a non-zero second derivative with respect to <span class="math inline">\(u\)</span>. The "-" produces a disturbance (or wave) traveling to the right, and a "+" is a wave traveling to the left. Let’s show why <span class="math inline">\(g(u)\)</span> is a solution. I will let <span class="math inline">\(g&#39; \equiv dg/du\)</span> and <span class="math inline">\(g&#39;&#39; \equiv d^2g/du^2\)</span>. Consider the case for which <span class="math inline">\(u=x-vt\)</span>. <span class="math inline">\(d&quot;d&quot;/dx\)</span> is given by</p>
+<p><span class="math display">\[{{d&quot;d&quot;} \over {dx}} = {{dg} \over {du}} {{du} \over {dx}}= g&#39;\]</span></p>
+<p>using the chain rule. The second derivative is determined in the same way:</p>
+<p><span class="math display">\[{{d^2&quot;d&quot;} \over {dx^2}} = {{dg&#39;} \over {du}} {{du} \over {dx}}= g&#39;&#39;\]</span></p>
+<p>We can use the chain rule in a similar way with the time derivatives:</p>
+<p><span class="math display">\[{{d&quot;d&quot;} \over {dt}} = {{dg} \over {du}} {{du} \over {dt}}= (-v) g&#39;\]</span></p>
+<p>The <span class="math inline">\(-v\)</span> comes from differentiating <span class="math inline">\(u=x-vt\)</span> with respect to <span class="math inline">\(t\)</span>. Taking the second derivative with respect to time gives:</p>
+<p><span class="math display">\[{{d^2&quot;d&quot;} \over {dt^2}} = {{dg&#39;} \over {du}} {{du} \over {dt}}= v^2 g&#39;&#39;\]</span></p>
+<p>Comparing the second derivative equations for <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>, we see that</p>
+<p><span class="math display">\[{{d^2 &quot;d&quot;} \over {dt^2}} = v^2 {{d^2 &quot;d&quot;} \over {dx^2}}\]</span></p>
+<p>Thus, any function of the form <span class="math inline">\(d=g(x-vt)\)</span> which has non-zero second derivatives will satisfy the wave equation, with the velocity of the wave equal to <span class="math inline">\(v = \sqrt{F/ \mu}\)</span>.<br />
+Let’s consider a specific example to better understand this concept. Since <span class="math inline">\(g(u)\)</span> can be anything, let’s let <span class="math inline">\(g(u)=u^3\)</span>. This means that <span class="math inline">\(d(x,t)\)</span> is <span class="math inline">\((x-vt)^3\)</span>:</p>
+<p><span class="math display">\[d(x,t) = (x-vt)^3\]</span></p>
+<p>If we take the second derivative of <span class="math inline">\(d\)</span> with respect to x we get <span class="math inline">\(6(x-vt)\)</span> using the chain rule. The second derivative of <span class="math inline">\(d\)</span> with respect to <span class="math inline">\(t\)</span> is <span class="math inline">\(6v^2(x-vt)\)</span>. Thus,</p>
+<p><span class="math display">\[{{d^2 &quot;d&quot;} \over {dt^2}} = 6 v^2 (x-vt)\]</span></p>
+<p>However, <span class="math inline">\(6 (x-vt) = d^&quot;d&quot;/dx^2\)</span>. Substituting this into the above equation, we have</p>
+<p><span class="math display">\[{{d^2 &quot;d&quot;} \over {dt^2}} = v^2 {{d^2 &quot;d&quot;} \over {dx^2}}\]</span></p>
+<p>Thus, <span class="math inline">\(d(x,t) = (x-vt)^3\)</span> is a solution to the wave equation with <span class="math inline">\(v=\sqrt{F/ \mu}\)</span>. We would have had the same result if we had used any function <span class="math inline">\(g(u)\)</span> with <span class="math inline">\(u=x-vt\)</span>.<br />
+This is a nice result and deserves some comments:<br />
+. We applied Newton’s law of motion to the segment of string, with the resulting motion that of a traveling wave: if a pulse is formed on the string, it keeps its shape and travels down the string. It is not obvious that this should occur. What was the key property of the medium that lead to a "fixed shape" traveling down the string? From the wave equation, we see that it was important that the second derivative of <span class="math inline">\(d\)</span> in space is proportional to the second derivative in time. The second derivative in time is the acceleration of the segment which is proportional to the force. So the key property is that the force on a segment of the medium is proportional to the second derivative of <span class="math inline">\(d\)</span>. We shall see this same property when we analyze a sound wave.<br />
+. The velocity only depends on the tension <span class="math inline">\(F\)</span> and the linear mass density <span class="math inline">\(\mu\)</span> of the string. <span><strong>The velocity does not depend on the frequency of the disturbance</strong></span>. If a medium has this property it is called a <span><strong>non-dispersive medium</strong></span>. In a non-dispersive medium a pulse can travel down the medium without its shape changing. <span class="math inline">\(f\)</span> times <span class="math inline">\(\lambda\)</span> equals <span class="math inline">\(v\)</span>, which is the same for all frequencies, as long as the tension and density do not change. Thus if the frequency increases, the wavelength decreases with the product being constant. Air is non-dispersive for sound waves. This is fortunate, because if the speed of sound depended on the pitch of the note, you wouldn’t want to listen to music.<br />
+</p>
+<p>Sinusoidal traveling waves are traveling waves that have a perfect sinusoidal function. Their shape is given by <span class="math inline">\(d=A sin(2 \pi u/\lambda)\)</span> where <span class="math inline">\(\lambda\)</span> is the wavelength and <span class="math inline">\(A\)</span> is the amplitude of the wave. If they are traveling to the right, then <span class="math inline">\(u=x-vt\)</span>. If they are traveling to the left, then <span class="math inline">\(u=x+vt\)</span>. Substituing these expressions for <span class="math inline">\(u\)</span> into the sinusoidal function we have</p>
+<p><span class="math display">\[d(x,t) = A sin({{2 \pi} \over \lambda}(x \pm vt))\]</span></p>
+<p>where the + (-) refers to waves traveling to the left (right). Since <span class="math inline">\(v/\lambda=f\)</span>, this can be written as:</p>
+<p><span class="math display">\[d(x,t) = A sin({{2 \pi} \over \lambda}x \pm 2 \pi f t))\]</span></p>
+<p>The expression can be made simplier if we define <span class="math inline">\(\omega \equiv 2 \pi f\)</span> and <span class="math inline">\(k \equiv 2 \pi / \lambda\)</span>. k is called the <span><strong>wave number</strong></span>.</p>
+<p><span class="math display">\[d(x,t) = A sin(kx \pm  \omega t)\]</span></p>
+<p>. If <span class="math inline">\(d(0,0)\)</span> is not zero, then we need an additional constant to match the initial conditions. As in the case of simple harmonic motion in one dimension, we use a phase <span class="math inline">\(\phi\)</span> to "put" the sine function in the correct position at <span class="math inline">\(t=0\)</span>:</p>
+<p><span class="math display">\[d(x,t) = A sin(kx \pm  \omega t + \phi)\]</span></p>
+<p>The "-" corresponds to waves traveling to the right (+x direction) and the "+" to waves traveling to the left (-x direction).</p>
+<p>The derivation of the wave equation for sound waves is similiar to the string. In the case of sound waves the speed is equal to <span class="math inline">\(v_{sound} = \sqrt{B/\rho}\)</span>, where <span class="math inline">\(B\)</span> is the bulk modulus and <span class="math inline">\(\rho\)</span> is the density of the medium. The speed of sound is quite different in gases, liquids, and solids. For example, in air <span class="math inline">\(v_{sound} \approx 340\)</span> m/s, in water <span class="math inline">\(v_{sound} \approx 
+1500\)</span> m/s, and in solids it can be as large as <span class="math inline">\(5000\)</span> m/s. Of the many topics we could cover on sound, we will discuss two: the Doppler effect and Sound Level Intensity.<br />
+<br />
+Suppose there is a source of sound which emits waves of a definate frequency <span class="math inline">\(f_s\)</span>, with the <span class="math inline">\(s\)</span> standing for source. If the source is moving in the medium, the crests of the sound waves will be closer together in front of the source and further apart behind the source than if the source were at rest in the medium. An observer stationary in the medium will hear a frequency different than <span class="math inline">\(f_s\)</span>. This same effect will occur if the source is at rest in the medium and the observer is moving. A change in the frequency of the observed sound from <span class="math inline">\(f_s\)</span> is called the Doppler effect, named after Doppler who first observed it.<br />
+<br />
+Let <span class="math inline">\(f_s\)</span> be the frequency of the source of the sound and <span class="math inline">\(f_o\)</span> be the frequency observed by an observer at rest in the medium. Let <span class="math inline">\(v_s\)</span> be the velocity of the source with respect to the medium, and <span class="math inline">\(v\)</span> the velocity of sound in the medium. Suppose the source is moving towards an observer who is stationary in the medium. The frequency that the observer will hear will be higher than <span class="math inline">\(f_s\)</span>. We will derive in class that:</p>
+<p><span class="math display">\[f_o = {f_s \over {1 - v_s/v}}\]</span></p>
+<p>The minus sign in the denominator makes <span class="math inline">\(f_o &gt; f_s\)</span>. If the source is moving away from the observer the result is</p>
+<p><span class="math display">\[f_o = {f_s \over {1 + v_s/v}}\]</span></p>
+<p>and <span class="math inline">\(f_o &lt; f_s\)</span>. Both of these equations can be combined into one:</p>
+<p><span class="math display">\[f_o = {f_s \over {1 \pm v_s/v}}\]</span></p>
+<p>The key idea for deriving this equation is to note that the wavelength of the sound in the medium equals the "normal" wavelength minus <span class="math inline">\(v_s T\)</span> where <span class="math inline">\(T\)</span> is the period of the wave.<br />
+<br />
+Suppose the source is at rest in the medium and an observer is moving towards the source. The observer will observe a higher frequency than <span class="math inline">\(f_s\)</span>. Let <span class="math inline">\(v_o\)</span> be the velocity of the observer. It will be shown in lecture that</p>
+<p><span class="math display">\[f_o = f_s (1 + v_o/v)\]</span></p>
+<p>for an observer moving towards a source at rest in the medium. If the observer is moving away from the source</p>
+<p><span class="math display">\[f_o = f_s (1 - v_o/v)\]</span></p>
+<p>In this case <span class="math inline">\(f_o &lt; f_s\)</span>. These two equations can be combined into one:</p>
+<p><span class="math display">\[f_o = f_s (1 \pm v_o/v)\]</span></p>
+<p>Both situations of moving source and observe can be expressed in one equation:</p>
+<p><span class="math display">\[f_o = f_s {{1 \pm v_o/v} \over {1 \pm v_s/v}}\]</span></p>
+<p>The key to using this equation properly is to use all variables <span><strong>in the reference frame of the medium</strong></span>. That is, in the frame with the medium at rest. When determining <span class="math inline">\(f_o\)</span>, the frequency heard by the observer, I substitute into the equation for <span class="math inline">\(f_s\)</span>, the frequency of the source, <span class="math inline">\(v_o/v\)</span>, and <span class="math inline">\(v_s/v\)</span> without assigning a "+" or "-" in the numerator or demonimator. Then I think:<br />
+a) If the <span><em>observer is moving</em></span> towards the source, <span class="math inline">\(f_o\)</span> should increase <span class="math inline">\(\rightarrow\)</span> a "+" in the numerator. If the <span><em>observer is moving</em></span> away from the source, <span class="math inline">\(f_o\)</span> should decrease <span class="math inline">\(\rightarrow\)</span> a "-" in the numerator.<br />
+b) If the <span><em>source is moving</em></span> towards the observer, <span class="math inline">\(f_o\)</span> should increase <span class="math inline">\(\rightarrow\)</span> a "-" in the denominator. If the <span><em>source is moving</em></span> away from the observer, <span class="math inline">\(f_o\)</span> should decrease <span class="math inline">\(\rightarrow\)</span> a "+" in the denominator.<br />
+If both are moving with respect to the medium, then apply both a) and b). above.</p>
+<p>Sound intensity, <span class="math inline">\(I\)</span>, is a measure of the Energy per Area per sec of the sound wave. The metric units of sound intensity is Joules/m<span class="math inline">\(^2\)</span>/sec. The human ear is rather amazing. It can detect sound intensity as small as <span class="math inline">\(10^{-12}\)</span> W/m<span class="math inline">\(^2\)</span> and as large as <span class="math inline">\(1\)</span> W/m<span class="math inline">\(^2\)</span>. That is <span class="math inline">\(12\)</span> orders of magnitude!! For this reason it is useful to have a different way to assign a number to sound intensity. It is called the sound level and the unit given is the decibel. The sound level in dB is defined in terms of the sound intensity <span class="math inline">\(I\)</span> as:</p>
+<p><span class="math display">\[Sound \; Level \;(dB) \; \equiv 10 log({I \over {10^{-12}}})\]</span></p>
+<p>where the sound intensity <span class="math inline">\(I\)</span> is in units of W/m<span class="math inline">\(^2\)</span>, and the log is in base <span class="math inline">\(10\)</span>. The table below gives some examples of sound levels for various everyday activities:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Activity</th>
+<th style="text-align: center;"><span class="math inline">\(I\)</span> W/m<span class="math inline">\(^2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(I/10^{-12}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(log(I/10^{-12})\)</span></th>
+<th style="text-align: center;">dB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Threshold</td>
+<td style="text-align: center;"><span class="math inline">\(10^{-12}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of hearing</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Whisper at 1 Meter</td>
+<td style="text-align: center;"><span class="math inline">\(10^{-10}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10^2\)</span></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Classroom</td>
+<td style="text-align: center;"><span class="math inline">\(10^{-7}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10^5\)</span></td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Jackhammer</td>
+<td style="text-align: center;"><span class="math inline">\(10^{-3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10^9\)</span></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rock Band</td>
+<td style="text-align: center;"><span class="math inline">\(10^{-1}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10^{11}\)</span></td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">110</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Pain</td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10^{12}\)</span></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">120</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Usually sound sources produce a certain amount of sound energy per unit time. That is their output is usually measured in terms of their power. Power is energy per unit time, with the metric unit being Watts. One Watt equals one Joule/sec. In general, the further away one is from a source of sound, the smaller is the sound intensity. If the source of sound is a "small" source and the waves travel away equally in three dimensions the sound intensity is easy to determine. If the observer is a distance <span class="math inline">\(r\)</span> away from the source, the energy distributes itself equally on a spherical surface of radius <span class="math inline">\(r\)</span>. Thus, the sound intensity from a source of power <span class="math inline">\(P\)</span> is just:</p>
+<p><span class="math display">\[I = {P \over {4 \pi r^2}}\]</span></p>
+<p>If one moves twice as far away from a sound source, the intensity decreases by a factor of <span class="math inline">\(2^2\)</span> or <span class="math inline">\(4\)</span>.</p>
+<p>Suppose there are two or more sources of mechanical waves. What is the net displacement of the medium at a particular position? As verified by experiment, the net displacement is the sum of the displacements from the individual sources. This property of nature is called the superposition principle. Simply stated it is:<br />
+<br />
+In this course, we will consider the case when there are only two sources, and each source emits pure sinusoidal waves of equal amplitude.</p>
+<p>For two sources of waves, the net displacement will be the sum of the displacements from the two sources: <span class="math inline">\(d_{net} = d_1 + d_2\)</span>. If the sources emit sinusoidal waves, <span class="math inline">\(d_{net}\)</span> will be the sum of two sinusoidal waves. We will need to use the formula for the sum of two sin functions with equal amplitude:</p>
+<p><span class="math display">\[sin(\alpha) + sin(\beta) = 2 sin({{\alpha + \beta} \over 2}) cos({{\alpha - \beta} \over 2})\]</span></p>
+<p>In this course we will consider three different cases with two sources: a) two sources separated in space, b) two sources of slightly different frequency, and c) standing waves.</p>
+<p>Suppose there are two sources of sinusoidal waves, each having the <span><strong>same frequency</strong></span> and in phase with each other. Let <span class="math inline">\(D\)</span> be the separation of the two sources. The displacement at time <span class="math inline">\(t\)</span>, and at a position located a distance <span class="math inline">\(r_1\)</span> away from the first source is:</p>
+<p><span class="math display">\[d_1(r_1,t) = A(r_1) sin(kr_1 - \omega t)\]</span></p>
+<p>where the amplitude <span class="math inline">\(A(r)\)</span> will decrease with distance from the source. Similarly, the displacement due to the second source is</p>
+<p><span class="math display">\[d_2(r_2,t) = A(r_2) sin(kr_2 - \omega t)\]</span></p>
+<p>where <span class="math inline">\(r_2\)</span> is the distance the observer is away from source 2.</p>
+<p>If an observer receives both sources, the net displacement at the position of the observer is the sum of the displacements due to each source separately (Superposition Principle):</p>
+<p><span class="math display">\[d_{net} = d_1 + d_2\]</span></p>
+<p>In general, this sum can be complicated. However, lets assume that <span class="math inline">\(A(r_1)\)</span> and <span class="math inline">\(A(r_2)\)</span> are approximately equal: <span class="math inline">\(A(r_1) \approx A(r_2) \equiv
+A\)</span>. This is a good approximation if <span class="math inline">\(D&lt;&lt;r_i\)</span>. With this approximation,</p>
+<p><span class="math display">\[d_{net} \approx A (sin(kr_1 - \omega t) + sin(kr_2 - \omega t))\]</span></p>
+<p>Now we can use our formula for adding two sin functions:</p>
+<p><span class="math display">\[d_{net} \approx 2 A sin({{k(r_1 + r_2)} \over 2} - \omega t) cos(k{{r_1-r_2} \over 2})\]</span></p>
+<p>Rearrainging terms and defining <span class="math inline">\(r_{ave} \equiv (r_1 + r_2)/2\)</span> and <span class="math inline">\(\Delta r \equiv (r_1 - r_2)\)</span>:</p>
+<p><span class="math display">\[d_{net} \approx 2 A cos(k{{\Delta r} \over 2}) sin(kr_{ave} - \omega t)\]</span></p>
+<p>Since <span class="math inline">\(k=2 \pi / \lambda\)</span>, we have</p>
+<p><span class="math display">\[d_{net} \approx 2 A cos({{\pi \Delta r} \over \lambda}) sin(kr_{ave} - \omega t)\]</span></p>
+<p>The "sin" term oscillates in time and varies from <span class="math inline">\(+1\)</span> to <span class="math inline">\(-1\)</span>. The factor <span class="math inline">\(2 A cos(\pi \Delta r/ \lambda)\)</span> is the largest that <span class="math inline">\(d_{net}\)</span> can become. It is the maximum amplitude of the net displacement:</p>
+<p><span class="math display">\[A_{max} = 2 A cos({{\pi \Delta r} \over \lambda})\]</span></p>
+<p>This is an interesting result. <span class="math inline">\(A_{max} = 2A\)</span> if <span class="math inline">\(\Delta r\)</span> equals <span class="math inline">\(0\)</span>, <span class="math inline">\(\pm \lambda\)</span>, <span class="math inline">\(\pm 2 \lambda\)</span>, ... , <span class="math inline">\(\pm N \lambda\)</span> where <span class="math inline">\(N\)</span> is an integer. In this case, the two waves add "constructively", with the net amplitude being <span class="math inline">\(2A\)</span>.</p>
+<p>If, on the other hand, <span class="math inline">\(\Delta r = \pm \lambda/2\)</span>, <span class="math inline">\(\pm 3 \lambda/2\)</span>, ... , <span class="math inline">\(\pm (N+1/2) \lambda\)</span> then the <span><strong>net displacement equals ZERO</strong></span>. This is because <span class="math inline">\(cos(\pi /2) = 0\)</span>, etc. In this case, the two waves cancel each other.<br />
+The superposition principle leads to what is called "interference effects". If the two amplitudes add constructively, it is termed "constructive interference". If the two waves cancel out, it is called "destructive interference". The general expression for the interference amplitude is <span class="math inline">\(A_{max} = 2 A cos(\pi \Delta r / \lambda)\)</span>. Another way of looking at the interference effect is to notice that the "phase" difference between <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span> is given by <span class="math inline">\(\phi = 2 \pi \Delta r / \lambda\)</span>. If the extra distance <span class="math inline">\(\Delta r\)</span> equals <span class="math inline">\(\lambda /2\)</span> then the waves are <span class="math inline">\(180^\circ\)</span> out of phase and cancel out. If the extra distance <span class="math inline">\(\Delta r\)</span> is a multiple of a wave length <span class="math inline">\(\lambda\)</span> then the waves are "in phase" and add together.</p>
+<p>We will do a number of examples and demo’s in class which illustrate "two source" interference including: two sound sources and double slit interference.</p>
+<p>Suppose there are two sources of sinusoidal waves located next to each other. One source has a frequency of <span class="math inline">\(f_1\)</span>, and the other a frequency of <span class="math inline">\(f_2\)</span>, with <span class="math inline">\(f_1 \approx f_2\)</span>. The sources have the same amplitude <span class="math inline">\(A\)</span>. If an observer "listens" to both sounds at once, the net displacement is:</p>
+<p><span class="math display">\[d_{net}(t) = A sin(2 \pi f_1 t) + A sin(2 \pi f_2 t)\]</span></p>
+<p>Using our formula for adding sin functions:</p>
+<p><span class="math display">\[d_{net}(t) = 2 A cos(2 \pi ({{f_1 - f_2} \over 2})t) sin(2 \pi ({{f_1+f_2} \over 2}) t)\]</span></p>
+<p>Defining <span class="math inline">\(\Delta f \equiv f_1 - f_2\)</span> and <span class="math inline">\(f_{ave} \equiv (f_1+f_2)/2\)</span>, we have</p>
+<p><span class="math display">\[d_{net}(t) = 2 A cos(\pi (\Delta f) t) sin(2 \pi f_{ave} t)\]</span></p>
+<p>The sin term oscillates in time with a frequency between <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span>. The cos term oscillates much slower, <span class="math inline">\(\Delta f &lt;&lt; f_{ave}\)</span>, since <span class="math inline">\(f_1 \approx f_2\)</span>. So, the observer hears a sound with frequency <span class="math inline">\(f_{ave} \approx f_1\)</span>, whose amplitude slowly changes in time according to <span class="math inline">\(2A |cos(\pi (\Delta f) t)|\)</span>. The result is a sound that gets loud, soft, loud, soft, etc. This phenomena is called <span><strong>beats</strong></span>. The time <span class="math inline">\(T\)</span> between loud sounds is <span class="math inline">\((\Delta f) T = 1\)</span>, or <span class="math inline">\(1/T = \Delta f\)</span>. The frequency of the loud sounds, called the <span><strong>beat frequency</strong></span>, <span class="math inline">\(f_{beat}\)</span> equals <span class="math inline">\(1/T\)</span>. Thus, <span class="math inline">\(f_{beat} = \Delta f\)</span>,</p>
+<p><span class="math display">\[f_{beat} = |f_1 - f_2|\]</span></p>
+<p>If waves are formed in a medium that has boundaries, standing waves can form. Here we will consider the case of waves that can move in only one dimension. In one dimension, having boundaries means that the waves are confined to a specific length <span class="math inline">\(L\)</span> of the medium. At a boundary, a wave is reflected back. Thus, there will be the superposition of waves traveling to the right and waves traveling to the left. Consider this happening for two sinusoidal waves of the same amplitude and frequency. The displacement for one wave will be:</p>
+<p><span class="math display">\[d_1(x,t) = A sin (kx + \omega t)\]</span></p>
+<p>traveling to the left, and for the wave traveling to the right:</p>
+<p><span class="math display">\[d_2(x,t) = A sin (kx - \omega t)\]</span></p>
+<p>The net displacement is the sum of these two waves (Superposition Principle) <span class="math inline">\(d_{net} = d_1 + d_2\)</span>:</p>
+<p><span class="math display">\[d_{net}(x,t) = A sin (kx + \omega t) + A sin (kx - \omega t)\]</span></p>
+<p>Using the formula for adding two sin waves we obtain:</p>
+<p><span class="math display">\[d_{net} = 2A sin(kx) cos(\omega t)\]</span></p>
+<p>This is a simple result. The "x" part is separate from the "t" part. The wave doesn’t travel anywhere, it is an equal sum of waves moving to the right and to the left. The sinusoidal shape <span class="math inline">\(2A sin(kx)=2A sin(2 \pi x/ \lambda)\)</span> in space is multiplied by <span class="math inline">\(cos(\omega t)\)</span>. Thus, the shape "oscillates" in time with frequency <span class="math inline">\(\omega / (2 \pi)\)</span>. Places where <span class="math inline">\(sin(2 \pi x/ \lambda)\)</span> are zero will not move at all. These positions are called <span><strong>nodes</strong></span>. Places where <span class="math inline">\(sin(2 \pi x/ \lambda)\)</span> are <span class="math inline">\(\pm 1\)</span> will have the largest amplitudes. These positions are called <span><strong>anti-nodes</strong></span>.<br />
+.<br />
+In this course we will consider cases in which the boundaries are either "closed" or "open". If the boundary is closed, there will be a node at the boundary. If the boundary is open, there will be an anti-node at the boundary. For a standing wave to exist in a region of length <span class="math inline">\(L\)</span>, an appropriate number of quarter wavelengths (<span class="math inline">\(\lambda /4\)</span>) must fit into the boundary, and the boundary conditions must be satisfied. In lecture we will examine examples of standing waves in pipes and on strings.</p>
+<p>When we derived the standing wave equation above we added perfect sinusoidal functions. You might be wondering, is this the most general case. That is, what shapes can standing waves be? Must they always be perfect sinusoidal forms? We can answer this question by starting from the wave equation: <span class="math inline">\(v^2 d^2&quot;d&quot;/dx^2 = d^2&quot;d&quot;/dt^2\)</span>. By stationary standing waves, we mean displacements that are separable in space and time. That is, <span class="math inline">\(d(x,t) = f(x) g(t)\)</span>. We can substitute this form for <span class="math inline">\(d\)</span> into our wave equation and determine what functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are allowed:</p>
+<p><span class="math display">\[v^2 {{d^2(f(x)g(t))} \over {dx^2}} = {{d^2(f(x)g(t))} \over {dt^2}}\]</span></p>
+<p>we can factor out the <span class="math inline">\(g(t)\)</span> on the left side and the <span class="math inline">\(f(x)\)</span> on the right:</p>
+<p><span class="math display">\[v^2 g(t) {{d^2 f(x)} \over {dx^2}} = f(x) {{d^2 g(t)} \over {dt^2}}\]</span></p>
+<p>Dividing by <span class="math inline">\(f(x)g(t)\)</span> on both sides gives:</p>
+<p><span class="math display">\[v^2 {1 \over {f(x)}} {{d^2 f(x)} \over {dx^2}} = {1 \over {g(t)}} {{d^2 g(t)} \over {dt^2}}\]</span></p>
+<p>where <span class="math inline">\(v\)</span> is a constant. The left side of the equation is only dependent on the variable <span class="math inline">\(x\)</span>, and the right side of the equation is only dependent on the variable <span class="math inline">\(t\)</span>. If this equation is to be true for all <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>, then each side must equal a constant (the same one) <span class="math inline">\(C\)</span>. Thus:</p>
+<p><span class="math display">\[v^2 {1 \over {f(x)}} {{d^2 f(x)} \over {dx^2}} = C\]</span></p>
+<p>For oscillatory solutions, the constant on the right must be less than zero, so</p>
+<p><span class="math display">\[{{d^2 f(x)} \over {dx^2}} = - {{|C|} \over v^2} f(x)\]</span></p>
+<p>Similarly, the equation for <span class="math inline">\(g(t)\)</span> is</p>
+<p><span class="math display">\[{{d^2 g(t)} \over {dt^2}} = - |C| g(t)\]</span></p>
+<p>The only function whose <span><strong>second derivative is proportional to minus the function itself</strong></span> is a <span><strong>sinusoidal</strong></span> function. Thus, standing waves in one dimensioinal media, whose wave equation are of the form above (linear media), will be perfect sinusoidal functions of position multiplied by perfect sinusoidal functions of time.</p>
+<p><strong>Summary</strong></p>
+<p>The past three weeks we have covered various topics on oscillations and waves. Although we defined various terms and looked at different phenomena, I think there are only three main "physics" concepts: 1) the linear restoring force and the motion it produces; 2) the one dimensional "wave equation"; and 3) the superposition principle for "waves".<br />
+) When considering periodic motion in one dimension, we asked the following question: What kind of restoring force will produce perfect sinusoidal motion? We answered this question using Newton’s second law, <span class="math inline">\(F_{net} = ma\)</span>. We discovered that a force of the form: <span class="math inline">\(F = - Cx\)</span>, or a linear restoring force, gives an acceleration <span class="math inline">\(a\)</span> of <span class="math inline">\(a=-(C/m)x\)</span>, or <span class="math inline">\(d^x/dt^2 = - (C/m)x\)</span>. The only function whose second derivative is equal to minus itself is a sinusoidal function. The most general solution can be written as: <span class="math inline">\(x(t) = A sin(\omega t + \phi)\)</span>, where <span class="math inline">\(\omega = \sqrt{C/m}\)</span>. Not only did we find the special force for simple havmonic motion, we derived the formula which relates the period of the motion to the parameters of the force: <span class="math inline">\(T=2 \pi /\omega =  2 \pi \sqrt{m/C}\)</span>.<br />
+) In the discussion on waves (i.e. disturbances of a medium) we observed that a one dimensional medium can support a traveling wave that moves to the right or left with a definate speed and a shape that doesn’t change. We asked the question: why does this happen? We answered the question by applying Newton’s law of motion to a string. The equation <span class="math inline">\(a=F/m\)</span> turned into a differential equation of the form: <span class="math inline">\(d^2&quot;d&quot;/dt^2 = (F/\mu) d^2 &quot;d&quot;/dx^2\)</span>. The acceleration became the second derivative of the displacement with respect to time, and the force became proportional to the second derivative of displacement with respect to position. We showed that the general solution to this "wave equation" was any function of the form <span class="math inline">\(g(x-vt)\)</span>. Not only did we explain the wave motion, but we obtained an expression for the speed of the wave: <span class="math inline">\(v=\sqrt{F/\mu}\)</span>.<br />
+) The last principle of physics that we discussed was motivated by the question: What is the net displacement of a medium if there are more than one source of waves? The answer to this question lies in a very important property of nature: the Superpostion Principle: the net displacement is the sum of the displacements from the individual sources. Although the superposition principle is always true, interesting effects occur when the sources are <span><strong>coherent</strong></span>. In our case we considered sinusoidal mechanical sources of waves, and by coherent we mean that the sources have the same frequency. The superposition principle let to interference effects of which constructive and destructive interference were special cases.<br />
+Of all the properties of nature that we have studied the past three weeks, interference effects are probably the most significant. When it was discovered that interference effects also occur without a medium, our ideas of nature radically changed. As shown in lecture, electrons and photons (light particles) exhibit interference phenomena. The area of physics that deals with these properties is called Quantum Mechanics, and has been developing since the early 1900’s. In the quantum world of molecules, atoms, and nuclei, interference effects rule. The advancements of quantum physics has changed our view of nature, and led to the digital revolution. To learn more about quantum physics take our Phy235 lecture class.</p>
+<p><img src="fig1322a.png" style="width:14cm" alt="image" /></p>
+</body>
+</html>

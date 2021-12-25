@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Electromagnetic_Radiation_Special_Relativity_3</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="center">
+<p><span><strong>Notes on Special Relativity</strong></span></p>
+</div>
+<p>We start this section by reminding you what an inertial reference frame is, then discuss how to compare the laws of physics from one reference frame to another.</p>
+<p><strong>Inertial Reference Frames</strong></p>
+<p>Imagine two space ships floating in space. Suppose someone named Bill was in one, and George in the other. Suppose that George observed that Bill was moving in the + direction with a <span><em>constant velocity</em></span> <span class="math inline">\(+v\)</span>. George would feel at rest and say that Bill was moving to the right with a constant velocity. Bill, however, would also feel at rest and say that George is moving to the left with a constant velocity <span class="math inline">\(-v\)</span>. Who is correct? Both are. Each of these space ships is an inertial reference frame. Bill feels at rest, and so does George. There is something very special about reference frames floating in space with a constant velocity with respect to each other. They are all inertial reference frames and have the following properties:<br />
+. A reference frame moving with a constant velocity with respect to an inertial frame is also an inertial reference frame.<br />
+. In an inertial reference frame, one "feels" at rest.<br />
+. There is no experiment that one can do in an inertial reference frame to determine the velocity of the reference frame.<br />
+. The laws of physics take on the same form in all inertial reference frames.<br />
+. There is no absolute reference frame.<br />
+The equivalance of inertial reference frames is a fundamental property of physics, and is the basis of Einstein’s theory of special relativity. It is a wonderful property of nature, and one can marvel at its simplicity.</p>
+<p>We now want to compare the laws of physics between inertial reference frames. We will label all quantities in one frame with a "prime", and all quantities in the other frame without the "prime". In all discussions that follow, we will consider two inertial reference frames that have set up their coordinate systems such that the <span class="math inline">\(x-y-z\)</span> coordinate system axes are each parallel to the <span class="math inline">\(x&#39;-y&#39;-z&#39;\)</span> "primed" coordinate system axes. We will orient the axes in such a way as to have the primed system have a velocity of <span class="math inline">\(\vec{v} = V \hat{i}\)</span> as measured in the unprimed reference frame. We will also have as a time reference <span class="math inline">\(t=0\)</span> to be the time when the two coordinate systems, <span class="math inline">\(x-y-z\)</span> and <span class="math inline">\(x&#39;-y&#39;-z&#39;\)</span>, coincide.</p>
+<p>As you will see, there is no loss of generality with these choices of space and time references. As viewed in the primed frame, the unprimed reference frame is moving with a uniform velocity of <span class="math inline">\(-V\hat{i}&#39;\)</span>. In comparing the laws of physics between these two reference frames, we will need to determine how two events in one reference compare to events in the other. We will take the first event to occur at <span class="math inline">\(x=y=z=t=0\)</span> in the unprimed frame, and consequently at <span class="math inline">\(x&#39;=y&#39;=z&#39;=t&#39;=0\)</span> in the primed frame. We will need to figure out how each observer measures a second event. That is, if <span class="math inline">\((x,y,z,t)\)</span> are the coordinates of the second event in the unprimed frame and <span class="math inline">\((x&#39;,y&#39;,z&#39;,t&#39;)\)</span> are the coordinates in the primed frame for the same event, then what is the relationship between <span class="math inline">\((x&#39;,y&#39;,z&#39;,t&#39;)\)</span> and <span class="math inline">\((x,y,z,t)\)</span>? The equations that relate these coordinates between the two reference frames are called <span><em>transformation equations</em></span>. We start first with the Galilean transformation.</p>
+<p><strong>Galilean Transformation</strong></p>
+<p>Our senses give us an idea as to how to transform the coordinates of the second event from one frame to the other. One would believe that <span class="math inline">\(t=t&#39;\)</span> since time changes seem to be absolute. Also, since the motion is in the x-direction, <span class="math inline">\(y=y&#39;\)</span>, and <span class="math inline">\(z=z&#39;\)</span>. The only non-trivial relationship would be how <span class="math inline">\(x\)</span> and <span class="math inline">\(x&#39;\)</span> are related. Since in a time interval <span class="math inline">\(t\)</span> the primed frame has moved a distance <span class="math inline">\(Vt\)</span>, or <span class="math inline">\(Vt&#39;\)</span>, we have</p>
+<p><span class="math display">\[\begin{aligned}
+    x &amp; = &amp; x&#39; + Vt&#39; \\
+    y &amp; = &amp; y&#39; \\
+    z &amp; = &amp; z&#39;  \\
+    t &amp; = &amp; t&#39; \end{aligned}\]</span></p>
+<p>where we have used <span class="math inline">\(t&#39;\)</span> on the right side of the equation, since <span class="math inline">\(t = t&#39;\)</span>. Note that all the variables on the right side are from the primed reference frame, and all the variables on the left side are for the unprimed reference frame. We can write these equations in matrix form:</p>
+<p><span class="math display">\[\begin{pmatrix} x \\ t \end{pmatrix} =
+\begin{pmatrix} 1 &amp; V \\ 0  &amp; 1 \end{pmatrix}
+\begin{pmatrix} x&#39; \\ t&#39; \end{pmatrix}\]</span></p>
+<p>where we have only included the nontrivial equations for <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>. Remember that these equations are for the second event. The first event occurs at <span class="math inline">\((0,0,0,0)\)</span> in each frame. The above equations are called the <span><em>Galilean transformations</em></span> for space and time differences.</p>
+<p>The inverse equations relate <span class="math inline">\(x&#39;\)</span> and <span class="math inline">\(t&#39;\)</span> to <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[\begin{pmatrix} x&#39; \\ t&#39; \end{pmatrix} =
+\begin{pmatrix} 1 &amp; -V \\ 0  &amp; 1 \end{pmatrix}
+\begin{pmatrix} x \\ t \end{pmatrix}\]</span></p>
+<p>The product of the transformation matrix and its inverse must be unity:</p>
+<p><span class="math display">\[\begin{pmatrix} 1 &amp; V \\ 0  &amp; 1 \end{pmatrix} \cdot
+\begin{pmatrix} 1 &amp; -V \\ 0  &amp; 1 \end{pmatrix}
+= \begin{pmatrix} 1 &amp; 0 \\ 0  &amp; 1 \end{pmatrix}\]</span></p>
+<p>The transformation equations can be used to determine how velocities transform from one observer to the other. Suppose there is a particle moving in the x-direction, and the primed observer measures its speed to be <span class="math inline">\(u_x&#39;\)</span>. To use the transformation equations, one needs two events. Let the moving particle "flash" twice. The first flash is at <span class="math inline">\((x&#39;,t&#39;) = (0,0)\)</span>. The second flash is at <span class="math inline">\(x&#39;\)</span> at time <span class="math inline">\(t&#39;\)</span>. Then <span class="math inline">\(u&#39;_x = x&#39;/t&#39;\)</span>. Dividing the two transformation equations we have:</p>
+<p><span class="math display">\[\begin{aligned}
+ {x \over t} &amp; = &amp; {{x&#39;+Vt&#39;} \over t&#39;} \\
+     u_x &amp; = &amp; u&#39;_x + V\end{aligned}\]</span></p>
+<p>If we differentiate the equation above, we see that the acceleration <span class="math inline">\(a_x\)</span> of the particle measured in the unprimed frame is equal to the acceleration <span class="math inline">\(a_x&#39;\)</span> in the primed frame. This is true since <span class="math inline">\(V\)</span> is a constant value.</p>
+<p><span class="math display">\[a_x = a_x&#39;\]</span></p>
+<p>If mass and force are the same for each observer, then Newton’s second law of motion (for the x-direction) <span class="math inline">\(F=ma_x\)</span> will have the same form in each reference frame. That is, <span><strong>if</strong></span> <span class="math inline">\(F&#39;=ma_x&#39;\)</span>, <span><strong>then</strong></span> <span class="math inline">\(F=m_x a\)</span>. The same invarience is true regarding momentum conservation in the x-direction. For example, for two interacting particles, <span><strong>if</strong></span></p>
+<p><span class="math display">\[m_1u_{1i}&#39; + m_2u_{2i}&#39; = m_1u_{1f}&#39; + m_2u_{2f}&#39;\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+   m_1(u_{1i}+V) + m_2(u_{2i}+V) &amp; = &amp; m_1(u_{1f}+V) + m_2(u_{2f}+V) \\
+   m_1u_{1i} + m_2u_{2i} &amp; = &amp; m_1u_{1f} + m_2u_{2f}  \end{aligned}\]</span></p>
+<p>That is, if momentum is conserved in the primed frame, then it is also conserved in the unprimed frame. Note that the conserved quantity (<span class="math inline">\(m_1u_1+m_2u_2\)</span> in this case) depends on the transformation equations. If the transformation equations were different, then <span class="math inline">\(m_1u_1+m_2u_2\)</span> might not be conserved when two particles interact.</p>
+<p>From the discussion above, one can conclude that Newton’s laws of motion are of the same form for the Galilean transformations of space and time events. This statement is also phrased as: Newton’s laws of motion are invarient under a Galilean transformation.</p>
+<p>Although Newton’s laws of motion are invarient under a Galilean transformation, the laws of electrodynamics, Maxwell’s equations, are not. The magnetic part of the interaction is velocity dependent. The interaction depends on the velocity of the source, producing the magnetic field, as well as the force on the particle, <span class="math inline">\(F = q \vec{v} \times \vec{B}\)</span>. Velocities are reference frame dependent, as well as the electric and magnetic fields. The Galilean transformation does not allow one to formulate Maxwell’s equations in a frame independent way. One can most easily see the difficulties inherent in Maxwell’s equations by considering the electromagnetic radiation that it predicts. In free space the electric field of the radiation obeys the equation</p>
+<p><span class="math display">\[{{\partial^2 E_y} \over {\partial x^2}} = \mu_0 \epsilon_0 
+                      {{\partial^2 E_y} \over {\partial t^2}}\]</span></p>
+<p>where <span class="math inline">\(c=1/\sqrt{\mu_0 \epsilon_0}\)</span>. Note that the velocity of the source does not enter this "wave" equation. That is, <span><em>the speed of the radiation is the same whether the source is moving towards or away from the observer</em></span>. Suppose the source is at rest in the primed frame. Then according to the Galilean transformation, the velocity of the radiation observed in the unprimed frame should be <span class="math inline">\(u_x = c -V\)</span>, which is not consistent with Maxwell’s equation for the speed of the radiation in the unprimed frame.</p>
+<p>Another problem, which bothered Einstein, is the following. Suppose one traveled with a speed <span class="math inline">\(c\)</span> along with the radiation. Then in this reference frame, the electric field would oscillate sinusoidally in space, but not travel at all. A solution of this form for the electric field is not possible from Maxwell’s equations.</p>
+<p>To remedy these problems, scientists came up with the idea that light must travel in a medium called ether. The interference effects of light supported this incorrect conclusion, since interference effects were only observed with mechanical waves that traveled in a medium. However, if this were to be the case, then there would be a special reference frame for the universe, the reference frame of the ether. By measuring the speed of light, one could determine the absolute velocity of one’s (inertial) reference frame.</p>
+<p>Einstein spent years trying to find a way to make the laws of electrodynamics be of the same form in all inertial reference frames. As the story goes, the key idea came to him in May, 1905, after talking to his friend from the Swiss patent office Michele Besso. On his way back from Besso’s home, Einstein noticed that two of the church clocks in Bern, Switzerland, ran at different rates. He then realized that if <span class="math inline">\(t \ne t&#39;\)</span>, the equations could be made reference frame independent. The next day Einstein visited his friend Besso. The first thing he said to him was: "Thank you, I’ve completely solved the problem." Einstein spent the next weeks formulating his theory of special relativity, which we discuss next.</p>
+<p><strong>The Lorentz Transformation</strong></p>
+<p>The Galilean transformations need to be modified in such a way that if</p>
+<p><span class="math display">\[{{\partial^2 E_y&#39;} \over {\partial x&#39;^2}} = \mu_0 \epsilon_0 
+                      {{\partial^2 E_y&#39;} \over {\partial t&#39;^2}}\]</span></p>
+<p>then</p>
+<p><span class="math display">\[{{\partial^2 E_y} \over {\partial x^2}} = \mu_0 \epsilon_0 
+                      {{\partial^2 E_y} \over {\partial t^2}}\]</span></p>
+<p>for the same electromagnetic radiation. In other words, the speed of light will be <span class="math inline">\(c\)</span> for each observer, using their own space and time measurements, for the same light.</p>
+<p>We can determine some of the changes needed from the following experiment. In the primed frame, a pulse of light is emitted at the origin at a time <span class="math inline">\(t&#39;=0\)</span>. This is the first event. Then the light travels along the y-axis a distance <span class="math inline">\(L\)</span> and reflects off a mirror. It travels back to the origin along the y-axis, arriving at a time <span class="math inline">\(t&#39;=2L/c\)</span>. Event 2 is the arrival of the light back at the origin. That is, event 1: <span class="math inline">\(x&#39;=0\)</span>, <span class="math inline">\(t&#39;=0\)</span>. Event 2: <span class="math inline">\(x&#39;=0\)</span>, <span class="math inline">\(t&#39;=2L/c\)</span>.</p>
+<p>Now, lets determine the coordinates of these two events in the unprimed frame. Event 1 occurs at <span class="math inline">\(x=0\)</span>, <span class="math inline">\(t=0\)</span>, since this is how we set up the two coordinate systems. In the unprimed frame, the light travels at an angle to the mirror, then reflects back to the x-axis. Let <span class="math inline">\(t\)</span> be the time (in the unprimed frame) that it takes for the light to return to the x-axis. The time it takes to hit the mirror is therefore <span class="math inline">\(t/2\)</span>, and has traveled in the x-direction a distance of <span class="math inline">\(Vt/2\)</span>. The total distance that the light travels before it reaches the first mirror is found by Pythagorus theorum to be:</p>
+<p><span class="math display">\[d = \sqrt{L^2 + (Vt/2)^2}\]</span></p>
+<p><img src="fig2343a.png" style="width:14cm" alt="image" /></p>
+<p>The time to reach the first mirror is therefore <span class="math inline">\(d/c=\sqrt{L^2 + (Vt/2)^2}/c\)</span>. Note that we use the same speed <span class="math inline">\(c\)</span> for the light in both reference frames. The total time for the light to return to the x-axis is twice this time or <span class="math inline">\(2d/c\)</span>. That is</p>
+<p><span class="math display">\[\begin{aligned}
+    t &amp; = &amp; {{2d} \over c} \\
+    t &amp; = &amp; {{2\sqrt{L^2+(Vt/2)^2}} \over c}\end{aligned}\]</span></p>
+<p>This equation can be solved for <span class="math inline">\(t\)</span> to give</p>
+<p><span class="math display">\[t = {{2L/c} \over {\sqrt{1-V^2/c^2}}}\]</span></p>
+<p>Note that <span class="math inline">\(2L/c\)</span> is the time of the second event as measured by the primed observer. That is, <span class="math inline">\(2L/c = t&#39;\)</span>. So the relationship between <span class="math inline">\(t&#39;\)</span> and <span class="math inline">\(t\)</span> is</p>
+<p><span class="math display">\[t = {t&#39; \over {\sqrt{1-V^2/c^2}}}\]</span></p>
+<p>. The location of the second event in the unprimed frame is just <span class="math inline">\(x=Vt\)</span>. Thus, If the second event is at the origin at time <span class="math inline">\(t&#39;\)</span> in the primed reference frame, the unprimed frame will observe this event at</p>
+<p><span class="math display">\[\begin{aligned}
+  t &amp; = &amp; {t&#39; \over {\sqrt{1-V^2/c^2}}} \\
+  x &amp; = &amp; {{Vt&#39;} \over {\sqrt{1-V^2/c^2}}} \\\end{aligned}\]</span></p>
+<p>I repeat, these equations only apply if the second event is at the origin in the unprimed reference frame.</p>
+<p>The transformation equations above don’t agree with our senses. The time difference as measured in the primed frame is different than in the unprimed reference frame. However, this difference is very small for relative velocites in our everyday life. For example, if <span class="math inline">\(V = 500 \; mph \approx 224 \; m/s\)</span>, then <span class="math inline">\(v/c = 224/(3 \times 10^8) = 7.47 \times 10^{-7}\)</span>. The quantity <span class="math inline">\(\sqrt{1-(7.47 \times 10^{-7})^2}\)</span> is around <span class="math inline">\(0.9999999999997212\)</span>. This results in <span class="math inline">\(t = 1.0000000000002789 \; t&#39;\)</span>. Our senses cannot detect this very small difference in time.</p>
+<p>In order to observe the difference in time intervals between reference frames, the relative velocity between the observers needs to be close to the speed of light. Large relative speeds can be achieved in particle accelerators, and the equations above can be tested. For example,a muon has a mean lifetime of <span class="math inline">\(2.2 \times 10^{-6} \; sec\)</span> before it decays into an electron and two neutrinos. The mean lifetime of a particle always refers to the reference frame in which the particle is at rest.</p>
+<p>Now, if the muon is created with a velocity of <span class="math inline">\(0.8c\)</span> in the laboratory, we can measure its mean lifetime in the laboratory frame and check out the equation. In this case, the primed frame is moving with the muon. The muon is created at <span class="math inline">\(x&#39;= 0\)</span>, <span class="math inline">\(t&#39; = 0\)</span>. The muon stays at the origin, and decays at the origin at time <span class="math inline">\(t&#39;\)</span>, which on average is <span class="math inline">\(2.2 \times 10^{-6}\)</span> sec. Using <span class="math inline">\(t&#39; = 2.2 \times 10^{-6}\)</span> sec in the equation gives</p>
+<p><span class="math display">\[\begin{aligned}
+  t &amp; = &amp; {t&#39; \over {\sqrt{1-(V/c)^2}}} \\
+  t &amp; = &amp; {{2.2 \times 10^{-6}} \over {\sqrt{1-0.8^2}}} \\
+  t &amp; \approx &amp; 3.67 \times 10^{-6} \; sec\end{aligned}\]</span></p>
+<p>The muon has a longer average lifetime in the lab than in the primed reference frame, its rest frame. This increased time effect is refered to as <span><em>time dilation</em></span>. The distance (on average) that the muon travels in the lab will be</p>
+<p><span class="math display">\[\begin{aligned}
+  x &amp; = &amp; Vt \\
+    &amp; = &amp; 0.8c (3.67 \times 10^{-6}) \\
+    &amp; = &amp; 880 \; meters\end{aligned}\]</span></p>
+<p>If <span class="math inline">\(t\)</span> were to equal <span class="math inline">\(t&#39;\)</span>, as in the Galilean transformation, then the distance that the muon would travel on average would be <span class="math inline">\(x = Vt =
+0.8c(2.2 \times 10^{-6}) \approx 528 \; meters\)</span>. When the experiment is done, the muon travels on average <span class="math inline">\(880 \; meters\)</span> as predicted by Einstein. This "time dilation" effect has been verified every day for the past 50 years in accelerators around the world. Although the effect is small for human scale speeds, one needs to take time dilation into account for an accuate GPS system.</p>
+<p>So far we have come up with the correct transformation when the two events are both at the the origin. Now we would like to determine the form of the transformation equations in general. That is, if the second event occurs at a location different than the origin. To do this, we first write down the transformation from the unprimed frame to the primed frame <span><em>when the second event occurs at the origin in the unprimed reference frame</em></span>. The only difference will be to replace <span class="math inline">\(V\)</span> with <span class="math inline">\(-V\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  t&#39; &amp; = &amp; {t \over {\sqrt{1-V^2/c^2}}} \\
+  x&#39; &amp; = &amp; {{-Vt} \over {\sqrt{1-V^2/c^2}}} \\\end{aligned}\]</span></p>
+<p>where in this case the second event in the unprimed frame has <span class="math inline">\(x=0\)</span>. Now the time between the events is longer in the primed frame. Why is this the case. If two events occur at the same place in a reference frame, the time between the events will be shorter than in any other reference frame. One cannot always find a reference frame in which the two events occur in the same place, but if one can, then in this frame the time between the two events will be the shortest. Let the time between two events that occur at the same position in an inertial reference frame be <span class="math inline">\(\tau\)</span>. Then the time difference between these events in another inertial reference frame is</p>
+<p><span class="math display">\[\Delta t = {{\tau} \over {\sqrt{1-(V/c)^2}}}\]</span></p>
+<p>where <span class="math inline">\(V\)</span> is the relative velocity between the reference frames.</p>
+<p>It is instructive to write the transformation equations that we have so far in matrix form:</p>
+<p><span class="math display">\[\begin{pmatrix} x \\ t \end{pmatrix} =
+\begin{pmatrix} a(V) &amp; {V \over \sqrt{1-(V/c)^2}}\\ 
+                b(V)  &amp; {1 \over \sqrt{1-(V/c)^2}}\end{pmatrix}
+\begin{pmatrix} 0 \\ t&#39; \end{pmatrix}\]</span></p>
+<p>We do not know the coefficients <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> yet. I have written them as <span class="math inline">\(a(V)\)</span> and <span class="math inline">\(b(V)\)</span> because they might depend on <span class="math inline">\(V\)</span>. <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> can have any value so far, since they don’t enter the calculation if <span class="math inline">\(x&#39;=0\)</span>, Similarly, the inverse transformation is</p>
+<p><span class="math display">\[\begin{pmatrix} x&#39; \\ t&#39; \end{pmatrix} =
+\begin{pmatrix} a(-V) &amp; {-V \over \sqrt{1-(V/c)^2}}\\ 
+                b(-V)  &amp; {1 \over \sqrt{1-(V/c)^2}}\end{pmatrix}
+\begin{pmatrix} 0 \\ t \end{pmatrix}\]</span></p>
+<p>by symmetry, <span class="math inline">\(V \rightarrow -V\)</span>.</p>
+<p>The coefficients <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> can be determine by requiring that the two matrices are inverses of each other as we saw with the Galilean transformation. That is, if we transform from the primed coordinates to the unprimed coordinates, then back again to the primed coordinates, the result must be what we started with. In matrix notation, we require</p>
+<p><span class="math display">\[\begin{pmatrix} a(V) &amp; {V \over \sqrt{1-(V/c)^2}}\\ 
+                b(V)  &amp; {1 \over \sqrt{1-(V/c)^2}}\end{pmatrix}
+\begin{pmatrix} a(-V) &amp; {-V \over \sqrt{1-(V/c)^2}}\\ 
+                b(-V)  &amp; {1 \over \sqrt{1-(V/c)^2}}\end{pmatrix}
+  =
+\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}\]</span></p>
+<p>The <span class="math inline">\(1,2\)</span> element of the product equals zero, and only contains <span class="math inline">\(a(V)\)</span>:</p>
+<p><span class="math display">\[a(V)({{-V} \over {\sqrt{1-(V/c)^2}}}) + {V \over {\sqrt{1-(V/c)^2}}}
+                     ({1 \over {\sqrt{1-(V/c)^2}}}) = 0\]</span></p>
+<p>Solving this equation for <span class="math inline">\(a(V)\)</span> gives</p>
+<p><span class="math display">\[a(V) = {1 \over {\sqrt{1-(V/c)^2}}}\]</span></p>
+<p>Likewise, the <span class="math inline">\(2,2\)</span> element of the product equals one, and only contains <span class="math inline">\(b(V)\)</span>:</p>
+<p><span class="math display">\[b(V)({{-V} \over {\sqrt{1-(V/c)^2}}}) + {1 \over {\sqrt{1-(V/c)^2}}}
+                     ({1 \over {\sqrt{1-(V/c)^2}}}) = 1\]</span></p>
+<p>Solving this equation for <span class="math inline">\(b(V)\)</span> gives</p>
+<p><span class="math display">\[b(V) = {{V/c^2} \over {\sqrt{1-(V/c)^2}}}\]</span></p>
+<p>Using these values for <span class="math inline">\(a(V)\)</span> and <span class="math inline">\(b(V)\)</span> for the <span class="math inline">\(1,1\)</span> and the <span class="math inline">\(2,1\)</span> elements of the produce yields the correct values of <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span> respectively.</p>
+<p>Putting the transformation equations together in matrix form we have:</p>
+<p><span class="math display">\[\begin{pmatrix} x \\ t \end{pmatrix} = {1 \over {\sqrt{1-(V/c)^2}}}
+\begin{pmatrix} 1 &amp; V \\ 
+                V/c^2  &amp; 1 \end{pmatrix}
+\begin{pmatrix} x&#39; \\ t&#39; \end{pmatrix}\]</span></p>
+<p>to transform space and time events from the primed to the unprimed frame. The inverse transformation, from the unprimed to the primed frame, will just require replacing <span class="math inline">\(V\)</span> with <span class="math inline">\(-V\)</span>:</p>
+<p><span class="math display">\[\begin{pmatrix} x&#39; \\ t&#39; \end{pmatrix} = {1 \over {\sqrt{1-(V/c)^2}}}
+\begin{pmatrix} 1 &amp; -V \\ 
+                -V/c^2  &amp; 1 \end{pmatrix}
+\begin{pmatrix} x \\ t \end{pmatrix}\]</span></p>
+<p>Writing the transformations in equation form, gives</p>
+<p><span class="math display">\[\begin{aligned}
+  x &amp; = &amp; {{x&#39; + Vt&#39;} \over {\sqrt{1-(V/c)^2}}} \\
+  t &amp; = &amp; {{t&#39;+Vx&#39;/c^2} \over {\sqrt{1-(V/c)^2}}}\end{aligned}\]</span></p>
+<p>The transformation from the unprimed to the primed frame is obtained by just replacing <span class="math inline">\(V\)</span> with <span class="math inline">\(-V\)</span>. Since both reference frames are indistiguishable, it doesn’t matter which one we call primed and which one we call unprimed. <span><strong>The velocity <span class="math inline">\(V\)</span> is the relative velocity of the frame with the variables on the right side with respect to the frame with the variables on the left side of the equations.</strong></span> Note that <span class="math inline">\(V\)</span> can be positive or negative. These transformation equations are called <span><em>the Lorentz transformation</em></span> equations.</p>
+<p>Some comments on the Lorentz transformations:</p>
+<ol>
+<li><p>If <span class="math inline">\(V&lt;&lt;c\)</span>, which is true for human speeds, the Lorentz transformations are the same as the Galilean transformations:</p>
+<p><span class="math display">\[\begin{aligned}
+  x &amp; \approx &amp; x&#39; + Vt&#39; \\
+  t &amp; \approx  &amp; t&#39;\end{aligned}\]</span></p>
+<p>for <span class="math inline">\(V&lt;&lt;c\)</span>.</p></li>
+<li><p>The transformation equations that we have derived so far are for <span class="math inline">\((x,t)\)</span> and <span class="math inline">\((x&#39;,t&#39;)\)</span> being the second event when the first event occurs at <span class="math inline">\((0,0)\)</span> in both reference frames. Suppose the first event occurs at <span class="math inline">\((x_1,t_1)\)</span> in the unprimed frame and <span class="math inline">\((x_1&#39;,t_1&#39;)\)</span> in the primed frame. Then the equations will be correct for <span class="math inline">\(\Delta x = x-x_1\)</span>, <span class="math inline">\(\Delta t = t-t_1\)</span> and <span class="math inline">\(\Delta x&#39; = x&#39;-x_1&#39;\)</span>, <span class="math inline">\(\Delta t&#39; = t&#39;-t_1&#39;\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  \Delta x &amp; = &amp; {{\Delta x&#39; + V\Delta t&#39;} \over {\sqrt{1-(V/c)^2}}} \\
+  \Delta t &amp; = &amp; {{\Delta t&#39;+V\Delta x&#39;/c^2} \over {\sqrt{1-(V/c)^2}}}\end{aligned}\]</span></p>
+<p>or in matrix form:</p>
+<p><span class="math display">\[\begin{pmatrix} \Delta x \\ \Delta t \end{pmatrix} = {1 \over {\sqrt{1-(V/c)^2}}}
+\begin{pmatrix} 1 &amp; V \\ 
+                V/c^2  &amp; 1 \end{pmatrix}
+\begin{pmatrix} \Delta x&#39; \\ \Delta t&#39; \end{pmatrix}\]</span></p></li>
+<li><p>For two events, the difference in the location of the two events, <span class="math inline">\(\Delta x\)</span> depends on the reference frame. That is, <span class="math inline">\(\Delta x\)</span> is a relative quantity, depending on one’s reference frame. Also, the time difference between the events, <span class="math inline">\(\Delta t\)</span>, is a relative quantity which depends on one’s reference frame. Is there any quantity that is the same for both observers? Is there any combination of <span class="math inline">\(\Delta x\)</span> and <span class="math inline">\(\Delta t\)</span> that will give the same value for both observers? Consider the combination <span class="math inline">\((\Delta x)^2 - c^2 (\Delta t)^2\)</span>.</p>
+<p><span class="math display">\[\begin{aligned}
+ (\Delta x)^2 - c^2(\Delta t)^2 &amp; = &amp; {{(\Delta x&#39; + V\Delta t&#39;)^2} \over {1-(V/c)^2}} 
+                               - c^2{{(\Delta t&#39;+V\Delta x&#39;/c^2)^2} \over {1-(V/c)^2}}\\
+                   &amp; = &amp; (\Delta x&#39;)^2 - c^2(\Delta t&#39;)^2\end{aligned}\]</span></p>
+<p>Wow, this is nice. For any two events, "1" and "2", we define <span class="math inline">\(\Delta x \equiv x_2 - x_1\)</span> and <span class="math inline">\(\Delta t \equiv t_2 - t_1\)</span>. The combination <span class="math inline">\((\Delta x)^2 - c^2 (\Delta t)^2\)</span> will have the same value for all inertial frames that observe the two events. Although <span class="math inline">\(\Delta x\)</span> and <span class="math inline">\(\Delta t\)</span> will in general be different for each inertial frame, the magical combination of <span class="math inline">\((\Delta x)^2 - c^2(\Delta t)^2\)</span> will be the same value in every inertial reference frame. Quantities that have this property are called <span><em>Lorentz invarients</em></span>. The quantity <span class="math inline">\((\Delta x)^2 - c^2 (\Delta t)^2\)</span> is refered to as the <span><em>invarient spacetime interval</em></span> and often given the symbol <span class="math inline">\(s^2\)</span>.</p></li>
+<li><p>In our discussion so far, we have not considered the <span class="math inline">\(y\)</span> and <span class="math inline">\(z\)</span> parts of the transformation. These space coordinates are perpendicular to the direction of the relative velocity <span class="math inline">\(V\)</span>. In deriving the equations for <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>, we have assumed <span class="math inline">\(y=y&#39;\)</span> and <span class="math inline">\(z=z&#39;\)</span>. The complete Lorentz transformation equations are therefore:</p>
+<p><span class="math display">\[\begin{aligned}
+  x &amp; = &amp; {{x&#39; + Vt&#39;} \over {\sqrt{1-(V/c)^2}}} \\
+  y &amp; = &amp; y&#39; \\
+  z &amp; = &amp; z&#39; \\ 
+  t &amp; = &amp; {{t&#39;+Vx&#39;/c^2} \over {\sqrt{1-(V/c)^2}}}\end{aligned}\]</span></p>
+<p>Or more generally:</p>
+<p><span class="math display">\[\begin{aligned}
+  \Delta x &amp; = &amp; {{\Delta x&#39; + V\Delta t&#39;} \over {\sqrt{1-(V/c)^2}}} \\
+  \Delta y &amp; = &amp; \Delta y&#39; \\
+  \Delta z &amp; = &amp; \Delta z&#39; \\
+  \Delta t &amp; = &amp; {{\Delta t&#39;+V\Delta x&#39;/c^2} \over {\sqrt{1-(V/c)^2}}}\end{aligned}\]</span></p>
+<p>and the invarient spacetime interval is</p>
+<p><span class="math display">\[\begin{aligned}
+  s^2 &amp; = &amp; (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 - c^2(\Delta t)^2 \\
+  s^2 &amp; = &amp; (\Delta r)^2 - c^2(\Delta t)^2\end{aligned}\]</span></p>
+<p>where we have defined <span class="math inline">\((\Delta r)^2 \equiv (\Delta x)^2 + (\Delta y)^2
++ (\Delta z)^2\)</span>.</p></li>
+<li><p>The spacetime interval, <span class="math inline">\(s^2\)</span>, is an interesting quantity. If <span class="math inline">\(s^2 &lt; 0\)</span>, or <span class="math inline">\(c^2(\Delta t)^2 &gt; (\Delta r)^2\)</span>, then the two events are said to be <span><em>time like</em></span>. In this case, there exists a reference frame where <span class="math inline">\((\Delta r)^2\)</span> can equal zero. That is, there exists a reference frame where the two events occur at the same location. In this reference frame, the time between the two events is the shortest. No inertial reference frame will observe the two events to occur at the same time, and all observers will agree which event preceeded the other.</p>
+<p>If the spacetime interval <span class="math inline">\(s^2\)</span> is greater than zero, <span class="math inline">\((\Delta r)^2 &gt; c^2(\Delta t)^2\)</span>, then the two events are said to be <span><em>space like</em></span>. In this case, there exists a reference frame in which the two events occur at the same time, that is, where <span class="math inline">\((\Delta t)^2 = 0\)</span>. In this reference frame, <span class="math inline">\(|\Delta x|\)</span> is the smallest. No inertial reference frame will observe the two events to occur at the same place. The two events will occur simultaneously in only one reference frame, and the time ordering of the two events may be different for different inertial reference frames.</p>
+<p>If the spacetime interval <span class="math inline">\(s^2 = 0\)</span>, then the two events are said to be <span><em>light like</em></span>. A beam of light can travel from one event to the other.</p>
+<p>The principle of causality states that one event can influence another event only if the invarient spacetime interval is less than or equal to zero, <span class="math inline">\(s^2 \le 0\)</span>.</p></li>
+</ol>
+<p>We now discuss how the Lorentz transformation will modify our previous expressions for the Doppler shift for light and the velocity addition formula.</p>
+<p>We are familiar with the Doppler shift for sound from our discussion in Phy132. Here we carry out a similar derivation for electromagnetic (EM) radiation. Suppose there is a source of EM radiation traveling away from us with a relative speed <span class="math inline">\(V\)</span>. Let the frequency of the radiation in the reference frame of the source be <span class="math inline">\(f_0\)</span>, and the period in this frame be <span class="math inline">\(T_0=1/f_0\)</span>. In the source’s reference frame the cycle lasts a time of <span class="math inline">\(T_0\)</span>, and the start and end of the cycle occurs at the same location. That is, event "1" is the start of the cycle of radiation, and event "2" is the end. Both events occur at the origin and the time between them is <span class="math inline">\(T_0\)</span>. However, in our reference the time between the start and end of the cycle takes a time of <span class="math inline">\(T=T_0/\sqrt{1-(V/c)^2}\)</span>.</p>
+<p>The distance that the source travels from the start of the "wave" to the end of the "wave" is equal to <span class="math inline">\(\Delta x = VT=VT_0/\sqrt{1-(V/c)^2}\)</span>. During the start and end of the "wave", the front of the radiation has traveled distance of <span class="math inline">\(cT\)</span> towards us. Thus, the wavelength <span class="math inline">\(\lambda\)</span> of the radiation as observed in our frame is the sum of the distance the front of the wave has traveled, <span class="math inline">\(cT\)</span>, plus the distance the source has traveled (in our frame) in time <span class="math inline">\(T\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  \lambda &amp; = &amp; cT + VT \\
+          &amp; = &amp; (c+V)T \\
+          &amp; = &amp; (c+V) {T_0 \over {\sqrt{1-(V/c)^2}}} \\
+          &amp; = &amp; cT_0 {{(1+V/c)} \over {\sqrt{1-(V/c)^2}}} \\
+  \lambda &amp; = &amp; cT_0 \sqrt{{{1+V/c} \over {1-V/c}}}        \end{aligned}\]</span></p>
+<p>Dividing both sides by <span class="math inline">\(c\)</span>, and using <span class="math inline">\(\lambda /c = 1/f\)</span> and <span class="math inline">\(T_0 = 1/f_0\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+   {\lambda \over c} &amp; = &amp; {1 \over f_0} \sqrt{{{1+V/c} \over {1-V/c}}} \\
+   {1 \over f} &amp; = &amp; {1 \over f_0} \sqrt{{{1+V/c} \over {1-V/c}}} \\
+    f &amp; = &amp; f_0 \sqrt{{{1-V/c} \over {1+V/c}}} \\      \end{aligned}\]</span></p>
+<p>where a positive <span class="math inline">\(V\)</span> means that the source is going away from the observer. Note that <span class="math inline">\(V\)</span> is the relative velocity between the two reference frames. This result is different than the Doppler formula for sound. With sound, two velocities entered in the equation: the velocity of the source with respect to the medium and the velocity of the observer with respect to the medium. With EM radiation there is no medium, so only the relative velocity can enter the equation.</p>
+<p>The relationship <span class="math inline">\(f = f_0\sqrt{(1-V/c)/(1+V/c)}\)</span> is refered to as the relativistic Doppler shift formula. It has been verified experimentally, and is very important in analyzing astronomical spectra.</p>
+<p>We want to correct the velocity addition formula to be consistent with the Lorentz transformation equations. Suppose there is a particle moving in the x-direction. Let <span class="math inline">\(u_x\)</span> be the velocity of the particle as measured in the unprimed reference frame. Let <span class="math inline">\(u_x&#39;\)</span> be the velocity of the same particle as measured in the primed reference frame. There will be three velocities involved. One is the relative velocity between reference frames, <span class="math inline">\(V\)</span>. The other two velocities are the velocity of the particle as measured by each observer, <span class="math inline">\(u_x\)</span> in the unprimed frame, and <span class="math inline">\(u_x&#39;\)</span> in the primed frame.</p>
+<p>The velocity formula is best understood by having the particle flash at equal time intervals. Then, two events are two successive flashes. The distance between the two flashes (events) in the primed frame will be <span class="math inline">\(\Delta x&#39;\)</span>, and the distance between the two flashes in the unprimed frame will be <span class="math inline">\(\Delta x\)</span>. The time between the two flashes (events) as measured in the primed frame will be <span class="math inline">\(\Delta t&#39;\)</span>, and in the unprimed frame <span class="math inline">\(\Delta t\)</span>. <span class="math inline">\(u_x\)</span> will equal <span class="math inline">\((\Delta x)/(\Delta t)\)</span>. <span class="math inline">\(u_x&#39;\)</span> will equal <span class="math inline">\((\Delta x&#39;)/(\Delta t&#39;)\)</span>. Transforming these quantities gives:</p>
+<p><span class="math display">\[\begin{aligned}
+  {{\Delta x} \over {\Delta t}} &amp; = &amp; {{(\Delta x&#39; + V(\Delta t&#39;))/\sqrt{1-(V/c)^2}} \over
+                                       {(\Delta t&#39; + V(\Delta x&#39;)/c^2)/\sqrt{1-(V/c)^2}}}\\
+  {{\Delta x} \over {\Delta t}} &amp; = &amp; {{\Delta x&#39; + V(\Delta t&#39;)} \over{\Delta t&#39; + V(\Delta x&#39;)/c^2}}\\\end{aligned}\]</span></p>
+<p>If we divide the right side by <span class="math inline">\(\Delta t&#39;\)</span> we have</p>
+<p><span class="math display">\[u_x = {{u_x&#39; + V} \over {1 + Vu_x&#39;/c^2}}\]</span></p>
+<p>This velocity addition equation is known as <span><em>Einstein’s velocity addition formula</em></span>. If <span class="math inline">\(V\)</span> and <span class="math inline">\(u_x&#39;\)</span> are much less than <span class="math inline">\(c\)</span>, then the equation reduces to the Galilean result, <span class="math inline">\(u_x = u_x&#39; + V\)</span>. Note, that if <span class="math inline">\(u_x&#39; = c\)</span>, then so does <span class="math inline">\(u_x = c\)</span> for any <span class="math inline">\(V\)</span>.<br />
+Let’s compare the Galilean and Lorentz transformations with regard to absolute, relative, and invarient quantities as well as the invarience of the laws of physics.</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Galilean Transformation</th>
+<th style="text-align: center;">Lorentz Transformation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Newton’s Laws of motion</td>
+<td style="text-align: center;">invarient</td>
+<td style="text-align: center;">not invarient</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Maxwell’s EM interaction</td>
+<td style="text-align: center;">not invarient</td>
+<td style="text-align: center;">invarient</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Speed of EM radiation</td>
+<td style="text-align: center;">relative</td>
+<td style="text-align: center;">absolute</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Delta x\)</span></td>
+<td style="text-align: center;">relative</td>
+<td style="text-align: center;">relative</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Delta t\)</span></td>
+<td style="text-align: center;">absolute</td>
+<td style="text-align: center;">relative</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\((\Delta x)^2-c^2(\Delta t)^2\)</span></td>
+<td style="text-align: center;">relative</td>
+<td style="text-align: center;">absolute</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">time ordering of events</td>
+<td style="text-align: center;">absolute</td>
+<td style="text-align: center;">can be relative</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sum_i m_i\vec{u}_i\)</span></td>
+<td style="text-align: center;">conserved</td>
+<td style="text-align: center;">not conserved</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Which is the correct transformation for space and time? If the Galilean transformation is the choice (which seems to make "sense"), then the laws of electrodynamics depend on one’s reference frame. If the Lorentz transformations are the truth, then Newton’s laws of motion are not absolute and <span class="math inline">\(\sum_i m_i\vec{u}_i\)</span> is not conserved in collisions in every inertial reference frame. Einstein believed in the invarience of Maxwell’s equations, and modified the expressions for momentum and energy such that they are conserved in all reference frames.</p>
+<p>Next we determine the four quantities that will be conserved in all inertial reference frames and that will reduce to Newton’s forms for momentum and energy when <span class="math inline">\(u&lt;&lt;c\)</span>.</p>
+<p><strong>Relativistic Kinematics</strong></p>
+<p>To find quantities that will yield the same equations for all inertial observers, the quantities need to transform according to the Lorentz transformation. In this class we will consider momentum conservation, and you will see what is meant by the previous statement. For our discussion, it will be useful to define "four vectors" as any four quantities that transform according to the Lorentz transformation. For example, we have shown that <span class="math inline">\(\Delta x\)</span>, <span class="math inline">\(\Delta y\)</span>, <span class="math inline">\(\Delta z\)</span>, and <span class="math inline">\(\Delta t\)</span> have this property:</p>
+<p><span class="math display">\[\begin{aligned}
+  \Delta x &amp; = &amp; {{\Delta x&#39; + V\Delta t&#39;} \over {\sqrt{1-(V/c)^2}}} \\
+  \Delta y &amp; = &amp; \Delta y&#39; \\
+  \Delta z &amp; = &amp; \Delta z&#39; \\
+  \Delta t &amp; = &amp; {{\Delta t&#39;+V\Delta x&#39;/c^2} \over {\sqrt{1-(V/c)^2}}}\end{aligned}\]</span></p>
+<p>or in matrix form:</p>
+<p><span class="math display">\[\begin{pmatrix} \Delta x \\ \Delta y \\ \Delta z \\ \Delta t \end{pmatrix} = 
+\begin{pmatrix} 1/\sqrt{1-(V/c)^2} &amp;0&amp;0 &amp; V/\sqrt{1-(V/c)^2} \\
+                0 &amp; 1 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 1 &amp; 0 \\ 
+         (V/c^2)/\sqrt{1-(V/c)^2} &amp; 0 &amp; 0 &amp; 1/\sqrt{1-(V/c)^2} \end{pmatrix}
+\begin{pmatrix} \Delta x&#39; \\ \Delta y&#39; \\ \Delta z&#39; \\ \Delta t&#39; \end{pmatrix}\]</span></p>
+<p>For the Galilean transformation, the total momentum <span class="math inline">\(\sum_i m_iu_i\)</span> is conserved when particles interact with each other (i.e. in collisions). Under a Lorentz transformation, <span class="math inline">\(\sum_im_iu_i\)</span> will not be conserved when particles interact. We seek a quantity, that will replace <span class="math inline">\(m_iu_i\)</span>, and be the correct quantity that is conserved in collisions. We need a relativistic version of momentum. A relativistic momentum requires a velocity "four-vector". Velocity is a change in position over change in time. One might think that the space-time four vector divided by <span class="math inline">\(\Delta t\)</span>:</p>
+<p><span class="math display">\[\begin{pmatrix} (\Delta x)/(\Delta t) \\ (\Delta y)/(\Delta t) \\ 
+                (\Delta z)/(\Delta t) \\ (\Delta t)/(\Delta t) \end{pmatrix}\]</span></p>
+<p>would be a good candidate for a velocity four-vector. However, it is not. <span class="math inline">\(\Delta t\)</span> is a relative quantity. If we could divide by an invarient quantity for <span class="math inline">\(\Delta t\)</span>, then we would have a nice velocity four-vector.</p>
+<p>The solution to a velocity four-vector is found as follows. Suppose a particle is traveling and flashing at equal time intervals, <span class="math inline">\(\tau\)</span>, in the particle’s reference frame, where <span class="math inline">\(\tau\)</span> is very small. Let the particle’s speed in the unprimed reference frame be labeled <span class="math inline">\(u\)</span>, and the speed of the particle as measured in the primed frame labeled as <span class="math inline">\(u&#39;\)</span>. Let the relative velocity between the frames be <span class="math inline">\(V\)</span> as before. What is the time between the flashes as measured in the unprimed frame? <span><em>The flashes occur at the same place in the particles reference frame</em></span>, which is moving with a relative velocity of <span class="math inline">\(\vec{u}\)</span> with respect to the unprimed frame. So, using the Lorentz transformation from the <span><em>particle’s frame</em></span> to the <span><em>unprimed frame</em></span>, the time between the flashes as measured in the unprimed frame will be <span class="math inline">\(\Delta t = \tau /\sqrt{1-(u/c)^2}\)</span>. Note the speed <span class="math inline">\(u\)</span> is used here, and not <span class="math inline">\(V\)</span>. <span class="math inline">\(u\)</span> is the speed of the particle’s rest frame with respect to the unprimed frame. Using the same reasoning, the time between the flashes as measured in the primed reference frame will be <span class="math inline">\(\Delta t&#39; = \tau /\sqrt{1-(u&#39;/c)^2}\)</span>. Note that <span class="math inline">\(\Delta t \ne \Delta t&#39;\)</span>. However,</p>
+<p><span class="math display">\[\begin{aligned}
+  \sqrt{1-(u/c)^2} \Delta t = &amp; \tau &amp; = \sqrt{1-(u&#39;/c)^2} \Delta t&#39; \\
+  \sqrt{1-(u/c)^2} \; \Delta t   &amp;  = &amp;  \sqrt{1-(u&#39;/c)^2} \; \Delta t&#39; \\ \end{aligned}\]</span></p>
+<p>The quantity <span class="math inline">\(\sqrt{1-(u/c)^2} \; \Delta t\)</span> is an invarient, the same in all inertial reference frames. Note that <span class="math inline">\(u\)</span> and <span class="math inline">\(\Delta t\)</span> will depend on the reference frame. However, the magical combination of <span class="math inline">\(\sqrt{1- (u/c)^2} \; \Delta t\)</span> will be the same value for every observer. Each observer must use the speed <span class="math inline">\(u\)</span> and <span class="math inline">\(\Delta t\)</span> as measured in their frame. We can use the time interval <span class="math inline">\(\tau\)</span> to make a Lorentz four-vector by dividing a four-vector by the invarient <span class="math inline">\(\tau\)</span>:</p>
+<p><span class="math display">\[\begin{pmatrix} (\Delta x)/\tau \\ (\Delta y)/\tau \\ 
+                (\Delta z)/\tau \\ (\Delta t)/\tau \end{pmatrix} =
+\begin{pmatrix} (\Delta x)/(\Delta t \sqrt{1-(u/c)^2}) \\ 
+                (\Delta y)/(\Delta t \sqrt{1-(u/c)^2}) \\ 
+                (\Delta z)/(\Delta t \sqrt{1-(u/c)^2}) \\ 
+                (\Delta t)/(\Delta t \sqrt{1-(u/c)^2}) \end{pmatrix}\]</span></p>
+<p>Since <span class="math inline">\((\Delta x)/(\Delta t)\)</span> equals <span class="math inline">\(u_x\)</span>, etc., the four quantities</p>
+<p><span class="math display">\[\begin{pmatrix} u_x/\sqrt{1-(u/c)^2} \\ u_y/\sqrt{1-(u/c)^2} \\ 
+                u_z/\sqrt{1-(u/c)^2} \\ 1/\sqrt{1-(u/c)^2} \end{pmatrix}\]</span></p>
+<p>will transform the same way as <span class="math inline">\(\Delta x\)</span>, <span class="math inline">\(\Delta y\)</span>, <span class="math inline">\(\Delta z\)</span>, and <span class="math inline">\(\Delta t\)</span> under a Lorentz transformation. Multiplying each component by the particle’s mass <span class="math inline">\(m\)</span> produces another four-vector, one that reduces to the Newtonian momentum <span class="math inline">\(mu\)</span> if <span class="math inline">\(u&lt;&lt;c\)</span>:</p>
+<p><span class="math display">\[\begin{pmatrix} {{m u_x}\over {\sqrt{1-(u/c)^2}}} \\ {{m u_y}\over {\sqrt{1-(u/c)^2}}} \\ 
+                {{m u_z}\over {\sqrt{1-(u/c)^2}}} \\ {m\over{\sqrt{1-(u/c)^2}}} \end{pmatrix}\]</span></p>
+<p>The four-vector above will transform from the primed frame to the unprimed frame via the Lorentz transformation:</p>
+<p><span class="math display">\[\begin{pmatrix} {{m u_x}\over {\sqrt{1-(u/c)^2}}} \\ {{m u_y}\over {\sqrt{1-(u/c)^2}}} \\ 
+                {{m u_z}\over {\sqrt{1-(u/c)^2}}} \\ {m\over{\sqrt{1-(u/c)^2}}} \end{pmatrix}=
+\begin{pmatrix} 1/\sqrt{1-(V/c)^2} &amp;0&amp;0 &amp; V/\sqrt{1-(V/c)^2} \\
+                0 &amp; 1 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 1 &amp; 0 \\ 
+         (V/c^2)/\sqrt{1-(V/c)^2} &amp; 0 &amp; 0 &amp; 1/\sqrt{1-(V/c)^2} \end{pmatrix}
+\begin{pmatrix} {{m u_x&#39;}\over {\sqrt{1-(u&#39;/c)^2}}} \\ {{m u_y&#39;}\over {\sqrt{1-(u&#39;/c)^2}}} \\ 
+                {{m u_z&#39;}\over {\sqrt{1-(u&#39;/c)^2}}} \\ {m\over{\sqrt{1-(u&#39;/c)^2}}} \end{pmatrix}\]</span></p>
+<p>Note the different velocities that enter in this equation. The velocities <span class="math inline">\(u_x\)</span>, <span class="math inline">\(u_y\)</span>, <span class="math inline">\(u_z\)</span>, and <span class="math inline">\(u^2=u_x^2+u_y^2+u_z^2\)</span> refer to the velocity of the particle as measured in the unprimed reference frame. The velocities <span class="math inline">\(u_x&#39;\)</span>, <span class="math inline">\(u_y&#39;\)</span>, <span class="math inline">\(u_z&#39;\)</span>, and <span class="math inline">\(u&#39;^2=u_x&#39;^2+u_y&#39;^2+u_z&#39;^2\)</span> refer to the velocity of the particle as measured in the primed reference frame. The velocity <span class="math inline">\(V\)</span> is the relative velocity between the two reference frames, with the direction of <span class="math inline">\(V\)</span> being along the x-axes.</p>
+<p>As the transformation equation is expressed above, the quantities in the four-vector don’t have the same units. Also, the matrix elements don’t all have the same units. A more consistent way to write the Lorentz transformation equations in this case is to have each element in the four-vector to have units of momentum, mass times velocity, and all matrix elements to be unitless as follows:</p>
+<p><span class="math display">\[\begin{pmatrix} {{m u_x}\over {\sqrt{1-(u/c)^2}}} \\ {{m u_y}\over {\sqrt{1-(u/c)^2}}} \\ 
+                {{m u_z}\over {\sqrt{1-(u/c)^2}}} \\ {{mc}\over{\sqrt{1-(u/c)^2}}} \end{pmatrix}=
+\begin{pmatrix} 1/\sqrt{1-(V/c)^2} &amp;0&amp;0 &amp; (V/c)/\sqrt{1-(V/c)^2} \\
+                0 &amp; 1 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 1 &amp; 0 \\ 
+         (V/c)/\sqrt{1-(V/c)^2} &amp; 0 &amp; 0 &amp; 1/\sqrt{1-(V/c)^2} \end{pmatrix}
+\begin{pmatrix} {{m u_x&#39;}\over {\sqrt{1-(u&#39;/c)^2}}} \\ {{m u_y&#39;}\over {\sqrt{1-(u&#39;/c)^2}}} \\ 
+                {{m u_z&#39;}\over {\sqrt{1-(u&#39;/c)^2}}} \\ {{mc}\over{\sqrt{1-(u&#39;/c)^2}}} \end{pmatrix}\]</span></p>
+<p>Note that the transformation matrix is symmetric.</p>
+<p>The first three quantities approach the classical definition of momentum when <span class="math inline">\(V/c \rightarrow 0\)</span>. What does the fourth quantity approach as <span class="math inline">\(V/c \rightarrow 0\)</span>? Using the Taylor expansion about <span class="math inline">\(V=0\)</span> gives:</p>
+<p><span class="math display">\[\begin{aligned}
+ {{mc} \over {\sqrt{1-(u/c)^2}}} &amp; = &amp; mc(1-(u/c)^2)^{-1/2} \\
+                                 &amp; = &amp; mc(1+{u^2 \over {2c^2}} + \cdots ) \\
+                                 &amp; = &amp; mc + {{mu^2} \over {2c}} + \cdots\end{aligned}\]</span></p>
+<p>The first term in the expansion is a constant, a rather large one. The second term is the classical formula for Kinetic <span><em>Energy</em></span> divided by <span class="math inline">\(c\)</span>. We therefore associate <span class="math inline">\((mc)/ \sqrt{1-(u/c)^2}\)</span> with energy/c, <span class="math inline">\(E/c\)</span>. The expressions for momentum and energy that transform as a Lorentz four-vector are:</p>
+<p><span class="math display">\[\begin{aligned}
+    p_x &amp; = &amp; {{mu_x} \over {\sqrt{1-u^2/c^2}}} \\
+    p_y &amp; = &amp; {{mu_y} \over {\sqrt{1-u^2/c^2}}} \\
+    p_z &amp; = &amp; {{mu_z} \over {\sqrt{1-u^2/c^2}}} \\
+    E/c &amp; = &amp; {{mc} \over {\sqrt{1-u^2/c^2}}} \\\end{aligned}\]</span></p>
+<p>and these four quantities in the primed reference frame are related to the same four quantities in the unprimed reference frame via the Lorentz transformation:</p>
+<p><span class="math display">\[\begin{pmatrix} p_x \\ p_y \\ p_z \\ E/c \end{pmatrix}=
+\begin{pmatrix} 1/\sqrt{1-(V/c)^2} &amp;0&amp;0 &amp; (V/c)/\sqrt{1-(V/c)^2} \\
+                0 &amp; 1 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 1 &amp; 0 \\ 
+         (V/c)/\sqrt{1-(V/c)^2} &amp; 0 &amp; 0 &amp; 1/\sqrt{1-(V/c)^2} \end{pmatrix}
+\begin{pmatrix} p_x&#39; \\ p_y&#39; \\ p_z&#39; \\ E&#39;/c \end{pmatrix}\]</span></p>
+<p>We can now show that <span><em>if momentum and energy are conserved in the primed reference frame</em></span> then <span><em>they are also conserved in the unprimed reference frame</em></span>. We will show this for a collision involving two particles. We will write the conservation of momentum in four-vector form, with each component being conserved:</p>
+<p><span class="math display">\[\begin{pmatrix} p_x&#39; \\ p_y&#39; \\ p_z&#39; \\ E&#39;/c \end{pmatrix} _1^{(before)}+
+\begin{pmatrix} p_x&#39; \\ p_y&#39; \\ p_z&#39; \\ E&#39;/c \end{pmatrix} _2^{(before)}=
+\begin{pmatrix} p_x&#39; \\ p_y&#39; \\ p_z&#39; \\ E&#39;/c \end{pmatrix} _1^{(after)}+
+\begin{pmatrix} p_x&#39; \\ p_y&#39; \\ p_z&#39; \\ E&#39;/c \end{pmatrix} _2^{(after)}\]</span></p>
+<p>where "1" and "2" refer to particles one and two. "Before" means the value before the collision, and "after" to after the collision. If we multiply both sides of this four-vector equation by the transformation matrix</p>
+<p><span class="math display">\[\begin{pmatrix} 1/\sqrt{1-(V/c)^2} &amp;0&amp;0 &amp; (V/c)/\sqrt{1-(V/c)^2} \\
+                0 &amp; 1 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 1 &amp; 0 \\ 
+         (V/c)/\sqrt{1-(V/c)^2} &amp; 0 &amp; 0 &amp; 1/\sqrt{1-(V/c)^2} \end{pmatrix}\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[\begin{pmatrix} p_x \\ p_y \\ p_z \\ E/c \end{pmatrix} _1^{(before)}+
+\begin{pmatrix} p_x \\ p_y \\ p_z \\ E/c \end{pmatrix} _2^{(before)}=
+\begin{pmatrix} p_x \\ p_y \\ p_z \\ E/c \end{pmatrix} _1^{(after)}+
+\begin{pmatrix} p_x \\ p_y \\ p_z \\ E/c \end{pmatrix} _2^{(after)}\]</span></p>
+<p>WOW! We have found the correct expressions for energy and momentum, since if momentum and energy are conserved in one inertial frame they are observed to be conserved in all inertial frames. Although the values of <span class="math inline">\(p_x\)</span>, <span class="math inline">\(p_y\)</span>, <span class="math inline">\(p_z\)</span>, and <span class="math inline">\(E\)</span> will depend on the reference frame, the total momentum and energy before a collision will equal the total momentum and energy after the collison in every inertial reference frame.</p>
+<p>The key feature that gave the reference frame independence for the conservation equations was having each term in the equation transform the same way. In our case momentum and energy mix in the transformation from the primed to the unprimed frames. However, having a four-vector for each term in the equation, preserves the four-vector form of the equation. The equations end up exactly the same in each frame, with the primed quantities being replaced with the corresponding unprimed quantities. By using four-vector quantities, you will see in our upper division course Phy315 that Maxwell’s equations also take on the same form in all inertial frames.</p>
+<p>Although <span class="math inline">\(E/c\)</span> is the fourth component of the four-vector, <span class="math inline">\(E\)</span> by itself is also conserved. The standard expressions for relativisitic momentum and energy are:</p>
+<p><span class="math display">\[\begin{aligned}
+  \vec{p} &amp; = &amp; {{m\vec{u}} \over {\sqrt{1-u^2/c^2}}} \\
+   E &amp; = &amp; {{mc^2} \over {\sqrt{1-u^2/c^2}}}\end{aligned}\]</span></p>
+<p>Even if the particle is at rest, it has an energy <span class="math inline">\(E=mc^2\)</span>, the most famous equation in physics. We will do many examples in class on relativisitic kinematics.</p>
+<p>If an object is at rest, its momentum is zero, <span class="math inline">\(\vec{p} = 0\)</span>, but its energy is not. If <span class="math inline">\(u^2=0\)</span>, then <span class="math inline">\(E=mc^2\)</span>. In the energy equation, <span class="math inline">\(m\)</span> is refered to as the particle’s <span><em>rest mass</em></span>. The kinetic energy of the particle is the energy in addition to <span class="math inline">\(mc^2\)</span>. So we define the energy of motion (K.E.) as</p>
+<p><span class="math display">\[K.E. \equiv E - mc^2\]</span></p>
+<p>Multiplying the matrix expression for momentum and energy transformation, gives</p>
+<p><span class="math display">\[\begin{aligned}
+   p_x &amp; = &amp; {{p_x&#39; + (V/c^2)E&#39;} \over {\sqrt{1-V^2/c^2}}} \\
+   p_y &amp; = &amp; p_y&#39; \\
+   p_z &amp; = &amp; p_z&#39; \\
+   E &amp; = &amp; {{E&#39; + Vp_x&#39;} \over {\sqrt{1-V^2/c^2}}}\end{aligned}\]</span></p>
+<p>Remember that these expressions are for the relative velocity along the x-axes, and the <span class="math inline">\(x-y-z\)</span> axes for the reference frames are parallel. Note that momentum and energy "mix" in the transformation.</p>
+<p>Is there a combination of energy and momentum that is invarient? Yes. Consider the expression <span class="math inline">\(E^2 - p^2c^2\)</span>. Transforming to the prime frame variables we have</p>
+<p><span class="math display">\[\begin{aligned}
+ E^2-p_x^2c^2 &amp; = &amp; {{(E&#39;+Vp_x&#39;)^2} \over {1-V^2/c^2}} - 
+                     c^2{{(p_x&#39;+(V/c^2)E&#39;)^2} \over {1-V^2/c^2}}\\
+            &amp; = &amp; E&#39;^2 - p_x&#39;^2c^2\end{aligned}\]</span></p>
+<p>Since <span class="math inline">\(p_y=p_y&#39;\)</span> and <span class="math inline">\(p_z=p_z&#39;\)</span>, we have</p>
+<p><span class="math display">\[E^2 - p^2c^2 = E&#39;^2 - p&#39;^2c^2\]</span></p>
+<p>This is a nice result. The expression <span class="math inline">\(E^2-p^2c^2\)</span> is the same for all inertial reference frames, and thus a Lorentz invarient. Although every observer will have a different value for <span class="math inline">\(E\)</span> and <span class="math inline">\(\vec{p}\)</span>, <span class="math inline">\(E^2-p^2c^2\)</span> will be the same. What value is it?</p>
+<p><span class="math display">\[\begin{aligned}
+  E^2 - p^2c^2 &amp; = &amp; {{(mc^2)^2} \over {1-u^2/c^2}} - c^2{{m^2u^2} \over {1-u^2/c^2}} \\
+               &amp; = &amp; {{m^2c^4 -c^2m^2u^2} \over {1-u^2/c^2}} \\
+               &amp; = &amp; m^2c^4\end{aligned}\]</span></p>
+<p>This invarient gives us the relationship between relativistic energy and momentum, that will be valid in all inertial reference frames:</p>
+<p><span class="math display">\[E^2 = m^2c^4 + p^2c^2\]</span></p>
+<p>Another nice relation between energy and momentum is found by taking the ratio <span class="math inline">\(p/E\)</span>, where <span class="math inline">\(p=|\vec{p}|\)</span>. Using <span class="math inline">\(\vec{p}=m\vec{u}/\sqrt{1-u^2/c^2}\)</span> and <span class="math inline">\(E=mc^2/\sqrt{1-u^2/c^2}\)</span> we have</p>
+<p><span class="math display">\[{p \over E} = {u \over c^2}\]</span></p>
+<p>where <span class="math inline">\(u=|\vec{u}|\)</span>.</p>
+<p>These equations are valid for particles with mass and for massless particles. For the case that <span class="math inline">\(m=0\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  E &amp; = &amp; pc \\
+  u &amp; = &amp; c\end{aligned}\]</span></p>
+<p>We will do many examples using these relationships in lecture.</p>
+<p>Suppose there are two particles, labeled "1" and "2", that interact with each other. Each particle has energy and momentum, and consequently an energy-momentum four-vector. We can add the two four-vectors together and construct a (total energy)-(total momentum) four vector:</p>
+<p><span class="math display">\[\begin{pmatrix} P_x \\ P_y \\ P_z \\ E_{tot}/c \end{pmatrix} =
+\begin{pmatrix} p_{1x} \\ p_{1y} \\ p_{1z} \\ E_1/c \end{pmatrix} +
+\begin{pmatrix} p_{2x} \\ p_{2y} \\ p_{2z} \\ E_2/c \end{pmatrix}\]</span></p>
+<p>This is just a short-hand way of saying that the individual components add to give the total momentum and energy of the system.</p>
+<p><span class="math display">\[\begin{aligned}
+   P_x &amp; = &amp; p_{1x} + p_{2x} \\
+   P_y &amp; = &amp; p_{1y} + p_{2y} \\
+   P_z &amp; = &amp; p_{1z} + p_{2z} \\
+   E_{tot} &amp; = &amp; E_1 + E_2\end{aligned}\]</span></p>
+<p>Momentum and energy conservation means that the (total-energy)- (total-momentum) four-vector <span class="math inline">\((P_x,P_y,P_z,E_{tot}/c)\)</span> is the same before, after, and during the interaction of the two particles. Momentum and energy are conserved even if the particles after the interaction are different than those before the interaction.</p>
+<p>The four-vector for total momentum and energy, <span class="math inline">\((P_x,P_y,P_z,E_{tot}/c)\)</span> will transform from one inertial frame to another via the Lorentz transformation, just as <span class="math inline">\((\Delta x, \Delta y, \Delta z, c\Delta t)\)</span>. Using the same mathematics that led to <span class="math inline">\(E^2 - c^2p^2\)</span> being a Lorentz invarient, one can show that <span class="math inline">\(E_{tot}^2 - c^2P^2\)</span> is a Lorentz invarient as well.</p>
+<p><span class="math display">\[E_{tot}^2 - c^2P^2 = M^2c^4\]</span></p>
+<p>is a Lorentz invarient, where every inertial observer will get the same value for <span class="math inline">\(M\)</span>. The quantity <span class="math inline">\(M\)</span> is refered to as the total invarient mass. The total invarient mass is an interesting quantity. It is a Lorentz invarient and it conserved. There are other invarients that one can construct, which you might encounter in future classes.</p>
+<p><strong>Final Comments</strong></p>
+<p>This is probably a good place to end our discussion of special relativity. We will do examples in class to help clarify these unusual concepts. We did not explicitly show that Maxwell’s equations invarient under a Lorentz transformation. In our upper division Electrodynamics course, Phy314-Phy315, this is covered, where the proof is similar to what we did here for momentum conservation. One needs to express Maxwell’s equations in terms of four-vectors. The four-vector that represents the electric and magnetic fields is the electrostatic potential <span class="math inline">\(\phi\)</span> and the vector potential <span class="math inline">\(\vec{A}\)</span>. If each term in an equation transforms as a four-vector, then upon transformation to another inertial frame the equation has the same form.</p>
+<p>We have covered topics here that have practical application. The relativistic Doppler shift is the correct one to use for EM radiation. Time dilation is important in GPS and in accelerator physics. Relativisitic kinematics are used daily by particle and nuclear physicists. Modern physics could not have advanced as it did without Einstein’s special theory of relativity. The theory also makes us rethink our ideas regarding relative and absolute quantities:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">quantity</th>
+<th style="text-align: center;">absolute</th>
+<th style="text-align: center;">relative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Delta x\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Delta t\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">simultaneity</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\((\Delta r)^2-c^2(\Delta t)^2\)</span></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">energy</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">momentum</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(E^2-c^2p^2\)</span></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">rest mass <span class="math inline">\(m\)</span></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">speed of EM radiation</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Absolute quantities are hard to find, and are very special. Certainly grades are relative. So, no matter how you do on the final exam your score is a relative quantity. Hope you have enjoyed the course.</p>
+</body>
+</html>

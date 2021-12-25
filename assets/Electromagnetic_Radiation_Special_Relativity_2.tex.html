@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Electromagnetic_Radiation_Special_Relativity_2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="center">
+<p><span><strong>Notes on Geometric Optics and Interference effects of Electromagnetic Radiation</strong></span></p>
+</div>
+<p>We just finished discussing Maxwell’s Equations and the free space solutions of electromagnetic radiation. Now we examine some practical applications for electromagnetic radiation in the visible region. We start with geometric optics, which is followed by interference effects.</p>
+<p><br />
+</p>
+<p>Electromagnetic radiation can reflect off surfaces, transmit through materials, interact with charge, etc. Applying Maxwell’s equations directly would involve solving for <span class="math inline">\(\vec{E}(\vec{r},t)\)</span> and <span class="math inline">\(\vec{B}(\vec{r},t)\)</span> for the appropriate boundary conditions of the situation. Carrying out such calculations can be difficult, however for many situations one can follow the "rays" of the radiation. A ray is a line that is perpendicular to the plane of the electric and magnetic fields of the radiation. It is a line that is in the direction of Poynting’s vector, <span class="math inline">\(\vec{S}\)</span>. To determine what the radiation does, we will follow the rays as they reflect off of, or travel through materials.</p>
+<p>How accurate is ray tracing? We have all seen a laser beam, or seen a thin light beam after it has passed through a small hole in piece of paper. It is as if the light stays as a small thin line as it travels. So one can imagine breaking up light into thin lines, and following what each line does as it travels. One has to be careful with this picture. As light travels, it’s cross sectional area cannot remain constant. We will discuss this more later under the topic of diffraction. I mention one point now. The amount of spreading, that is how much the cross section area increases, depends on the ratio:</p>
+<p><span class="math display">\[spreading \; angle \sim {\lambda \over d}\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is the wavelength of the radiation, and <span class="math inline">\(d\)</span> is the diameter of the beam. The wavelengths for visible light range from <span class="math inline">\(400-700 \; nm\)</span>. So if a beam of light is <span class="math inline">\(1 \; mm\)</span> in diameter, then <span class="math inline">\((7 \times 10^{-7})/(10^{-3}) \approx 7 \times 10^{-4}\)</span> and one not notice the spreading unless the beam travels hundreds of meters. So, for visible light, it is a good approximation to break up the radiation into thin rays and follow each ray as it travels through the environment as long as it doesn’t travel hundreds of meters. Next we will take a "ray tracing" approach in analyzing how light reflects off surfaces and transmits through different media.</p>
+<p><strong>Geometric Optics and Mirrors</strong></p>
+<p>If a beam of light strikes a flat mirror, or smooth reflecting surface, the angle that the light makes when it is reflected from the mirror equals the angle that it stuck the mirror. We know this from experience, and we will demonstrate in lecture that the incident and reflected angles are equal. When we discuss refraction, we will understand why this is true in general for waves reflecting off of a flat surface.</p>
+<p>What if the mirror is not flat, but is curved. In this case, the situation is not difficult if the beam is very narrow. That is, if the diameter of the beam is much smaller than the radius of the curved surface where it strikes the mirror. If the beam is very narrow, then the mirror is essentially flat where the beam hits it. So, as with the completely flat mirror, the incident and reflected angles will be equal. In order to handle curved surfaces, the best angles to use are the angles with respect to a line that is perpendicular to the surface that the beam hits.</p>
+<p>In the figure we show how the incident and reflected beam, or ray, is measured. Go to where the beam, or ray, stikes the surface. Then draw a line perpendicular (or normal) to the surface. The incident angle, <span class="math inline">\(\theta_i\)</span>, is measured from the incoming ray to the normal. The reflected angle, <span class="math inline">\(\theta_r\)</span>, is measured from the outgoing ray to the same normal. For reflection:</p>
+<p><img src="fig2342a.png" style="width:14cm" alt="image" /></p>
+<p><span class="math display">\[\theta_i = \theta_r\]</span></p>
+<p>This equation is true even if the surface is curved.</p>
+<p>Consider an object that is in front of a flat mirror. Let the distance from the object to the mirror be <span class="math inline">\(o\)</span>. The object emits light in all directions, which we show by rays. Some of the light will reflect off the mirror. Let’s follow the rays that reflect off the mirror. Each ray will reflect such that <span class="math inline">\(\theta_r=\theta_i\)</span> as shown in the figure.</p>
+<p>We can extend the reflected ray back into the mirror, as is drawn in the figure as dashed lines. The dashed lines intersect at a point. <span><em>This point is where one would see the object if one looked in the mirror.</em></span> That is, if you looked in the mirror, you would see the object at that position no matter where your eyes are. This position is where the image is located. We will label the distance from the mirror to the image as <span class="math inline">\(i\)</span>. For the flat mirror, you can see that</p>
+<p><span class="math display">\[i = o\]</span></p>
+<p>by using geometry and <span class="math inline">\(\theta_r = \theta_i\)</span>. An image that is seen by looking into a mirror (or lens) is called a <span><em>virtual image</em></span>. The image cannot be projected onto a screen, but rather it can only be seen by looking into the mirror.</p>
+<p>We first consider a special kind of mirror, one that has axial symmetry and is curved in such a way as to focus light to a point. The mirror has the following property: <span><em>rays parallel to its axis focus at a point</em></span>, the focal point. The distance from the mirror to the <span><em>focal point</em></span> is called the <span><em>focal length</em></span> of the mirror. We label this distance <span class="math inline">\(f\)</span>. To produce the focusing of rays at a point, the mathematical shape of the mirror needs to be a parabola (rotated about its axis).</p>
+<p>Note that if we put a light source exactly at the focal point, then the light that reflects from the mirror will emerge parallel to the axis. That is, by putting a light bulb at the focal point, the reflected light will be a nice beam, like a flashlight.</p>
+<p>Now, consider an object that is placed between the focal point and the mirror. Let the object have a height <span class="math inline">\(h_0\)</span> and be located a distance <span class="math inline">\(o\)</span> (<span class="math inline">\(o&lt;f\)</span>) from the mirror. The object is represented by an arrow in the figure. We can trace three rays from the tip of the arrow that reflect off the mirror:<br />
+(<span class="math inline">\(2 \rightarrow 3\)</span>)<br />
+The ray that is parallel to the axis will reflect off the mirror and pass through the focal point. The dashed line extends the reflected ray back behind the mirror.<br />
+(<span class="math inline">\(2 \rightarrow 8\)</span>)<br />
+The ray that is directed away from the focal point will reflect parallel to the axis. The dashed line extends the reflected ray back behind the mirror.<br />
+</p>
+<p><img src="fig2342b.png" style="width:14cm" alt="image" /></p>
+<p>(<span class="math inline">\(2 \rightarrow 6\)</span>)<br />
+The ray that strikes the center of the mirror will reflect back at the same angle that it strikes the mirror. This part of the mirror is perpendicular to the axis of the mirror. The dashed line extends the reflected ray back behind the mirror.<br />
+</p>
+<p>All three of the dashed lines intersect at a point. Although we only considered these three rays, the dashed lines for all rays from the tip would intersect there as well. Wherever you look into the mirror, you will see the tip of the arrow at this intersection point. The intersection point is the image of the arrows tip. Since the image is "in the mirror", it is a virtual image. We label <span class="math inline">\(i\)</span> as the distance from the image to the mirror, <span class="math inline">\(h_i\)</span> as the height of the image, and <span class="math inline">\(h_o\)</span> has the height of the object.</p>
+<p>Using geometry, we can determine the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_i\)</span> and <span class="math inline">\(h_o\)</span>.<br />
+Triangle <span class="math inline">\(1-4-5\)</span> and triangle <span class="math inline">\(1-3-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {{f+i} \over f}\]</span></p>
+<p>Triangle <span class="math inline">\(2-6-7\)</span> and triangle <span class="math inline">\(4-5-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {i \over o}\]</span></p>
+<p>Equating the <span class="math inline">\(h_i/h_o\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {i \over o} &amp; = &amp; {{i+f} \over f} \\
+  {1 \over o} - {1 \over i} &amp; = &amp; {1 \over f}\end{aligned}\]</span></p>
+<p>The ratio of <span class="math inline">\(h_i/h_o\)</span> is how much the image increased in size, and is called the <span><em>magnification</em></span> <span class="math inline">\(m\)</span>. For the case just treated, we see that <span class="math inline">\(m=h_i/h_o=i/o\)</span>. Since for this case <span class="math inline">\(i&gt;o\)</span>, the magnification is greater than 1.<br />
+Now, lets use the same mirror, but place the object such that <span class="math inline">\(o&gt;f\)</span>. We can follow the same rays from the tip of the arrow as before:</p>
+<p>(<span class="math inline">\(2 \rightarrow 3\)</span>)<br />
+The ray that is parallel to the axis will reflect off the mirror and pass through the focal point. The dashed line extends the reflected ray back behind the mirror.<br />
+(<span class="math inline">\(2 \rightarrow 8\)</span>)<br />
+Since the <span class="math inline">\(o&gt;f\)</span> a ray from the tip can pass through the focal point. The ray that passes through the focal point will reflect parallel to the axis. The dashed line extends the reflected ray back behind the mirror.<br />
+(<span class="math inline">\(2 \rightarrow 6\)</span>)<br />
+The ray that strikes the center of the mirror will reflect back at the same angle that it strikes the mirror. This part of the mirror is perpendicular to the axis of the mirror. The dashed line extends the reflected ray back behind the mirror.<br />
+</p>
+<p>From the figure we can see that the dashed lines do not converge. One will not see an image of the arrow in the mirror. However, in this case, the reflected rays do converge. The rays from point "2" do converge at point "4". However, now point "4" is in front of the mirror. Although we just followed three rays, all rays from point "2" that hit the mirror will converge at point "4". If we put a piece of paper, or screen, where point "4" is, we would see an image of the arrow on the screen. An image that can be projected on a screen is called a <span><em>real image</em></span>. If <span class="math inline">\(o&gt;f\)</span> the image is real.</p>
+<p>Once again, we can use geometry to find the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_0\)</span> and <span class="math inline">\(h_i\)</span>:</p>
+<p>Triangle <span class="math inline">\(1-4-5\)</span> and triangle <span class="math inline">\(1-3-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {{i-f} \over f}\]</span></p>
+<p>Triangle <span class="math inline">\(2-6-7\)</span> and triangle <span class="math inline">\(4-5-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {i \over o}\]</span></p>
+<p>Once again, equating the <span class="math inline">\(h_i/h_o\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {i \over o} &amp; = &amp; {{i-f} \over f} \\
+  {1 \over o} + {1 \over i} &amp; = &amp; {1 \over f}\end{aligned}\]</span></p>
+<p>As before, the magnification <span class="math inline">\(m\)</span> equals <span class="math inline">\(h_i/h_o = i/o\)</span>. For the real image, the magnification can be less than one (<span class="math inline">\(o&gt;2f\)</span>) or greater than one (<span class="math inline">\(f&lt;o&lt;2f\)</span>).</p>
+<p>Note that the equation for <span class="math inline">\(o&lt;f\)</span> is similar to the equation for <span class="math inline">\(o&gt;f\)</span>. The only difference is the minus sign in front of <span class="math inline">\(i\)</span>. We can combine both equations into one, which will be valid for any value for <span class="math inline">\(o\)</span> if we assign a minus sign to a virtual image. That is, <span class="math inline">\(i&gt;0\)</span> means the image is in front of the mirror, and <span class="math inline">\(i&lt;0\)</span> means the image is "behind" or "in" the mirror. The universal equation for all values of <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, and <span class="math inline">\(f\)</span> is</p>
+<p><span class="math display">\[{1 \over o} + {1 \over i} = {1 \over f}\]</span></p>
+<p>where <span class="math inline">\(i&gt;0\)</span> for a real image in front of the mirror, and <span class="math inline">\(i&lt;0\)</span> for a virtual image behind the mirror. This equation also works for a flat mirror. For a flat mirror, <span class="math inline">\(f = \infty\)</span>, and we have <span class="math inline">\(i=-o\)</span>.</p>
+<p>Now we consider a curved mirror that is curved in the opposite way as the converging mirror we just analyzed. The property that the diverging mirror will have is <span><em>rays parallel to the axis diverge from a point behind the mirror</em></span>. As before, the "divergence" point is called the focal point. Although parallel rays do not "focus" at this point, they diverge from the point, it is still useful to use the same name. The distance from this focal point to the mirror is the focal length, "<span class="math inline">\(f\)</span>". Note that if rays are directed at the focal point, after they reflect from the mirror they will travel parallel to the axis. This property is the same as the converging mirror, but now the physical rays cannot go through the focal point.</p>
+<p>Lets examine that the image will be for an object of height <span class="math inline">\(h_o\)</span> placed a distance <span class="math inline">\(o\)</span> from the mirror. We will follow the same three rays from the tip of an arror as we did with the converging mirror, and label the diagram the same way:<br />
+(<span class="math inline">\(2 \rightarrow 3\)</span>)<br />
+The ray that is parallel to the axis will reflect off the mirror and travel away from the focal point. The dashed line extends the reflected ray back behind the mirror.<br />
+(<span class="math inline">\(2 \rightarrow 8\)</span>)<br />
+A ray from the tip of the arrow directed towards the focal point will reflect parallel to the axis. The dashed line extends the reflected ray back behind the mirror.<br />
+(<span class="math inline">\(2 \rightarrow 6\)</span>)<br />
+The ray that strikes the center of the mirror will reflect back at the same angle that it strikes the mirror. This part of the mirror is perpendicular to the axis of the mirror. The dashed line extends the reflected ray back behind the mirror.<br />
+All three of the dashed lines intersect at a point. Although we only considered these three rays, the dashed lines for all rays from the tip would intersect there as well. Wherever you look into the mirror, you will see the tip of the arrow at this intersection point. The intersection point is the image of the arrows tip. Since the image is "in the mirror", it is a virtual image. As before, we label <span class="math inline">\(i\)</span> as the distance from the image to the mirror, and <span class="math inline">\(h_i\)</span> as the height of the image.</p>
+<p>Using geometry, we can determine the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_i\)</span> and <span class="math inline">\(h_o\)</span>.<br />
+Triangle <span class="math inline">\(1-4-5\)</span> and triangle <span class="math inline">\(1-3-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {{f-i} \over f}\]</span></p>
+<p>Triangle <span class="math inline">\(2-6-7\)</span> and triangle <span class="math inline">\(4-5-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {i \over o}\]</span></p>
+<p>Equating the <span class="math inline">\(h_i/h_o\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {i \over o} &amp; = &amp; {{f-i} \over f} \\
+  {1 \over o} - {1 \over i} &amp; = &amp; -{1 \over f}\end{aligned}\]</span></p>
+<p><img src="fig2342c.png" style="width:14cm" alt="image" /></p>
+<p>Wow, this equation is very similar to the equation for the converging mirror. If we assign a negative value to the focal length of a diverging mirror, then we can use <span><em>one equation</em></span> for both converging and diverging mirrors, and the cases which have real or virtual images. Thus, we can produce a <span><em>Universal Equation for converging and diverging mirrors</em></span>:</p>
+<p><span class="math display">\[{1 \over o} + {1 \over i} = {1 \over f}\]</span></p>
+<p><br />
+There are a few final points that need mentioning:</p>
+<ol>
+<li><p>The magnification is defined as <span class="math inline">\(m=h_i/h_o\)</span>, which is equal to <span class="math inline">\(i/o\)</span>. Nowever, we are defining the signs of <span class="math inline">\(o\)</span> and <span class="math inline">\(i\)</span> to represent real or virtual quantities. When a real object produces a real image, the image is inverted. So we are can define the magnification as <span class="math inline">\(m=-o/i\)</span>, to include the inverted (non-inverted) nature of the image. A negative <span class="math inline">\(m\)</span> means the object and image have opposite orientations. A positive <span class="math inline">\(m\)</span> means that the object and image have the same orientation.</p></li>
+<li><p>It is much easier to make a spherical mirror than a parabolic mirror. If the light only reflects near the center of a spherical mirror then the rays will focus at a point fairly well. The focusing will not be perfect, as with a parabolic surface. If the radius of curvature of the spherical surface is <span class="math inline">\(r\)</span>, then the focal length will be <span class="math inline">\(f \approx r/2\)</span>. This accuracy of this approximation can be determined as follows. From the figure we can see that</p>
+<p><span class="math display">\[{{r/2} \over {r-f}} = cos(\alpha )\]</span></p>
+<p>We can solve this equation for <span class="math inline">\(f\)</span> to obtain</p>
+<p><span class="math display">\[f = r(1 - {1 \over {2 cos(\alpha )}})\]</span></p>
+<p>So far this equation is exact. Now, if <span class="math inline">\(\alpha &lt;&lt; 1\)</span> we can use the Taylor expansion for <span class="math inline">\(1/cos(\alpha)=sec(\alpha )\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  f &amp; = &amp; r(1 - {1 \over 2}(1 + {\alpha^2 \over 2} - \dots )) \\
+    &amp; = &amp; {r \over 2}(1 - {\alpha^2 \over 2} + \dots ) \\
+    &amp; \approx &amp; {r \over 2} (1 - {1 \over 2}({h \over r})^2 + \dots )\end{aligned}\]</span></p>
+<p>where we have substituted <span class="math inline">\(\alpha \approx h/r\)</span>. So the first correction to <span class="math inline">\(f=r/2\)</span> is of order <span class="math inline">\((1/2)(h/r)^2\)</span>. So parallel rays will focus on the axis of the mirror in a region that is a distance of <span class="math inline">\(r/2\)</span> to (<span class="math inline">\(r/2 - (1/2)(h_{max}/r)^2\)</span>) from the mirror. Thus, the "bluryness" of the focal point will be approximately <span class="math inline">\((1/2)(h_{max}/r)^2\)</span>. If <span class="math inline">\(h_{max}&lt;&lt;r\)</span> then the focusing is pretty good at <span class="math inline">\(f=r/2\)</span>.</p></li>
+<li><p>A converging mirror is also called a concave mirror. A diverging mirror is also called a convex mirror. The diverging mirror only has virtual images. Real images (from a real object) can only be produced with a converging mirror, and only when <span class="math inline">\(o&gt;f\)</span>.</p></li>
+<li><p>Our derivation of the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_o\)</span>, <span class="math inline">\(h_i\)</span>, and <span class="math inline">\(m\)</span> was based on geometry. Hence, the analysis is termed "Geometric Optics".</p></li>
+</ol>
+<p>We now consider images formed by lenses. First we need to understand what happens when light passes from one material (medium) to another. We start with Snell’s law, then derive the relationships for thin lenses.</p>
+<p><strong>Snell’s Law</strong></p>
+<p>Snell’s law deals with how light travels from one material (or medium) to another. Light travels at the speed <span class="math inline">\(c = 3 \times 10^8 \; m/s\)</span> in vacuum. In a transparent material it travels slower. If light travels at the speed <span class="math inline">\(v\)</span> in a medium, we define the <span><em>index of refraction</em></span> <span class="math inline">\(n\)</span> as <span class="math inline">\(v=c/n\)</span>. In vacuum, <span class="math inline">\(n=1\)</span>, and for transparent materials <span class="math inline">\(n&gt;1\)</span> since light travels slower in materials than in vacuum. We should mention that the index of refraction <span class="math inline">\(n\)</span> will depend on the material and in general on the frequency of the radiation.</p>
+<p>Suppose there are two materials (media) which we label as "1" and "2", and that the interface where they are in contact is a flat plane. Let the speed of waves in the respective media be <span class="math inline">\(v_1\)</span> and <span class="math inline">\(v_2\)</span>. From experiment, we observe that light "bends" as it travels from one material into another. This phenomena is called refraction. We label the angle that the incident wave makes with the interface as <span class="math inline">\(\theta_i\)</span>, and the angle that the refracted wave makes as <span class="math inline">\(\theta_R\)</span>. <span><em>Both angles are measured from the direction of the wave with respect to a line perpendicular (normal) to the interface</em></span>. Both angles are always positive and between <span class="math inline">\(0^\circ\)</span> and <span class="math inline">\(90^\circ\)</span>. We want to come up with a relationship between <span class="math inline">\(\theta_i\)</span> and <span class="math inline">\(\theta_R\)</span>.</p>
+<p>Suppose a plane wave travels from "1" into "2" as shown in the figure. The figure is a snapshot of the wave as it travels from "1" into "2". The lines in the figure are points which have the same phase in the snapshot. If you want, one of the lines can be the crest of the wave when the snapshot is taken. The points <span class="math inline">\(A\)</span> and <span class="math inline">\(A&#39;\)</span> have the same phase. The points <span class="math inline">\(B\)</span> and <span class="math inline">\(B&#39;\)</span> also have the same phase, although different than <span class="math inline">\(A\)</span> and <span class="math inline">\(A&#39;\)</span>. Let <span class="math inline">\(x \equiv (distance \; A \rightarrow B)/\lambda_2\)</span>. With this assignment, the distance from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> equals <span class="math inline">\(x \lambda_2\)</span>. Since <span class="math inline">\(A\)</span> and <span class="math inline">\(A&#39;\)</span> have the same phase, and <span class="math inline">\(B\)</span> and <span class="math inline">\(B&#39;\)</span> have the same phase, the distance from <span class="math inline">\(A&#39;\)</span> to <span class="math inline">\(B&#39;\)</span> must be <span class="math inline">\(x\lambda_1\)</span>. Let <span class="math inline">\(l\)</span> be the distance on the interface between <span class="math inline">\(A\)</span> and <span class="math inline">\(B&#39;\)</span>. From the figure we see that</p>
+<p><span class="math display">\[sin(\theta_1) = {{x\lambda_1} \over l}\]</span></p>
+<p>and</p>
+<p><span class="math display">\[sin(\theta_2) = {{x\lambda_2} \over l}\]</span></p>
+<p><img src="fig2342d.png" style="width:14cm" alt="image" /></p>
+<p>equating <span class="math inline">\(x/l\)</span> in each equation we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {{sin(\theta_1)} \over \lambda_1} &amp; = &amp; {x \over l} = {{sin(\theta_2)} \over \lambda_2} \\
+  {{sin(\theta_1)} \over \lambda_1} &amp; = &amp; {{sin(\theta_2)} \over \lambda_2} \\\end{aligned}\]</span></p>
+<p>which is true for any value of <span class="math inline">\(x\)</span>. <span class="math inline">\(x\)</span> does not need to be <span class="math inline">\(1.0\)</span>. The final line should also hold in the limit as <span class="math inline">\(l \rightarrow 0\)</span>, and consequently <span class="math inline">\(x \rightarrow 0\)</span>.</p>
+<p>There is one more bit of physics to refraction: the frequency of the radiation in medium "2" will be the same as the frequency in medium "1". Why is this true? At the interface, medium "1" and medium "2" share the same location. So the time dependence of the fields are the same at the interface and consequently in the different media. That is <span class="math inline">\(f_1 = f_2 \equiv f\)</span>. Dividing both sides of the equation by <span class="math inline">\(f\)</span> yields</p>
+<p><span class="math display">\[\begin{aligned}
+  {{sin(\theta_1)} \over {f \lambda_1}} &amp; = &amp; {{sin(\theta_2)} \over {f \lambda_2}} \\
+  {{sin(\theta_1)} \over {v_1}} &amp; = &amp; {{sin(\theta_2)} \over {v_2}} \\   \end{aligned}\]</span></p>
+<p>This refraction equation is true for waves in general. For light, in terms of the indicies of refraction, we have</p>
+<p><span class="math display">\[n_1 sin(\theta_1 ) = n_2 sin(\theta_2 )\]</span></p>
+<p>This equation is known as Snell’s Law.</p>
+<p>Is refraction the only thing that can occur when light travels from one medium into another? No, light can (and usually does) reflect as well. For the reflected light, the angle of reflection equals the angle of incidence as with a mirror. Actually, the derivation of Snell’s law will work for reflection. In this case <span class="math inline">\(n_1=n_2\)</span>, since the medium is the same. If <span class="math inline">\(n_1=n_2\)</span> then <span class="math inline">\(\theta_1 = \theta_2\)</span>. So, in general when light passes from one medium into another there can be reflection as well as refraction. Usually, both occur.</p>
+<p>Some points regarding reflection and refraction:</p>
+<ol>
+<li><p>The angles in Snell’s law are measured from the ray to a line normal (or perpendicular) to the interface.</p></li>
+<li><p>If light travels from a faster medium into a slower medium, rays bend towards the normal. If light travels from a slower medium into a faster medium, rays bend away from the normal.</p></li>
+<li><p>Suppose light travels from medium "1" into medium "2", and <span class="math inline">\(n_1&gt;n_2\)</span>. That is, light travels from a slower medium into a faster one. Since</p>
+<p><span class="math display">\[sin(\theta_2 ) = {n_1 \over n_2} sin(\theta_1 )\]</span></p>
+<p>the angle <span class="math inline">\(\theta_2\)</span> is greater than <span class="math inline">\(\theta_1\)</span>. In this case, the refracted light bends away from the normal. If <span class="math inline">\((n_1/n_2)sin(\theta_1)\)</span> is larger than one, there is no real solution for <span class="math inline">\(\theta_2\)</span>. The light cannot refract into medium "2". All the light is reflected! We call this phenomenon <span><em>total internal reflection</em></span>. The critical angle <span class="math inline">\(\theta_c\)</span> when this happens is when</p>
+<p><span class="math display">\[\begin{aligned}
+  {n_1 \over n_2} sin(\theta_c) &amp; = &amp; 1 \\
+       sin(\theta_c) &amp; = &amp; {n_2 \over n_1}\end{aligned}\]</span></p>
+<p>For angles <span class="math inline">\(\theta &gt; \theta_c\)</span> from the normal, all the incident light is reflected.</p></li>
+</ol>
+<p>Snell’s law is the "physics" of refraction. Now we can use this understanding in practical applications.</p>
+<p><strong>Thin Lenses</strong></p>
+<p>Glass, or other transparent materials, can be formed such that parallel rays focus at a point on the other side of the glass. The glass is called a <span><em>converging lens</em></span>. Alternatively, glass (or other transparent material) can be formed such that parallel rays diverge from a point. In this case we have a <span><em>diverging lens</em></span>. In lecture we will show that a converging lens is thicker in the middle than on the edges, and a diverging lens is thinner in the middle than the edges. Let’s first consider thin converging lenses, then thin diverging lenses. The geometry will be very similar to the mirror analysis, and the final thin lens formula will be the same as the one for mirrors.</p>
+<p><br />
+</p>
+<p>As with mirrors, we will follow (the same) three rays to examine where the image is formed and if the image is real or virtual. First, consider an object that is placed between the focal point and the lens, <span class="math inline">\(o&lt;f\)</span>. Let the object have a height <span class="math inline">\(h_0\)</span> and be located a distance <span class="math inline">\(o\)</span> (<span class="math inline">\(o&lt;f\)</span>) from the lens. The object is represented by an arrow in the figure. We can trace three rays from the tip of the arrow that travel through the lens:<br />
+(<span class="math inline">\(2 \rightarrow 3\)</span>)<br />
+The ray that is parallel to the axis will go through the lens and pass through the focal point. The dashed line extends this ray back behind the lens.<br />
+(<span class="math inline">\(2 \rightarrow 8\)</span>)<br />
+The ray that is directed away from the focal point will emerge parallel to the axis. The dashed line extends the refracted ray back behind the lens.<br />
+(<span class="math inline">\(2 \rightarrow 6\)</span>)<br />
+The ray that strikes the center of the mirror will pass straight through at the same angle that it strikes the lens. This part of the lens is line a plane window. The dashed line extends the transmitted ray back behind the lens.<br />
+</p>
+<p>All three of the dashed lines intersect at a point. Although we only considered these three rays, the dashed lines for all rays from the tip would intersect there as well. Wherever you look into the lens from the left side, you will see the tip of the arrow at this intersection point. The intersection point is the image of the arrows tip. Since the image is on the same side as the object, it is a virtual image. We label <span class="math inline">\(i\)</span> as the distance from the image to the mirror, <span class="math inline">\(h_i\)</span> as the height of the image, and <span class="math inline">\(h_o\)</span> has the height of the object as before.</p>
+<p>Using geometry, we can determine the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_i\)</span> and <span class="math inline">\(h_o\)</span>.<br />
+Triangle <span class="math inline">\(7-4-5\)</span> and triangle <span class="math inline">\(7-3-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {{f+i} \over f}\]</span></p>
+<p>Triangle <span class="math inline">\(6-1-2\)</span> and triangle <span class="math inline">\(6-4-5\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {i \over o}\]</span></p>
+<p>Equating the <span class="math inline">\(h_i/h_o\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {i \over o} &amp; = &amp; {{i+f} \over f} \\
+  {1 \over o} - {1 \over i} &amp; = &amp; {1 \over f}\end{aligned}\]</span></p>
+<p>The ratio of <span class="math inline">\(h_i/h_o\)</span> is how much the image increased in size, and is called the <span><em>magnification</em></span> <span class="math inline">\(m\)</span> as in the case with the mirror. For the case just treated, we see that <span class="math inline">\(m=h_i/h_o=i/o\)</span>.<br />
+Now, lets use the same lens, but place the object such that <span class="math inline">\(o&gt;f\)</span>. We can follow the same rays from the tip of the arrow as before:<br />
+(<span class="math inline">\(2 \rightarrow 3\)</span>)<br />
+The ray that is parallel to the axis will go through the lens and pass through the focal point. The dashed line extends the refracted ray back behind the lens.<br />
+(<span class="math inline">\(2 \rightarrow 8\)</span>)<br />
+The ray that is directed towards the focal point will emerge parallel to the axis. The dashed line extends the refracted ray back behind the lens.<br />
+(<span class="math inline">\(2 \rightarrow 6\)</span>)<br />
+The ray that strikes the center of the mirror will pass straight through at the same angle that it strikes the lens. The dashed line extends the transmitted ray back behind the lens.<br />
+</p>
+<p>From the figure we can see that the dashed lines do not converge. One will not see an image of the arrow in the lens. However, in this case, the transmitted rays do converge. The rays from point "2" do converge at point "4". However, now point "4" is on the other side of the lens. Although we just followed three rays, all rays from point "2" that hit the lens will converge at point "4". If we put a piece of paper, or screen, where point "4" is, we would see an image of the arrow on the screen. An image that can be projected on a screen is called a <span><em>real image</em></span>. If <span class="math inline">\(o&gt;f\)</span> the image is real.</p>
+<p>Once again, we can use geometry to find the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_0\)</span> and <span class="math inline">\(h_i\)</span>:</p>
+<p>Triangle <span class="math inline">\(7-4-5\)</span> and triangle <span class="math inline">\(7-3-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {{i-f} \over f}\]</span></p>
+<p>Triangle <span class="math inline">\(2-6-1\)</span> and triangle <span class="math inline">\(4-5-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {i \over o}\]</span></p>
+<p>Once again, equating the <span class="math inline">\(h_i/h_o\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {i \over o} &amp; = &amp; {{i-f} \over f} \\
+  {1 \over o} + {1 \over i} &amp; = &amp; {1 \over f}\end{aligned}\]</span></p>
+<p>As before, the magnification <span class="math inline">\(m\)</span> equals <span class="math inline">\(h_i/h_o = i/o\)</span>. For the real image, the magnification can be less than one (<span class="math inline">\(o&gt;2f\)</span>) or greater than one (<span class="math inline">\(f&lt;o&lt;2f\)</span>).</p>
+<p><img src="fig2342e.png" style="width:14cm" alt="image" /></p>
+<p>As with the mirrors, the equation for <span class="math inline">\(o&lt;f\)</span> is similar to the equation for <span class="math inline">\(o&gt;f\)</span>. The only difference is the minus sign in front of <span class="math inline">\(i\)</span>. We can combine both equations into one, which will be valid for any value for <span class="math inline">\(o\)</span> if we assign a minus sign to a virtual image. That is, <span class="math inline">\(i&gt;0\)</span> means the image is on the other side of the lens, and <span class="math inline">\(i&lt;0\)</span> means the image is on the same side of the lens as the object. The universal equation for all values of <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, and <span class="math inline">\(f\)</span> for a converging lens is</p>
+<p><span class="math display">\[{1 \over o} + {1 \over i} = {1 \over f}\]</span></p>
+<p>where <span class="math inline">\(i&gt;0\)</span> for a real image, and <span class="math inline">\(i&lt;0\)</span> for a virtual image. This equation also works for a flat window. For a flat window, <span class="math inline">\(f = \infty\)</span>, and we have <span class="math inline">\(i=-o\)</span>.</p>
+<p><br />
+</p>
+<p>Finally, we consider a diverging lens. This is a lens that is thinner in the center than on the edges. If the lens is formed properly, parallel light rays will diverge on the other side of the lens as if they are coming from a single point. Let’s examine the image that if formed with this kind of lens. Place an arrow a distance <span class="math inline">\(o\)</span> from the lens. We trace the same three rays as before:<br />
+(<span class="math inline">\(2 \rightarrow 3\)</span>)<br />
+The ray that is parallel to the axis will go through the lens and diverge from the focal point. The dashed line extends the refracted ray back behind the lens.<br />
+(<span class="math inline">\(2 \rightarrow 8\)</span>)<br />
+The ray that is directed towards the focal point will emerge parallel to the axis. The dashed line extends the refracted ray back behind the lens.<br />
+(<span class="math inline">\(2 \rightarrow 6\)</span>)<br />
+The ray that strikes the center of the mirror will pass straight through at the same angle that it strikes the lens. The dashed line extends the transmitted ray back behind the lens.<br />
+</p>
+<p>From the figure we can see that the dashed lines do converge. One will see an image of the arrow in the lens. The rays from point "2" do converge at point "4". However, point "4" is on the same side of the lens as the object. Although we just followed three rays, all rays from point "2" that hit the lens will diverge from point "4". If we look into the lens, we will see the tip of the arrow at the point "4", and the arrow will be a virtual image.</p>
+<p>Once again, we can use geometry to find the relationship between <span class="math inline">\(o\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(h_0\)</span> and <span class="math inline">\(h_i\)</span>:</p>
+<p>Triangle <span class="math inline">\(7-4-5\)</span> and triangle <span class="math inline">\(7-3-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {{f-i} \over f}\]</span></p>
+<p>Triangle <span class="math inline">\(2-6-1\)</span> and triangle <span class="math inline">\(4-5-6\)</span> are similar triangles:</p>
+<p><span class="math display">\[{h_i \over h_0} = {i \over o}\]</span></p>
+<p>Once again, equating the <span class="math inline">\(h_i/h_o\)</span> we have</p>
+<p><span class="math display">\[\begin{aligned}
+  {i \over o} &amp; = &amp; {{f-i} \over f} \\
+  {1 \over o} - {1 \over i} &amp; = &amp; - {1 \over f}\end{aligned}\]</span></p>
+<p>Wow, this equation is very similar to the equation for the converging lens. If we assign a negative value to the focal length of a diverging lens, then we can use <span><em>one equation</em></span> for both converging and diverging lenses, and the cases which have real or virtual images. Thus, we can produce a <span><em>Universal Equation for converging and diverging lenses</em></span>:</p>
+<p><span class="math display">\[{1 \over o} + {1 \over i} = {1 \over f}\]</span></p>
+<p>This same equation applies universally for mirrors and lenses because the properties of these elements are the same: <span><em>Parallel rays converge (focus) or diverge from the focal points of both mirrors and lenses</em></span>.<br />
+A few final points on lenses and Snell’s law:</p>
+<ol>
+<li><p>Converging lenses are also called convex lenses. Diverging lenses are also called concave lenses.</p></li>
+<li><p>Real images are only formed with converging lenses, and only when <span class="math inline">\(o&gt;f\)</span>.</p></li>
+<li><p>The magnification <span class="math inline">\(m=|h_i/h_o|\)</span> as with mirrors. If we adopt the convention that + means upright and - means inverted, then <span class="math inline">\(m=-i/o\)</span> as with mirrors.</p></li>
+<li><p>The index of refraction depends on the frequency (or color) of the light. For water, a wavelength of <span class="math inline">\(\lambda = 400 \; nm\)</span>, has <span class="math inline">\(n = 1.35\)</span>. For water, a wavelength of <span class="math inline">\(\lambda = 700 \; nm\)</span>, has <span class="math inline">\(n=1.33\)</span>. Thus, for water, red light travels slightly faster than blue light. Blue light will therefore refract more than red in going from air into water, giving us a nice rainbow.</p></li>
+</ol>
+<p><strong>Other topics in Optics</strong></p>
+<p>We have covered the main idea used in geometric optics, Snell’s law. Considering the different polarizations of light gives interesting results. If there is time in lecture we might discuss:<br />
+</p>
+<ol>
+<li><p>Images using two lenses: In this case, the image of the first lens is the object of the second lens. Applications include telescopes and microscopes.</p></li>
+<li><p>Natural polarization: If light scatters at a special angle, Brewster’s angle, it will be polarized. The special incident angle is when the reflected ray makes an angle of <span class="math inline">\(90^\circ\)</span> with the refracted ray. Then the reflected light will be polarized in a direction parallel to the surface of the interface. Polaroid lenses are designed to greatly reduce this "glare".</p></li>
+<li><p>Polarization in the sky: Light scattered at <span class="math inline">\(90^\circ\)</span> in the sky will also be polarized. If you have polarized glasses, you can check this out, as well as Brewster’s angle.</p></li>
+<li><p>The lens maker’s formula. The lens maker’s formula relates the radii of curvature of the lens to the focal length.</p></li>
+</ol>
+<p>There are so many topics we can cover in optics, we have two upper division optics courses. If you are interested in optics, I recommend you take one (or both) of these classes: Phy417/Phy417L and/or Phy344(Applied Optics). As a final important topic in optics, we cover interference effects.</p>
+<p><strong>Interference Effects</strong></p>
+<p>We will have demonstrations in lecture that show similar interference effects with visible light that we saw and discussed in Phy132 with sound. We will shine light at screens with slits, etc. and look at what happens when light goes through the slits or reflects off thin films. We will see that at some positions the transmitted (or reflected) light will be bright, and at other positions dark. We can explain these phenomena using the principle of superposition. In this course we will use the classical approach of treating the electromagnetic radiation as an electric-magnetic field. The net electric field at any point in space will be the superposition of the electric fields from all the sources of the radiation.</p>
+<p>We will consider light of one frequency (i.e. one color). Thus, the net electric field will consist of the sum of sinusoidal functions that have the same frequency. We first go over the mathematics of adding sinusoidal functions that have the same frequency, which is the basis for understanding these interference effects.</p>
+<p><strong>Adding Sinusoidal Functions that have the same Frequency</strong></p>
+<p>The general problem is to add terms of the following form:</p>
+<p><span class="math display">\[\sum_i a_i cos(\omega t + \phi_i) = a_1 cos(\omega t) + a_2 cos(\omega t + \phi_2) + \cdots\]</span></p>
+<p>where we have measured all phase angles <span class="math inline">\(\phi_i\)</span> relative to the first term for simplicity. There is no generality lost in taking <span class="math inline">\(\phi_1=0\)</span>, we have just started our time <span class="math inline">\(t\)</span> when the first sinusoidal function is at a maximum <span class="math inline">\(+a_1\)</span>. Before we go into the details, we can guess what this sum will look like. First, after a time equal to the period, <span class="math inline">\(T=2\pi /\omega\)</span> each term has gone through a complete cycle and the sum is the same as it was. Thus, the sum of the sinusoidals will be periodic with the same period, or frequency, as the terms. We will also show that the sum will be a sinusoidal function as well. The sum will be therefore equal to <span class="math inline">\(A cos(\omega t + \phi)\)</span>:</p>
+<p><span class="math display">\[\sum_i a_i cos(\omega t + \phi_i) = A cos(\omega t + \phi)\]</span></p>
+<p>Our goal is to find a mathematical way to obtain <span class="math inline">\(A\)</span> and <span class="math inline">\(\phi\)</span> from the <span class="math inline">\(a_i\)</span> and <span class="math inline">\(\phi_i\)</span>. I’ll present three different ways to do this: using trig identities, "phasors", and complex numbers. I’ll also show the special case of two functions with <span class="math inline">\(a_1 = a_2\)</span>.<br />
+</p>
+<p>Let’s start with the simple case of two sinusoidals where <span class="math inline">\(a_1 = a_2\)</span>. We can use the trig identity:</p>
+<p><span class="math display">\[cos(\alpha ) + cos(\beta ) = 2 \; cos({{\alpha + \beta} \over 2})cos({{\alpha - \beta} \over 2})\]</span></p>
+<p>Now, if <span class="math inline">\(a_1=a_2\)</span>, <span class="math inline">\(\alpha = \omega t\)</span>, and <span class="math inline">\(\beta = \omega t + \phi_2\)</span>, we have</p>
+<p><span class="math display">\[\begin{aligned}
+ a_1 cos(\omega t) + a_1 cos(\omega t + \phi_2) &amp; = &amp; 2a_1 cos(\omega t + \phi_2/2)cos(-\phi_2/2) \\
+                   &amp; = &amp; 2 a_1 cos(\phi_2/2) \; cos(\omega t + \phi_2/2)\end{aligned}\]</span></p>
+<p>where we have used <span class="math inline">\(cos(-\theta) = cos(\theta)\)</span>. So we see that the sum of these two cosine functions is a cosine function with the same frequency <span class="math inline">\(\omega\)</span>. The resulting phase is <span class="math inline">\(\phi_2/2\)</span> from the first term and the Net Amplitude <span class="math inline">\(A\)</span> is <span class="math inline">\(A = |2 a_1 cos(\phi_2/2)|\)</span>.</p>
+<p>From the expression for the net amplitude <span class="math inline">\(A=|2 a_1 cos(\phi_2/2)|\)</span> we can see how the interference effects can be understood. If <span class="math inline">\(\phi_2 = 0, \pm 2\pi, \pm 4\pi, \cdots\)</span>, then <span class="math inline">\(|cos(\phi/2)| = 1\)</span>. The net amplitude will be a maximum, the light will be bright, constructive interference will occur. If <span class="math inline">\(\phi_2/2 = \pm \pi /2, \pm (3/2) \pi, \cdots\)</span>, then <span class="math inline">\(\cos(\phi/2) = 0\)</span>. The net amplitude will be zero, the light will be gone, destructive interference will occur. For other values of <span class="math inline">\(\phi_2\)</span> the amplitude will be <span class="math inline">\(|2 a_1 cos(\phi_2/2)|\)</span> and the intensity will be proportional to the square of the amplitude <span class="math inline">\(A^2 = 4 a_1^2 cos^2(\phi_2/2)\)</span>.</p>
+<p>If <span class="math inline">\(a_1 \ne a_2\)</span> we could perform a similar analysis, but it will be easier to use the phasor method described next.</p>
+<p>Since all the sinusoidal functions have the same frequency, we can add them just like we add vectors. Let’s demonstrate this. At time <span class="math inline">\(t=0\)</span> the sum is</p>
+<p><span class="math display">\[a_1 + a_2 cos(\phi_2)\]</span></p>
+<p>This sum is the projection on the x-axis of the vector sum of the two vectors <span class="math inline">\(\vec{a_1} = a_1 \hat{i}\)</span> and <span class="math inline">\(\vec{a_2}\)</span>, where <span class="math inline">\(|\vec{a_2}|=a_2\)</span> and <span class="math inline">\(\vec{a_2}\)</span> makes an angle of <span class="math inline">\(\phi_2\)</span> with respect to the x-axis, as shown in the figure.</p>
+<p><img src="fig2342f.png" style="width:14cm" alt="image" /></p>
+<p>At time <span class="math inline">\(t\)</span>, both vectors in the figure have rotated by the same angle <span class="math inline">\(\omega t\)</span>. The sum of the sinusoidal functions are, at time <span class="math inline">\(t\)</span>, equal to</p>
+<p><span class="math display">\[a_1 cos(\omega t) + a_2 cos(\omega t + \phi_2)\]</span></p>
+<p>Once again, this sum is the projection on the x-axis of the vector sum of the two vectors as shown in the figure. The result of the above equation is true for all times.</p>
+<p>That is, we can define the vector <span class="math inline">\(\vec{a_1}(t)\)</span> to have a magnitude <span class="math inline">\(|\vec{a_1}|=a_1\)</span> and make an angle of <span class="math inline">\(\omega t\)</span> with respect to the x-axis, and define the vector <span class="math inline">\(\vec{a_2}(t)\)</span> to have a magnitude or <span class="math inline">\(|\vec{a_2}|=a_2\)</span> and make an angle of <span class="math inline">\(\omega t + \phi_2\)</span> with respect to the x-axis. At any time <span class="math inline">\(t\)</span>, we can add these two vectors. The projection of the resulting vector sum (<span class="math inline">\(\vec{a_1}(t) + \vec{a_2}(t)\)</span>) on the x-axis will be the sum of the two sinusoidal functions at time <span class="math inline">\(t\)</span>.</p>
+<p>Note the important result: <span><strong>The magnitude of <span class="math inline">\(\vec{a_1}(t) + \vec{a_2}(t)\)</span> does not change in time!</strong></span> The vector sum <span class="math inline">\(\vec{a_1}(t)+\vec{a_2}(t)\)</span> just rotates around with angular velocity <span class="math inline">\(\omega\)</span>! <span><em>Thus the net amplitude of the sum of the sinusoidal functions is just the magnitude of the vector sum: <span class="math inline">\(|\vec{a_1}(t)+\vec{a_2}(t)|\)</span>.</em></span> We can evaluate this sum at any time. It easiest to evaluate the vector sum at <span class="math inline">\(t=0\)</span>, which we have chosen such that <span class="math inline">\(\vec{a_1}(0)\)</span> lies along the x-axis.</p>
+<p>In the figure, we evaluate the vector sum for the special case of <span class="math inline">\(a_2=a_1\)</span>. Here we see that the magnitude <span class="math inline">\(|\vec{a_1}(0)+\vec{a_2}(0)|\)</span> is equal to</p>
+<p><span class="math display">\[|\vec{a_1}(0)+\vec{a_2}(0)| = |2a_1 cos(\phi_2/2)|\]</span></p>
+<p>which is the same result we obtained using trig identities. The angle that the vector <span class="math inline">\(\vec{a_1}(0) + \vec{a_2}(0)\)</span> makes with respect to the x-axis is <span class="math inline">\(\phi_2/2\)</span>. This will be the phase relative of the sum to the first sinusoidal.</p>
+<p>We can use this procedure of adding sinusoidal functions of the same frequency to any number of functions. One simply associates a vector with each term in the sum. Then one adds the vectors by the rules of vector addition to obtain a net vector. The magnitude of the net vector is the magnitude of the sum of sinusoidals. The angle of the net vector is the relative phase of the sum of sinusoidals. One can say the same thing mathematically as follows. For a sinusoidal function with frequency <span class="math inline">\(\omega\)</span>, amplitude <span class="math inline">\(a_k\)</span>, and phase <span class="math inline">\(\phi_k\)</span>, associate the vector <span class="math inline">\(\vec{a}_k\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  a_k cos(\omega t + \phi_k) &amp; \leftrightarrow &amp; \vec{a}_k \\
+           &amp; \leftrightarrow &amp; a_k cos(\phi_k) \hat{i} + a_k sin(\phi_k) \hat{j}\end{aligned}\]</span></p>
+<p>Note that <span class="math inline">\(|\vec{a}_k| = a_k\)</span> and <span class="math inline">\(\phi_k\)</span> is the angle between <span class="math inline">\(\vec{a}_k\)</span> and the x-axis. Here I am using <span class="math inline">\(k\)</span> as the index for the sinusoidal function, since we are using <span class="math inline">\(\hat{i}\)</span> as the unit vector along the x-axis. The addition of the sinusoidal functions is found by adding the vectors:</p>
+<p><span class="math display">\[\begin{aligned}
+  \sum_i a_i \; cos(\omega t + \phi_i) &amp; = &amp; ?  \\
+           &amp; \leftrightarrow &amp; \sum_i \vec{a}_i \; \; \; (Assign \; the \; Vectors) \\
+           &amp; \leftrightarrow &amp; \vec{A}_{net} \; \; \; (add \; the \; vectors)\\
+           &amp; \leftrightarrow &amp; |A_{net}| \; cos(\omega t + \phi) \; \; \; 
+                                     (Map \; back \; to \; sinusoidals) \\
+  \sum_i a_i \; cos(\omega t + \phi_i) &amp; = &amp; |A_{net}| \; cos(\omega t + \phi)  \\           \end{aligned}\]</span></p>
+<p>The addition of sinusoidal functions of the same frequency is isomorphic to vector addition. Instead of using the word vector, phasor is often used. This is because these vectors are all rotating around the z-axis with the same frequency <span class="math inline">\(\omega\)</span>. A phasor is a vector that is rotating around an axis with a constant angular velocity.</p>
+<p>Adding complex numbers obeys the same mathematics as adding two dimensional vectors. The real parts add independently to the imaginary parts. For every sinusoidal function with time dependence <span class="math inline">\(\omega t\)</span> we associate a complex number:</p>
+<p><span class="math display">\[\begin{aligned}
+    a_k \; cos(\omega t + \phi_k) &amp;  \leftrightarrow &amp; z_k \\
+                                  &amp; \leftrightarrow &amp; a_k e^{i\phi_k}\end{aligned}\]</span></p>
+<p>Note that <span class="math inline">\(a_k\)</span> is real, and is the magnitude of the complex number. I use the index <span class="math inline">\(k\)</span>, since <span class="math inline">\(i\)</span> is assigned <span class="math inline">\(\sqrt{-1}\)</span> when using complex numbers. As with the vector (or phasor) method one justs adds the complex numbers:</p>
+<p><span class="math display">\[\sum_k a_ke^{i\phi_k} = A = |A| e^{i\phi}\]</span></p>
+<p>Then, one just needs to express the complex number <span class="math inline">\(A\)</span> in terms of its magnitude <span class="math inline">\(|A|\)</span> and its phase <span class="math inline">\(\phi\)</span>. The net sinusoidal wave will be <span class="math inline">\(|A|cos(\omega t + \phi)\)</span>. The reason this works for complex numbers is as follows:</p>
+<p><span class="math display">\[\begin{aligned}
+  \sum_k a_k cos(\omega t + \phi_k) &amp; = &amp; \sum_k Re(a_ke^{i(\omega t + \phi_k)}) \\
+                                    &amp; = &amp; Re (\sum_k a_ke^{i(\omega t + \phi_k)}) \\
+                                    &amp; = &amp; Re (e^{i\omega t}(\sum_k a_ke^{\phi_k})) \\
+                                    &amp; = &amp; Re (e^{i\omega t} |A|e^{i \phi})\\
+                                    &amp; = &amp; Re (|A|e^{i(\omega t+\phi)})\\
+                                    &amp; = &amp; |A| cos(\omega t + \phi)\end{aligned}\]</span></p>
+<p>where Re means take the real part of the complex number. Note that it was critical that each function have the same frequency. Otherwise, we could not have removed the common term <span class="math inline">\(e^{i\omega t}\)</span> outside the summation. The addition of sinusoidal functions of the same frequency is isomorphic to the addition of complex numbers.</p>
+<p>Now we are ready to see if the "interference" experiments with monochromatic light can be understood using the mathematics of adding sinusoidal functions. We will investigate what happens when light interacts with two slits, many slits, a single slit, thin films, etc.</p>
+<p><strong>"Interference" Experiments with light</strong></p>
+<p>In the double slit experiment, light is emitted that has a <span><em>single frequency</em></span> and is from a <span><em>single source</em></span>. The light hits a screen that has two thin slits, slit "1" and slit "2". The slits are separated by a distance <span class="math inline">\(d\)</span>. After going through the two slits the light hits a second screen. On the second screen, one sees bright and dark regions.</p>
+<p><img src="fig2342g.png" style="width:14cm" alt="image" /></p>
+<p>This phenomena of bright and dark regions can be understood as follows. When the light hits the second screen, the net amplitude is the superposition of the light from slit "1" plus the light from slit "2". At the position on the second screen between the two slits, the distance to each slit is the same. The light from slit "1" has the same phase as the light from slit "2". A bright spot will be formed at this middle position. At positions on the second screen away from the middle, the distance to slit "1" is different than from slit "2". Maxwell’s picture of monochromatic light is that it is an oscillating electric field vector. If the distance to slit "1" is different than to slit "2", then the oscillating electric field from slit "1" will have a different phase with respect to the oscillating electric field from slit "2". The net electric field will be the sum of two sinusoidal functions that have a relative phase between them.</p>
+<p>Let’s calculate the net electric field. If the distance to slit "1" is not too much different than that to slit "2", then the amplitude from each slit is approximately the same, say <span class="math inline">\(E_0\)</span>. So the net electric field on the second screen is the sum of the electric field from slit "1" plus that from slit "2":</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{E}_{net} &amp; = &amp; \vec{E}_1 + \vec{E}_2 \\
+                 &amp; \approx &amp; \vec{E}_0 (cos(\omega t) + cos(\omega t + \phi) )  \end{aligned}\]</span></p>
+<p>What is the phase difference <span class="math inline">\(\phi\)</span>? It is due to the extra distance that the light must travel from one slit compared to the other. Let the extra distance be <span class="math inline">\(l\)</span>. Then the extra time to reach the screen is <span class="math inline">\(l/c\)</span>. So one "wave" arrives at time <span class="math inline">\(t\)</span>, and the other "wave" arrives at a time of <span class="math inline">\(t + l/c\)</span>. Substituting into the equation we have</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{E}_{net} &amp; \approx &amp; \vec{E}_0 (cos(\omega t) + cos(\omega (t+l/c)) ) \\  
+                 &amp; \approx &amp; \vec{E}_0 (cos(\omega t) + cos(\omega t+ \omega l/c)) ) \\  
+                 &amp; \approx &amp; \vec{E}_0 (cos(\omega t) + cos(\omega t+ 2 \pi f l/c)) ) \\  
+                 &amp; \approx &amp; \vec{E}_0 (cos(\omega t) + cos(\omega t+ 2 \pi l/\lambda)) ) \\  \end{aligned}\]</span></p>
+<p>where we have used <span class="math inline">\(c = f \lambda\)</span> to get the last line. Thus, the difference in the sinusoidal phase of the light from the two slits is</p>
+<p><span class="math display">\[\phi = 2 \pi {l \over \lambda}\]</span></p>
+<p>We know how to add sinusoidal functions from the last section. For the case at hand, two slits, we have</p>
+<p><span class="math display">\[\begin{aligned}
+  \vec{E}_{net}  &amp; \approx &amp; \vec{E}_0 (cos(\omega t) + cos(\omega t+ \phi)) ) \\
+                 &amp; \approx &amp; \vec{E}_0 2 cos(\phi /2)cos(\omega t + \phi /2) \\
+                 &amp; \approx &amp; \vec{E}_0 2 cos(\pi l /\lambda)cos(\omega t + \phi /2) \\  \end{aligned}\]</span></p>
+<p>Here we see that the amplitude of the light when it stikes the second screen is</p>
+<p><span class="math display">\[|\vec{E}_{net}| = 2 E_0 cos(\pi {l \over \lambda} )\]</span></p>
+<p>This equation for <span class="math inline">\(\vec{E}_{net}\)</span> enables us to understand the two slit experiment. The intensity of the light is proportional to the square of the electric field strength:</p>
+<p><span class="math display">\[I = 4 I_0 cos^2(\pi {l \over \lambda} )\]</span></p>
+<p>At the middle position, <span class="math inline">\(l=0\)</span>, and the intensity is <span class="math inline">\(4 I_0\)</span>. If the extra distance <span class="math inline">\(l = \pm \lambda /2\)</span>, <span class="math inline">\(cos(\pi /2) = 0\)</span>, then there is a dark spot. Dark spots will also occur whenever <span class="math inline">\(l=\pm 3 \lambda /2, 5 \lambda /2, \cdots\)</span>. Bright spots will occur whenever <span class="math inline">\(l=0, \lambda, 2\lambda, \cdots\)</span>. The intensity, or brightness, varies as <span class="math inline">\(cos^2(\pi l/\lambda )\)</span>.</p>
+<p>We can express the extra distance <span class="math inline">\(l\)</span> in terms of the "scattering" angle <span class="math inline">\(\theta\)</span> shown in the figure. If <span class="math inline">\(\theta\)</span> is small, then</p>
+<p><span class="math display">\[l \approx d sin(\theta)\]</span></p>
+<p>So, in terms of the scattering angle <span class="math inline">\(\theta\)</span> the intensity on the second screen is</p>
+<p><span class="math display">\[I = 4 I_0 cos^2({{\pi d \; sin(\theta )}  \over \lambda} )\]</span></p>
+<p>Some final comments on the two slit experiment:</p>
+<ol>
+<li><p>It is important that the light coming from slit "1" is in sych with the light coming from slit "2" at the slit opening at all times. For the case of a single monochromatic source impinging directly on the two slits, the light eminating from each slit is the same (at the slit opening). If the single monochromatic source were closer to one slit than the other, the light from "1" would still be in sych with the light from slit "2". The relative phase would not change in time. The radiation from sources that are in sych is called <span><em>coherent</em></span>.</p></li>
+<li><p>For interference to occur, the two "sources", slit "1" and slit "2", must be coherent longer than a distance <span class="math inline">\(l\)</span>. The maximum distance that the sources remain coherent is called the <span><em>coherence length</em></span>. In our case, the coherence length must be longer than <span class="math inline">\(l\)</span> for interference to exist.</p></li>
+<li><p>In a real experiment, the intensity does not decrease exactly as <span class="math inline">\(cos^2(\pi d \; sin(\theta )/\lambda)\)</span>. The slits will have a finite opening size, and this will affect the pattern on the second screen. We will consider this effect later.</p></li>
+<li><p>The middle point is often called the central maximum.</p></li>
+<li><p>The two slit experiment was first performed by Young. The experiment is sometimes refered to as "Young’s double slit experiment". The experiment was one of the first to show the interference effects of light. It lead scientists to the incorrect conclusion that light is a classical wave.</p></li>
+</ol>
+<p>Now let’s consider will happen if light is incident on a screen with three equally spaced thin slits, located on the screen. The light will travel though the slits and strike a wall. On the wall, we will see an interference pattern. We can carry out the same analysis that we did with two slits. Let the spacing between each slit be <span class="math inline">\(d\)</span>. Label the slits "1", "2", and "3". If <span class="math inline">\(E_0\)</span> is the amplitude on the wall from each slit, then the amplitude at the central maximum on the wall is <span class="math inline">\(3E_0\)</span>. On the wall away from the central maximum (upward in the figure), slit "1" will be closer than slit "2" by a length <span class="math inline">\(l\)</span>, and slit "2" will be closer than slit "3" by a length <span class="math inline">\(l\)</span>. The phase difference between adjacent slits will be <span class="math inline">\(\phi = 2 \pi l/\lambda\)</span>. The net amplitude will be the sum of the amplitudes from each of the three slits:</p>
+<p><img src="fig2342h.png" style="width:14cm" alt="image" /></p>
+<p><span class="math display">\[E_{net} = E_0 cos(\omega t) + E_0 cos(\omega t + \phi) + E_0 cos(\omega t + 2\phi)\]</span></p>
+<p>We can add the sinusoidals using phasors. The first term is associated with a vector of length <span class="math inline">\(E_0\)</span> along the x-axis. The second sinusoidal is associated with a vector of length <span class="math inline">\(E_0\)</span> at an angle of <span class="math inline">\(\phi\)</span> with respect to the x-axis. The third sinusoidal is associated with a vector of length <span class="math inline">\(E_0\)</span> at an angle of <span class="math inline">\(2\phi\)</span> with respect to the x-axis. The magnitude of <span class="math inline">\(E_{net}\)</span> is magnitude of the sum of the three vectors.</p>
+<p>One of your homework problems is to solve for <span class="math inline">\(E_{net}\)</span> in terms of <span class="math inline">\(\phi\)</span>. Here we will determine the values of <span class="math inline">\(\phi\)</span> that result in minima and maxima. Maxima occur when <span class="math inline">\(\phi =0^\circ\)</span> and when <span class="math inline">\(\phi = 360^\circ\)</span>. For a minima to occur, the three vectors must add to zero. The first value of <span class="math inline">\(\phi\)</span> for the sum to be zero is when <span class="math inline">\(\phi = 120^\circ\)</span>. The next value of <span class="math inline">\(\phi\)</span> for the sum to add to zero is when <span class="math inline">\(\phi = 240^\circ\)</span>. These are the only values for <span class="math inline">\(0^\circ &lt; \phi &lt; 360^\circ\)</span> where there are minima. In the middle of the minima at <span class="math inline">\(\phi = 120^\circ\)</span> and <span class="math inline">\(240^\circ\)</span> there must be a maximum, a "local maximum". This will occur at <span class="math inline">\(\phi=180^\circ\)</span>. Substituting in the equation for <span class="math inline">\(E_{net}\)</span>, we have <span class="math inline">\(E_{net} = E_0 - E_0 + E_0 = E_0\)</span>. The pattern on the wall will be the following. <span class="math inline">\(E_{net}\)</span> has maxima of <span class="math inline">\(3E_0\)</span> when <span class="math inline">\(\phi = 0, \pm 2\pi, \pm 4\pi, \cdots\)</span>. <span class="math inline">\(E_0\)</span> has smaller local maxima at <span class="math inline">\(\phi = \pm \pi, \pm 3\pi, \cdots\)</span>.</p>
+<p>The intensity of the light is proportional to <span class="math inline">\(E^2_{net}\)</span>. So the intensity at the maxima when <span class="math inline">\(\phi = 0^\circ\)</span> and <span class="math inline">\(\phi = 360^\circ\)</span> will be <span class="math inline">\(9\)</span> times the intensity at the local maximum when <span class="math inline">\(\phi = 180^\circ\)</span>. As we move across the wall from the central maximum, the intensity will vary as: <span class="math inline">\(I_0\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(I_0/9\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(I_0\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(I_0/9\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(I_0\)</span>, <span class="math inline">\(\cdots\)</span>.</p>
+<p>We can perform the same analysis with <span class="math inline">\(4\)</span> slits as we did with <span class="math inline">\(3\)</span>. As before, let <span class="math inline">\(\phi\)</span> be the relative phase between light from one slit and its adjacent slit. The net amplitude will be the sum of four sinusoidals:</p>
+<p><span class="math display">\[E_{net} = E_0 cos(\omega t) + E_0 cos(\omega t + \phi ) + E_0 cos(\omega t + 2\phi ) 
+              + E_0 cos(\omega t + 3\phi )\]</span></p>
+<p>As before we can add the sinusoidals using phasors. The first term is associated with a vector of length <span class="math inline">\(E_0\)</span> along the x-axis. The second sinusoidal is associated with a vector of length <span class="math inline">\(E_0\)</span> at an angle of <span class="math inline">\(\phi\)</span> with respect to the x-axis. The third sinusoidal is associated with a vector of length <span class="math inline">\(E_0\)</span> at an angle of <span class="math inline">\(2\phi\)</span> with respect to the x-axis. The forth sinusoidal is associated with a vector of length <span class="math inline">\(E_0\)</span> at an angle of <span class="math inline">\(3\phi\)</span> from the x-axis. The magnitude of <span class="math inline">\(E_{net}\)</span> is magnitude of the sum of the four vectors.</p>
+<p>Let’s try and determine where the minima and maxima are. The central maximum is when <span class="math inline">\(\phi = 0\)</span>, and <span class="math inline">\(E_{net} = 4E_0\)</span>. Equally large maxima will occur when <span class="math inline">\(\phi = \pm 2\pi, \pm 4\pi, \cdots\)</span>. Since <span class="math inline">\(E_{net}(\phi \pm 2\pi) = E_{net}(\phi )\)</span>, we can limit our analysis for <span class="math inline">\(0 \le \phi \le 2\pi\)</span>.</p>
+<p>To find the minima for <span class="math inline">\(0 \le \phi \le 2\pi\)</span>, we can slowly increase <span class="math inline">\(\phi\)</span> and see when the four vectors add up to zero. The first minima will occur at <span class="math inline">\(\phi = 90^\circ\)</span>. The vectors form a square going counter-clockwise. The next minima will be when <span class="math inline">\(\phi = 180^\circ\)</span>. The vectors cancel each other out. The next minima will be when <span class="math inline">\(\phi = 270^\circ\)</span>. The vectors form a square going clockwise. So there are three minima (dark spots) for <span class="math inline">\(0 \le \phi \le 2\pi\)</span>. In between the minima, there will be local (smaller) maxima. One for <span class="math inline">\(90^\circ \le \phi \le 180^\circ\)</span>, and another one for <span class="math inline">\(180^\circ \le \phi \le 270^\circ\)</span>. At the local maxima, the net amplitude will be approximately <span class="math inline">\(E_0\)</span> by examining how the four vectors add. Since intensity is proportional to the square of <span class="math inline">\(E_{max}\)</span>, the intensity at <span class="math inline">\(\phi = 0\)</span> and <span class="math inline">\(\phi = 2\pi\)</span> will be much larger, around <span class="math inline">\(4^2 = 16\)</span> times larger than at the two local maxima between the bright peaks.</p>
+<p>Suppose there are <span class="math inline">\(N\)</span> equally spaced narrow slits that are separated from each other by a distance <span class="math inline">\(d\)</span>. Extending the above analysis, the interference pattern on the wall will have a very bright (and narrow) central maximum. The next very bright (and narrow) maximum will be when <span class="math inline">\(\phi = 2\pi\)</span>, since all the vectors will add in a straight line. Between the two bright maxima, there will be <span class="math inline">\(N-1\)</span> dark spots where <span class="math inline">\(E_{net}=0\)</span>. Between each dark spot there will be a local maxima. The amplitude of the <span class="math inline">\(N-2\)</span> local maxima will be much smaller than at <span class="math inline">\(\phi = 0\)</span> or <span class="math inline">\(\phi = 2\pi\)</span>. Since the intensity is proportional to <span class="math inline">\(|E_{max}|^2\)</span>, the intensity at <span class="math inline">\(\phi = 0\)</span> or <span class="math inline">\(\phi = 2\pi\)</span> will be <span class="math inline">\(N^2\)</span> greater than the local maxima in the middle of the pattern.</p>
+<p>The features of the three and four slit interference patterns are enhanced when <span class="math inline">\(N\)</span> is large. If <span class="math inline">\(N\)</span> is large, the interference pattern on the wall will consists of very bright lines that are very narrow, with little light between them. We can determine the narrowness of the lines as follows. The central maximum has its first minimum (i.e. dark spot) when <span class="math inline">\(\phi = 2\pi /N\)</span>. At this value of <span class="math inline">\(\phi\)</span> all the vectors sum to zero. <span class="math inline">\(\phi\)</span> is related to the scattering angle <span class="math inline">\(\theta\)</span> as <span class="math inline">\(\phi = 2 \pi l/\lambda = (2 \pi d sin(\theta )/\lambda\)</span>. So the first minima occurs for a value of <span class="math inline">\(\theta\)</span> given by</p>
+<p><span class="math display">\[\begin{aligned}
+  {{2 \pi d \; sin(\theta )} \over \lambda} &amp; = &amp; {{2 \pi } \over N} \\
+                  sin(\theta ) &amp; = &amp; {\lambda \over {d N}} \\
+                         \theta &amp; \approx &amp; {\lambda \over {d N}}\\ \end{aligned}\]</span></p>
+<p>where we have used the approximation <span class="math inline">\(sin(\theta) \approx \theta\)</span> for <span class="math inline">\(\theta &lt;&lt; 1\)</span>. The expression <span class="math inline">\(\lambda /(dN)\)</span> is called the <span><em>line width</em></span> of the diffraction line. This simple expression is applicable for the central maximum.</p>
+<p>Screens with many slits are called <span><em>diffraction gratings</em></span>. Diffraction gratings can have thousand of slits and produce very narrow interference lines. They are used in spectrometers to measure wavelength to great accuracy. In Phy417, you will use complex numbers to solve for <span class="math inline">\(N\)</span> slit interference. Briefly, the calculation goes as</p>
+<p><span class="math display">\[\begin{aligned}
+  I &amp; \propto &amp; |\sum_{n=0}^N e^{in\phi }|^2 \\
+    &amp; \propto &amp; |{{1 - (e^{i\phi})^N} \over {1-e^{i\phi}}}|^2 \\
+  I  &amp; = &amp; I_0 {{sin^2(N \phi /2)} \over {sin^2(\phi /2)}}\end{aligned}\]</span></p>
+<p>At <span class="math inline">\(\phi \rightarrow 0\)</span>, <span class="math inline">\(I \rightarrow N^2 I_0\)</span>. The intensity of the local maxima are around <span class="math inline">\(I_0\)</span>, much smaller than the central maximum.</p>
+<p>Summarizing equally spaced multiple slit interference:</p>
+<ol>
+<li><p>The main property of radiation we used was that the net amplitude on the wall is equal to the sum of the amplitudes from each of the slits.</p></li>
+<li><p>The process of adding the amplitudes from each of the slits involves adding sinusoidal functions that have a common frequency. Each sinusoidal function has approximately the same amplitude, but with different phase shifts. The difference in phase from one slit to its neighbor is the same value, <span class="math inline">\(\phi\)</span>, since the slits are equally spaced.</p></li>
+<li><p>In all our discussions, the phase shift <span class="math inline">\(\phi\)</span> has always been the relative phase from one slit compared to an adjacent slit. In terms of the extra distance <span class="math inline">\(l\)</span>, <span class="math inline">\(\phi = 2\pi l/\lambda\)</span>. In terms of the scattering angle <span class="math inline">\(\theta\)</span>, <span class="math inline">\(l=d \; sin(\theta )\)</span>. So, <span class="math inline">\(\phi = 2\pi \; d \; sin(\theta )/\lambda\)</span>.</p></li>
+</ol>
+<p>As a final slit interference experiment, we analyze the interference effects when light passes through a single slit. Consider a coherent light beam that hits a screen that has a slit of length <span class="math inline">\(d\)</span>. After the light passes through the slit, it "hits" a wall. In lecture, we will demonstrate this, and notice the interference pattern on the wall. Let the magnitude of the electric field on the wall at the central maximum be <span class="math inline">\(E_0\)</span>. <span class="math inline">\(E_{net}\)</span> will have its largest value here.</p>
+<p><img src="fig2342i.png" style="width:14cm" alt="image" /></p>
+<p>For the case of a thin slit, each slit was a source of light. We can carry this model over to the finite sized slit by dividing the opening of length <span class="math inline">\(d\)</span> into <span class="math inline">\(N\)</span> thin slits separated by a distance of <span class="math inline">\(d/N\)</span>, and letting <span class="math inline">\(N \rightarrow \infty\)</span>.</p>
+<p>Consider light scattered at an angle <span class="math inline">\(\theta\)</span>. The path difference between light emitted at the top of the opening to that at the bottom of the opening is <span class="math inline">\(d \; sin(\theta )\)</span>, which we label as <span class="math inline">\(L\)</span>, <span class="math inline">\(L = d \; sin(\theta )\)</span>. The difference in phase between light emitted at the top compared to the bottom of the slit is <span class="math inline">\(2\pi L/\lambda\)</span>, which we label as <span class="math inline">\(\Phi = 2\pi L/\lambda\)</span>.</p>
+<p>If there are <span class="math inline">\(N\)</span> equally spaced sources (of thin slits) in the slit opening, each source will produce an electric field of amplitude <span class="math inline">\(E_0/N\)</span> at the wall. The relative phase between adjacent sources will be <span class="math inline">\(\phi = \Phi /N\)</span>. Adding up these <span class="math inline">\(N\)</span> coherent sources at the wall yields a net amplitude <span class="math inline">\(E_{net}\)</span> of</p>
+<p><span class="math display">\[E_{net} = \sum_{n=0}^N {E_0 \over N} cos(\omega t + {{n \Phi} \over N})\]</span></p>
+<p>We can use phasors (vectors) to add these sinusoidal functions as we did with <span class="math inline">\(N\)</span> slits. If <span class="math inline">\(N\)</span> is large, each vector will be very short and be rotated a small angle, <span class="math inline">\(\Phi /N\)</span>, from the adjacent vector. An important property of the sum is that <span><em>no matter what <span class="math inline">\(N\)</span> is, the last vector will be rotated by an angle <span class="math inline">\(\Phi\)</span> relative to the x-axis</em></span>. To find <span class="math inline">\(E_{net}\)</span>, we take the limit as <span class="math inline">\(N \rightarrow \infty\)</span>:</p>
+<p><span class="math display">\[E_{net} = lim_{N \rightarrow \infty} \sum_{n=0}^N {E_0 \over N} cos(\omega t + {{n \Phi} \over N})\]</span></p>
+<p>Adding the vectors in the limit that <span class="math inline">\(N \rightarrow \infty\)</span> results in a circular arc of length <span class="math inline">\(E_0\)</span> with the end of the arc rotated by an angle of <span class="math inline">\(\Phi\)</span>, as shown in the figure. <span class="math inline">\(|E_{net}|\)</span> is the length of the chord that starts at the origin and ends at the end of the circular arc. From the figure, it is seen that <span class="math inline">\(\Phi = E_0/r\)</span>, where <span class="math inline">\(r\)</span> is the radius of the circle. Using geometry, the length of the chord is <span class="math inline">\(2r \; sin(\Phi /2)\)</span>. Since <span class="math inline">\(r=E_0/\Phi\)</span>, we have</p>
+<p><span class="math display">\[\begin{aligned}
+  |E_{net}| &amp; = &amp; 2 r \; sin(\Phi /2) \\
+            &amp; = &amp; {{2 E_0 \; sin(\Phi /2)} \over \Phi} \\
+            &amp; = &amp; E_0 {{sin(\Phi /2)} \over {\Phi /2}}\end{aligned}\]</span></p>
+<p>The intensity of the light on the wall is therefore</p>
+<p><span class="math display">\[I =  I_0 ({{sin(\Phi /2)} \over {\Phi /2}})^2\]</span></p>
+<p>where <span class="math inline">\(I_0\)</span> is the intensity at the central maximum.</p>
+<p>Some final points on single slit interference:<br />
+</p>
+<ol>
+<li><p>The first minimum occurs when <span class="math inline">\(\Phi = \pm 2\pi\)</span>. The extra distance <span class="math inline">\(L\)</span> traveled from the bottom of the slit is <span class="math inline">\(L=\lambda\)</span>. So the first minimum occurs when the radiation emitted from the bottom of the slit is <span class="math inline">\(360^\circ\)</span> different than that from the top of the slit. This seem strange that cancellation happens, since <span class="math inline">\(360^\circ\)</span> or <span class="math inline">\(2 \pi\)</span> radians means that the two sources are in phase. The reason for the total cancellation is that each source in the upper half of the slit cancels with a source in the lower half of the slit. The central maximum region is therefore rather wide.</p></li>
+<li><p>The value of <span class="math inline">\(\Phi\)</span> at the first maxima is when <span class="math inline">\(\Phi = \pm 3\pi\)</span>. The intensity at these first maxima are</p>
+<p><span class="math display">\[I = ({2 \over {3\pi}})^2 I_0 = {4 \over {9\pi^2}}I_0\]</span></p></li>
+<li><p>In general, there will be minima when <span class="math inline">\(\Phi = \pm 2\pi , \pm 4\pi , \cdots\)</span>. There will be maxima when <span class="math inline">\(\Phi = \pm 3\pi , \pm 5\pi , \cdots\)</span>.</p></li>
+<li><p>Another way to obtain the single slit formula is to use the <span class="math inline">\(N\)</span> slit result derived by the complex number way:</p>
+<p><span class="math display">\[I   =  I_0 {{sin^2(N \phi /2)} \over {sin^2(\phi /2)}}\]</span></p>
+<p>Letting <span class="math inline">\(\phi = \Phi /N\)</span> we have</p>
+<p><span class="math display">\[I   =  I_0 {{sin^2(\Phi /2)} \over {sin^2(\Phi /(2N))}}\]</span></p>
+<p>Taking the limit <span class="math inline">\(N \rightarrow \infty\)</span> yields</p>
+<p><span class="math display">\[\begin{aligned}
+  I &amp; = &amp; (N^2 I_0) {{sin^2(\Phi /2)} \over {(\Phi /2)^2}} \\ 
+   &amp; = &amp; I_C {{sin^2(\Phi /2)} \over {(\Phi /2)^2}} \\ \end{aligned}\]</span></p>
+<p><img src="fig2342j.png" style="width:14cm" alt="image" /></p>
+<p>where <span class="math inline">\(I_C\)</span> is the intensity of the central maximum, since <span class="math inline">\(I_0\)</span> is the intensity from one slit. We have used the approximation that <span class="math inline">\(lim_{N \rightarrow \infty} sin(\Phi /N) \rightarrow \Phi /N\)</span>, since <span class="math inline">\(\Phi /N\)</span> is very small as <span class="math inline">\(N \rightarrow \infty\)</span>.</p></li>
+</ol>
+<p>Using the results from single slit interference, we can understand a real two slit interference pattern. By real, we mean two slits that have a finite size. Suppose the screen consists of two slits, whose separation is <span class="math inline">\(d\)</span>. Let <span class="math inline">\(w\)</span> be the size of the slit opening of each slit. Consider a scattering angle <span class="math inline">\(\theta\)</span>. As we just derived, the net amplitude for single slit interference at the angle theta is <span class="math inline">\(E_0 sin(\Phi /2)/(\Phi /2)\)</span>, where <span class="math inline">\(\Phi = 2 \pi w \; sin(\theta )/\lambda\)</span>. The net amplitude for the superposition of both finite sized slits is thus</p>
+<p><span class="math display">\[E_{net} = E_0 {{sin(\Phi /2)} \over {(\Phi /2)}} cos(\omega t) +
+                  E_0 {{sin(\Phi /2)} \over {(\Phi /2)}} cos(\omega t + \phi)\]</span></p>
+<p>where <span class="math inline">\(\phi = 2\pi d \; sin(\theta )/\lambda\)</span>. Note that <span class="math inline">\(\Phi\)</span> is the phase difference between sources at the top and bottom of the slit opening. <span class="math inline">\(\phi\)</span> is the phase difference between the first slit and the second slit. <span class="math inline">\(\phi\)</span> is larger than <span class="math inline">\(\Phi\)</span>. In fact:</p>
+<p><span class="math display">\[{\phi \over \Phi} = {d \over w}\]</span></p>
+<p>The equation for <span class="math inline">\(E_{net}\)</span> can be simplified by factoring out the term <span class="math inline">\(sin(\Phi /2)/(\Phi /2)\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+  E_{net} &amp; = &amp; E_0 {{sin(\Phi /2)} \over {(\Phi /2)}} cos(\omega t) +
+                  E_0 {{sin(\Phi /2)} \over {(\Phi /2)}} cos(\omega t + \phi) \\
+      &amp; = &amp; E_0 {{sin(\Phi /2)} \over {(\Phi /2)}} (cos(\omega t) + cos(\omega t + \phi)) \\
+      &amp; = &amp; 2 E_0 {{sin(\Phi /2)} \over {(\Phi /2)}} cos(\phi /2) \; cos(\omega t + \phi /2) \end{aligned}\]</span></p>
+<p>So we see that the net interference amplitude is the product of the single slit times the double slit amplitudes. Since the single slit amplitude varies slower than the double slit amplitude, the single slit amplitude squared is an envelope for the double slit pattern. The single slit has its first minimum when <span class="math inline">\(\Phi = 2 \pi\)</span>. As <span class="math inline">\(\Phi \rightarrow 2 \pi\)</span>, <span class="math inline">\(\phi\)</span> passes through <span class="math inline">\(2 \pi\)</span> <span class="math inline">\(d/w\)</span> times. Thus, the number of bright spots in the central region is <span class="math inline">\(2d/w - 1\)</span>.</p>
+<p>Another way interference can occur is when light is reflected off a thin film of transparent material. We show this in the figure. Suppose light is incident near the normal of a thin film. Light can reflect from the near surface of the film, and it can reflect from the far surface of the film. The reflected radiation will be a linear superposition of the radiation reflected from the near plus the far surfaces. If we let <span class="math inline">\(t\)</span> be the thickness of the thin film, then the extra distance that the light reflected from the far surface travels is <span class="math inline">\(2t\)</span>:</p>
+<p><span class="math display">\[l = 2t\]</span></p>
+<p>So, the difference in phase of the light that reflects from the near versus the far surface is <span class="math inline">\(\phi = l/\lambda_{film} = 2t/\lambda_{film}\)</span>. There is one other property of reflection to consider: when light reflects off of a "slower" medium, the reflected radiation is shifted <span class="math inline">\(180^\circ\)</span> in phase. That is, if light reflects from a medium with <span class="math inline">\(n=n_1\)</span> off a medium with <span class="math inline">\(n=n_2\)</span>, then the phase of the reflected radiation is shifted <span class="math inline">\(180^\circ\)</span> if <span class="math inline">\(n_2&gt;n_1\)</span>. If <span class="math inline">\(n_2&lt;n_1\)</span>, then there is no phase change in the reflected light. We will demonstrate this phenomena in lecture. Let <span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span>, and <span class="math inline">\(n_3\)</span> be the indices of refraction for the media in the diagram. Then zero relative phase due to the surfaces will occur if <span class="math inline">\(n_1 &lt; n_2 &lt; n_3\)</span> or <span class="math inline">\(n_1 &gt; n_2 &gt; n_3\)</span>. A relative phase change of <span class="math inline">\(\pi\)</span> will occur is <span class="math inline">\(n_1 &lt; n_2 &gt; n_3\)</span> or <span class="math inline">\(n_1 &gt; n_2 &lt; n_3\)</span>.</p>
+<p>To summarize: upon reflection from a thin transparent film, the relative phase <span class="math inline">\(\phi\)</span> between the radiation reflected between the near and far surfaces is</p>
+<p><span class="math display">\[\phi = {{2t} \over \lambda_{film}} + (any \; additional \; phase \; from \; surfaces)\]</span></p>
+<p>The wavelength <span class="math inline">\(\lambda_{film}\)</span> is the wavelength of the light in the medium of the film. The wavelength in the film is <span class="math inline">\(\lambda_0/n_{film}\)</span>, where <span class="math inline">\(\lambda_0\)</span> is the wavelength in vacuum and <span class="math inline">\(n_{film}\)</span> is the index of refraction of the film.</p>
+<p>An important apparatus that makes use of interference effects is the Michelson interferometer. A monochromatic light source (usually a laser) is incident upon a beam splitter. Half of the light travels through the beam splitter, and half is reflected <span class="math inline">\(90^\circ\)</span>. Both halves reflect off of mirrors,and return to the beam splitter. One beam travels straight through and the other reflects <span class="math inline">\(90^\circ\)</span> and they both emerge together. Interference can occur between the two split beams when they "recombine". The phase difference <span class="math inline">\(\phi\)</span> between the two beams will be</p>
+<p><span class="math display">\[\phi = 2 \pi {l \over \lambda}\]</span></p>
+<p>where <span class="math inline">\(l\)</span> is the difference in path length of the two beams. If one mirror is a distance <span class="math inline">\(d_1\)</span> and the other mirror a distance <span class="math inline">\(d_2\)</span> from the beam splitter, then <span class="math inline">\(l = 2 |d_1 - d_2|\)</span>. By changing one of the distances <span class="math inline">\(d_1\)</span> or <span class="math inline">\(d_2\)</span>, one observes the interference pattern shift. Everytime a new interference fringe is produced, <span class="math inline">\(l\)</span> has changed by one wavelength.</p>
+<p>Interference is a remarkable phenomena. Water waves and sound waves (mechanical waves) experience interference when the wave amplitude from different sources combine. Guided by mechanical wave interference, we have explained the double slit, N-slit, single slit interference patterns on the wall by summing an amplitude from each of the individual slits, then squaring the magnitude of the summed (net) amplitude. In the Maxwell or classical picture of electromagnetic radiation, the amplitude represents an electric field vector. The radiation is a sinusoidal wave, with the electric vector field doing the "waving". This classical picture explains many things, but as you will see next quarter one of its failures is the description of what happens when the light is very dim.</p>
+<p>As the intensity is reduced, at first the brightness is also reduced. However, at very low intensity the radiation arrives as particles. The particles, or photons, arrive more often in the "bright" regions and never in the dark regions. The modern view is the following. Nothing physical is waving. An amplitude is assigned to each path that the photon can take to get to the wall. After summing up the amplitudes for all possible paths, we take the absolute square of the sum. The interference properties come from <span><em>summing the amplitudes</em></span>. The absolute square of this sum is the probability (or probability density) that the photon will arrive at the particular region on the wall. Instead of corresponding to an electric field magnitude, the sinusoidal functions represent the probability amplitude (density) for a "free" photon (or particle) to be in a particular location.</p>
+<p>Interference effects can be understood without anything waving. The pattern on the wall is also determined from the Fourier transform of the slit openings. The Fourier transform employs the term <span class="math inline">\(e^{ikx}\)</span>, which does not require anything to wave. It took physicists many years to sort these ideas out, and they form the basis of Quantum Mechanics. Next quarter you will cover the experiments and reasoning that occured from 1900-1930 and lead to our modern formalism.</p>
+<p>Electromagnetism and its radiation has taught us many lessons. So far it has taught us about the interaction of charged particles and light. Next, it will teach us about the properties of space and time. We conclude this course with Einstein’s theory of special relativity.</p>
+</body>
+</html>

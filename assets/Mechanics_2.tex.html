@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>n1312w16</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p><strong>Mechanics Notes II</strong></p>
+<p><strong>Forces, Inertia and Motion</strong></p>
+<p>The mathematics of calculus, which enables us to work with instantaneous rates of change, provides a language to describe motion. Our perception of <span><strong>force</strong></span> is that it is a push or a pull. We also have experienced that it is easier to change the motion of a "smaller" object than a "larger" one. We call <span><strong>inertia</strong></span> the resistance to a change in motion, and as you might imagine it is related to how much "matter" (or mass) an object has.</p>
+<p><br />
+There are three different properties associated with the mass of an object:</p>
+<ol>
+<li><p>The amount of matter an object has. For a pure substance, say iron, we assume that mass is proportional to the volume of the substance. There is no law of nature associated with this definition of mass, only that mass <span class="math inline">\(m=\rho V\)</span>, where <span class="math inline">\(\rho\)</span> is the density of the substance and <span class="math inline">\(V\)</span> it’s volume. We will refer to this property of mass as just <span><strong>mass</strong></span>, or "<span class="math inline">\(\rho V\)</span> mass".</p></li>
+<li><p>The resistance to a change of motion. We refer to this property of mass as <span><strong>inertial mass</strong></span>.</p></li>
+<li><p>The property of an object that causes the attractive force of gravity. We refer to this property of mass as <span><strong>gravitational mass</strong></span>.</p></li>
+</ol>
+<p>We will carry out and discuss experiments that relates these three properties associated with mass to each other. As we will see, these three different aspects of mass are proportional to each other.</p>
+<p><br />
+We demonstrated that if an object has <span><strong>no</strong></span> forces acting on it, it will stay at rest or move with a constant velocity. Is there any other situation that an object will move with constant velocity. Yes, there is. If we push our physics book across the table, we can push it such that it will move with a constant velocity, say <span class="math inline">\(\vec{v}=v_0 \hat{i}\)</span>. Does this mean that there are no forces on it? NO. We are pushing with a certain force, the table is exerting a force, and the earth is attracting the book (gravitational force). These three forces are acting on the book. The table is actually "pushing up" on the book and exerting a frictional force as well. Newton realized that if an object is moving with a <span><strong>constant velocity</strong></span> then all the forces that it experiences must add up to zero (via vector addition). This is consistent with our experiments on statics, since if we are in a reference frame that is moving with a velocity of <span class="math inline">\(v_0 \hat{i}\)</span> then the book is at rest. In this case, we know that the vector sum of the forces must add to zero.</p>
+<p>Therefore, <span><strong>if an object is moving with a constant velocity, the vector sum of the forces acting on it equals zero</strong></span>. If the net force on an object is not equal to zero, then the object will not move with a constant velocity.</p>
+<p>At present we have discovered only three basic interactions in our universe:</p>
+<ol>
+<li><p>Gravity</p></li>
+<li><p>Electro-magnetic-weak interaction</p></li>
+<li><p>Strong interaction</p></li>
+</ol>
+<p>As a physicist we are interested in discovering the Laws of Nature in their most simple form. Since particle interactions result in changes in the velocity of a particle, we are motivated to try and express the laws of motion in terms of the change in velocity of a particle: <span class="math inline">\(d \vec{v} /dt\)</span>. Therefore, we believe that the highest derivative of position with time in the basic equations of motion should be the second derivative <span class="math inline">\(d^2 \vec{r}(t) / dt^2\)</span>. There is another reason to expect that the laws of classical physics will not need higher derivatives. If the equations were to contain terms involving <span class="math inline">\(d^3x/dt^3\)</span>, one would need three initial conditions to determine <span class="math inline">\(x(t)\)</span> for times in the future. <span><strong>If one believes that only the initial position, <span class="math inline">\(x_0\)</span>, and initial velocity, <span class="math inline">\(v_0\)</span>, are necessary to determine <span class="math inline">\(x(t)\)</span> for future times, then there can be at most second derivatives of <span class="math inline">\(x(t)\)</span> in the equations of motion</strong></span>. Under the requirement of only two initial conditions, one only needs to consider the acceleration of a particle in formulating the Laws of Motion. It turns out that differential equations are very useful in describing nature because the laws of physics often take on a simple form when expressed in terms of infinitesimal changes. Thus, we will try and understand physics using second order differential equations. This is one of the important ideas that Newton demonstrated.</p>
+<p>The three basic interactions (gravity, electromagnetism, weak and strong) can be understood without introducing the concept of force. For example, in Phy132, you will learn that the law of universal gravity between two "point" objects equals</p>
+<p><span class="math display">\[\begin{aligned}
+   m_1 {{d\vec{v}_1} \over {dt}} &amp; = &amp; G {{m_1 m_2} \over r^2} \hat{r}_{12} \\
+   m_1 \vec{a}_1  &amp; = &amp; G {{m_1 m_2} \over r^2} \hat{r}_{12} \end{aligned}\]</span></p>
+<p>Note that there is no mention of force in this equation. The same is true of the other fundamental interactions. One reason force is not needed because these basic interactions occur without the particles actually touching each other. However, it is useful to consider "force". We can pull and push things around, and in practical engineering problems objects experience pushes and pulls from ropes, surfaces, etc. We will refer to forces that actually touch an object as <span><strong>contact forces</strong></span>. Since a push or pull changes a particles velocity, we are motivated to define and quantify the amount of force an object experiences by how it changes the object’s velocity.</p>
+<p>We start by doing simple experiments in an inertial reference frame, that is, a reference frame floating freely in space. Let’s examine what happens when an object is subject to a <span><strong>constant contact force</strong></span>.</p>
+<p>One can ask: how do we determine that a contact force acting on an object is constant? One way might be to use a "perfect" spring and pull on the object such that the spring’s extention is constant. I think we can agree that if a spring is streched by a <span><em>fixed amount</em></span> the contact force it exerts will not change. By a "perfect" spring, we mean just that, that the spring does not weaken over time but keeps the same constant force. Let’s observe what happens when an object is subject to a <span><strong>constant contact force</strong></span>. What kind of motion will result? Most likely not constant velocity, since this is the case if there are no net forces. The object will accelerate, but will the acceleration change in time? We need to do the experiment, and in lecture I will pull a cart on an air track with a spring keeping the stretch of the string constant. If I do it correctly, we will see that:<br />
+<span><strong>Experiment 1</strong></span>: If an object is subject to a <span><em>constant force</em></span>, the motion is one of <span><em>constant acceleration</em></span>.<br />
+Wow, this is a very nice result! Nature didn’t have to be this simple. The acceleration might have changed in time with our perception of constant force, but within the limits of the experiment it doesn’t. Experiments show that this result is true for any object subject to any constant force. I should note that this experimental result is only valid within the realm of non-relativistic mechanics. If the velocities are large and/or the measurements very very accurate, relativistic mechanics are needed to understand the data.</p>
+<p>We need another experiment determine how an object’s acceleration is related to it’s mass. Take two identical objects, each of the same substance, and apply the constant force <span class="math inline">\(F_0\)</span> to one object. The acceleration will be constant, call it <span class="math inline">\(a_1\)</span>. Now connect the two identical objects together and apply the same force <span class="math inline">\(F_0\)</span> to both. The acceleration is constant, but how large is it? We will do a similar experiment in lecture. The result from the experiment is:<br />
+<span><strong>Experiment 2</strong></span>: If a constant force is applied to two identical objects which are connected to each other, the measured acceleration is <span>it 1/2</span> the acceleration of one of the objects if it is subject to the same constant force.<br />
+</p>
+<p>This is also an amazing result, and nature didn’t have be be so simple! It shows that if the amount of material (or "<span class="math inline">\(\rho V\)</span> mass") is doubled, the acceleration is cut in half for the same constant force. Experiment will also show that <span class="math inline">\(n\)</span> times the amount of "<span class="math inline">\(\rho V\)</span> mass" results in an acceleration equal to <span class="math inline">\(1/n\)</span> times <span class="math inline">\(a_1\)</span>. Therefore, <span><strong>inertial mass is proportional to the amount of material (or "<span class="math inline">\(\rho V\)</span> mass")</strong></span> for any object made of a single substance.</p>
+<p>This experimental result gives us a method to quantify inertial mass for objects made of different materials. Decide on a reference mass <span class="math inline">\(m_0\)</span> (e.g. one kilogram). Use a constant spring extension to produce a constant force. The constant force applied to the reference mass, causes a constant acceleration (<span class="math inline">\(a_0\)</span>). Now apply the same constant force is to the (unknown) mass being measured. The acceleration will be constant, <span class="math inline">\(a\)</span>. The inertial mass of the unknown is <span class="math inline">\(m = m_0 (a_0/a)\)</span>.</p>
+<p>As far as we know, inertial mass, is an intrinsic property of an object, proportional to the objects "<span class="math inline">\(\rho V\)</span> mass". There is no loss of generality taking the proportionality constant equal to one, equating inertial mass to mass, and using the same units for both. In the MKS system, the unit is the kilogram (Kg). If <span class="math inline">\(a\)</span> is in units of <span class="math inline">\(M/s^2\)</span>, then force will have units of <span class="math inline">\(Kg M/s^2\)</span>, and is a derived quantity. One <span class="math inline">\(Kg M/s^2\)</span> is called a Newton (N). If a constant force of one Newton is applied to an object whose mass is 1 Kg, the object have a constant acceleration of 1 <span class="math inline">\(M/s^2\)</span>. For any single constant force, <span class="math inline">\(F\)</span>, acting on an object of mass <span class="math inline">\(m\)</span>, the acceleration is <span class="math inline">\(a=F/m\)</span> More force produces more acceleration, more mass results in less acceleration.</p>
+<p>We need to one more experiment to see if the "dynamic" definition of force add like vectors. Suppose an object is subject to two constant forces at once. Call them <span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_2\)</span>. Since we are still experimenting in one dimension, the forces can act towards the right (+) or left (-) direction. Forces to the right will be considered positive and to the left negative. When both forces are applied at the same time, here is what the experiment shows:</p>
+<p>: If a constant force <span class="math inline">\(F_1\)</span> produces an acceleration <span class="math inline">\(a_1\)</span> on an object and a constant force <span class="math inline">\(F_2\)</span> produces an acceleration <span class="math inline">\(a_2\)</span> on the same object, then if the force <span class="math inline">\(F_1 + F_2\)</span> acts on the object the measured acceleration is <span class="math inline">\(a_1 +a_2\)</span>.<br />
+Wow, we should be grateful that nature behaves in such a simple way. The experiment indicates that if a 5 Newton force to the right and a 3 Newton force to the left are both applied to an object, the resulting <span><strong>motion</strong></span> is the same as if a 2 Newton force to the right were applied. Forces applied in one dimension add up like real numbers. (As discussed in the next section, in two and/or three dimensions experiment shows they add up like vectors). We refer to the "sum" of all the forces on an object as the net force, and give it the label <span class="math inline">\(\vec{F}_{net}\)</span>.</p>
+<p><strong>Two and Three Dimensional Frictionless Environment</strong></p>
+<p>The extension to two and three dimensions is greatly facilitated by using the mathematics of vectors. Displacement is a vector, since displacements have the properties that vectors need to have. A displacement 40 units east plus a displacement 30 units north is the same as one displacement 50 units at an angle of <span class="math inline">\(36.869...^\circ\)</span> N of E. Similarly, relative velocity is a vector, since it is the time derivative of displacement. The extension of force and motion to two and three dimensions follows:</p>
+<p><span class="math display">\[\vec{F}_{net} \equiv m \vec{a}\]</span></p>
+<p>for a single particle. This equation is refered to as <span><strong>Newton’s Second Law of motion</strong></span>. Although force is not needed to describe the fundamental interactions of nature, force is a useful quantity in statics, and when dealing with contact interactions (i.e. contact forces and friction).</p>
+<p>In this mechanics class, we will deal with the contact forces of surfaces, ropes, human pushes or pulls, and the non-contact force of gravity near a planet’s surface. The general approach is to determine all the forces involved. Once the forces are known, the acceleration of the objects are known. Once the accelerations are determined, the position function <span class="math inline">\(x(t)\)</span> can be found by integration. Doing appropriate experiments we can test our understanding of the "physics" behind the interactions. Before we proceed with investigating different forces, we present Newton’s Third Law.</p>
+<p>Let’s consider what happens when two objects, "1" and "2", interact with each other. By interact, we mean that object "1" causes a push or pull on object "2" for a certain amount of time. Likewise object "2" can cause a push or pull on object "1". We’ll do the following experiment in lecture. Two carts will be held together with a spring between them attached to cart "1". They will be released and the spring will push them apart. The carts can roll on the horizontal surface of the table. Is it possible for only one cart to move away, and the other one to stay still? As we shall see, no it is not. If cart "1" moves off to the right, then cart "2" must move off to the left. If cart "2" feels a push due to cart "1", then cart "1" also feels a push. After they fly apart, and the spring is no longer pushing them, they will travel with a constant velocity. Let’s first only examine the final velocities of the cars, and not be concerned with what is happening during the pushing.</p>
+<p>The experiment will show: if the carts are identical, they end up moving with the same speed, but in opposite directions. We will also see that more "massive" carts end up moving slower after "pushing away" a less massive cart. We can pure substances for the carts and define mass as we did inititally, <span><strong>as the amount of matter an object has</strong></span>. For cart "1", we have <span class="math inline">\(m_1 = \rho V_1\)</span>, and for cart "2", <span class="math inline">\(m_2 = \rho V_2\)</span>, where the <span class="math inline">\(V_i\)</span> are the volumes of the carts. Now we can carry out some experiments.</p>
+<p>The experiments will show that if <span class="math inline">\(m_1 = 2 m_2\)</span>, the final speed of cart "2" will be twice that of cart "1". If <span class="math inline">\(m_1 = 3 m_2\)</span>, the final speed of cart "2" will be twice that of cart "1". Etc... WOW!, this is a very nice result. The mass times speed of cart "1" is always equal to the mass times speed of cart "2". Once again, the experiments demonstrate that inertial mass is proportional to "<span class="math inline">\(\rho V\)</span>" mass. There is something special about the product (mass)(speed). It is so special that is given a special name, <span><strong>momentum</strong></span>. Since velocity better describes the motion, we use velocity instead of speed and define the momentum <span class="math inline">\(\vec{p}\)</span> of an object as</p>
+<p><span class="math display">\[\vec{p} \equiv m \vec{v}\]</span></p>
+<p>Note that we have written momentum as a vector. We haven’t yet shown that momenta combine according to the mathematics of vector addition, but we will check it out later. Now, returning to the cart experiment. Let <span class="math inline">\(\vec{v}_1\)</span> be the final velocity of cart "1", and <span class="math inline">\(\vec{v}_2\)</span> be the final velocity of cart "2". Then we see that <span class="math inline">\(m_1 |\vec{v}_1| = m_2 |\vec{v}_2|\)</span>, or in vector notation:</p>
+<p><span class="math display">\[\begin{aligned}
+     m_1 \vec{v}_1 &amp; = &amp; - m_2 \vec{v}_2 \\
+         \vec{p}_1 &amp; = &amp; - \vec{p}_2\end{aligned}\]</span></p>
+<p>Since cart "1" started off at rest with no momentum, <span class="math inline">\(\vec{p}_1\)</span> is the change in the momentum of cart "1". Likewise, <span class="math inline">\(\vec{p}_2\)</span> is the change in the momentum of cart "2" resulting from its interaction with cart "1". Newton postulated that this symmetry holds whenever any two particles interact with each other:</p>
+<div class="center">
+<p><span><strong>If object 1 interacts with object 2,<br />
+then the change in momentum of object 2 caused by object 1 is equal but opposite to the change in momentum of object 1 due to object 2.</strong></span><br />
+</p>
+</div>
+<p><span class="math display">\[\vec{\Delta p}_1 = - \vec{\Delta p}_2\]</span></p>
+<p>Since the forces act on each cart at the same time, we have</p>
+<p><span class="math display">\[\begin{aligned}
+ {{\vec{\Delta p}_1} \over {\Delta t}} &amp; = &amp; - {{\vec{\Delta p}_2} \over {\Delta t}} \\
+ m_1{{\vec{\Delta v}_1} \over {\Delta t}} &amp; = &amp; - m_2 {{\vec{\Delta v}_2} \over {\Delta t}} \\
+ m_1 a_1 &amp; = &amp; - m_2 a_2 \\
+       \vec{F}_{1net} &amp; = &amp; - \vec{F}_{2net}  \end{aligned}\]</span></p>
+<p>since the net force equals <span class="math inline">\(m d \vec{v} / dt = d \vec{p} / dt\)</span>. we see that the magnitude of the force that each object experiences is the same but opposite in direction. Let <span class="math inline">\(\vec{F}_{12}\)</span> be the force that object "1" exerts on object "2", and <span class="math inline">\(\vec{F}_{21}\)</span> be the force that object "2" exerts on object "1". Then,</p>
+<div class="center">
+<p><span><strong>If object 1 exerts a force on object 2,<br />
+then object 2 exerts an equal but opposite force on object 1.</strong></span><br />
+</p>
+</div>
+<p><span class="math display">\[\vec{F}_{12} = - \vec{F}_{21}\]</span></p>
+<p>This equality of interacting forces that we showed in our cart experiments is called "Newton’s Third Law".</p>
+<p>It was a great insight of Newton to realize there was certain symmetry in every interaction. He probabily reasoned that something must be the same for each object. Interacting objects clearly can have different masses and different accelerations. The only quantity left are the forces that each object "feels". Nature is fair when it comes to interacting particles, object 2 is not preferred to object 1 when it comes to the force that each feels. Forces always come in pairs. Whenever there is a force on a particle, there must be another force acting on another particle.</p>
+<p>Newton’s Third Law applies (in some form) to every type of interaction. It is true if the objects are moving <span><strong>or if they are not</strong></span>. It is true even in the static case. As simple as it may seem, it is often miss-understood. Consider the example of a book resting on a table in a room. The book feels a graviational force due to the earth, which is it’s weight. What is the paired force for the book’s weight? Most students answer is "the force of the table on the book". The table does exert a force on the book equal to it’s weight, but it is not the "reaction" force to the book’s weight. The "reaction" force to the book’s weight is the force on the earth due to the book. To determine the two forces that are "paired", just replace "object 1" with one object and "object 2" with the other in the statement above. "If the <span><strong>earth</strong></span> exerts force on the <span><strong>book</strong></span>, then the <span><strong>book</strong></span> exerts an equal but opposite force on the <span><strong>earth</strong></span>."</p>
+<p>Newton’s third law and its connection to the conservation of momentum is an example of how a symmetry in nature leads to a conservation law. We will return to the conservation of momentum in the next section when we investigate other conserved quantities.</p>
+<p>The laws of motion apply in an inertial reference frame.</p>
+<ol>
+<li><p>Newton’s "First Law": If there are <u>no forces</u> acting on an object, an object at rest remains at rest and an object in motion continues in a state of<br />
+uniform motion. This law enables one to quantify time, i.e. equal time intervals.</p></li>
+<li><p>Newton’s "Second Law": <span class="math inline">\(\vec{F}_{net} = m \vec{a}\)</span>.</p></li>
+<li><p>Newton’s "Third Law": <span class="math inline">\(\vec{F}_{21}=-\vec{F}_{12}\)</span>.</p></li>
+</ol>
+<p><strong>Some Simple Forces</strong></p>
+<p>Newton’s laws of motion give us a method for determining the resulting motion when an object is subject to forces. One proceeds by first identifying all the forces acting on the object. Then, one adds the forces via vector addition to find <span class="math inline">\(\vec{F}_{net}\)</span>. The object’s acceleration is <span class="math inline">\(\vec{a} = \vec{F}_{net}/m\)</span>. Once the acceleration is known at all times (or all positions) then the motion is determined. The beauty of this approach is that the forces take on a simple form. That is, the quantity that affects the acceleration of an object (the thing we are calling a force) turns out to be a simple expression of position, velocity, etc. Here, we consider three types of forces: contact forces, frictional forces, and weight (gravity near the surface of a planet). In future courses we will consider the "universal" gravitational force, spring forces, electric and magnetic forces, and atomic/nuclear/subatomic particle interactions.</p>
+<p>As previously stated, by a contact force we mean the pushing or pulling caused by the touching (or physical contact) of one object on another. Someone’s hand pushing on, or a rope pulling on an object are some examples. From Newton’s third law, object 2 feels the same contact force from object 1 that object 1 feels from the contact force from object 2.<br />
+Consider the following example shown in the figure:<br />
+</p>
+<p><img src="notes1a.png" style="width:14cm" alt="image" /></p>
+<p>Two masses in an inertial reference frame are connected by a rope. The inertial mass of the mass on the left is <span class="math inline">\(M_1\)</span>, the inertial mass of the mass on the right is <span class="math inline">\(M_2\)</span>, and the rope connecting them has a mass of <span class="math inline">\(m\)</span>. Someone pulls on the mass on the right with a force of <span class="math inline">\(F\)</span> Newtons. Question: find the resulting motion, and all the contact forces.</p>
+<p>The method of applying Newton’s Laws of motion to a system of particles is: first: find the forces on each object in the system, then: the acceleration of each object is just <span class="math inline">\(F_{Net}/(mass)\)</span>. For the example above, the forces on the "right mass" are <span class="math inline">\(F\)</span> minus the force that the rope pulls to the left, which we label as <span class="math inline">\(c_2\)</span>. The rope feels the "reaction" force <span class="math inline">\(c_2\)</span> to the right and a force <span class="math inline">\(c_1\)</span> from the left mass. Finally, the mass on the left feels only the "reaction" force from the rope which is <span class="math inline">\(c_1\)</span> to the left.<br />
+Summarizing:<br />
+</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><u>Object</u></td>
+<td style="text-align: center;"><u>Net Force</u></td>
+<td style="text-align: center;"><u>Equation of motion</u></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">left mass</td>
+<td style="text-align: center;"><span class="math inline">\(c_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c_1 = M_1 a\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">rope</td>
+<td style="text-align: center;"><span class="math inline">\(c_2 - c_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c_2 - c_1 = m a\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">right mass</td>
+<td style="text-align: center;"><span class="math inline">\(F - c_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(F - c_2 = M_2 a\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Adding up the equations of motion for the various masses gives <span class="math inline">\(a=F/(M_1 + M_2 + m)\)</span>. Solving for the contact forces gives: <span class="math inline">\(c_1 = M_1 F/(M_1 + M_2 + m)\)</span>, and <span class="math inline">\(c_2 = (M_1 + m)F/(M_1 + M_2 +m)\)</span>. If the mass <span class="math inline">\(m\)</span> is very small compared to <span class="math inline">\(M_1\)</span> and <span class="math inline">\(M_2\)</span>, then the contact forces are approximately equal <span class="math inline">\(c_1 \approx M_1 F/(M_1 + M_2)\)</span>, and <span class="math inline">\(c_2 \approx M_1 F/(M_1 + M_2)\)</span>, giving <span class="math inline">\(c_1 \approx c_2\)</span>. This force is called the tension in the rope, and is the same throughout for a massless rope.<br />
+</p>
+<p>Weight is a force. In the Newtonian picture of gravity, the <span><strong>weight</strong></span> <span class="math inline">\(W\)</span> of an object is the gravitational force on the object due to all the other matter in the universe. We will be considering the weight of objects on or near the surface of a planet (neglecting the rotation of the planet). In this case, the strongest force the object experiences is due to the planet. A remarkable property of nature is that the <span><em>motion</em></span> of all objects due to the graviational force is not dependent on the objects mass! This is true for objects falling in the classroom, satelites orbiting the earth, planets orbiting a star, etc. We will demonstrate this property in lecture by dropping two different objects with different masses. They both fall with the same acceleration, which we label as <span class="math inline">\(g\)</span>. Since <span class="math inline">\(F = ma\)</span>, the graviational force on an object must be <span class="math inline">\(W = mg\)</span>, where <span class="math inline">\(g\)</span> depends only on the location of the object and <span class="math inline">\(m\)</span> is the inertial mass of the object. <span><strong>An objects weight is proportional to it’s inertial mass</strong></span>. Since <span class="math inline">\(g=W/m\)</span> is the same for all objects, if the mass is doubled, so is the objects weight. Thus, experiments show that all three aspects of mass, "<span class="math inline">\(\rho V\)</span>", inertial mass, and gravitational mass, are proportional to each other. With no loss of generality, we can set them equal to each other and use "<span class="math inline">\(\rho V\)</span>" in each case.</p>
+<p>To measure an objects weight on a planet, one can use a scale which keeps the object at rest. Since the object is not accelerating relative to the planet, the force the scale exerts on the object equals its weight. An object’s mass is an intrinsic property and is the same everywhere. An objects weight <span class="math inline">\(W\)</span> depends on its location (i.e. which planet it is on or near).</p>
+<p>The Einstein picture of gravity is somewhat different. Being in a free falling elevator near the earth’s surface "feels" the same as if you were floating in free space or in the space shuttle. In each case you are weightless. Thus, you can be near the surface of the earth and be "weightless". Likewise, if you are in a rocket ship in free space (outer space far away from any other objects) that is accelerating at <span class="math inline">\(9.8 M/s^2\)</span> you feel the same as if the rocket were at rest on the earth. Thus, if you sit on a scale in a rocket that is accelerating in free space, the scale will give you a "weight" reading eventhough there are no "gravitational forces". Weight therefore is a relative quantity, and depends on the reference frame. In an inertial reference frame, everything is weightless. In a non-inertial reference frame, the force needed to keep the object at rest relative to the frame is the weight (or apparent weight) of the object. Mass (more specifically rest mass), on the other hand, is an absolute intrinsic quantity and is the same everywhere. Students interested in these philosophical topics should major in Physics. In this introductory class, we will take the Newtonian point of view for objects near the surface of a planet in which case the weight <span class="math inline">\(W\)</span> is:</p>
+<p><span class="math display">\[W = m g\]</span></p>
+<p>Next quarter you will discover what Newton discovered, that the gravitational force between two point objects of mass <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> that are separated by a distance <span class="math inline">\(r\)</span> is: <span class="math inline">\(F_{gravity} = G m_1 m_2 / r^2\)</span>. You will also show that the acceleration near the surface of a spherically symmetric planet is approximately <span class="math inline">\(g = G m_{planet}/R^2\)</span>, where <span class="math inline">\(R\)</span> is the planet’s radius and <span class="math inline">\(G \approx 6.67 x 10^{-11} N M^2/Kg^2\)</span>.</p>
+<p>Projectile motion is often used as an example in textbooks, and is the motion of an object "flying through the air" near the surface of the earth (or any planet). The approximations that are made are 1) that the object is near enough to the surface to consider the surface as flat, 2) the acceleration due to gravity is constant (does not change with height), and 3) air friction is neglected. Usually the <span class="math inline">\(+\hat{j}\)</span> direction is taken as up, and the <span class="math inline">\(\hat{i}\)</span> direction parallel to the surface of the earth such that the object travels in the <span class="math inline">\(x-y\)</span> plane. The objects acceleration is constant and given by <span class="math inline">\(a_0 = - g \hat{j}\)</span> for all objects. Letting <span class="math inline">\(\vec{v}(t)\)</span> represent the objects velocity vector and <span class="math inline">\(\vec{r}(t)\)</span> be the objects position vector we have:</p>
+<p><span class="math display">\[\vec{v}(t) = \vec{v}_0 - gt \hat{j}\]</span></p>
+<p>and</p>
+<p><span class="math display">\[\vec{r}(t) = -{{gt^2} \over {2}} \hat{j} + \vec{v}_0 t + \vec{r}_0\]</span></p>
+<p>where <span class="math inline">\(\vec{v}_0\)</span> is the initial velocity and <span class="math inline">\(\vec{r}_0\)</span> is the initial position. If <span class="math inline">\(\vec{r}_0 = 0\)</span> and <span class="math inline">\(\vec{v}_0 = v_0 cos(\theta) \hat{i}
++ v_0 sin(\theta) \hat{j}\)</span> one has:</p>
+<p><span class="math display">\[\vec{v}(t) = v_0 cos(\theta) \hat{i} + (v_0 sin(\theta) - gt) \hat{j}\]</span></p>
+<p>and for the position vector, one has:</p>
+<p><span class="math display">\[\vec{r}(t) = v_0 cos(\theta) t \hat{i} + (v_0 sin(\theta) t - {{gt^2} \over 2} ) \hat{j}\]</span></p>
+<p>It is nice that the horizontal and vertical motions can be treated separately. This is because force is a vector and the only force acting on the particle is gravity which is in the vertical direction. The seemly complicated two-dimensional motion is actually two simple one-dimensional motions.</p>
+<p>In this example of projectile motion, two quantities remain constant: the acceleration (<span class="math inline">\(-g \hat{j}\)</span>) and the x-component of the velocity. The x-component of the velocity is constant since there is no force in the x-direction and consequently no acceleration in the x-direction. Also note that vectors <span class="math inline">\(\vec{r}\)</span>, <span class="math inline">\(\vec{v}\)</span>, and <span class="math inline">\(\vec{a}_0\)</span> can (and usually) point in different directions.</p>
+<p>On the earth, there is air friction which needs to be considered for an accurate calculation. Also, even in the absence of air friction, the parabolic solution above is not exactly correct. In the absence of friction, the path of a projectile near a spherical planet is elliptical.</p>
+<p>In this class we consider "contact" frictional forces. When two surfaces touch each other, one surface exerts a force on the other (and visa-versa by Newton’s third law). It is convienient to "break-up" this force into a component <span><em>perpendicular</em></span> to the surfaces (Normal Force) and a component <span><em>parallel</em></span> to the surfaces (Frictional Force). We consider two cases for the frictional force: 1) the two surfaces slide across each other (kinetic friction) and 2) the two surfaces do not slide (static friction).</p>
+<p><br />
+If two surfaces slide across each other, the frictional force depends primarily on two things: how much the surfaces are pushing against each other (normal force N) and the type of material that makeup the surfaces. We will show in class that the kinetic frictional force is roughly proportional to the force pushing the surfaces together (normal force N), or <span class="math inline">\(F_{kinetic\: friction} \propto N\)</span>. We can change the proportional sign to an equal sign by introducing a constant: <span class="math inline">\(F_{kinetic\: friction} \approx \mu_K N\)</span>. The coefficient <span class="math inline">\(\mu_K\)</span> is called the coefficient of kinetic friction and depends on the material(s) of the surfaces.</p>
+<p><br />
+If the surfaces do not slide across each other, the frictional force (parallel to the surfaces) is called static friction. The static frictional force will have a magnitude necessary to keep the surfaces from sliding. If the force necessary to keep the surfaces from sliding is too great for the frictional force, then the surfaces will slip. Thus, there is a maximum value <span class="math inline">\(F_{Max}\)</span> for the static friction: <span class="math inline">\(F_{static\: friction} \leq F_{Max}\)</span>. As in the case of sliding friction, <span class="math inline">\(F_{Max}\)</span> will depend primarily on two things: the normal force <span class="math inline">\(N\)</span> and the type of materials that make-up the surfaces. We will also show in class the <span class="math inline">\(F_{Max}\)</span> is roughly proportional to the normal force, <span class="math inline">\(F_{Max} \propto N\)</span>. Introducing the coefficient of static friction, <span class="math inline">\(\mu_{S}\)</span>, we have: <span class="math inline">\(F_{Max} = \mu_S N\)</span>. The static friction force will only be equal to <span class="math inline">\(F_{Max}\)</span> just before the surfaces start slipping. If the surfaces do not slip, <span class="math inline">\(F_{static\: friction}\)</span> will be just the right amount to keep the surfaces from slipping. Thus, one usually writes that <span class="math inline">\(F_{static\: friction} \leq \mu_S N\)</span>.</p>
+<p>Summarizing we have:</p>
+<p><span class="math display">\[F_{kinetic\: friction} = \mu_K N\]</span></p>
+<p>and for static friction</p>
+<p><span class="math display">\[F_{static\: friction} \leq \mu_S N\]</span></p>
+<p>We remind the reader that the above equations are not fundamental "Laws of Nature", but rather models that approximate the forces of contact friction. The fundamental forces involved in contact friction are the electromagnetic interactions between the atoms and electrons in the two surfaces. To determine the frictional forces from these fundamental forces is complicated, and we revert to the phenomenological models described above.</p>
+<p>It is interesting to note that in the case of kinetic friction, the net force that the surface experiences must lie on a cone. The angle that the cone makes with the normal is always <span class="math inline">\(tan^{-1}(\mu_K)\)</span>. For the case of static friction, the net force that the surface can experience must lie within a cone which makes an angle with the normal of <span class="math inline">\(tan^{-1}(\mu_S)\)</span></p>
+<p>If an object travels with constant speed in a circle, we call the motion uniform circular motion. The uniform meaning constant speed. This motion is described by two parameters: the radius of the circle, <span class="math inline">\(R\)</span>, and the speed of the object, <span class="math inline">\(v\)</span>. The speed of the object is constant, but the direction of the velocity is always changing. Thus, the object does have an acceleration. We can determine the acceleration by differentiating the position <span><strong>vector</strong></span> twice with respect to time. For uniform circular motion, the position vector is given by:</p>
+<p><span class="math display">\[\vec{r}(t) = R (cos({{vt} \over {R}}) \hat{i} +
+                 sin({{vt} \over {R}}) \hat{j})\]</span></p>
+<p>where <span class="math inline">\(\hat{i}\)</span> points along the +x-direction and <span class="math inline">\(\hat{j}\)</span> points along the +y-direction. It is also convenient to define a unit vector <span class="math inline">\(\hat{r}\)</span> which points from the origin to the particle:</p>
+<p><span class="math display">\[\hat{r}(t) = (cos({{vt} \over {R}}) \hat{i} +
+                 sin({{vt} \over {R}}) \hat{j} )\]</span></p>
+<p>In terms of <span class="math inline">\(\hat{r}\)</span>, the position vector <span class="math inline">\(\vec{r}\)</span> can be written as:</p>
+<p><span class="math display">\[\vec{r}(t) = R \hat{r}(t)\]</span></p>
+<p>To find the velocity vector, we just differentiate the <span><strong>vector</strong></span> <span class="math inline">\(\vec{r}(t)\)</span> with respect to t:</p>
+<p><span class="math display">\[\begin{aligned}
+       \vec{v}(t)  &amp; = &amp; {{d \vec{r}} \over {dt}}\\
+                   &amp; = &amp; R {v \over R} (-sin({{vt} \over {R}}) \hat{i}
+                            + cos({{vt} \over {R}}) \hat{j})\\
+       \vec{v}(t) &amp; = &amp; v (-sin({{vt} \over {R}}) \hat{i} +
+                            cos({{vt} \over {R}}) \hat{j}) \end{aligned}\]</span></p>
+<p>To find the acceleration of an object moving in uniform circular motion one needs to differentiate the velocity <span><strong>vector</strong></span> <span class="math inline">\(\vec{v}(t)\)</span> with respect to <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+   \vec{a}(t) &amp; = &amp; {{d \vec{v}} \over {dt}}\\
+              &amp; = &amp; v {v \over R} (-cos({{vt} \over {R}}) \hat{i} -
+                 sin({{vt} \over {R}}) \hat{j})\\
+   \vec{a}(t) &amp; = &amp; - {{v^2} \over {R}} \hat{r}\end{aligned}\]</span></p>
+<p>Thus for an object moving in uniform circular motion, the magnitude of the acceleration is <span class="math inline">\(|\vec{a}| = v^2/R\)</span>, and the direction of the acceleration is towards the center of the circle.</p>
+<p>In an inertial reference frame, net force equals mass times acceleration. Thus, if an object is moving in a circle of radius <span class="math inline">\(R\)</span> with a constant speed of <span class="math inline">\(v\)</span>, the net force on the object must point towards the center and have a magnitude of <span class="math inline">\(mv^2/R\)</span>.</p>
+<p>Uniform circular motion is another case in which the three vectors <span class="math inline">\(\vec{r}\)</span>, <span class="math inline">\(\vec{v}\)</span>, and <span class="math inline">\(\vec{a}\)</span> do not point in the same direction. In this case <span class="math inline">\(\vec{a}\)</span> points in the opposite direction from <span class="math inline">\(\vec{r}\)</span>, and <span class="math inline">\(\vec{v}\)</span> is perpendicular to both <span class="math inline">\(\vec{r}\)</span> and <span class="math inline">\(\vec{a}\)</span>.</p>
+</body>
+</html>
