@@ -7,6 +7,7 @@ REFERENCES :
 https://www.cpp.edu/~pbsiegel/supnotes/notes130.html
 https://pretagteam.com/question/how-to-use-iframe-in-dashplotly-pythonhtml
 https://community.plotly.com/t/adding-a-scrollbar-to-a-sidebar-div/53330/2
+https://stackoverflow.com/questions/68269257/local-html-file-wont-load-properly-into-dash-application
 '''
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -90,73 +91,73 @@ def render_page_content(pathname):
                 target='_blank')]), style={'color': 'black'}),
            ])
     elif pathname == "/M-Lecture-1":
-        return html.Iframe(src = "http://localhost/Latex/Mechanics_1.tex.html",
+        return html.Iframe(src="assets/Mechanics_1.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/M-Lecture-2":
-        return html.Iframe(src = "http://localhost/Latex/Mechanics_2.tex.html",
+        return html.Iframe(src="assets/Mechanics_2.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/M-Lecture-3":
-        return html.Iframe(src = "http://localhost/Latex/Mechanics_3.tex.html",
+        return html.Iframe(src="assets/Mechanics_3.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/FOT-Lecture-1":
-        return html.Iframe(src = "http://localhost/Latex/Fluids_Oscillations_Thermodynamics_1.tex.html",
+        return html.Iframe(src="assets/Fluids_Oscillations_Thermodynamics_1.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/FOT-Lecture-2":
-        return html.Iframe(src = "http://localhost/Latex/Fluids_Oscillations_Thermodynamics_2.tex.html",
+        return html.Iframe(src="assets/Fluids_Oscillations_Thermodynamics_2.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/FOT-Lecture-3":
-        return html.Iframe(src = "http://localhost/Latex/Fluids_Oscillations_Thermodynamics_3.tex.html",
+        return html.Iframe(src="assets/Fluids_Oscillations_Thermodynamics_3.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/EM-Lecture-1":
-        return html.Iframe(src = "http://localhost/Latex/Electricity_Magnetism_1.tex.html",
+        return html.Iframe(src="assets/Electricity_Magnetism_1.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/EM-Lecture-2":
-        return html.Iframe(src = "http://localhost/Latex/Electricity_Magnetism_2.tex.html",
+        return html.Iframe(src="assets/Electricity_Magnetism_2.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/EM-Lecture-3":
-        return html.Iframe(src = "http://localhost/Latex/Electricity_Magnetism_3.tex.html",
+        return html.Iframe(src="assets/Electricity_Magnetism_3.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/ERSR-Lecture-1":
-        return html.Iframe(src = "http://localhost/Latex/Electromagnetic_Radiation_Special_Relativity_1.tex.html",
+        return html.Iframe(src="assets/Electromagnetic_Radiation_Special_Relativity_1.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/ERSR-Lecture-2":
-        return html.Iframe(src = "http://localhost/Latex/Electromagnetic_Radiation_Special_Relativity_2.tex.html",
+        return html.Iframe(src="assets/Electromagnetic_Radiation_Special_Relativity_2.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
                })
     elif pathname == "/ERSR-Lecture-3":
-        return html.Iframe(src = "http://localhost/Latex/Electromagnetic_Radiation_Special_Relativity_3.tex.html",
+        return html.Iframe(src="assets/Electromagnetic_Radiation_Special_Relativity_3.tex.html",
                style = {
                   "height": "600px",
                   "width": "100%"
@@ -171,4 +172,4 @@ def render_page_content(pathname):
     )
 
 if __name__ == "__main__":
-    app.run_server(port=8888)
+    app.run_server()
