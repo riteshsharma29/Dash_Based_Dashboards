@@ -2,7 +2,7 @@
 https://plotly.com/python/plotly-express/<br>
 https://dash.plotly.com/dash-html-components<br>
 https://dash.plotly.com/dash-core-components<br>
-
+https://plotly.com/python/reference/layout/<br>
 
 # Dash_Based_Dashboards
 
